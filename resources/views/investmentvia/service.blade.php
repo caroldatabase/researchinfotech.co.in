@@ -4,6 +4,7 @@
 
 @section('header') 
 @stop
+@section('content')
 @include('partials/menu');
 
  
@@ -196,3 +197,4 @@
     </div>
   </div>
 </section>
+@stop

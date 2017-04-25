@@ -4,6 +4,8 @@
 
 @section('header') 
 @stop
+
+@section('content')
 @include('partials/menu')
  
 
@@ -77,5 +79,4 @@ Conduct or forward surveys, contests, or chain letters.</li>
   </div>
 </section>
 
-
-<div class="clearfix"></div>
+@stop

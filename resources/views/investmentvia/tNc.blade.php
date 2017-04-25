@@ -4,6 +4,8 @@
 
 @section('header') 
 @stop
+@section('content')
+
 @include('partials/menu')
  
 
@@ -76,5 +78,4 @@
   </div>
 </section>
 
-
-<div class="clearfix"></div>
+@stop

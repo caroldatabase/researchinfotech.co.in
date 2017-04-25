@@ -4,6 +4,7 @@
 
 @section('header') 
 @stop
+@section('content')
 @include('partials/menu')
  
 
@@ -78,6 +79,4 @@ IFSC CODE	ICIC000330 </br></p>
     </div>
   </div>
 </section>
-
-
-<div class="clearfix"></div>
+@stop

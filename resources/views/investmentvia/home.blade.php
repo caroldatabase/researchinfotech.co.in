@@ -5,6 +5,7 @@
         @section('header')
         <h1>Home</h1>
         @stop
+        @section('content')
     @include('partials/menu')
     <!--Slider-->
     <section class="rev_slider_wrapper text-center">			
@@ -204,4 +205,4 @@
       </div>
     </section>
     <!--Paralax --> 
- 
+ @stop

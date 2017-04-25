@@ -6,6 +6,7 @@
 @section('header')
 <h1>Home</h1>
 @stop
+@section('content')
 @include('partials/menu')
 <!--Page Header-->
 <section class="page_header padding-top">
@@ -83,3 +84,4 @@
     
   </div>
 </section>
+@stop

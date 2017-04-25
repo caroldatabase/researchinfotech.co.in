@@ -4,6 +4,7 @@
 
 @section('header') 
 @stop
+@section('content')
 @include('partials/menu')
  
 
@@ -60,3 +61,4 @@ Compliance </p>
   </div>
 </section>
  
+ @stop

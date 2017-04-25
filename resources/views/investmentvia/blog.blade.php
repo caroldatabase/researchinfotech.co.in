@@ -4,6 +4,7 @@
 @section('header')
 <h1>Home</h1>
 @stop
+@section('content')
 @include('partials/menu')
 
 
@@ -23,4 +24,5 @@
 </section>
 <!--Page Header-->
 
+@stop
  

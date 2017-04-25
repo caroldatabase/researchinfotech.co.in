@@ -4,6 +4,7 @@
 
 @section('header') 
 @stop
+@section('content')
 @include('partials/menu')
  
 <!--Page Header-->
@@ -221,3 +222,4 @@
     </div>
   </section>
   <!--Pricings-->
+  @stop
