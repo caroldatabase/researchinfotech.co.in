@@ -97,8 +97,6 @@ Route::get('discloser',[
         ]);
 
 
-//Route::match(['post','get'],'/','HomeController@home');
-
  
 
 
