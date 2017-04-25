@@ -4,11 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
-use Auth; 
-use Modules\Admin\Models\User;
-use Modules\Admin\Models\Category;
-use Modules\Admin\Models\Product;
-use Modules\Admin\Models\Transaction;
+use Auth;  
 use View;
 use Html;
 use URL; 
@@ -22,11 +18,8 @@ use Session;
 use DB;
 use Route;
 use Crypt;
-use Redirect;
-use Cart;
-use Input;
-use App\Helpers\Helper as Helper;
-use Modules\Admin\Models\Settings;
+use Redirect; 
+use Input; 
 
 class HomeController extends Controller
 {
@@ -37,37 +30,7 @@ class HomeController extends Controller
      */
      
 
-      public function __construct(Request $request,Settings $setting) { 
-        
-        View::share('category_name',$request->segment(2));
-        View::share('total_item',Cart::content()->count());
-        View::share('sub_total',Cart::subtotal()); 
-        View::share('userData',$request->session()->get('current_user'));
-
-        $hot_products   = Product::orderBy('views','desc')->limit(3)->get();
-        $special_deals  = Product::orderBy('discount','desc')->limit(3)->get(); 
-        View::share('hot_products',$hot_products);
-        View::share('special_deals',$special_deals);  
-
-        $website_title      = $setting::where('field_key','website_title')->first();
-        $website_email      = $setting::where('field_key','website_email')->first();
-        $website_url        = $setting::where('field_key','website_url')->first();
-        $contact_number     = $setting::where('field_key','contact_number')->first();
-        $company_address    = $setting::where('field_key','company_address')->first();
-
-        $banner             = $setting::where('field_key','LIKE','%banner_image%')->get();
-
-
-         View::share('website_title',$website_title);
-         View::share('website_email',$website_email);
-         View::share('website_url',$website_url);
-         View::share('contact_number',$contact_number);
-         View::share('company_address',$company_address);
-         View::share('banner',$banner); 
- 
- 
-      // dd(Route::currentRouteName());
-
+      public function __construct(Request $request) {  
     }
 
     /**
