@@ -25,23 +25,6 @@
 <body class="pushmenu-push">
 <a href="#" class="scrollToTop"><i class="fa fa-angle-up"></i></a>
 
-<!--Loader-->
-<div class="loader">
-  <div class="spinner centered">
-  <div class="spinner-container container1">
-    <div class="circle1"></div>
-    <div class="circle2"></div>
-    <div class="circle3"></div>
-    <div class="circle4"></div>
-  </div>
-  <div class="spinner-container container2">
-    <div class="circle1"></div>
-    <div class="circle2"></div>
-    <div class="circle3"></div>
-    <div class="circle4"></div>
-  </div>
-</div>
-</div>
 
 
 
