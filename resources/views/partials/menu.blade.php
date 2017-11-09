@@ -1,4 +1,3 @@
-
 <header>
   <nav class="navbar navbar-default navbar-fixed white no-background bootsnav pushy">
     <div class="container"> 

@@ -1,12 +1,12 @@
-
 @extends('layouts.master')
 @section('title', 'HOME')
 
-@section('header') 
+@section('header')
+<h1>Home</h1>
 @stop
 @section('content')
-@include('partials/menu');
-
+@include('partials/menu')
+    <!--Slider--> 
  
 
 <!--Page Header-->
@@ -15,9 +15,9 @@
     <div class="row">
       <div class="col-md-12 page-content">
         <h1>Services</h1>
-        <p>We are recommending Intraday / BTST/ STBT /Positional tips in various Product(Packages).</p>
-        <div class="page_nav">
-      <span>You are here:</span> <a href="home">Home</a> <span><i class="fa fa-angle-double-right"></i>Services</span>
+          <p>We are recommending Intraday / BTST/ STBT /Positional tips in various Product(Packages).</p>
+       <div class="page_nav">
+      <span>You are here:</span> <a href="index.html">Home</a> <span><i class="fa fa-angle-double-right"></i>Services</span>
       </div>
       </div>
     </div>

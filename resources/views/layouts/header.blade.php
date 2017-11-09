@@ -22,8 +22,7 @@
 
 </head>
 
-<body class="pushmenu-push">
-<a href="#" class="scrollToTop"><i class="fa fa-angle-up"></i></a>
+<body class="pushmenu-push"> 
 
 
 
