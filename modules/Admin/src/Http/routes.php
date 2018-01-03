@@ -311,6 +311,23 @@
                 ]
         );
         
+        Route::bind('faq', function($value, $route) {
+            return App\Models\Faq::find($value);
+        });
+ 
+        Route::resource('admin/faq', 'Modules\Admin\Http\Controllers\FaqController', [
+            'names' => [
+                'edit' => 'faq.edit',
+                'show' => 'faq.show',
+                'destroy' => 'faq.destroy',
+                'update' => 'faq.update',
+                'store' => 'faq.store',
+                'index' => 'faq',
+                'create' => 'faq.create',
+            ]
+                ]
+        );
+        
         Route::match(['get','post'],'admin/profile', 'Modules\Admin\Http\Controllers\AdminController@profile'); 
             
   });
