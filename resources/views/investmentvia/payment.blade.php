@@ -37,18 +37,17 @@
                 <li><a href="#." >ICICI BANK</a>
                   <ul class="sub-items">
                     <li>
-                       ACCOUNT NAME	: BUCKS GAINER ADVISORY SERVICES </br>
-A/C NO	: 185905000330 </br>
-BRANCH NAME	MALAV PARISAR INDORE</br>
+                       ACCOUNT NAME	: Researchinfotech.co.in</br>
+A/C NO	: 18590XXXXXX </br>
+ INDORE</br>
 IFSC CODE	ICIC000330 </br>
                     </li>
                   </ul>
                 </li>
                 <li><a href="#.">AXIS BANK</a>
                   <ul class="sub-items">
-                    <li><p> ACCOUNT NAME	: BUCKS GAINER ADVISORY SERVICES </br>
-A/C NO	: 185905000330 </br>
-BRANCH NAME	MALAV PARISAR INDORE</br>
+                    <li><p> ACCOUNT NAME	:Researchinfotech </br>
+A/C NO	: 185905000330XXXXAV   INDORE</br>
 IFSC CODE	ICIC000330 </br></p>
                     </li>
                   </ul>
@@ -56,9 +55,9 @@ IFSC CODE	ICIC000330 </br></p>
                 <li><a href="#.">HDFC BANK</a>
                   <ul class="sub-items">
                     <li>
-                      <p>ACCOUNT NAME	: BUCKS GAINER ADVISORY SERVICES </br>
-A/C NO	: 185905000330 </br>
-BRANCH NAME	MALAV PARISAR INDORE</br>
+                      <p>ACCOUNT NAME	:Researchinfotech</br>
+A/C NO	: 18590XXXXX </br>
+ INDORE</br>
 IFSC CODE	ICIC000330 </br></p>
                     </li>
                   </ul>
@@ -66,9 +65,9 @@ IFSC CODE	ICIC000330 </br></p>
                 <li><a href="#.">INDUSIND BANK</a>
                   <ul class="sub-items">
                     <li>
-                      <p>ACCOUNT NAME	: BUCKS GAINER ADVISORY SERVICES </br>
-A/C NO	: 185905000330 </br>
-BRANCH NAME	MALAV PARISAR INDORE</br>
+                      <p>ACCOUNT NAME	: Researchinfotech </br>
+A/C NO	: 185905XXXX </br>
+ INDORE</br>
 IFSC CODE	ICIC000330 </br></p>
                     </li>
                   </ul>

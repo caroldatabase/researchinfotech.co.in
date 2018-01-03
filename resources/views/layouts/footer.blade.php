@@ -77,7 +77,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 text-center">
-        <p>Copyright &copy; 2017 <a href="#.">Investmentvia</a>. all rights reserved.</p>
+        <p>Copyright &copy; {{date('Y')}} <a href="#.">Research Infotech</a>. all rights reserved.</p>
       </div>
     </div>
   </div>
@@ -86,24 +86,47 @@
 
 
 
-<script src="{{ asset('storage/assets/js/jquery-2.2.3.js')}}"></script>
-<script src="{{ asset('storage/assets/js/bootstrap.min.js')}}"></script>
-<script src="{{ asset('storage/assets/js/bootsnav.js')}}"></script>
-<script src="{{ asset('storage/assets/js/jquery.appear.js')}}"></script>
-<script src="{{ asset('storage/assets/js/jquery-countTo.js')}}"></script>
-<script src="{{ asset('storage/assets/js/jquery.parallax-1.1.3.js')}}"></script>
-<script src="{{ asset('storage/assets/js/owl.carousel.min.js')}}"></script>
-<script src="{{ asset('storage/assets/js/jquery.cubeportfolio.min.js')}}"></script>
-<script src="{{ asset('storage/assets/js/jquery.matchHeight-min.js')}}"></script>
-<script src="{{ asset('storage/assets/js/jquery.themepunch.tools.min.js')}}"></script>
-<script src="{{ asset('storage/assets/js/jquery.themepunch.revolution.min.js')}}"></script>
-<script src="{{ asset('storage/assets/js/revolution.extension.layeranimation.min.js')}}"></script>
-<script src="{{ asset('storage/assets/js/revolution.extension.navigation.min.js')}}"></script>
-<script src="{{ asset('storage/assets/js/revolution.extension.parallax.min.js')}}"></script>
-<script src="{{ asset('storage/assets/js/revolution.extension.slideanims.min.js')}}"></script>
-<script src="{{ asset('storage/assets/js/revolution.extension.video.min.js')}}"></script>
-<script src="{{ asset('storage/assets/js/wow.min.js')}}"></script>
-<script src="{{ asset('storage/assets/js/functions.js')}}"></script>
+<script src="{{ asset('public/assets/js/jquery-2.2.3.js')}}"></script>
+<script src="{{ asset('public/assets/js/bootstrap.min.js')}}"></script>
+<script src="{{ asset('public/assets/js/bootsnav.js')}}"></script>
+<script src="{{ asset('public/assets/js/jquery.appear.js')}}"></script>
+<script src="{{ asset('public/assets/js/jquery-countTo.js')}}"></script>
+<script src="{{ asset('public/assets/js/jquery.parallax-1.1.3.js')}}"></script>
+<script src="{{ asset('public/assets/js/owl.carousel.min.js')}}"></script>
+<script src="{{ asset('public/assets/js/jquery.cubeportfolio.min.js')}}"></script>
+<script src="{{ asset('public/assets/js/jquery.matchHeight-min.js')}}"></script>
+<script src="{{ asset('public/assets/js/jquery.themepunch.tools.min.js')}}"></script>
+<script src="{{ asset('public/assets/js/jquery.themepunch.revolution.min.js')}}"></script>
+<script src="{{ asset('public/assets/js/revolution.extension.layeranimation.min.js')}}"></script>
+<script src="{{ asset('public/assets/js/revolution.extension.navigation.min.js')}}"></script>
+<script src="{{ asset('public/assets/js/revolution.extension.parallax.min.js')}}"></script>
+<script src="{{ asset('public/assets/js/revolution.extension.slideanims.min.js')}}"></script>
+<script src="{{ asset('public/assets/js/revolution.extension.video.min.js')}}"></script>
+<script src="{{ asset('public/assets/js/wow.min.js')}}"></script>
+<script src="{{ asset('public/assets/js/functions.js')}}"></script>
+
+<script>
+  $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:3,
+            nav:false
+        },
+        1000:{
+            items:5,
+            nav:true,
+            loop:false
+        }
+    }
+})
+</script>
 
 </body>
 </html>
