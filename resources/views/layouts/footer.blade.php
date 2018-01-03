@@ -40,7 +40,7 @@
         <a href="index.html" class="footer_logo bottom25">
 
         <img src="{{ asset('storage/assets/images/logo-white.png')}}" alt="Xwin"></a>
-        <p>InvestmentVia Advisory Service is a team of expert analyst with vast experience in commodity market research. We provide recommendations commodities including bullion, agri and metals traded in MCX and NCDEX.</p>
+        <p>Welcome to Research Infotech, We have been known for serving our customers with atmost care and dedication. Our motto has been always aligned with "Delivering Quality Services" and "Customer Satisfaction".</p>
         <ul class="social_icon top25">
           <li><a href="#." class="facebook"><i class="fa fa-facebook"></i></a></li>
           <li><a href="#." class="twitter"><i class="fa fa-twitter"></i></a></li>
@@ -66,8 +66,8 @@
       </div>
       <div class="col-md-4 col-sm-4 footer_panel bottom25">
         <h3 class="heading bottom25">Keep in Touch <span class="divider-left"></span></h3>
-        <p class=" address"><i class="fa fa-map-marker" aria-hidden="true"></i>InvestmentVia Advisory Service, Indore , India</p>
-        <p class=" address"><i class="fa fa-phone" aria-hidden="true"></i>+91-9893000150</p>
+        <p class=" address"><i class="fa fa-map-marker" aria-hidden="true"></i>Research Infotech Advisory Service, Indore , India</p>
+        <p class=" address"><i class="fa fa-phone" aria-hidden="true"></i>+91-8982890444</p>
          <img src="{{ asset('storage/assets/images/footer-map.png')}}" class="img-responsive">
       </div>
     </div>
