@@ -54,7 +54,7 @@
         </a> 
         <ul class="treeview-menu">
           <li class="{{ (isset($page_action) && $page_action=='Create Pricing')?"active":'' }}" ><a href="{{ route('pricing.create')}}"><i class="fa fa-user-plus"></i> Create Pricing</a></li>
-          <li class="{{ (isset($page_action) && $page_action=='View Pricing')?"active":'' }}"><a href="{{ route('pricing')}}"><i class="fa  fa-list"></i> View Pricing</a></li>
+          <li class="{{ (isset($page_action) && $page_action=='View Pricing')?"active":'' }}"><a href="{{ url('admin/pricing')}}"><i class="fa  fa-list"></i> View Pricing</a></li>
         </ul>
       </li>  
       
