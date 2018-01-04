@@ -61,7 +61,7 @@
                   <div class="icon">
                     <i class="ion ion-person-add"></i>
                   </div>
-                  <a href="{{route('pricing')}}" class="small-box-footer"><i class="fa fa-arrow-circle-right"></i></a>
+                  <a href="{{url('admin/pricing')}}" class="small-box-footer"><i class="fa fa-arrow-circle-right"></i></a>
                 </div>
               </div><!-- ./col -->
 
@@ -75,7 +75,7 @@
                   <div class="icon">
                     <i class="ion ion-person-add"></i>
                   </div>
-                  <a href="{{route('service')}}" class="small-box-footer"><i class="fa fa-arrow-circle-right"></i></a>
+                  <a href="{{url('admin/service')}}" class="small-box-footer"><i class="fa fa-arrow-circle-right"></i></a>
                 </div>
               </div><!-- ./col -->
 
