@@ -106,7 +106,7 @@
 <script src="{{ asset('public/assets/js/functions.js')}}"></script>
 
 <script>
-  $('.owl-carousel').owlCarousel({
+  $('.owl-carousel2').owlCarousel({
     loop:true,
     margin:10,
     responsiveClass:true,
