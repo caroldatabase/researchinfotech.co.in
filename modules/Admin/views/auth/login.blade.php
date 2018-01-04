@@ -38,12 +38,7 @@
 
           {!! Form::model($user, ['url' => ['admin/login'],'class'=>'form-horizontal','files' => true]) !!}
             @include('packages::auth.form')
-          {!! Form::close() !!}
-
-        
-        <a href="{{ url('admin/signUp') }}">Create an account!</a>
- 
-        <br> 
+          {!! Form::close() !!} 
 
       </div><!-- /.login-box-body -->
     </div><!-- /.login-box -->
