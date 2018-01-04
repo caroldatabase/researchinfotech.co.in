@@ -1,137 +1,112 @@
+
+<div class="col-md-10">
+
+    
+    <div class="form-group{{ $errors->first('title', ' has-error') }}">
+        <label class="col-lg-4 col-md-4 control-label"> Service Name <span class="error">*</span></label>
+        <div class="col-lg-8 col-md-8"> 
+            {!! Form::text('title',null, ['class' => 'form-control form-cascade-control input-small'])  !!} 
+            <span class="label label-danger">{{ $errors->first('title', ':message') }}</span>
+        </div>
+    </div>  
+    
+    <div class="form-group{{ $errors->first('monthly_price', ' has-error') }}">
+        <label class="col-lg-4 col-md-4 control-label"> Monthly Price <span class="error">*</span></label>
+        <div class="col-lg-8 col-md-8"> 
+            {!! Form::number('monthly_price',null, ['class' => 'form-control form-cascade-control input-small','min'=>0])  !!} 
+            <span class="label label-danger">{{ $errors->first('monthly_price', ':message') }}</span>
+        </div>
+    </div>  
+    
+     <div class="form-group{{ $errors->first('quarterly_price', ' has-error') }}">
+        <label class="col-lg-4 col-md-4 control-label"> Quaterly Price <span class="error">*</span></label>
+        <div class="col-lg-8 col-md-8"> 
+            {!! Form::number('quarterly_price',null, ['class' => 'form-control form-cascade-control input-small','min'=>0])  !!} 
+            <span class="label label-danger">{{ $errors->first('quarterly_price', ':message') }}</span>
+        </div>
+    </div>  
+    
+    <div class="form-group{{ $errors->first('half_yearly_price', ' has-error') }}">
+        <label class="col-lg-4 col-md-4 control-label"> Halfyearly Price <span class="error">*</span></label>
+        <div class="col-lg-8 col-md-8"> 
+            {!! Form::number('half_yearly_price',null, ['class' => 'form-control form-cascade-control input-small','min'=>0])  !!} 
+            <span class="label label-danger">{{ $errors->first('half_yearly_pric', ':message') }}</span>
+        </div>
+    </div>  
+     <div class="form-group{{ $errors->first('yearly_price', ' has-error') }}">
+        <label class="col-lg-4 col-md-4 control-label"> Yearly Price <span class="error">*</span></label>
+        <div class="col-lg-8 col-md-8"> 
+            {!! Form::number('yearly_price',null, ['class' => 'form-control form-cascade-control input-small','min'=>0])  !!} 
+            <span class="label label-danger">{{ $errors->first('yearly_price', ':message') }}</span>
+        </div>
+    </div>  
+  
+  
+
+
+      <div class="form-group{{ $errors->first('tax', ' has-error') }}">
+        <label class="col-lg-4 col-md-4 control-label"> GST tax (%)</label>
+        <div class="col-lg-8 col-md-8"> 
+            {!! Form::number('tax',0, ['class' => 'form-control form-cascade-control input-small','min'=>0])  !!} 
+            <span class="label label-danger">{{ $errors->first('tax', ':message') }}</span>
+        </div>
+    </div> 
+
+    <div class="form-group{{ $errors->first('description', ' has-error') }}">
+        <label class="col-lg-4 col-md-4 control-label">Service Description</label>
+        <div class="col-lg-8 col-md-8"> 
+            {!! Form::textarea('description',null, ['class' => 'form-control ckeditor form-cascade-control input-small'])  !!}
+            <span class="label label-danger">{{ $errors->first('description', ':message') }}</span>
+            @if(Session::has('flash_alert_notice')) 
+            <span class="label label-danger">
+
+                {{ Session::get('flash_alert_notice') }} 
+
+            </span>@endif
+        </div>
+    </div> 
+
  
+     <div class="form-group{{ $errors->first('photo', ' has-error') }}">
+        <label class="col-lg-4 col-md-4 control-label">Service Image</label>
+        <div class="col-lg-8 col-md-8">  
 
-<div class="form-body">
-    <div class="alert alert-danger display-hide">
-        <button class="close" data-close="alert"></button> Please fill the required field! </div>
-  <!--   <div class="alert alert-success display-hide">
-        <button class="close" data-close="alert"></button> Your form validation is successful! </div>
--->
+             {!! Form::file('photo',null,['class' => 'form-control form-cascade-control input-small'])  !!}
+             <br>
+             @if(!empty($product->photo))
+                 <img src="{!! Url::to('storage/pricing/'.$product->photo) !!}" width="100px">
+                 <input type="hidden" name="photo" value="{!! $product->photo !!}">
+             @endif                                       
+            <span class="label label-danger">{{ $errors->first('photo', ':message') }}</span>
+            @if(Session::has('flash_alert_notice')) 
+            <span class="label label-danger">
 
-      
-            <div class="form-group {{ $errors->first('title', ' has-error') }}">
-                <label class="control-label col-md-3">Select Title
-                    <span class="required" aria-required="true">  </span>
-                </label>
-                <div class="col-md-4"> 
-                <select name="title" class="form-control">
-                   <option value="Mr." {{ (isset($contact->title) && $contact->title=="Mr.")?"selected":'' }}> 
-                        Mr. 
-                    </option>         
-                    <option value="Mrs." {{ (isset($contact->title) && $contact->title=="Mrs.")?"selected":'' }} > 
-                        Mrs. 
-                    </option>
-                     <option value="Miss" {{ (isset($contact->title) && $contact->title=="Miss")?"selected":'' }} > 
-                        Miss 
-                    </option>
-                </select>
-                    <span class="help-block"></span>
-                </div>
-            </div>
+                {{ Session::get('flash_alert_notice') }} 
 
-
-
-    <div class="form-group {{ $errors->first('firstName', ' has-error') }}">
-        <label class="control-label col-md-3">First Name <span class="required"> * </span></label>
-        <div class="col-md-4"> 
-            {!! Form::text('firstName',null, ['class' => 'form-control','data-required'=>1])  !!} 
-            
-            <span class="help-block">{{ $errors->first('firstName', ':message') }}</span>
+            </span>@endif
         </div>
     </div> 
-
-    <div class="form-group {{ $errors->first('lastName', ' has-error') }}">
-        <label class="control-label col-md-3">Last Name </label>
-        <div class="col-md-4"> 
-            {!! Form::text('lastName',null, ['class' => 'form-control','data-required'=>1])  !!} 
-            
-            <span class="help-block">{{ $errors->first('lastName', ':message') }}</span>
+    
+    
+      <div class="form-group{{ $errors->first('features', ' has-error') }}">
+        <label class="col-lg-4 col-md-4 control-label"> Feature </label>
+        <div class="col-lg-8 col-md-8"> 
+            {!! Form::text('features',null, ['class' => 'form-control form-cascade-control input-small'])  !!} 
+            <span class="label label-danger">{{ $errors->first('features', ':message') }}</span>
         </div>
     </div> 
-
-     <div class="form-group {{ $errors->first('position', ' has-error') }}">
-        <label class="control-label col-md-3">Position </label>
-        <div class="col-md-4"> 
-            {!! Form::text('position',null, ['class' => 'form-control','data-required'=>1])  !!} 
-            
-            <span class="help-block">{{ $errors->first('position', ':message') }}</span>
-        </div>
-    </div> 
-
-    <div class="form-group {{ $errors->first('phone', ' has-error') }}">
-        <label class="control-label col-md-3">Phone </label>
-        <div class="col-md-4"> 
-            {!! Form::text('phone',null, ['class' => 'form-control','data-required'=>1,'min'=>10]) !!} 
-            <span class="help-block">{{ $errors->first('phone', ':message') }}</span>
-        </div>
-    </div> 
-
-
-    <div class="form-group {{ $errors->first('email', ' has-error') }}  @if(session('field_errors')) {{ 'has-group' }} @endif">
-        <label class="col-md-3 control-label">Email 
-            <span class="required"> * </span>
-        </label>
-        <div class="col-md-4"> 
-                
-         {!! Form::email('email',null, ['class' => 'form-control','data-required'=>1])  !!} 
-        <span class="help-block" style="color:red">{{ $errors->first('email', ':message') }} @if(session('field_errors')) {{ 'The email has already been taken.' }} @endif</span>
-
-        </div> 
-    </div>
 
      
+    
+    <div class="form-group">
+        <label class="col-lg-4 col-md-4 control-label"></label>
+        <div class="col-lg-8 col-md-8">
 
-     <div class="form-group {{ $errors->first('categoryName', ' has-error') }}">
-        <label class="control-label col-md-3">Select Category
-            <span class="required">  </span>
-        </label>
-        <div class="col-md-4"> 
-        <div class="portlet-body">
-             <select class="mt-multiselect btn btn-default" multiple="multiple" data-label="right" data-select-all="true" data-width="100%"  name="categoryName[]" data-action-onchange="true">
-                @foreach($categories as $key=>$value)
-                <option value="{{$value->id}}" @if(isset($category_id) && (in_array($value->id,$category_id))) {{ 'selected="selected"'}}  @endif
+            {!! Form::submit(' Save ', ['class'=>'btn  btn-primary text-white','id'=>'saveBtn']) !!}
 
-                @if($value->id==old('categoryName'))  {{ 'selected="selected"'}} @endif
-                  >
-
-                {{ $value->category_name }}
-                
-                </option>
-                @endforeach
-            </select>
-            </div>
-            <span class="help-block">{{ $errors->first('categoryName', ':message') }}</span>
+            <a href="{{route('product')}}">
+            {!! Form::button('Back', ['class'=>'btn btn-warning text-white']) !!} </a>
         </div>
-    </div> 
- 
-
-
-
-<div class="form-group {{ $errors->first('address', ' has-error') }}">
-    <label class="control-label col-md-3">Address<span class="required"> </span></label>
-    <div class="col-md-4"> 
-        {!! Form::textarea('address',null, ['class' => 'form-control','data-required'=>1,'rows'=>3,'cols'=>5])  !!} 
-        
-        <span class="help-block">{{ $errors->first('address', ':message') }}</span>
     </div>
+
 </div> 
-    
-    
-</div>
-<div class="form-actions">
-    <div class="row">
-        <div class="col-md-offset-3 col-md-9">
-          {!! Form::submit(' Save ', ['class'=>'btn  btn-primary text-white','id'=>'saveBtn']) !!}
-
-
-           <a href="{{route('contact')}}">
-{!! Form::button('Back', ['class'=>'btn btn-warning text-white']) !!} </a>
-        </div>
-    </div>
-</div>
-
-
-<style type="text/css">
-    ul.multiselect-container.dropdown-menu li {
-    margin-left: 25px !important;
-}
-</style>

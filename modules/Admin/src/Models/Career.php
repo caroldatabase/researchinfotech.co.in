@@ -1,13 +1,10 @@
 <?php
-
 namespace Modules\Admin\Models;
 
-use Illuminate\Database\Eloquent\Model as Eloquent; 
-use Modules\Admin\Models\Category;
-use Illuminate\Foundation\Http\FormRequest;
-use Response;
+use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
-class Product extends Eloquent {
+class Career extends Model {
 
    
     /**
@@ -15,7 +12,7 @@ class Product extends Eloquent {
      *
      * @var string
      */
-    protected $table = 'services';
+    protected $table = 'careers';
     /**
      * The attributes that are mass assignable.
      *
@@ -32,15 +29,20 @@ class Product extends Eloquent {
      * The attributes that are mass assignable.
      *
      * @var array
-     */
-    protected $fillable = ['title','description','price','features','tax','images','monthly_price','yearly_price','half_yearly_price','quarterly_price'];  // All field of user table here    
-
-
     /**
      * The attributes that should be hidden for arrays.
      *
      * @var array
      */
+
+     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['first_name','last_name','email','mobile','resume'];  // All field of user table here    
     
- 
+    
+    
+  
 }

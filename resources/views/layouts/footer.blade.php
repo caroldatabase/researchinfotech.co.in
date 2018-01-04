@@ -8,22 +8,22 @@
     </div>
     <div class="row">
       <div class="col-md-2">
-        <img src="{{ asset('storage/assets/images/nse.jpg')}}">
+          <a href="https://www.nseindia.com" target="_blank">  <img src="{{ asset('storage/assets/images/nse.jpg')}}"> </a>
       </div>
       <div class="col-md-2">
-        <img src="{{ asset('storage/assets/images/marketwatch.jpg')}}">
+          <a href="https://www.marketwatch.com" target="_blank">  <img src="{{ asset('storage/assets/images/marketwatch.jpg')}}"></a>
       </div>
       <div class="col-md-2">
-        <img src="{{ asset('storage/assets/images/investing.jpg')}}">
+          <a href="https://www.investing.com" target="_blank">  <img src="{{ asset('storage/assets/images/investing.jpg')}}"></a>
       </div>
       <div class="col-md-2">
-        <img src="{{ asset('storage/assets/images/moneycontrol.jpg')}}">
+          <a href="https://www.www.moneycontrol.com" target="_blank"> <img src="{{ asset('storage/assets/images/moneycontrol.jpg')}}"></a>
       </div>
       <div class="col-md-2">
-        <img src="{{ asset('storage/assets/images/mcx.jpg')}}">
+          <a href="https://www.mcxcontrol.com" target="_blank">  <img src="{{ asset('storage/assets/images/mcx.jpg')}}"></a>
       </div>
       <div class="col-md-2">
-        <img src="{{ asset('storage/assets/images/cnbc.jpg')}}">
+          <a href="https://www.cnbc.com" target="_blank"> <img src="{{ asset('storage/assets/images/cnbc.jpg')}}"> </a>
       </div>
     </div>
   </div>
@@ -104,29 +104,7 @@
 <script src="{{ asset('public/assets/js/revolution.extension.video.min.js')}}"></script>
 <script src="{{ asset('public/assets/js/wow.min.js')}}"></script>
 <script src="{{ asset('public/assets/js/functions.js')}}"></script>
-
-<script>
-  $('.owl-carousel2').owlCarousel({
-    loop:true,
-    margin:10,
-    responsiveClass:true,
-    responsive:{
-        0:{
-            items:1,
-            nav:true
-        },
-        600:{
-            items:3,
-            nav:false
-        },
-        1000:{
-            items:5,
-            nav:true,
-            loop:false
-        }
-    }
-})
-</script>
+ 
 
 </body>
 </html>

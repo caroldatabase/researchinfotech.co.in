@@ -21,16 +21,18 @@ class CategoryRequest  extends Request {
                 case 'POST': {
                         return [
                             'title' => 'required|unique:categories,title',
-                            'description' => 'required',
+                           'description' => 'required',
+                             'image'             => 'required|mimes:jpeg,bmp,png,gif',
                         ];
                     }
                 case 'PUT':
                 case 'PATCH': {
-                    if ( $category = $this->categorys) {
+                    if ( $category = $this->category) {
 
                         return [
-                             'title' => 'required|unique:categories,title',
-                            'description' => 'required', 
+                            'title' => 'required|unique:categories,title',
+                            'description' => 'required',
+                            'image'             => 'required|mimes:jpeg,bmp,png,gif'
                         ];
                     }
                 }

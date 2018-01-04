@@ -115,14 +115,12 @@ class SettingsController extends Controller {
     {
         
        foreach ($request->except('_token') as $key => $value) {
-            
+             
             $setting = Settings::firstOrCreate(['field_key' => $key]);
 
             $setting->field_key     =   $key;
             $setting->field_value   =   $value;
-            $setting->save();  
-
-           
+            $setting->save();   
             if ($request->file($key)) {  
 
                 $photo = $request->file($key);

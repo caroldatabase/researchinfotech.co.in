@@ -55,16 +55,20 @@ class AdminController extends Controller {
         $page_title     = "Dashboard";
         $page_action    = "Veiw";
         $user           = User::count();
-        $product        = Product::count();
-        $category       = Category::where('parent_id',0)->count();
+        $pricing        = Product::count();
+        $service       = Category::count();
+         
+        $kyc            =    \Modules\Admin\Models\Kyc::count();
+        $contact        = \Modules\Admin\Models\Contact::count();
+        $freeTrail       = \Modules\Admin\Models\FreeTrial::count();
+        $resume      = \Modules\Admin\Models\Career::count();
         $order          =  Transaction::all()->count();  
 
         $today_order    =  Transaction::whereDate('created_at', '=', date('Y-m-d'))->get()->count(); 
-
         
 
         $viewPage       = "Admin";
-        return view('packages::dashboard.index',compact('today_order','order','category','product','user','page_title','page_action','viewPage'));
+        return view('packages::dashboard.index',compact('kyc','contact','freeTrail','resume','today_order','order','service','pricing','user','page_title','page_action','viewPage'));
     }
 
    public function profile(Request $request,Admin $users)

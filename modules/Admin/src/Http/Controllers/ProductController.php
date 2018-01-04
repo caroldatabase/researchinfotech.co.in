@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Modules\Admin\Http\Requests\ProductRequest;
 use Modules\Admin\Models\User;
 use Modules\Admin\Models\Category;
-use Modules\Admin\Models\Product;
+use Modules\Admin\Models\Product as Product;
 use Input;
 use Validator;
 use Auth;
@@ -56,22 +56,28 @@ class ProductController extends Controller {
 
     public function index(Product $product, Request $request) 
     { 
-        
-       $page_title = 'Product';
-        $page_action = 'View Product'; 
-        if ($request->ajax()) {
-            $id = $request->get('id'); 
-            $category = Product::find($id); 
-            $category->status = $s;
-            $category->save();
-            echo $s;
-            exit();
-        }
-         
-        $products = $product->with('category')->orderBy('id','desc')->Paginate($this->record_per_page);
- 
+       
+       $page_title = 'Pricing';
+        $page_action = 'View Pricing'; 
+       // Search by name ,email and group
+        $search = Input::get('search');
+        $status = Input::get('status');
+        if ((isset($search) && !empty($search)) OR  (isset($status) && !empty($status)) ) {
 
-        return view('packages::product.index', compact('products', 'page_title', 'page_action','helper'));
+            $search = isset($search) ? Input::get('search') : '';
+               
+            $products = Product::where(function($query) use($search,$status) {
+                        if (!empty($search)) {
+                            $query->Where('title', 'LIKE', "%$search%");
+                        }
+                        
+                    })->Paginate($this->record_per_page);
+        } else {
+            $products = Product::orderBy('id','desc')->Paginate(10);
+            
+        } 
+         
+        return view('packages::pricing.index', compact('products', 'page_title', 'page_action','helper'));
    
     }
 
@@ -81,19 +87,11 @@ class ProductController extends Controller {
 
     public function create(Product $product) 
     {
-        $page_title = 'Product';
-        $page_action = 'Create Product';
+        $page_title = 'Pricing';
+        $page_action = 'Create Pricing';
         $sub_category_name  = Product::all();
-        $category   = Category::all();
-        $cat = [];
-        foreach ($category as $key => $value) {
-             $cat[$value->category_name][$value->id] =  $value->sub_category_name;
-        } 
-
-         $categories =  Category::attr(['name' => 'product_category','class'=>'form-control form-cascade-control input-small'])
-                        ->selected([1])
-                        ->renderAsDropdown(); 
-        return view('packages::product.create', compact('categories','cat','category','product','sub_category_name', 'page_title', 'page_action'));
+        
+        return view('packages::pricing.create', compact('product', 'page_title', 'page_action'));
      }
 
     /*
@@ -102,26 +100,17 @@ class ProductController extends Controller {
 
     public function store(ProductRequest $request, Product $product) 
     {
-        if ($request->file('image')) { 
-            $photo = $request->file('image');
-            $destinationPath = storage_path('uploads/products');
+        $product->fill(Input::except('photo'));  
+        if ($request->file('photo')) { 
+            $photo = $request->file('photo');
+            $destinationPath = storage_path('pricing');
             $photo->move($destinationPath, time().$photo->getClientOriginalName());
             $photo_name = time().$photo->getClientOriginalName();
-            $request->merge(['photo'=>$photo_name]);
-           
-            $product->product_title      =   $request->get('product_title');
-            $product->product_category   =   $request->get('product_category');
-            $product->description        =   $request->get('description');
-            $product->price              =   $request->get('price');
-            $product->discount              =   $request->get('discount');
-            $product->photo              =   $photo_name;
- 
-            $product->save(); 
-           
-        } 
-       
+           $product->photo = $photo_name; 
+        }  
+        $product->save(); 
         return Redirect::to(route('product'))
-                            ->with('flash_alert_notice', 'New Product was successfully created !');
+                            ->with('flash_alert_notice', 'New Pricing was successfully added !');
     }
     /*
      * Edit Group method
@@ -131,51 +120,27 @@ class ProductController extends Controller {
 
     public function edit(Product $product) {
 
-        $page_title = 'Product';
-        $page_action = 'Show Product'; 
-        $category   = Category::all();  
-        $cat = [];
-        foreach ($category as $key => $value) {
-             $cat[$value->category_name][$value->id] =  $value->sub_category_name;
-        } 
-        
-        $categories =  Category::attr(['name' => 'product_category','class'=>'form-control form-cascade-control input-small'])
-                        ->selected(['id'=>$product->product_category])
-                        ->renderAsDropdown();
+        $page_title = 'Pricing';
+        $page_action = 'Edit Pricing';  
 
-        return view('packages::product.edit', compact( 'categories','product', 'page_title', 'page_action'));
+        return view('packages::pricing.edit', compact('product', 'page_title', 'page_action'));
     }
 
     public function update(ProductRequest $request, Product $product) 
     {
-           
-         if ($request->file('image')) { 
-
-            $photo = $request->file('image');
-            //$destinationPath = base_path() . '/public/uploads/products/';
-            $destinationPath = storage_path('uploads/products');
+         $product->fill(Input::except('photo')); 
+        if ($request->file('photo')) { 
+            $photo = $request->file('photo');
+            $destinationPath = storage_path('pricing/');
             $photo->move($destinationPath, time().$photo->getClientOriginalName());
-            $photo_name = time().$photo->getClientOriginalName();
-            $request->merge(['photo'=>$photo_name]);
-           
-            $product->product_title      =   $request->get('product_title');
-            $product->product_category   =   $request->get('product_category');
-            $product->description        =   $request->get('description');
-            $product->photo              =   $photo_name;
-            $product->price              =   $request->get('price');
-            $product->discount              =   $request->get('discount');
-            $product->save(); 
-        }else{
-            $product->product_title      =   $request->get('product_title');
-            $product->product_category   =   $request->get('product_category');
-            $product->description        =   $request->get('description');
-            $product->photo              =   $request->get('photo');
-            $product->price              =   $request->get('price');
-            $product->discount              =   $request->get('discount');
-            $product->save(); 
-        }
+            $photo_name = time().$photo->getClientOriginalName(); 
+           $product->photo = $photo_name;
+        } 
+        
+        $product->save(); 
+        
         return Redirect::to(route('product'))
-                        ->with('flash_alert_notice', 'Product was  successfully updated !');
+                        ->with('flash_alert_notice', 'Pricing was  successfully updated !');
     }
     /*
      *Delete User

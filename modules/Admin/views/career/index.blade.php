@@ -21,7 +21,7 @@
                                     <div class="box-header">
                                         <div class="table-toolbar">
                                         <div class="row">
-                                            <form action="{{route('contact')}}" method="get" id="filter_data">
+                                            <form action="{{route('career')}}" method="get" id="filter_data">
                                              
                                             <div class="col-md-3">
                                                 <input value="{{ (isset($_REQUEST['search']))?$_REQUEST['search']:''}}" placeholder="Search " type="text" name="search" id="search" class="form-control" >
@@ -32,7 +32,7 @@
                                            
                                         </form>
                                          <div class="col-md-2">
-                                             <a href="{{ route('contact') }}">   <input type="submit" value="Reset" class="btn btn-default form-control"> </a>
+                                             <a href="{{ route('career') }}">   <input type="submit" value="Reset" class="btn btn-default form-control"> </a>
                                         </div>
                                        
                                         </div>
@@ -56,32 +56,30 @@
         <table class="table table-striped table-hover table-bordered" id="contact">
             <thead>
                 <tr>
-                 <th>   Sno </th> 
-                 <th> Title </th>
+                 <th>   Sno </th>  
                     <th> Name </th>
                     <th> Email </th> 
                     <th> Phone </th>  
-                    <th> Comments </th>  
-                    <th>Created date</th> 
+                    <th> Resume </th>  
+                    <th>Post date</th> 
                     <th>Action</th> 
                 </tr>
             </thead>
             <tbody>
-            @foreach($contacts as $key => $result)
+            @foreach($career as $key => $result)
                 <tr>
-                 <th> {{++$key}} </th>
-                 <td> {{$result->title }} </td>
-                    <td> {{$result->firstName.' '.$result->lastName}} </td>
+                 <th> {{++$key}} </th> 
+                    <td> {{$result->first_name.' '.$result->last_name}} </td>
                      <td> {{$result->email}} </td>
-                     <td> {{$result->phone}} </td> 
-                     <td> {{$result->comments}} </td> 
+                     <td> {{$result->mobile}} </td> 
+                     <td> <a href="{{ url('storage/resume/'.$result->resume) }}"> Download Resume</td> 
                          <td>
                             {!! Carbon\Carbon::parse($result->created_at)->format('Y-m-d'); !!}
                         </td>
                         
                         <td> 
                             
-                            {!! Form::open(array('class' => 'form-inline pull-left deletion-form', 'method' => 'DELETE',  'id'=>'deleteForm_'.$result->id, 'route' => array('contact.destroy', $result->id))) !!}
+                            {!! Form::open(array('class' => 'form-inline pull-left deletion-form', 'method' => 'DELETE',  'id'=>'deleteForm_'.$result->id, 'route' => array('career.destroy', $result->id))) !!}
                             <button class='delbtn btn btn-danger btn-xs' type="submit" name="remove_levels" value="delete" id="{{$result->id}}"><i class="fa fa-fw fa-trash" title="Delete"></i></button>
                             
                              {!! Form::close() !!}
@@ -95,7 +93,7 @@
         </table>
        
 
-         <div class="center" align="center">  {!! $contacts->appends(['search' => isset($_GET['search'])?$_GET['search']:''])->render() !!}</div>
+         <div class="center" align="center">  {!! $career->appends(['search' => isset($_GET['search'])?$_GET['search']:''])->render() !!}</div>
     </div>
                                    
                                 </div>

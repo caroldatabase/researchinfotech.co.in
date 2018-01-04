@@ -30,16 +30,17 @@
         </div>
     </div>  
  
-     <div class="form-group{{ $errors->first('images', ' has-error') }}">
-        <label class="col-lg-2 col-md-2 control-label">Image </label>
+     <div class="form-group{{ $errors->first('image', ' has-error') }}">
+        <label class="col-lg-2 col-md-2 control-label">Service Image </label>
         <div class="col-lg-8 col-md-8">  
 
-             {!! Form::file('images',null,['class' => 'form-control form-cascade-control input-small'])  !!}
+             {!! Form::file('image',null,['class' => 'form-control form-cascade-control input-small'])  !!}
              <br>
-              @if(isset($page->images))
-                 <img src="{!! Url::to('storage/assets/images/'.$page->images) !!}" width="100px" height="100px">
+              @if(isset($category->category_image))
+              
+                 <img src="{!! Url::to('storage/services/'.$category->category_image) !!}" width="100px" height="100px">
               @endif                                   
-            <span class="label label-danger">{{ $errors->first('images', ':message') }}</span>
+            <span class="label label-danger">{{ $errors->first('image', ':message') }}</span>
             @if(Session::has('flash_alert_notice')) 
             <span class="label label-danger">
 
@@ -48,7 +49,15 @@
             </span>@endif
         </div>
     </div>  
-      
+            
+            
+       <div class="form-group{{ $errors->first('feature', ' has-error') }}">
+        <label class="col-lg-2 col-md-2 control-label"> Service feature <span class="error">*</span></label>
+        <div class="col-lg-8 col-md-8"> 
+            {!! Form::text('feature',null, ['class' => 'form-control form-cascade-control input-small'])  !!} 
+            <span class="label label-danger">{{ $errors->first('feature', ':message') }}</span> 
+        </div>
+    </div> 
     
     <div class="form-group">
         <label class="col-lg-2 col-md-2 control-label"></label>

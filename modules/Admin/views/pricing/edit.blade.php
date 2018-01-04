@@ -1,59 +1,36 @@
 
-@extends('packages::layouts.master')
-  @section('title', 'Dashboard')
-    @section('header')
-    <h1>Dashboard</h1>
-    @stop
+
+@extends('packages::layouts.master') 
     @section('content') 
-      @include('packages::partials.navigation')
+      @include('packages::partials.main-header')
       <!-- Left side column. contains the logo and sidebar -->
-      @include('packages::partials.sidebar')
-                             <!-- END SIDEBAR -->
-            <!-- BEGIN CONTENT -->
-             <div class="page-content-wrapper">
-                <!-- BEGIN CONTENT BODY -->
-                <div class="page-content">
-                    <!-- BEGIN PAGE HEAD-->
-                    
-                    <!-- END PAGE HEAD-->
-                    <!-- BEGIN PAGE BREADCRUMB -->
-                  @include('packages::partials.breadcrumb')
+      @include('packages::partials.main-sidebar')
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper"> 
+       @include('packages::partials.breadcrumb')
+        <!-- Main content -->
+          <section class="content">
+            <!-- Small boxes (Stat box) -->
+              <div class="row">
+                  <div class="col-md-12">
+                       <div class="panel panel-cascade">
+                          <div class="panel-body ">
+                              <div class="row">  
 
-                    <!-- END PAGE BREADCRUMB -->
-                    <!-- BEGIN PAGE BASE CONTENT -->
-                      <div class="row">
-                        <div class="col-md-12">
-                            <!-- BEGIN VALIDATION STATES-->
-                            <div class="portlet light portlet-fit portlet-form bordered">
-                                <div class="portlet-title">
-                                    <div class="caption">
-                                        <i class="icon-settings font-red"></i>
-                                        <span class="caption-subject font-dark sbold uppercase">Edit Contact</span>
-                                    </div>
-                                    
-                                </div>
-                                <div class="portlet-body">
-                                    <!-- BEGIN FORM--> 
-
-
-                                {!! Form::model($contact, ['method' => 'PATCH', 'route' => ['contact.update', $contact->id],'class'=>'form-horizontal user-form','id'=>'form_sample_3','enctype'=>'multipart/form-data']) !!}
-                                    @include('packages::contact.form', compact('contact'))
-                                {!! Form::close() !!} 
-                                    <!-- END FORM-->
-                                </div>
-                                <!-- END VALIDATION STATES-->
-                            </div>
-                        </div>
+                                {!! Form::model($product, ['method' => 'PATCH', 'route' => ['product.update', $product->id],'class'=>'form-horizontal','id'=>'users_form','files' => true]) !!}
+                                    @include('packages::pricing.form', compact('product'))
+                                {!! Form::close() !!}
+                              </div>
+                          </div>
                     </div>
-                    <!-- END PAGE BASE CONTENT -->
-                </div>
-                <!-- END CONTENT BODY -->
-            </div>
-            
-            
-            <!-- END QUICK SIDEBAR -->
-        </div>
-        
-
-        
+                </div>            
+              </div>  
+            <!-- Main row --> 
+          </section><!-- /.content -->
+      </div> 
 @stop
+
+
+
+
+

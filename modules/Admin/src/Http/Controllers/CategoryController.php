@@ -81,7 +81,7 @@ class CategoryController extends Controller {
                         
                     })->Paginate($this->record_per_page);
         } else {
-            $categories = Category::with('subcategory')->Paginate($this->record_per_page);
+            $categories = Category::orderBy('id','desc')->Paginate($this->record_per_page);
         }
         // Category sub category list-----
         
@@ -108,20 +108,23 @@ class CategoryController extends Controller {
 
     public function store(CategoryRequest $request, Category $category) 
     {   
-        $name = $request->get('category_name');
-        $slug = str_slug($request->get('sub_cat'));
-        $parent_id = 0;
-
         $cat = new Category;
-        $cat->name                  =  $request->get('category_name');
-        $cat->slug                  = strtolower(str_slug($request->get('category_name')));
-        $cat->parent_id             = $parent_id;
-        $cat->category_name         =  $request->get('category_name');
-        $cat->sub_category_name     =  $request->get('category_name');
-        $cat->level                 =  1;
+        if ($request->file('image')) {  
+
+            $photo = $request->file('image');
+            $destinationPath = storage_path('services/'); 
+            $photo->move($destinationPath, time().$photo->getClientOriginalName());
+            $banner_image = time().$photo->getClientOriginalName();
+            $cat->category_image   =   $banner_image;
+            
+        }  
+        
+        $cat->title                  =  $request->get('title');  
+        $cat->description            =  $request->get('description');  
+        $cat->feature                 =   $request->get('feature');
         $cat->save();   
 
-        return Redirect::to(route('category'))
+        return Redirect::to(route('service'))
                             ->with('flash_alert_notice', 'New Service was successfully created !');
         }
 
@@ -135,26 +138,28 @@ class CategoryController extends Controller {
 
         $page_title = 'Service';
         $page_action = 'Edit Service'; 
-
         return view('packages::category.edit', compact( 'category', 'page_title', 'page_action'));
     }
 
-    public function update(Request $request, Category $category) {
-       
-        $name = $request->get('category_name');
-        $slug = str_slug($request->get('sub_cat'));
-        $parent_id = 0;
+    public function update(Request $request, Category $category) { 
 
         $cat = Category::find($category->id);
-        $cat->name =  $request->get('category_name');
-        $cat->slug = strtolower(str_slug($request->get('category_name')));
-        $cat->parent_id = $parent_id;
-        $cat->category_name         =  $request->get('category_name');
-        $cat->sub_category_name     =  $request->get('category_name');
-        $cat->level                 =  1;
-        $cat->save();   
+        
+        if ($request->file('image')) {  
 
-        return Redirect::to(route('category'))
+            $photo = $request->file('image');
+            $destinationPath = storage_path('services/'); 
+            $photo->move($destinationPath, time().$photo->getClientOriginalName());
+            $banner_image = time().$photo->getClientOriginalName();
+            $cat->category_image   =   $banner_image; 
+        }  
+        
+        $cat->title                  =  $request->get('title');  
+        $cat->description            =  $request->get('description');  
+        $cat->feature                =   $request->get('feature');
+        $cat->save();    
+
+        return Redirect::to(route('service'))
                         ->with('flash_alert_notice', 'Service was  successfully updated !');
     }
     /*

@@ -21,7 +21,7 @@
                                     <div class="box-header">
                                         <div class="table-toolbar">
                                         <div class="row">
-                                            <form action="{{route('page')}}" method="get" id="filter_data">
+                                            <form action="{{url('admin/faq')}}" method="get" id="filter_data">
                                              
                                             <div class="col-md-3">
                                                 <input value="{{ (isset($_REQUEST['search']))?$_REQUEST['search']:''}}" placeholder="Search " type="text" name="search" id="search" class="form-control" >
@@ -32,7 +32,7 @@
                                            
                                         </form>
                                          <div class="col-md-2">
-                                             <a href="{{ route('page') }}">   <input type="submit" value="Reset" class="btn btn-default form-control"> </a>
+                                             <a href="{{url('admin/faq')}}">   <input type="submit" value="Reset" class="btn btn-default form-control"> </a>
                                         </div>
                                        
                                         </div>
@@ -40,8 +40,8 @@
                                         
                                         <div class="col-md-2 pull-right">
                                             <div style="width: 150px;" class="input-group"> 
-                                                <a href="{{ route('page.create')}}">
-                                                    <button class="btn  btn-primary"><i class="fa fa-user-plus"></i> Create Page</button> 
+                                                <a href="{{ route('faq.create')}}">
+                                                    <button class="btn  btn-primary"><i class="fa fa-user-plus"></i> Add FAQ</button> 
                                                 </a>
                                             </div>
                                         </div> 
@@ -60,53 +60,40 @@
                                         <table class="table table-hover table-condensed">
                                             <thead><tr>
                                                     <th>Sno</th> 
-                                                    <th>Page Title</th>
-                                                    <th>Content description</th>
-                                                    <th>image </th> 
-                                                    <th>Created Date</th> 
+                                                    <th>Faq Question</th>
+                                                    <th>Faq Answer</th>  
                                                     <th>Action</th>
                                                 </tr>
-                                                @if(count($page )==0)
+                                                @if(count($faq )==0)
                                                     <tr>
                                                       <td colspan="7">
                                                         <div class="alert alert-danger alert-dismissable">
-                                                          <button aria-hidden="true" data-dismiss="alert" class="close" type="button">Ã—</button>
+                                                          <button aria-hidden="true" data-dismiss="alert" class="close" type="button">x</button>
                                                           <i class="icon fa fa-check"></i>  
                                                           {{ 'Record not found. Try again !' }}
                                                         </div>
                                                       </td>
                                                     </tr>
                                                   @endif
-                                                @foreach ($page  as $key => $result)  
+                                                @foreach ($faq  as $key => $result)  
                                              <thead>
                                               <tbody>    
                                                 <tr>
                                                     <td>{{ ++$key }}</td>
-                                                    <td>{!! ucfirst($result->title)     !!}
+                                                    <td>{!! ucfirst($result->question)     !!}
 
                                                     </td>
                                                    
-                                                    <td>{!! substr($result->page_content,0,50) !!}...<a href="{{ route('page.edit',$result->id)}}">
+                                                    <td>{!! substr($result->answer,0,80) !!}...<a href="{{ route('faq.edit',$result->id)}}">
                                                             <i class="glyphicon glyphicon-eye-open" title="view"></i> 
                                                         </a></td>
-                                                     <td> 
-                                                      <!--   {!!  substr(html_entity_decode($result->description, ENT_QUOTES, 'UTF-8'),0,50)  !!}.. -->
-                                                      @if(file_exists(Url::to('storage/files/banner_content/'.$result->images)))  
-                                                      <img src="{!! Url::to('storage/files/banner_content/'.$result->images) !!}" width="100px">
-                                                      @else
-                                                       NA
-                                                      @endif
-                                                     </td>
-                                                     <td>
-                                                        {!! Carbon\Carbon::parse($result->created_at)->format('d-M-Y'); !!}
-                                                    </td>
-                                                    
+                                                     
                                                     <td> 
-                                                        <a href="{{ route('page.edit',$result->id)}}">
+                                                        <a href="{{ route('faq.edit',$result->id)}}">
                                                             <i class="fa fa-fw fa-pencil-square-o" title="edit"></i> 
                                                         </a>
 
-                                                        {!! Form::open(array('class' => 'form-inline pull-left deletion-form', 'method' => 'DELETE',  'id'=>'deleteForm_'.$result->id, 'route' => array('page.destroy', $result->id))) !!}
+                                                        {!! Form::open(array('class' => 'form-inline pull-left deletion-form', 'method' => 'DELETE',  'id'=>'deleteForm_'.$result->id, 'route' => array('faq.destroy', $result->id))) !!}
                                                         <button class='delbtn btn btn-danger btn-xs' type="submit" name="remove_levels" value="delete" id="{{$result->id}}"><i class="fa fa-fw fa-trash" title="Delete"></i></button>
                                                         
                                                          {!! Form::close() !!}
@@ -116,7 +103,7 @@
                                                 @endforeach 
                                             </tbody></table>
                                     </div><!-- /.box-body --> 
-                                    <div class="center" align="center">  {!! $page->render() !!}</div>
+                                    <div class="center" align="center">  {!! $faq->render() !!}</div>
                                 </div>
                             </div>
                         </div>

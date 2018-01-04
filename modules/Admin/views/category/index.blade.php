@@ -48,7 +48,7 @@
                                                     <th>service Name</th> 
                                                     <th>service Description</th> 
                                                     <th>service Image</th> 
-                                                    <th>Created Date</th> 
+                                                    <th width="150">Created Date</th> 
                                                     <th>Action</th>
                                                 </tr>
                                                 @if(count($categories )==0)
@@ -64,7 +64,7 @@
                                                   @endif
                                                    <?php $i=0; ?>
                                                 @foreach ($categories  as $key => $result)  
-                                                  @if($result->parent_id==0) 
+                                                 
                                              <thead>
                                               <tbody>    
                                                 <tr>
@@ -73,10 +73,10 @@
                                                         <a href="{{ route('service.edit',$result->id)}}">
                                                             <i class="fa fa-fw fa-pencil-square-o" title="edit"></i> 
                                                         </a></td> 
-                                                        <td> {{ $result->description }} </td>
-                                                           <td>{{ $result->images }}</td>
+                                                        <td> {!! $result->description !!} </td>
+                                                        <td> <img width="200px" src="{{ url('storage/services/'.$result->category_image) }}"></td>
                                                     <td>
-                                                        {!! Carbon\Carbon::parse($result->created_at)->format('m-d-Y H:i:s A'); !!}
+                                                        {!! Carbon\Carbon::parse($result->created_at)->format('d-M-Y'); !!}
                                                     </td>
                                                     
                                                     <td> 
@@ -90,7 +90,7 @@
                                                 </tr>
                                                 </tbody>
                                                 <thead>
-                                                @endif
+                                               
                                                 @endforeach 
                                             </table>
                                       </div>   

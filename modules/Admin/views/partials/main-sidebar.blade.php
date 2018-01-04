@@ -34,30 +34,104 @@
         </ul>
       </li>
  
-      <li class="treeview {{ (isset($page_action) && $page_title=='Category')?"active":'' }} ">
+      <li class="treeview {{ (isset($page_action) && $page_title=='Service')?"active":'' }} ">
         <a href="#">
           <i class="fa fa-user"></i>
-          <span>Manage category</span>
+          <span>Manage Service</span>
           <i class="fa fa-angle-left pull-right"></i>
         </a>
         <ul class="treeview-menu">
-          <li class="{{ (isset($page_action) && $page_action=='Create category')?"active":'' }}" ><a href="{{ route('category.create')}}"><i class="fa fa-user-plus"></i> Create Category</a></li>
-           <li class="{{ (isset($page_action) && $page_action=='Create Sub-category')?"active":'' }}" ><a href="{{ route('sub-category.create')}}"><i class="fa fa-user-plus"></i> Add Sub-category</a></li>
-          <li class="{{ (isset($page_action) && $page_action=='View Category')?"active":'' }}"><a href="{{ route('category')}}"><i class="fa  fa-list"></i> View Category</a></li>
+          <li class="{{ (isset($page_action) && $page_action=='Create Service')?"active":'' }}" ><a href="{{ route('category.create')}}"><i class="fa fa-user-plus"></i> Create Service</a></li>
+           <li class="{{ (isset($page_action) && $page_action=='View Service')?"active":'' }}"><a href="{{ route('category')}}"><i class="fa  fa-list"></i> View Service</a></li>
         </ul>
       </li>
 
-      <li class="treeview {{ (isset($page_action) && $page_title=='Product')?"active":'' }} ">
+      <li class="treeview {{ (isset($page_action) && $page_title=='Pricing')?"active":'' }} ">
         <a href="#">
           <i class="fa fa-user"></i>
-          <span>Manage Product</span>
+          <span>Manage Pricing</span>
           <i class="fa fa-angle-left pull-right"></i>
         </a> 
         <ul class="treeview-menu">
-          <li class="{{ (isset($page_action) && $page_action=='Create Product')?"active":'' }}" ><a href="{{ route('product.create')}}"><i class="fa fa-user-plus"></i> Create Product</a></li>
-          <li class="{{ (isset($page_action) && $page_action=='View Product')?"active":'' }}"><a href="{{ route('product')}}"><i class="fa  fa-list"></i> View Product</a></li>
+          <li class="{{ (isset($page_action) && $page_action=='Create Pricing')?"active":'' }}" ><a href="{{ route('pricing.create')}}"><i class="fa fa-user-plus"></i> Create Pricing</a></li>
+          <li class="{{ (isset($page_action) && $page_action=='View Pricing')?"active":'' }}"><a href="{{ route('pricing')}}"><i class="fa  fa-list"></i> View Pricing</a></li>
         </ul>
       </li>  
+      
+       <li class="treeview {{ (isset($page_action) && $page_title=='FreeTrial')?"active":'' }} ">
+        <a href="#">
+          <i class="fa fa-user"></i>
+          <span>Manage FreeTrial</span>
+          <i class="fa fa-angle-left pull-right"></i>
+        </a> 
+        <ul class="treeview-menu">
+           <li class="{{ (isset($page_action) && $page_action=='View FreeTrial ')?"active":'' }}"><a href="{{ url('admin/freeTrial')}}"><i class="fa  fa-list"></i> View FreeTrial</a></li>
+        </ul>
+      </li>  
+      
+       <li class="treeview {{ (isset($page_action) && $page_title=='Kyc')?"active":'' }} ">
+        <a href="#">
+          <i class="fa fa-user"></i>
+          <span>Manage Kyc</span>
+          <i class="fa fa-angle-left pull-right"></i>
+        </a> 
+        <ul class="treeview-menu">
+           <li class="{{ (isset($page_action) && $page_action=='View Kyc')?"active":'' }}"><a href="{{ url('admin/kyc')}}"><i class="fa  fa-list"></i> View Kyc</a></li>
+        </ul>
+      </li>  
+      
+       <li class="treeview {{ (isset($page_action) && $page_title=='Contact')?"active":'' }} ">
+        <a href="#">
+          <i class="fa fa-user"></i>
+          <span>Manage Contact</span>
+          <i class="fa fa-angle-left pull-right"></i>
+        </a> 
+        <ul class="treeview-menu">
+           <li class="{{ (isset($page_action) && $page_action=='View Contact')?"active":'' }}"><a href="{{ url('admin/contact')}}"><i class="fa  fa-list"></i> View Contact</a></li>
+        </ul>
+      </li>  
+      
+      
+        
+       <li class="treeview {{ (isset($page_action) && $page_title=='Faq')?"active":'' }} ">
+        <a href="#">
+          <i class="fa fa-user"></i>
+          <span>Manage Faq</span>
+          <i class="fa fa-angle-left pull-right"></i>
+        </a> 
+        <ul class="treeview-menu">
+         <li class="{{ (isset($page_action) && $page_action=='Create Faq')?"active":'' }}" ><a href="{{ route('faq.create')}}"><i class="fa fa-user-plus"></i> Create Faq</a></li>
+          <li class="{{ (isset($page_action) && $page_action=='View Faq')?"active":'' }}"><a href="{{ url('admin/faq')}}"><i class="fa  fa-list"></i> View Faq</a></li>
+        </ul>
+      </li> 
+      
+      
+        
+       <li class="treeview {{ (isset($page_action) && $page_title=='Page')?"active":'' }} ">
+        <a href="#">
+          <i class="fa fa-user"></i>
+          <span>Manage Page</span>
+          <i class="fa fa-angle-left pull-right"></i>
+        </a> 
+        <ul class="treeview-menu">
+         <li class="{{ (isset($page_action) && $page_action=='Create Page')?"active":'' }}" ><a href="{{ route('page.create')}}"><i class="fa fa-user-plus"></i> Create Static Page</a></li>
+          <li class="{{ (isset($page_action) && $page_action=='View Page')?"active":'' }}"><a href="{{ route('page')}}"><i class="fa  fa-list"></i> View page</a></li>
+        </ul>
+      </li> 
+      
+       <li class="treeview {{ (isset($page_action) && $page_title=='Career')?"active":'' }} ">
+        <a href="#">
+          <i class="fa fa-user"></i>
+          <span>Manage Career</span>
+          <i class="fa fa-angle-left pull-right"></i>
+        </a> 
+        <ul class="treeview-menu">
+         <li class="{{ (isset($page_action) && $page_action=='View Career')?"active":'' }}"><a href="{{ url('admin/career')}}"><i class="fa  fa-list"></i> View Career</a></li>
+        </ul>
+      </li> 
+      
+      
+      
         
       <li class="treeview {{ (isset($page_action) && $page_title=='Transaction')?"active":'' }} ">
         <a href="#">

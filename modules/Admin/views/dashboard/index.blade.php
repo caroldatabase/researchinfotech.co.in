@@ -55,13 +55,13 @@
                 <!-- small box -->
                 <div class="small-box bg-green">
                   <div class="inner">
-                    <h3>{{ $product }}</h3> 
-                    <p>Total products</p>
+                    <h3>{{ $pricing }}</h3> 
+                    <p>Total Pricing</p>
                   </div>
                   <div class="icon">
                     <i class="ion ion-person-add"></i>
                   </div>
-                  <a href="{{route('product')}}" class="small-box-footer"><i class="fa fa-arrow-circle-right"></i></a>
+                  <a href="{{route('pricing')}}" class="small-box-footer"><i class="fa fa-arrow-circle-right"></i></a>
                 </div>
               </div><!-- ./col -->
 
@@ -69,13 +69,13 @@
                 <!-- small box -->
                 <div class="small-box bg-blue">
                   <div class="inner">
-                    <h3>{{ $category }}</h3> 
-                    <p>Total category</p>
+                    <h3>{{ $service }}</h3> 
+                    <p>Total service</p>
                   </div>
                   <div class="icon">
                     <i class="ion ion-person-add"></i>
                   </div>
-                  <a href="{{route('category')}}" class="small-box-footer"><i class="fa fa-arrow-circle-right"></i></a>
+                  <a href="{{route('service')}}" class="small-box-footer"><i class="fa fa-arrow-circle-right"></i></a>
                 </div>
               </div><!-- ./col -->
 
@@ -84,7 +84,7 @@
                 <div class="small-box bg-red">
                   <div class="inner">
                     <h3>{{ $order }}</h3> 
-                    <p>Total Order</p>
+                    <p>Total Payment</p>
                   </div>
                   <div class="icon">
                     <i class="ion ion-person-add"></i>
@@ -92,12 +92,70 @@
                   <a href="{{route('transaction')}}" class="small-box-footer"><i class="fa fa-arrow-circle-right"></i></a>
                 </div>
               </div><!-- ./col --> 
+              
+               <div class="col-lg-3 col-xs-3">
+                <!-- small box -->
+                <div class="small-box bg-red">
+                  <div class="inner">
+                    <h3>{{ $kyc }}</h3> 
+                    <p>Total KYC</p>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-person-add"></i>
+                  </div>
+                  <a href="{{url('admin/kyc')}}" class="small-box-footer"><i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+              </div><!-- ./col -->
+              
+              
+               <div class="col-lg-3 col-xs-3">
+                <!-- small box -->
+                <div class="small-box bg-red">
+                  <div class="inner">
+                    <h3>{{ $contact }}</h3> 
+                    <p>Total Contact</p>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-person-add"></i>
+                  </div>
+                  <a href="{{url('admin/contact')}}" class="small-box-footer"><i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+              </div><!-- ./col -->
+              
+               <div class="col-lg-3 col-xs-3">
+                <!-- small box -->
+                <div class="small-box bg-red">
+                  <div class="inner">
+                    <h3>{{ $freeTrail }}</h3> 
+                    <p>Total Free Trail</p>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-person-add"></i>
+                  </div>
+                  <a href="{{url('admin/freeTrial')}}" class="small-box-footer"><i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+              </div><!-- ./col -->
+              
+               <div class="col-lg-3 col-xs-3">
+                <!-- small box -->
+                <div class="small-box bg-red">
+                  <div class="inner">
+                    <h3>{{ $resume }}</h3> 
+                    <p>Total Resume</p>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-person-add"></i>
+                  </div>
+                  <a href="{{url('admin/resume')}}" class="small-box-footer"><i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+              </div><!-- ./col -->
+              
                <div class="col-lg-3 col-xs-3">
                 <!-- small box -->
                 <div class="small-box bg-green">
                   <div class="inner">
                     <h3>{{ $today_order }}</h3> 
-                    <p>Total  Order Today </p>
+                    <p>Total  Payment Today </p>
                   </div>
                   <div class="icon">
                     <i class="ion ion-person-add"></i>

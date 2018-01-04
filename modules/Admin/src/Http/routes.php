@@ -190,7 +190,7 @@
         
         
         Route::bind('service', function($value, $route) {
-            return  Modules\Admin\Models\Service::find($value);
+            return Modules\Admin\Models\Category::find($value);
         });
  
         Route::resource('admin/service', 'Modules\Admin\Http\Controllers\CategoryController', [
@@ -208,7 +208,7 @@
 
         
         Route::bind('freeTrial', function($value, $route) {
-            return App\Models\FreeTrial::find($value);
+            return Modules\Admin\Models\FreeTrial::find($value);
         });
  
         Route::resource('admin/freeTrial', 'Modules\Admin\Http\Controllers\FreeTrialController', [
@@ -225,7 +225,7 @@
         ); 
         
         Route::bind('career', function($value, $route) {
-            return App\Models\Career::find($value);
+            return Modules\Admin\Models\Career::find($value);
         });
  
         Route::resource('admin/career', 'Modules\Admin\Http\Controllers\CareerController', [
@@ -243,10 +243,10 @@
         
         
         Route::bind('pricing', function($value, $route) {
-            return App\Models\Pricing::find($value);
+            return Modules\Admin\Models\Product::find($value);
         });
  
-        Route::resource('admin/pricing', 'Modules\Admin\Http\Controllers\PricingController', [
+        Route::resource('admin/pricing', 'Modules\Admin\Http\Controllers\ProductController', [
             'names' => [
                 'edit' => 'pricing.edit',
                 'show' => 'pricing.show',
@@ -260,7 +260,7 @@
         );
         
         Route::bind('payment', function($value, $route) {
-            return App\Models\Pricing::find($value);
+            return Modules\Admin\Models\Pricing::find($value);
         });
  
         Route::resource('admin/payment', 'Modules\Admin\Http\Controllers\PaymentController', [
@@ -278,7 +278,7 @@
         
         
         Route::bind('contactList', function($value, $route) {
-            return App\Models\ContactList::find($value);
+            return Modules\Admin\Models\ContactList::find($value);
         });
  
         Route::resource('admin/contactList', 'Modules\Admin\Http\Controllers\ContactListController', [
@@ -295,7 +295,7 @@
         );
         
         Route::bind('kyc', function($value, $route) {
-            return App\Models\Kyc::find($value);
+            return Modules\Admin\Models\Kyc::find($value);
         });
  
         Route::resource('admin/kyc', 'Modules\Admin\Http\Controllers\KycController', [
@@ -312,7 +312,7 @@
         );
         
         Route::bind('faq', function($value, $route) {
-            return App\Models\Faq::find($value);
+            return Modules\Admin\Models\Faq::find($value);
         });
  
         Route::resource('admin/faq', 'Modules\Admin\Http\Controllers\FaqController', [
