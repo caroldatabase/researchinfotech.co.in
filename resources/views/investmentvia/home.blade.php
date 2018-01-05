@@ -23,33 +23,22 @@
 <!-- START REVOLUTION SLIDER 5.0 auto mode -->
   <div id="rev_slider_full" class="rev_slider" data-version="5.0">
     <ul>    
-    <!-- SLIDE  -->
-         <li data-transition="fade">
-        <!-- MAIN IMAGE -->
-        <img src="{{ asset('storage/assets/images/news2.jpg')}}" alt="" data-bgposition="center center" data-bgfit="cover" data-bgparallax="10" class="rev-slidebg">
-                                    
-        <!-- LAYER NR. 1 -->
-      </li>
-      <li data-transition="fade">
-        <!-- MAIN IMAGE -->
-        <img src="{{ asset('storage/assets/images/banner3.jpg')}}" alt="" data-bgposition="center center" data-bgfit="cover" data-bgparallax="10" class="rev-slidebg">
-                                    
-        <!-- LAYER NR. 1 -->
-      </li>
-      
-      <li data-transition="fade">
-        <!-- MAIN IMAGE -->
-        <img src="{{ asset('storage/assets/images/news1.jpg')}}" alt="" data-bgposition="center center" data-bgfit="cover" data-bgparallax="10" class="rev-slidebg">
-                                    
-        <!-- LAYER NR. 1 -->
-      </li>
-      <li data-transition="fade">
-        <!-- MAIN IMAGE -->
-        <img src="{{ asset('storage/assets/images/parallax2.jpg')}}" alt="" data-bgposition="center center" data-bgfit="cover" data-bgparallax="10" class="rev-slidebg">
-                                    
-        <!-- LAYER NR. 1 -->
-      </li>
-
+    <!-- SLIDE  --> 
+    @if($banner->count())
+        @foreach($banner as $key => $value)  
+            <li data-transition="fade">
+            <!-- MAIN IMAGE -->
+                <img src="{!! asset('storage/files/banner/'.$value->field_value) !!}" alt="" data-bgposition="center center" data-bgfit="cover" data-bgparallax="10" class="rev-slidebg">
+            <!-- LAYER NR. 1 -->
+            </li>
+        @endforeach
+    @else
+        <li data-transition="fade">
+            <!-- MAIN IMAGE -->
+            <img src="{{ asset('storage/assets/images/news2.jpg')}}" alt="" data-bgposition="center center" data-bgfit="cover" data-bgparallax="10" class="rev-slidebg">
+            <!-- LAYER NR. 1 -->
+        </li>
+    @endif
       
     </ul>
   </div><!-- END REVOLUTION SLIDER -->

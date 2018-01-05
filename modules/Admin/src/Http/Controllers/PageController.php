@@ -63,16 +63,7 @@ class PageController extends Controller {
         
         $page_title = 'Page';
         $page_action = 'View Page'; 
-        if ($request->ajax()) {
-            $id = $request->get('id');
-            $status = $request->get('status');
-            $user = Pages::find($id);
-            $s = ($status == 1) ? $status = 0 : $status = 1;
-            $user->status = $s;
-            $user->save();
-            echo $s;
-            exit();
-        }
+        
         // Search by name ,email and group
         $search = Input::get('search');
         $status = Input::get('status');
