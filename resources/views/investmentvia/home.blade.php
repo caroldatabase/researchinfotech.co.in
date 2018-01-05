@@ -66,9 +66,7 @@ News and Technical & Fundamental Analysis
         </div>
         <!-- Large modal -->
 
-<div class="chat-btn wow fadeInUp" data-wow-delay="300ms""">
-    <a href="#"><img src="{{ asset('storage/assets/images/chat-now.png')}}" alt=""></a>
-</div>
+ 
 <div class="paytm wow fadeInUp" data-wow-delay="300ms""">
     <a href="#"><img src="{{ asset('storage/assets/images/paytm.png')}}" alt=""></a>
 </div>
