@@ -120,6 +120,18 @@
       </li> 
       
       
+       <li class="treeview {{ (isset($page_action) && $page_title=='Bank Account')?"active":'' }} ">
+        <a href="#">
+          <i class="fa fa-user"></i>
+          <span>Manage Bank Account</span>
+          <i class="fa fa-angle-left pull-right"></i>
+        </a> 
+        <ul class="treeview-menu">
+         <li class="{{ (isset($page_action) && $page_action=='Create Bank Account')?"active":'' }}" ><a href="{{ route('bankAccount.create')}}"><i class="fa fa-user-plus"></i> Add Bank Account</a></li>
+          <li class="{{ (isset($page_action) && $page_action=='View Bank Account')?"active":'' }}"><a href="{{ url('admin/bankAccount')}}"><i class="fa  fa-list"></i> View Bank Account</a></li>
+        </ul>
+      </li> 
+      
         
        <li class="treeview {{ (isset($page_action) && $page_title=='Page')?"active":'' }} ">
         <a href="#">

@@ -41,6 +41,27 @@
             ]
                 ]
         );
+        
+        //=============bankaccount
+        
+        Route::bind('bankAccount', function($value, $route) {
+            return Modules\Admin\Models\BankAccount::find($value);
+        });
+
+        Route::resource('admin/bankAccount', 'Modules\Admin\Http\Controllers\BankAccountController', [
+            'names' => [
+                'edit' => 'bankAccount.edit',
+                'show' => 'bankAccount.show',
+                'destroy' => 'bankAccount.destroy',
+                'update' => 'bankAccount.update',
+                'store' => 'bankAccount.store',
+                'index' => 'bankAccount',
+                'create' => 'bankAccount.create',
+            ]
+                ]
+        );
+        
+        
         /*---------End---------*/   
   
         /*------------User Category and controller---------*/

@@ -8,6 +8,19 @@ use Auth,View,Html,URL,Validator,Paginate,Grids,Form,Hash,Lang;
 use Session,DB,Route,Crypt,Redirect,Input; 
 use App\Helpers\Helper as Helper;
 use Modules\Admin\Models\Settings;
+use Modules\Admin\Models\BankAccount;
+use Modules\Admin\Models\Career;
+use Modules\Admin\Models\Contact;
+use Modules\Admin\Models\Faq;
+use Modules\Admin\Models\FreeTrial;
+use Modules\Admin\Models\Category;
+use Modules\Admin\Models\Kyc;
+use Modules\Admin\Models\Pages;
+use Modules\Admin\Models\Product;
+use Modules\Admin\Models\Service;
+use Modules\Admin\Models\TrackSheet;
+use Modules\Admin\Models\Transaction;
+use Modules\Admin\Models\Blogs;
 
 
 class HomeController extends Controller
