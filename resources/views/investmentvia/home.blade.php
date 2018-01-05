@@ -58,8 +58,8 @@ News and Technical & Fundamental Analysis
             </div>
             <div class="live-btn">
                 <p>
-                    <a href="#"><img src="{{ asset('storage/assets/images/live-rate.png')}}"></a> 
-                    <a href="#"><img src="{{ asset('storage/assets/images/live-tv.png')}}"></a> 
+<!--                    <a href="#"><img src="{{ asset('storage/assets/images/live-rate.png')}}"></a> 
+                    <a href="#"><img src="{{ asset('storage/assets/images/live-tv.png')}}"></a> -->
                     <a href="#"><img src="{{ asset('storage/assets/images/pay-online.png')}}"></a>
                 </p>
             </div>
