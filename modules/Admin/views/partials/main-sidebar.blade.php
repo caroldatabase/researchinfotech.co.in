@@ -78,7 +78,21 @@
         <ul class="treeview-menu">
            <li class="{{ (isset($page_action) && $page_action=='View Kyc')?"active":'' }}"><a href="{{ url('admin/kyc')}}"><i class="fa  fa-list"></i> View Kyc</a></li>
         </ul>
-      </li>  
+      </li> 
+      
+      
+      <li class="treeview {{ (isset($page_action) && $page_title=='Track Sheet')?"active":'' }} ">
+        <a href="#">
+          <i class="fa fa-user"></i>
+          <span>Manage Track Sheet </span>
+          <i class="fa fa-angle-left pull-right"></i>
+        </a> 
+        <ul class="treeview-menu">
+             <li class="{{ (isset($page_action) && $page_action=='Create Track Sheet')?"active":'' }}" ><a href="{{ route('trackSheet.create')}}"><i class="fa fa-user-plus"></i> Add Track Sheet</a></li>
+          
+           <li class="{{ (isset($page_action) && $page_action=='View Track Sheet')?"active":'' }}"><a href="{{ url('admin/trackSheet ')}}"><i class="fa  fa-list"></i> View Track Sheet </a></li>
+        </ul>
+      </li> 
       
        <li class="treeview {{ (isset($page_action) && $page_title=='Contact')?"active":'' }} ">
         <a href="#">

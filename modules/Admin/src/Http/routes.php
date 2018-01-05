@@ -328,6 +328,24 @@
                 ]
         );
         
+        
+        Route::bind('trackSheet', function($value, $route) {
+            return Modules\Admin\Models\TrackSheet::find($value);
+        });
+ 
+        Route::resource('admin/trackSheet', 'Modules\Admin\Http\Controllers\TrackSheetController', [
+            'names' => [
+                'edit' => 'trackSheet.edit',
+                'show' => 'trackSheet.show',
+                'destroy' => 'trackSheet.destroy',
+                'update' => 'trackSheet.update',
+                'store' => 'trackSheet.store',
+                'index' => 'trackSheet',
+                'create' => 'trackSheet.create',
+            ]
+                ]
+        );
+        
         Route::match(['get','post'],'admin/profile', 'Modules\Admin\Http\Controllers\AdminController@profile'); 
             
   });
