@@ -310,14 +310,14 @@ class FreeTrialController extends Controller {
      */
     public function destroy(FreeTrial $freeTrial) { 
         FreeTrial::where('id',$freeTrial->id)->delete(); 
-        return Redirect::to(route('freeTrial'))
+        return Redirect::to('admin/freeTrial')
                         ->with('flash_alert_notice', 'Free Trial  successfully deleted.');
     }
 
     public function show($id) {
         
         return Redirect::to('admin/freeTrial');
-
+S
             }
 
 }
