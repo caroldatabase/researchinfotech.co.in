@@ -308,15 +308,15 @@ class FreeTrialController extends Controller {
      * @param ID
      * 
      */
-    public function destroy(Contact $contact) { 
-        Contact::where('id',$contact->id)->delete(); 
-        return Redirect::to(route('contact'))
-                        ->with('flash_alert_notice', 'contact  successfully deleted.');
+    public function destroy(FreeTrial $freeTrial) { 
+        FreeTrial::where('id',$freeTrial->id)->delete(); 
+        return Redirect::to(route('freeTrial'))
+                        ->with('flash_alert_notice', 'Free Trial  successfully deleted.');
     }
 
     public function show($id) {
         
-        return Redirect::to('admin/contact');
+        return Redirect::to('admin/freeTrial');
 
             }
 
