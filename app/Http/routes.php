@@ -10,6 +10,10 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET, POST, DELETE, OPTIONS');
+header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorization, X-Request-With, auth-token');
+header('Access-Control-Allow-Credentials: true');
 
 Route::get('/',[
           'as' => 'home',
@@ -62,12 +66,19 @@ Route::get('package',[
 Route::get('terns-and-conditions',[
           'as' => 'tNc',
           'uses'  => 'HomeController@tNc'
-        ]);
+        ])->name('tNc');
 
 Route::get('privacy-policy',[
           'as' => 'privacy_and_policy',
           'uses'  => 'HomeController@privacypolicy'
         ]);
+
+Route::get('privacypolicy',[
+          'as' => 'privacy_and_policy',
+          'uses'  => 'HomeController@privacypolicy'
+        ]);
+
+
 
 Route::get('faq',[
           'as' => 'faq',

@@ -1,4 +1,5 @@
 <!-- News-->
+<!-- News-->
 <section id="news" class="padding">
   <div class="container">
     <div class="row">
@@ -7,28 +8,29 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-2">
+  <ul class="list-inline">
+      <li>
           <a href="https://www.nseindia.com" target="_blank">  <img src="{{ asset('storage/assets/images/nse.jpg')}}"> </a>
-      </div>
-      <div class="col-md-2">
+      </li>
+       <li>
           <a href="https://www.marketwatch.com" target="_blank">  <img src="{{ asset('storage/assets/images/marketwatch.jpg')}}"></a>
-      </div>
-      <div class="col-md-2">
+      </li>
+      <li>
           <a href="https://www.investing.com" target="_blank">  <img src="{{ asset('storage/assets/images/investing.jpg')}}"></a>
-      </div>
-      <div class="col-md-2">
+      </li>
+      <li>
           <a href="https://www.www.moneycontrol.com" target="_blank"> <img src="{{ asset('storage/assets/images/moneycontrol.jpg')}}"></a>
-      </div>
-      <div class="col-md-2">
+      </li>
+      <li>
           <a href="https://www.mcxcontrol.com" target="_blank">  <img src="{{ asset('storage/assets/images/mcx.jpg')}}"></a>
-      </div>
-      <div class="col-md-2">
+      </li>
+      <li>
           <a href="https://www.cnbc.com" target="_blank"> <img src="{{ asset('storage/assets/images/cnbc.jpg')}}"> </a>
-      </div>
+      </li>
+      </ul>
     </div>
   </div>
 </section>
-
 
 
 <!--FOOTER-->
@@ -104,6 +106,12 @@
 <script src="{{ asset('public/assets/js/revolution.extension.video.min.js')}}"></script>
 <script src="{{ asset('public/assets/js/wow.min.js')}}"></script>
 <script src="{{ asset('public/assets/js/functions.js')}}"></script>
+ <script>
+        
+        $(function () {
+            $('body').show();
+        }); // end ready
+        </script>
  
 <script>
 !function() {
