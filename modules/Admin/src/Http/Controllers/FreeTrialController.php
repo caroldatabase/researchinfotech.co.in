@@ -317,7 +317,7 @@ class FreeTrialController extends Controller {
     public function show($id) {
         
         return Redirect::to('admin/freeTrial');
-S
+
             }
 
 }
