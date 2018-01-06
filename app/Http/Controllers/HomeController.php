@@ -17,10 +17,10 @@ use Modules\Admin\Models\Category;
 use Modules\Admin\Models\Kyc;
 use Modules\Admin\Models\Pages;
 use Modules\Admin\Models\Product;
-use Modules\Admin\Models\Service;
+use Modules\Admin\Models\Service as Pricing;
 use Modules\Admin\Models\TrackSheet;
 use Modules\Admin\Models\Transaction;
-use Modules\Admin\Models\Blogs;
+use Modules\Admin\Models\Blogs; 
 
 
 class HomeController extends Controller
@@ -45,11 +45,11 @@ class HomeController extends Controller
         $company_address    = $setting::where('field_key','company_address')->first();
         $banner             = $setting::where('field_key','LIKE','%banner_image%')->get();
         
-         View::share('website_title',$website_title);
-         View::share('website_email',$website_email);
-         View::share('website_url',$website_url);
-         View::share('contact_number',$contact_number);
-         View::share('company_address',$company_address);
+         View::share('website_title',$website_title->website_title);
+         View::share('website_email',$website_email->website_email);
+         View::share('website_url',$website_url->website_url);
+         View::share('contact_number',$contact_number->contact_number);
+         View::share('company_address',$company_address->company_address);
          View::share('banner',$banner); 
     }
 
@@ -60,82 +60,173 @@ class HomeController extends Controller
      */
     public function about()
     { 
-         return view('investmentvia.about');
+        $title = "About Us";
+        $tagLine = "We offer the most complete advisory services in the country";
+        return view('investmentvia.about',compact('title','tagLine'));
     }  
 
     public function home()
     {
-        
-        return view('investmentvia.home');
+        $title = "Home";
+        $tagLine = "We offer the most complete advisory services in the country";
+        return view('investmentvia.home',compact('title','tagLine'));
     }
 
     
     public function services()
     {
-        
-        return view('investmentvia.service');
+        $title = "Services";
+        $tagLine = "We offer the most complete advisory services in the country";
+        $service = Category::all();
+        $url = url('public/assets/js/jquery-2.2.3.js');
+        $jsUrl = '<script src="'.$url.'"></script>';
+          
+        return view('investmentvia.service',compact('service','jsUrl','title','tagLine'));
     }
 
     public function payment()
     {
-        
-        return view('investmentvia.payment');
+        $bankAccount = BankAccount::all();
+        $title = "Payment";
+        $tagLine = "We offer the most complete advisory services in the country";
+        return view('investmentvia.payment', compact('bankAccount','title','tagLine'));
     }
  
 
     public function pricing()
     {
+        $pricing = Product::all(); 
+        $title = "Pricing Tables";
+        $tagLine = "We offer the most complete advisory services in the country";
         
-        return view('investmentvia.pricing');
+        return view('investmentvia.pricing',compact('pricing','title','tagLine'));
     }
 
     public function package()
     {
-        
-        return view('investmentvia.package');
+        $title = "Package";
+        $tagLine = "We offer the most complete advisory services in the country";
+        return view('investmentvia.package',compact('title','tagLine'));
     }
  
     public function privacypolicy()
     {
-        
-        return view('investmentvia.privacypolicy');
+        $title = "Privacy Policy";
+        $tagLine = "We offer the most complete advisory services in the country";
+        return view('investmentvia.privacypolicy',compact('title','tagLine'));
     } 
      /*----------*/
     public function faq()
     {
-        return view('investmentvia.faq'); 
+         $faq = Faq::all();
+        $title = "FAQ";
+        $tagLine = "We offer the most complete advisory services in the country";
+        return view('investmentvia.faq',compact('title','tagLine','faq')); 
     }
 
-    public function contact()
+    public function contact(Request $request, Contact $contact)
     {
-          return view('investmentvia.contact');   
+        $title = "Contact";
+        $tagLine = "We offer the most complete advisory services in the country";
+        if($request->method()=='POST'){
+            $validator = Validator::make($request->all(), [
+                'name' => 'required|min:3',
+                'email' => 'required|email',
+                'mobile' => 'required|numeric|min:10',
+                'comments' => 'required'
+            ]); 
+
+            if ($validator->fails()) {
+                 return Redirect::to('contact')
+                        ->withErrors($validator)
+                        ->withInput();
+            }else{
+                $input = $request->only('name','email','mobile','comments');
+                \DB::table('contacts')->insert($input);
+                  return Redirect::to('contact')->withErrors(['successMsg'=>'Thanking for Contacting us!']);
+                return view('investmentvia.contact',compact('title','tagLine','contact'))->with(['msg'=>'Thanking for Contacting us!']); 
+            }
+        }
+            
+        return view('investmentvia.contact',compact('title','tagLine','contact'));   
     } 
     public function tNc()
     {
-         return view('investmentvia.tNc');
+        $title = "Terms & Condition";
+        $tagLine = "We offer the most complete advisory services in the country";
+        return view('investmentvia.tNc',compact('title','tagLine'));
     }
 
-    public function career()
+    public function career(Request $request, Career $career)
     {
-        return view('investmentvia.career');
+        $title = "Career";
+        $tagLine = "We offer the most complete advisory services in the country";
+         
+        if($request->method()=='POST'){
+            $validator = Validator::make($request->all(), [
+                'name' => 'required|min:3',
+                'email' => 'required|email',
+                'mobile' => 'required|numeric|min:10',
+                'designation' => 'required',
+                'file' => 'required|mimes:doc,pdf,docs'
+            ]); 
+
+            if ($validator->fails()) {
+                 return Redirect::to('career')
+                        ->withErrors($validator)
+                        ->withInput();
+            }else{
+                $input = $request->only('name','email','mobile','designation');
+                if ($request->file('file')) {  
+                    $photo = $request->file('file');
+                    $destinationPath = storage_path('resume/');
+                    $photo->move($destinationPath, time().$photo->getClientOriginalName());
+                    $file = time().$photo->getClientOriginalName();
+                    $input['resume']   =   $file; 
+                }  
+                $input['first_name'] = $request->get('name');  
+                \DB::table('careers')->insert($input);
+                return Redirect::to('career')->withErrors(['successMsg'=>'Thanking for Contacting us!']);
+            }
+        }
+        
+        return view('investmentvia.career',compact('title','tagLine','career'));
     }
 
     public function blog()
     {
-        return view('investmentvia.blog');
+        $title = "Blog";
+        $tagLine = "We offer the most complete advisory services in the country";
+        return view('investmentvia.blog',compact('title','tagLine'));
     } 
     public function riskTolrance()
     {
-        return view('investmentvia.riskTolrance');
+        $title = "Risk Tolrance";
+        $tagLine = "We offer the most complete advisory services in the country";
+        return view('investmentvia.riskTolrance',compact('title','tagLine'));
     }
     public function kyc()
     {
-        return view('investmentvia.kyc');
+        $title = "Kyc";
+        $tagLine = "We offer the most complete advisory services in the country";
+        return view('investmentvia.kyc',compact('title','tagLine'));
     }
 
     public function discloser()
     {
-        return view('investmentvia.discloser');
+        $title = "Discloser";
+        $tagLine = "We offer the most complete advisory services in the country";
+        return view('investmentvia.discloser',compact('title','tagLine'));
+    }
+    
+    public function freeTrial(Request $request)
+    {
+        $input['first_name'] = $request->get('name');
+        $input['phone'] = $request->get('phone');
+        
+        \DB::table('free_trials')->insert($input);
+        return Redirect::to('home');
+
     }
 
 

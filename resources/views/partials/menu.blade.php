@@ -39,8 +39,8 @@
           <li><a href="{{url('contact')}}">Contact</a></li>
           <li class="dropdown"><a href="javascript:" class="dropdown-toggle" data-toggle="dropdown">More</a>
             <ul class="dropdown-menu animated fadeOut" style="display: none; opacity: 1;">
-              <li><a href="{{url('tNc')}}"> T&C </a></li>
-              <li><a href="{{url('privacypolicy')}}"> Privacy Policy </a></li>
+              <li><a href="{{url('terns-and-conditions')}}"> T&C </a></li>
+              <li><a href="{{url('privacy-policy')}}"> Privacy Policy </a></li>
               <li><a href="{{url('faq')}}"> FAQ </a></li>
               <li><a href="{{url('career')}}"> Career </a></li>
               <li><a href="{{url('blog')}}"> Blog </a></li>
@@ -72,13 +72,14 @@
           <li><a href="{{url('pricing')}}">Pricing</a></li> 
           <li><a href="{{url('contact')}}">Contact</a></li>
            <li><a href="{{url('tNc')}}"> T&C </a></li>
-      <li><a href="{{url('privacypolicy')}}"> Privacy Policy </a></li>
-      <li><a href="{{url('faq')}}"> FAQ </a></li>
-      <li><a href="{{url('career')}}"> Career </a></li>
-      <li><a href="{{url('blog')}}"> Blog </a></li>
-      <li><a href="{{url('kyc')}}"> KYC </a></li>
+     
+        <li><a href="{{url('faq')}}"> FAQ </a></li>
+        <li><a href="{{url('career')}}"> Career </a></li>
+        <li><a href="{{url('blog')}}"> Blog </a></li>
+        <li><a href="{{url('kyc')}}"> KYC </a></li>
 <!--      <li><a href="{{url('services')}}"> Risk Tolerance </a></li>-->
       <li><a href="{{url('discloser')}}"> Discloser </a></li>
+       <li><a href="{{url('privacypolicy')}}"> Privacy Policy </a></li>
                       </ul>
           </li>
           </ul>

@@ -50,9 +50,20 @@
                 Trading advice on Mobile Devices/IMs Purely based on Economic
 News and Technical & Fundamental Analysis
             </p>
-            <div class="main-btn">
-                 <a href="#" class="" data-toggle="modal" data-target=".bs-example-modal-lg">Free Trial</a>
+            <div class="main-btn"> 
+                <button style="
+    width: 150px;
+    height: 40px;
+    font-size: larger;
+    font-weight: bold;
+    background: #07bfd5;
+    border: 0px;
+" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Free Trial
+                  </button> 
             </div>
+           
+            
             <div class="follow-us-banner">
                 <p>Follow Us: <span><a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-linkedin"></i></a></span></p>
             </div>
@@ -74,27 +85,10 @@ News and Technical & Fundamental Analysis
     <a href="#"><img src="{{ asset('storage/assets/images/watsapp.png')}}" alt=""></a>
 </div>
 </section>  
-<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <form>
-                        <div class="form-group">
-                            <input class="trai-input" type="text" placeholder="Enter Your Name">
-                        </div>
-                        <div class="form-group">
-                            <input class="trai-input" type="text" placeholder="Enter Your Mobile Number">
-                        </div>
-                        <div class="form-group">
-                            <input type="button" class="trai-btn" value="Submit">
-                        </div>
-                        <div class="form-group">
-                            <input type="button" class="trai-btn" value="Cancel">
-                        </div>
-                    </form>
-                    <p class="lower-line">By clicking submit, you must agree to our <a href="#">Terms & Conditions</a></p>
-    </div>
-  </div>
-</div>
+ 
+
+
+
 <div class="free-trial-section marqu">
     <p class="marq"><marquee>Trading advice on Mobile Devices/IMs Purely based on Econom News and Technical & Fundamental Analysis Trading advice on Mobile Devices/IMs Purely based on Econom News and Technical & Fundamental Analysis</marquee></p>
 </div>
@@ -401,6 +395,41 @@ Commodity & Bullion Market.</p>
 <!--Paralax -->
 <!-- News-->
  
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="exampleModalLabel">2 Days Free Trial</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" style="
+    position: absolute;
+    top: 10px;
+">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body"> 
+
+        <div class="banner-right col-md-12 col-sm-12 jw-animate-gen animated fadeInRight" data-gen-offset="90%" data-gen="fadeInRight">
+            <form method="post" action="{{url('freeTrial')}}">
+
+                <input type="text" placeholder="Enter Name" name="name" required="" autofocus="true"> 
+
+                <input type="number" placeholder="Enter 10 Digit Phone Number" name="phone" required="" maxlength="10" size="10" min="999999999">
+
+                <input type="submit" class="submit trai-btn" value="Start My Free Trial Now!">
+
+            </form> 
+
+            </div>
+             
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
 
     <!--Paralax --> 
  @stop

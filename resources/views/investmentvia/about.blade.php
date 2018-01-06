@@ -10,23 +10,7 @@
     <!--Slider-->
 
  
-
-
-<!--Page Header-->
-<section class="page_header padding-top">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 page-content">
-        <h1>About US</h1>
-        <p>We offer the most complete advisory services in the country</p>
-        <div class="page_nav">
-      <span>You are here:</span> <a href="{url('/')}}">Home</a> <span><i class="fa fa-angle-double-right"></i>About Us</span>
-      </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!--Page Header-->
+@include('partials/titlebar')
 
 <section id="about" class="padding">
   <div class="container aboutus">

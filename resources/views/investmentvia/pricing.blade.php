@@ -15,26 +15,7 @@
   </form>
 </div>
 
-
-<!--Page Header-->
-<section class="page_header padding-top">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 page-content">
-        <h1>Pricing Tables</h1>
-        <p>We offer the most complete house renovating services in the country</p>
-        <div class="page_nav">
-      <span>You are here:</span> <a href="/">Home</a> <span><i class="fa fa-angle-double-right"></i>Pricing</span>
-      </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!--Page Header-->
-<!--Page Header-->
-
-
-
+@include('partials/titlebar')
 <!--Pricings-->
 <section class="padding" id="pricing">
   <div class="container">
@@ -43,174 +24,28 @@
         
         <div class="text-center"><h2 class="heading heading_space"><span>Our</span> Pricing <span class="divider-center"></span></h2></div>
         <div class="pricing three padding-bottom">
-          <div class="pricing_item wow fadeInUp" data-wow-delay="400ms">
-        <img src="{{ asset('storage/assets/images/intra-cash.jpg')}}" class="pricing-pic">
-            <h3>Intraday Cash</h3>
-            <div class="pricing_price"><span class="pricing_currency"></span>Monthly</div>
-            <p class="pricing_sentence">NA  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-      
-       <div class="pricing_price"><span class="pricing_currency"></span>Quarterly</div>
-            <p class="pricing_sentence">14,000  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-      
-       <div class="pricing_price"><span class="pricing_currency"></span>Half Yearly</div>
-            <p class="pricing_sentence">19,000  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-      
-       <div class="pricing_price"><span class="pricing_currency"></span>Yearly</div>
-            <p class="pricing_sentence">28,000  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-            
-            
-          </div>
-          <div class="pricing_item wow fadeInUp" data-wow-delay="400ms">
-        <img src="{{ asset('storage/assets/images/intra-cash.jpg')}}" class="pricing-pic">
-            <h3>Cash HNI</h3>
-            <div class="pricing_price"><span class="pricing_currency"></span>Monthly</div>
-            <p class="pricing_sentence">NA  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-      
-       <div class="pricing_price"><span class="pricing_currency"></span>Quarterly</div>
-            <p class="pricing_sentence">14,000  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-      
-       <div class="pricing_price"><span class="pricing_currency"></span>Half Yearly</div>
-            <p class="pricing_sentence">19,000  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-      
-       <div class="pricing_price"><span class="pricing_currency"></span>Yearly</div>
-            <p class="pricing_sentence">28,000  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-            
-            
-          </div>
-          <div class="pricing_item wow fadeInUp" data-wow-delay="400ms">
-        <img src="{{ asset('storage/assets/images/intra-cash.jpg')}}" class="pricing-pic">
-            <h3>Cash HNI</h3>
-            <div class="pricing_price"><span class="pricing_currency"></span>Monthly</div>
-            <p class="pricing_sentence">NA  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-      
-       <div class="pricing_price"><span class="pricing_currency"></span>Quarterly</div>
-            <p class="pricing_sentence">14,000  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-      
-       <div class="pricing_price"><span class="pricing_currency"></span>Half Yearly</div>
-            <p class="pricing_sentence">19,000  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-      
-       <div class="pricing_price"><span class="pricing_currency"></span>Yearly</div>
-            <p class="pricing_sentence">28,000  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-            
-            
-          </div>
-         <div class="pricing_item wow fadeInUp" data-wow-delay="400ms">
-        <img src="{{ asset('storage/assets/images/intra-cash.jpg')}}" class="pricing-pic">
-            <h3>Cash HNI</h3>
-            <div class="pricing_price"><span class="pricing_currency"></span>Monthly</div>
-            <p class="pricing_sentence">NA  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-      
-       <div class="pricing_price"><span class="pricing_currency"></span>Quarterly</div>
-            <p class="pricing_sentence">14,000  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-      
-       <div class="pricing_price"><span class="pricing_currency"></span>Half Yearly</div>
-            <p class="pricing_sentence">19,000  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-      
-       <div class="pricing_price"><span class="pricing_currency"></span>Yearly</div>
-            <p class="pricing_sentence">28,000  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-            
-            
-          </div>
-          <div class="pricing_item wow fadeInUp" data-wow-delay="400ms">
-        <img src="{{ asset('storage/assets/images/intra-cash.jpg')}}" class="pricing-pic">
-            <h3>Cash HNI</h3>
-            <div class="pricing_price"><span class="pricing_currency"></span>Monthly</div>
-            <p class="pricing_sentence">NA  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-      
-       <div class="pricing_price"><span class="pricing_currency"></span>Quarterly</div>
-            <p class="pricing_sentence">14,000  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-      
-       <div class="pricing_price"><span class="pricing_currency"></span>Half Yearly</div>
-            <p class="pricing_sentence">19,000  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-      
-       <div class="pricing_price"><span class="pricing_currency"></span>Yearly</div>
-            <p class="pricing_sentence">28,000  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-            
-            
-          </div>
-          <div class="pricing_item wow fadeInUp" data-wow-delay="400ms">
-        <img src="{{ asset('storage/assets/images/intra-cash.jpg')}}" class="pricing-pic">
-            <h3>Cash HNI</h3>
-            <div class="pricing_price"><span class="pricing_currency"></span>Monthly</div>
-            <p class="pricing_sentence">NA  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-      
-       <div class="pricing_price"><span class="pricing_currency"></span>Quarterly</div>
-            <p class="pricing_sentence">14,000  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-      
-       <div class="pricing_price"><span class="pricing_currency"></span>Half Yearly</div>
-            <p class="pricing_sentence">19,000  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-      
-       <div class="pricing_price"><span class="pricing_currency"></span>Yearly</div>
-            <p class="pricing_sentence">28,000  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-            
-            
-          </div>
-          <div class="pricing_item wow fadeInUp" data-wow-delay="400ms">
-        <img src="{{ asset('storage/assets/images/intra-cash.jpg')}}" class="pricing-pic">
-            <h3>Cash HNI</h3>
-            <div class="pricing_price"><span class="pricing_currency"></span>Monthly</div>
-            <p class="pricing_sentence">NA  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-      
-       <div class="pricing_price"><span class="pricing_currency"></span>Quarterly</div>
-            <p class="pricing_sentence">14,000  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-      
-       <div class="pricing_price"><span class="pricing_currency"></span>Half Yearly</div>
-            <p class="pricing_sentence">19,000  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-      
-       <div class="pricing_price"><span class="pricing_currency"></span>Yearly</div>
-            <p class="pricing_sentence">28,000  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-            
-            
-          </div>
-          <div class="pricing_item wow fadeInUp" data-wow-delay="400ms">
-        <img src="{{ asset('storage/assets/images/intra-cash.jpg')}}" class="pricing-pic">
-            <h3>Cash HNI</h3>
-            <div class="pricing_price"><span class="pricing_currency"></span>Monthly</div>
-            <p class="pricing_sentence">NA  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-      
-       <div class="pricing_price"><span class="pricing_currency"></span>Quarterly</div>
-            <p class="pricing_sentence">14,000  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-      
-       <div class="pricing_price"><span class="pricing_currency"></span>Half Yearly</div>
-            <p class="pricing_sentence">19,000  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-      
-       <div class="pricing_price"><span class="pricing_currency"></span>Yearly</div>
-            <p class="pricing_sentence">28,000  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-            
-            
-          </div>
-          <div class="pricing_item wow fadeInUp" data-wow-delay="400ms">
-        <img src="{{ asset('storage/assets/images/intra-cash.jpg')}}" class="pricing-pic">
-            <h3>Cash HNI</h3>
-            <div class="pricing_price"><span class="pricing_currency"></span>Monthly</div>
-            <p class="pricing_sentence">NA  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-      
-       <div class="pricing_price"><span class="pricing_currency"></span>Quarterly</div>
-            <p class="pricing_sentence">14,000  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-      
-       <div class="pricing_price"><span class="pricing_currency"></span>Half Yearly</div>
-            <p class="pricing_sentence">19,000  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-      
-       <div class="pricing_price"><span class="pricing_currency"></span>Yearly</div>
-            <p class="pricing_sentence">28,000  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-            
-            
-          </div>
-          <div class="pricing_item wow fadeInUp" data-wow-delay="400ms">
-        <img src="{{ asset('storage/assets/images/intra-cash.jpg')}}" class="pricing-pic">
-            <h3>Cash HNI</h3>
-            <div class="pricing_price"><span class="pricing_currency"></span>Monthly</div>
-            <p class="pricing_sentence">NA  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-      
-       <div class="pricing_price"><span class="pricing_currency"></span>Quarterly</div>
-            <p class="pricing_sentence">14,000  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-      
-       <div class="pricing_price"><span class="pricing_currency"></span>Half Yearly</div>
-            <p class="pricing_sentence">19,000  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-      
-       <div class="pricing_price"><span class="pricing_currency"></span>Yearly</div>
-            <p class="pricing_sentence">28,000  <span class="pay-now"><a href="#">Pay Now</a></span></p>
-          </div>
+            @foreach($pricing as $result)
+                <div class="pricing_item wow fadeInUp" data-wow-delay="400ms">
+                    @if(file_exists(asset('storage/pricing/'.$result->photo)))
+                    <img src="{{ asset('storage/pricing/'.$result->photo) }}" class="pricing-pic">
+                    @else
+                    <img src="{{ asset('storage/assets/images/intra-cash.jpg') }}" class="pricing-pic">
+                    @endif 
+                    <h3>{{$result->title}}</h3>
+                    <div class="pricing_price"><span class="pricing_currency"></span>Monthly</div>
+                    <p class="pricing_sentence">{!! $result->monthly_price !!}  <span class="pay-now"><a href="#">Pay Now</a></span></p>
+
+                    <div class="pricing_price"><span class="pricing_currency"></span>Quarterly</div>
+                    <p class="pricing_sentence">{!! $result->quarterly_price !!}  <span class="pay-now"><a href="#">Pay Now</a></span></p>
+
+                    <div class="pricing_price"><span class="pricing_currency"></span>Half Yearly</div>
+                    <p class="pricing_sentence">{!! $result->half_yearly_price !!}  <span class="pay-now"><a href="#">Pay Now</a></span></p>
+
+                    <div class="pricing_price"><span class="pricing_currency"></span>Yearly</div>
+                    <p class="pricing_sentence">{!! $result->yearly_price !!}  <span class="pay-now"><a href="#">Pay Now</a></span></p> 
+                </div>
+            @endforeach
+          
         </div>
         
       </div>

@@ -50,10 +50,14 @@ Route::get('package',[
           'uses'  => 'HomeController@package'
         ]);
 
-Route::get('contact',[
-          'as' => 'contact',
-          'uses'  => 'HomeController@contact'
-        ]);
+ 
+ Route::match(['post','get'],'contact',[
+                'as' => 'contactForm',
+                'uses' => 'HomeController@contact'
+                ]
+            );  
+ 
+
 
 Route::get('terns-and-conditions',[
           'as' => 'tNc',
@@ -69,11 +73,13 @@ Route::get('faq',[
           'as' => 'faq',
           'uses'  => 'HomeController@faq'
         ]);
-
-Route::get('career',[
-          'as' => 'career',
-          'uses'  => 'HomeController@career'
-        ]);
+ 
+ Route::match(['post','get'],'career',[
+                'as' => 'careerForm',
+                'uses' => 'HomeController@career'
+                ]
+            );  
+ 
 
 Route::get('blog',[
           'as' => 'blog',
@@ -186,7 +192,11 @@ Route::post('myaccount/signup',[
         ]); 
         
         
-
+Route::post('freeTrial',[
+          'as' => 'freeTrial',
+          'uses'  => 'HomeController@freeTrial'
+        ]); 
+        
 
 Route::post('login',function(App\User $user , Illuminate\Http\Request $request){ 
 
