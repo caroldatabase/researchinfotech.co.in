@@ -21,7 +21,7 @@ use Modules\Admin\Models\Service as Pricing;
 use Modules\Admin\Models\TrackSheet;
 use Modules\Admin\Models\Transaction;
 use Modules\Admin\Models\Blogs; 
-
+//use Modules\Admin\Models\Pages; 
 
 class HomeController extends Controller
 {
@@ -45,13 +45,24 @@ class HomeController extends Controller
         $company_address    = $setting::where('field_key','company_address')->first();
         $banner             = $setting::where('field_key','LIKE','%banner_image%')->get();
         
-         View::share('website_title',$website_title->website_title);
-         View::share('website_email',$website_email->website_email);
-         View::share('website_url',$website_url->website_url);
-         View::share('contact_number',$contact_number->contact_number);
-         View::share('company_address',$company_address->company_address);
-         View::share('banner',$banner); 
-    }
+        $pageMenu = Pages::all();
+        
+         foreach($pageMenu as $val){
+             $url = url('page/'.str_slug($val->title));
+         $html = "<li>".'<a href="'.$url.'">'.'<i class="fa fa-right">'.'</i>'.ucfirst($val->title).'</a></li>';
+         
+         }
+         
+        
+        
+        View::share('website_title',$website_title->website_title);
+        View::share('website_email',$website_email->website_email);
+        View::share('website_url',$website_url->website_url);
+        View::share('contact_number',$contact_number->contact_number);
+        View::share('company_address',$company_address->company_address);
+        View::share('banner',$banner); 
+        View::share('pageMenu',$pageMenu);
+}
 
     /**
      * Show the application dashboard.
@@ -228,6 +239,21 @@ class HomeController extends Controller
         return Redirect::to('home');
 
     }
+    
+    public function page(Request $request, $name=null)
+    {
+        $title = ucfirst(str_replace('-'," ",$name));
+        $tagLine = "We offer the most complete advisory services in the country";
+        $name = str_replace('-'," ",$name);
+        
+        $page = Pages::where('title','LIKE',"%$name%")->first();
+        
+        return view('investmentvia.page',compact('title','tagLine','page'));   
+                
+    }
+    
+    
+    
 
 
 }

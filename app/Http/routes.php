@@ -61,6 +61,11 @@ Route::get('package',[
                 ]
             );  
  
+  Route::match(['post','get'],'page/{string}',[
+                'as' => 'policy',
+                'uses' => 'HomeController@page'
+                ]
+            ); 
 
 
 Route::get('terns-and-conditions',[
