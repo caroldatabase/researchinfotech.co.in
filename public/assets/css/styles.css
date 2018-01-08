@@ -3592,3 +3592,50 @@ background:#eee;
     margin-bottom: 15px;
     margin-left: 15px;
 }
+.home-feature h2 {
+    color: #fff;
+    font-size: 27px;
+    margin-bottom: 40px;
+}
+.feature-box {
+    position: relative;
+    margin-bottom: 45px;
+}
+.feature-box h4 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+.feature-box p
+{
+color:#fff;
+}
+span.feature-abs0, span.feature-abs1, span.feature-abs2, span.feature-abs3 {
+    color: #fff;
+    background: #07bfd5;
+    padding: 24px;
+    font-size: 18px;
+    border-radius: 100%;
+    border: none;
+    right: 0;
+    position: absolute;
+	top:0;
+	height: 70px;
+    width: 70px;
+    text-align: center;
+}
+span.feature-abs0 {
+    right: -80px;
+}
+span.feature-abs1 {
+    right: -58px;
+}
+span.feature-abs2 {
+    right: -55px;
+}
+span.feature-abs3 {
+    right: -90px;
+}
+.mobile-view-clone img
+{
+float:right;
+}

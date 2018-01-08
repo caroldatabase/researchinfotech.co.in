@@ -18,12 +18,7 @@
     margin-right: 60px;
 }
 .feature-box {
-    transform: skew(-15deg);
-    -webkit-transform: skew(-15deg);
-    -moz-transform: skew(-15deg);
-    -o-transform: skew(-15deg);
-    position: relative;
-    z-index: 9;
+    
 }
 .features-section .container .col-md-7 .feature-box>.feature-box-inner {
     text-align: right;
@@ -7762,6 +7757,67 @@ body {
 	.col-md-6.col-sm-12.col-xs-12.stock-side{padding-right: inherit;}
 	.col-md-6.col-sm-12.col-xs-12.mcx-side .col-md-8.pull-right.content-box.col-sm-6{text-align: left;padding-right: inherit;padding-left: 0px;}
 }
+.home-feature
+{
+background:url(http://researchinfotech.co.in/public/assets/images/clone.png);
+background-size:cover;
+background-repeat:no-repeat;
+padding:60px 0px;
+height:680px;
+}
 
-	
-	
+.home-feature h2 {
+    color: #fff;
+    font-size: 27px;
+    margin-bottom: 40px;
+}
+.feature-box {
+    position: relative;
+    margin-bottom: 45px;
+}
+.feature-box h4 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+.feature-box p
+{
+color:#fff;
+}
+span.feature-abs0, span.feature-abs1, span.feature-abs2, span.feature-abs3 {
+    color: #fff;
+    background: #07bfd5;
+    padding: 24px;
+    font-size: 18px;
+    border-radius: 100%;
+    border: none;
+    right: 0;
+    position: absolute;
+	top:0;
+	height: 70px;
+    width: 70px;
+    text-align: center;
+}
+span.feature-abs0 {
+    right: -80px;
+}
+span.feature-abs1 {
+    right: -58px;
+}
+span.feature-abs2 {
+    right: -55px;
+}
+span.feature-abs3 {
+    right: -90px;
+}
+.mobile-view-clone img
+{
+float:right;
+}
+.home-feature
+{
+background:url('http://researchinfotech.co.in/public/assets/images/clone.png');
+background-size:cover;
+background-repeat:no-repeat;
+padding:60px 0px;
+height:680px;
+}

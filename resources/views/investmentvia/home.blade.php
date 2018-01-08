@@ -103,6 +103,61 @@ p{
     line-height: normal;
     font-size: 15px;
 }
+.home-feature h2 {
+    color: #fff;
+    font-size: 27px;
+    margin-bottom: 40px;
+}
+.feature-box {
+    position: relative;
+    margin-bottom: 45px;
+}
+.feature-box h4 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+.feature-box p
+{
+color:#fff;
+}
+span.feature-abs0, span.feature-abs1, span.feature-abs2, span.feature-abs3 {
+    color: #fff;
+    background: #07bfd5;
+    padding: 24px;
+    font-size: 18px;
+    border-radius: 100%;
+    border: none;
+    right: 0;
+    position: absolute;
+	top:0;
+	height: 70px;
+    width: 70px;
+    text-align: center;
+}
+span.feature-abs0 {
+    right: -80px;
+}
+span.feature-abs1 {
+    right: -58px;
+}
+span.feature-abs2 {
+    right: -55px;
+}
+span.feature-abs3 {
+    right: -90px;
+}
+.mobile-view-clone img
+{
+float:right;
+}
+.home-feature
+{
+background:url('http://researchinfotech.co.in/public/assets/images/clone.png');
+background-size:cover;
+background-repeat:no-repeat;
+padding:60px 0px;
+height:680px;
+}
 
 </style>
 
@@ -331,7 +386,45 @@ News and Technical & Fundamental Analysis
 <!--ABout US-->
 
 <div class="home-feature wow fadeInUp" data-wow-delay="500ms">
-    <img src="{{ asset('storage/assets/images/home-feature.jpg')}}" style="width:100%">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<h2>Let Know Our Feature - Research Infotech</h2>
+				<div class="feature-box">
+					<h4>Daily and weekly research report</h4>
+					<p>
+						Trading advice on Mobile Devices/IMs Purely based on Economic News and Technical & Fundamental Analysis
+					</p>
+					<span class="feature-abs0"><i class="fa fa-credit-card-alt" aria-hidden="true"></i></span>
+				</div>
+				<div class="feature-box">
+					<h4>Live chat Facilities</h4>
+					<p>
+						Trading advice on Mobile Devices/IMs Purely based on Economic News and Technical & Fundamental Analysis
+					</p>
+					<span class="feature-abs1"><i class="fa fa-location-arrow" aria-hidden="true"></i></span>
+				</div>
+				<div class="feature-box">
+					<h4>Intense 27/7 support</h4>
+					<p>
+						Trading advice on Mobile Devices/IMs Purely based on Economic News and Technical & Fundamental Analysis
+					</p>
+					<span class="feature-abs2"><i class="fa fa-phone" aria-hidden="true"></i></span>
+				</div>
+				<div class="feature-box">
+					<h4>Personalized Service</h4>
+					<p>
+						Trading advice on Mobile Devices/IMs Purely based on Economic News and Technical & Fundamental Analysis
+					</p>
+					<span class="feature-abs3"><i class="fa fa-cogs" aria-hidden="true"></i></span>
+				</div>
+			</div>
+			<div class="col-sm-6 mobile-view-clone">
+				<img src="{{ asset('public/assets/images/mobile-bg.png')}}">
+				
+			</div>
+		</div>
+	</div>
 </div>
 
 <div class="what-we-do">
