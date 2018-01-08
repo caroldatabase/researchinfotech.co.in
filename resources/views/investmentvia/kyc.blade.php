@@ -1,5 +1,3 @@
-
-
 @extends('layouts.master')
 @section('title', 'Kyc')
 
@@ -20,7 +18,13 @@
        
       <div class="col-md-12 wow fadeInRight animated" data-wow-delay="500ms" style="visibility: visible; animation-delay: 4500ms; animation-name: fadeInRight;">
         <h2 class="heading heading_space"> <span>Kyc </span> <span class="divider-left"></span></h2>
-        <form class="form-inline findus" id="contact-form" onsubmit="return false">
+            
+            @if($errors->first('successMsg', ' has-error'))
+         <div class="alert alert-info">Thank you!.Kyc Form Submitted successfully.</div>
+        @endif
+         
+        {!! Form::model($kyc, ['route' => ['kycForm'],'class'=>'form-inline findus','id'=>'contact-form','files'=>true]) !!}
+        
           <div class="row">
             <div class="col-md-12">
               <div id="result"></div>
@@ -41,7 +45,8 @@
             <div class="col-md-4 col-sm-4">
             <label>Full Name (required)</label>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Full Name (required)" name="full_name" id="full_name" required="required">
+                <input value="{{ old('name') }}"  type="text" class="form-control" placeholder="Full Name (required)" name="name" id="name" required="required">
+                 <span class="label label-danger">{{ $errors->first('name', ':message') }}</span>
               </div>
             </div> 
            
@@ -49,28 +54,32 @@
             <label>Father/Spouse Name (required)</label>
               <div class="form-group">
                 <input type="text" class="form-control" placeholder="Father/Spouse Name (required)
-" name="father_spouse" id="father_spouse" required="">
+" name="father_spouse" id="father_spouse" required="" value="{{ old('name') }}" >
+                 <span class="label label-danger">{{ $errors->first('father_spouse', ':message') }}</span>
               </div>
             </div>
               
             <div class="col-md-4 col-sm-4">
               <div class="form-group">
                <label>DOB(required)</label>
-                <input type="date" class="form-control" placeholder="date of birth" name="dob" id="date" required="required">
+                <input value="{{ old('dob') }}"  type="date" class="form-control" placeholder="date of birth" name="dob" id="date" required="required">
+                 <span class="label label-danger">{{ $errors->first('dob', ':message') }}</span>
               </div>
             </div>
               
             <div class="col-md-4 col-sm-4">
               <div class="form-group">
                <label>PAN(required)</label>
-                <input type="text" class="form-control" placeholder="PAN" name="pan" id="date" required="required">
+                <input type="text"  value="{{ old('pan') }}"  class="form-control" placeholder="PAN" name="pan" id="date" required="required">
+                 <span class="label label-danger">{{ $errors->first('pan', ':message') }}</span>
               </div>
             </div>
               
               <div class="col-md-4 col-sm-4">
               <div class="form-group">
                <label>Occupation</label>
-                <input type="text" class="form-control" placeholder="Occupation" name="occupation" id="date" required="">
+                <input type="text" value="{{ old('occupation') }}"  class="form-control" placeholder="Occupation" name="occupation" id="date" required="">
+                 <span class="label label-danger">{{ $errors->first('occupation', ':message') }}</span>
               </div>
             </div>
              
@@ -79,64 +88,67 @@
              <div class="col-md-4 col-sm-4">
             <label>City</label>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="city" name="city" id="city" required="required">
+                <input type="text" value="{{ old('city') }}"  class="form-control" placeholder="city" name="city" id="city" >
+                 <span class="label label-danger">{{ $errors->first('city', ':message') }}</span>
               </div>
             </div>
              <div class="col-md-4 col-sm-4">
             <label>State</label>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="state" name="state" id="name" required="">
+                <input type="text" value="{{ old('state') }}"  class="form-control" placeholder="state" name="state" id="name" required="">
               </div>
             </div>
                <div class="col-md-4 col-sm-4">
             <label>Pin Code</label>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="pincode" name="pincode" id="name" required="required">
+                <input type="text" class="form-control" value="{{ old('pincode') }}"  placeholder="pincode" name="pincode" id="name" required="required">
+                 <span class="label label-danger">{{ $errors->first('pincode', ':message') }}</span>
               </div>
             </div>
              <div class="col-md-4 col-sm-4">
             <label>Residential Address (required)
 </label>
               <div class="form-group">
-               <textarea placeholder="Comment" name="message" id="message" class="form-control"></textarea>
-               
+               <textarea placeholder="Comment" value="{{ old('message') }}"  name="message" id="message" class="form-control"></textarea>
+              
               </div>
             </div>
              <div class="col-md-4 col-sm-4">
             <label>Work Telephone (required)</label>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="work telephone" name="work_telephone" id="work_telephone" required="">
+                <input type="text" class="form-control" value="{{ old('work_telephone') }}"  placeholder="work telephone" name="work_telephone" id="work_telephone" >
               </div>
             </div>
              <div class="col-md-4 col-sm-4">
             <label>Home / Mobile Telephone (required)</label>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Home / Mobile Telephone " name="home_telephone" id="home_telephone" required="required">
+                <input type="text" class="form-control" value="{{ old('home_telephone') }}"  placeholder="Home / Mobile Telephone " name="home_telephone" id="home_telephone" required="required">
+                 <span class="label label-danger">{{ $errors->first('home_telephone', ':message') }}</span>
               </div>
             </div>
              <div class="col-md-4 col-sm-4">
             <label>Email Work (required)</label>
               <div class="form-group">
-               <input type="text" class="form-control" placeholder="Email Work " name="mail_work" id="mail_work" required="required">
+               <input type="text" value="{{ old('mail_work') }}"  class="form-control" placeholder="Email Work " name="mail_work" id="mail_work">
               </div>
             </div>
              <div class="col-md-4 col-sm-4">
             <label>Email</label>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Email" name="email" id="email" required="">
+                <input type="text" class="form-control" value="{{ old('email') }}"  placeholder="Email" name="email" id="email" required="">
               </div>
             </div>
              
              <div class="col-md-4 col-sm-4">
             <label>Fax Work (required)</label>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Fax Work (required)" name="fax_work" id="fax_work" required="">
+                <input type="text" class="form-control" value="{{ old('fax_work') }}"  placeholder="Fax Work (required)" name="fax_work" id="fax_work" required="">
               </div>
             </div>
              <div class="col-md-4 col-sm-4">
             <label>Nationality (required)</label>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Nationality (required)" name="nationality" id="nationality" required="">
+                <input type="text" class="form-control" value="{{ old('nationality') }}"  placeholder="Nationality (required)" name="nationality" id="nationality" required="">
               </div>
             </div>
              <div class="col-md-4 col-sm-4">
@@ -257,7 +269,8 @@
               <div class="col-md-4 col-sm-4">
                 <label>Adhar Number</label>
                 <div class="form-group {{ $errors->first('adhar_number', ' has-error') }}">
-                    <input type="text" class="form-control" name="adhar_number" placeholder="Adhar number">
+                    <input type="text" class="form-control"  value="{{ old('adhar_number') }}" name="adhar_number" placeholder="Adhar number">
+                     <span class="label label-danger">{{ $errors->first('adhar_number', ':message') }}</span>
                 </div>
             </div>
               
@@ -266,10 +279,11 @@
                 <div style="position:relative;">
                      <a class='btn btn-primary' href='javascript:;'>
                         Choose File...
-                    <input name="file" type="file" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40"  onchange='$("#upload-file-info").html($(this).val());'>
+                    <input name="file" type="file" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;'  size="40"  onchange='$("#upload-file-info").html($(this).val());'>
                     </a>
                     &nbsp;
                     <span class='label label-info' id="upload-file-info"></span>
+                     <span class="label label-danger">{{ $errors->first('file', ':message') }}</span>
             </div>
             </div>
               
@@ -283,7 +297,7 @@
                 </div>
             </div> 
             
-        </form>
+        {!! form::close() !!}
        
       </div>
     </div>

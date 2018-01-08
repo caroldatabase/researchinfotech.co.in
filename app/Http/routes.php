@@ -95,7 +95,12 @@ Route::get('faq',[
                 'uses' => 'HomeController@career'
                 ]
             );  
- 
+
+ Route::match(['post'],'kyc',[
+                'as' => 'kycForm',
+                'uses' => 'HomeController@kycForm'
+                ]
+            ); 
 
 Route::get('blog',[
           'as' => 'blog',

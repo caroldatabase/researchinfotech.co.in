@@ -216,11 +216,11 @@ class HomeController extends Controller
         $tagLine = "We offer the most complete advisory services in the country";
         return view('investmentvia.riskTolrance',compact('title','tagLine'));
     }
-    public function kyc()
+    public function kyc(Request $request, Kyc $kyc)
     {
         $title = "Kyc";
         $tagLine = "We offer the most complete advisory services in the country";
-        return view('investmentvia.kyc',compact('title','tagLine'));
+        return view('investmentvia.kyc',compact('title','tagLine','kyc'));
     }
 
     public function discloser()
@@ -251,9 +251,47 @@ class HomeController extends Controller
         return view('investmentvia.page',compact('title','tagLine','page'));   
                 
     }
-    
-    
-    
+    public function kycForm(Request $request, Kyc $kyc)
+    {
+        $title = "Kyc";
+        $tagLine = "We offer the most complete advisory services in the country";
+         
+        if($request->method()=='POST'){
+            $validator = Validator::make($request->all(), [
+                'name' => 'required|min:3',
+                'email' => 'required|email',
+                'city' => 'required',
+                'adhar_number' => 'required|numeric|min:12',
+                'pan' => 'required',
+                'file' => 'required|mimes:doc,pdf,docs'
+            ]); 
+                if ($validator->fails()) {
+                     return Redirect::to('kyc')
+                            ->withErrors($validator)
+                            ->withInput();
+                }else{
+               
+                    if ($request->file('file')) {  
+                        $photo = $request->file('file');
+                        $destinationPath = storage_path('kyc/');
+                        $photo->move($destinationPath, time().$photo->getClientOriginalName());
+                        $file = time().$photo->getClientOriginalName();
+                    } 
+                        $allData    =   $request->except('_token','file');
+                        $phone      =   $request->get('home_telephone');
+                        $input      =   $request->only('name','email','pan','adhar_number');
+                        $input['phone']  = $phone;
 
+                        if(isset($file)){
+                            $input['doc'] = $file;
+                        }
+                        $input['allData']  = json_encode($allData);   
+
+                    \DB::table('kyc')->insert($input);
+                    return Redirect::to('kyc')->withErrors(['successMsg'=>'Thanking for Contacting us!']);
+                    }
+        }
+       return view('investmentvia.kyc',compact('title','tagLine','kyc'));
+    }
 
 }

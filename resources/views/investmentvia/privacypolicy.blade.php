@@ -26,7 +26,7 @@
 
 
 
-<h4 style="color:#00A0E3">InvestmentVia Disclaimer &amp; Privacy Policies</h4> <br>
+<h4 style="color:#00A0E3">Research Infotech Disclaimer &amp; Privacy Policies</h4> <br>
 
 
         <p class="text-justify wow fadeInUp animated animated" data-wow-animation-name="fadeInUp" style="visibility: visible; animation-name: fadeInUp;">The term ‘Bucks Gainer’ or ‘us’ or ‘we’or ‘our’ refers to the owners, employees of the website. The term ‘you’ refers to the user or viewer of our website. The use of this website is subjected to following terms and conditions:</p>

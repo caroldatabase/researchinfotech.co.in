@@ -53,7 +53,7 @@
           <div class="row">
             <div class="col-md-6 col-sm-4">
               <div class="form-group">
-                <input type="text"  value="{{ old('name') }}" class="form-control" placeholder="Name" name="name" id="name" required="required">
+                <input type="text"  value="{{ old('name') }}"  class="form-control" placeholder="Name" name="name" id="name" required="required">
                  <span class="label label-danger">{{ $errors->first('name', ':message') }}</span>
               </div>
             </div>
