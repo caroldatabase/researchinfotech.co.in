@@ -21,7 +21,6 @@ class ProductRequest  extends Request {
                 case 'POST': {
                         return [
                             'title'     => "required|unique:services,title" ,  
-                            'description'  => 'required', 
                             'monthly_price'       => 'required|numeric|min:0',
                             'quarterly_price'             =>  'required|numeric|min:0',
                             'half_yearly_price'             =>  'required|numeric|min:0',
@@ -35,7 +34,6 @@ class ProductRequest  extends Request {
 
                         return [
                              'title'     => "required" ,  
-                            'description'  => 'required', 
                             'monthly_price'       => 'required|numeric|min:0',
                             'quarterly_price'             =>  'required|numeric|min:0',
                             'half_yearly_price'             =>  'required|numeric|min:0',
