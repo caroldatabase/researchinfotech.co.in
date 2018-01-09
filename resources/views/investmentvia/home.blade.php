@@ -288,7 +288,7 @@ News and Technical & Fundamental Analysis
 
 
 <div class="free-trial-section marqu">
-    <p class="marq"><marquee>Trading advice on Mobile Devices/IMs Purely based on Econom News and Technical & Fundamental Analysis Trading advice on Mobile Devices/IMs Purely based on Econom News and Technical & Fundamental Analysis</marquee></p>
+    <p class="marq"><marquee>Investment in stock and commodity market are subject to market risk. Free calls are only for Paper Trade to see our performance. Don't trade on Free Calls. Trade only on Calls received through SMS with proper Target and Stop Loss. Our company is SEBI Registered.Please pay only in company accounts we do not open d-mat & dabba account</marquee></p>
 </div>
 
 
@@ -438,22 +438,22 @@ News and Technical & Fundamental Analysis
             <div class="col-sm-4 border-right">
                 <div class="what-content wow fadeInUp" data-wow-delay="500ms">
                     <p><img src="{{ asset('storage/assets/images/right-circle.jpg')}}"></p>
-                    <h3>CUSTOMER/ON-CALL SUPPORT</h3>
-                    <p class="what-desc">In this service we provide limited calls in GOLD/SILVER with a high level of accuracy. You can also avail Free Tips for two days to test our accuracy and if satisfied you can join BULLION HNI services</p>
+                    <h3>WHO WE ARE ?</h3>
+                    <p class="what-desc">We are a team that supports the accumulation of your wealth through different sources. A team that has market’s best advisors helps you to wade through a difficult phase. We research Infotech  are always present to guide you to the right investment plans. Trust is what we offer you to be with us</p>
                 </div>
             </div>
             <div class="col-sm-4 border-right">
                 <div class="what-content wow fadeInUp" data-wow-delay="500ms""">
                     <p><img src="{{ asset('storage/assets/images/right-circle.jpg')}}"></p>
-                    <h3>CUSTOMER/ON-CALL SUPPORT</h3>
-                    <p class="what-desc">In this service we provide limited calls in GOLD/SILVER with a high level of accuracy. You can also avail Free Tips for two days to test our accuracy and if satisfied you can join BULLION HNI services</p>
+                    <h3>WHAT WE CARE ?</h3>
+                    <p class="what-desc">Customer needs and satisfaction are the main concerns of Research Infotech . Our tips and services are the indeed portrayal of our work. Enhanced services along with the trials are being provided to take care of the security issues of our clients.</p>
                 </div>
             </div>
             <div class="col-sm-4">
                 <div class="what-content wow fadeInUp" data-wow-delay="500ms""">
                     <p><img src="{{ asset('storage/assets/images/right-circle.jpg')}}"></p>
-                    <h3>CUSTOMER/ON-CALL SUPPORT</h3>
-                    <p class="what-desc">In this service we provide limited calls in GOLD/SILVER with a high level of accuracy. You can also avail Free Tips for two days to test our accuracy and if satisfied you can join BULLION HNI services</p>
+                    <h3>Learn How To Trade</h3>
+                    <p class="what-desc">You don’t have to work on BSE/NSE to make money like BSE. Learn more how to trade with Research Infotech</p>
                 </div>
             </div>
         </div>
@@ -462,21 +462,21 @@ News and Technical & Fundamental Analysis
             <div class="col-sm-4 border-right">
                 <div class="what-content wow fadeInUp" data-wow-delay="500ms""">
                     <p><img src="{{ asset('storage/assets/images/right-circle.jpg')}}"></p>
-                    <h3>CUSTOMER/ON-CALL SUPPORT</h3>
-                    <p class="what-desc">In this service we provide limited calls in GOLD/SILVER with a high level of accuracy. You can also avail Free Tips for two days to test our accuracy and if satisfied you can join BULLION HNI services</p>
+                    <h3>Quick Technical Support</h3>
+                    <p class="what-desc">You will get the quick solutions for your every problem pertaining to the Services. Call us or just click Priority Support.</p>
                 </div>
             </div>
             <div class="col-sm-4 border-right">
                 <div class="what-content wow fadeInUp" data-wow-delay="500ms""">
                     <p><img src="{{ asset('storage/assets/images/right-circle.jpg')}}"></p>
-                    <h3>CUSTOMER/ON-CALL SUPPORT</h3>
-                    <p class="what-desc">In this service we provide limited calls in GOLD/SILVER with a high level of accuracy. You can also avail Free Tips for two days to test our accuracy and if satisfied you can join BULLION HNI services</p>
+                    <h3>Quality Order Execution</h3>
+                    <p class="what-desc">You might be surprised at the variety of possible ways in which an order can be filled and the associated time delays.</p>
                 </div>
             </div>
             <div class="col-sm-4">
                 <div class="what-content wow fadeInUp" data-wow-delay="500ms""">
                     <p><img src="{{ asset('storage/assets/images/right-circle.jpg')}}"></p>
-                    <h3>CUSTOMER/ON-CALL SUPPORT</h3>
+                    <h3>Customer/ON-CALL Support</h3>
                     <p class="what-desc">In this service we provide limited calls in GOLD/SILVER with a high level of accuracy. You can also avail Free Tips for two days to test our accuracy and if satisfied you can join BULLION HNI services</p>
                 </div>
             </div>
@@ -543,39 +543,37 @@ Commodity & Bullion Market.</p>
       <div id="review_slider" class="owl-carousel text-center">
         <div class="item">
           <img src="{{ asset('storage/assets/images/customer1.png')}}" class="client_pic border_radius" alt="costomer">
-          <p class="review_text">I've been happy with the services provided by Xwin LLC. Scooter Libby has been wonderful! He has returned my calls quickly, and he answered all my questions. This is required when, for example, the final text is not yet available. We are here to help you from the initial phase to the final Xwin phase.</p>
-          <h4>John Smith</h4>
-          <p>Ditector Shangha</p>
+          <p class="review_text">I am quite impressed with their services. I like their strategies & resistance, support levels. With this I am able to earn more profit with less fund.</p>
+          <h4>D.K bansal</h4> 
         </div>
         <div class="item">
           <img src="{{ asset('storage/assets/images/customer1.png')}}" class="client_pic border_radius" alt="costomer">
-          <p class="review_text">I've been happy with the services provided by Xwin LLC. Scooter Libby has been wonderful! He has returned my calls quickly, and he answered all my questions. This is required when, for example, the final text is not yet available. We are here to help you from the initial phase to the final Xwin phase.</p>
-          <h4>kate Winslet</h4>
-          <p>Ditector Shangha</p>
+          <p class="review_text">I totally and blindly follow Research infotech  team for my trade in Stock Market because I know they will not let down me and always be there for me for support and efforts with their brilliant team. I wish them all the success for the future</p>
+          <h4>Bala subramanya swamy</h4>
+         
         </div>
         <div class="item">
           <img src="{{ asset('storage/assets/images/customer1.png')}}" class="client_pic border_radius" alt="costomer">
-          <p class="review_text">I've been happy with the services provided by Xwin LLC. We are here to help you from the initial phase to the final Xwin phase. Scooter Libby has been wonderful! He has returned my calls quickly, and he answered all my questions. This is required when, for example, the final text is not yet available. </p>
-          <h4>Robert Jhon</h4>
-          <p>Ditector Shangha</p>
+          <p class="review_text">Myself virendra pratap singh, client of research infotech  from past 2 months. I’m a new trader with very less knowledge about share market but want to trade and earn more from this market. Assent team gives me what I want from their excellent core Research and Sales team support. I’m so happy with their contribution to my success and now i give there to all my friends those who want to trade in this market. </p>
+          <h4>Virendra pratap singh</h4> 
         </div>
         <div class="item">
           <img src="{{ asset('storage/assets/images/customer1.png')}}" class="client_pic border_radius" alt="costomer">
-          <p class="review_text">I've been happy with the services provided by Xwin LLC. We are here to help you from the initial phase to the final Xwin phase. Scooter Libby has been wonderful! He has returned my calls quickly, and he answered all my questions. This is required when, for example, the final text is not yet available. </p>
-          <h4>Robert Jhon</h4>
-          <p>Ditector Shangha</p>
+          <p class="review_text">You guys are doing great job, I had a profitable trade during last 9 months without fail. Your option strategy service is excellent; I wanted to try out your BTST Calls. Special thanks to ankit  for assisting me as always! <br>
+I am an intraday trader in Stock Cash and Stock Futures. Earlier I was skeptical about stock tips service. But one day I heard about this stock market advisory providing intraday stock tips. I just visited website and filled out stock tips free trial form for intraday trading tips. And what I got was maximum returns ever.
+</p>
+          <h4>Kuwar singh rathore</h4>
+          
         </div>
         <div class="item">
           <img src="{{ asset('storage/assets/images/customer1.png')}}" class="client_pic border_radius" alt="costomer">
-          <p class="review_text">I've been happy with the services provided by Xwin LLC. We are here to help you from the initial phase to the final Xwin phase. Scooter Libby has been wonderful! He has returned my calls quickly, and he answered all my questions. This is required when, for example, the final text is not yet available. </p>
-          <h4>Robert Jhon</h4>
-          <p>Ditector Shangha</p>
+          <p class="review_text">Thank you very much for considering my request for permitting to make part payment 60% , (Rs8000).This kind of gesture towards retired people like me gives an oppertunity to generate income and gives a feeling of alive or else others would treat us as deadwood.I would make payment as soon activates my F & O segments.</p>
+          <h4>Nand kishore pawar</h4> 
         </div>
         <div class="item">
           <img src="{{ asset('storage/assets/images/customer1.png')}}" class="client_pic border_radius" alt="costomer">
-          <p class="review_text">I've been happy with the services provided by Xwin LLC. We are here to help you from the initial phase to the final Xwin phase. Scooter Libby has been wonderful! He has returned my calls quickly, and he answered all my questions. This is required when, for example, the final text is not yet available. </p>
-          <h4>Robert Jhon</h4>
-          <p>Ditector Shangha</p>
+          <p class="review_text">I am very happy with their calls & proper follow ups. My experience with Research Infotech is just amazing. I hope they will be able to always maintain their accuracy & services. </p>
+          <h4>Sriniwas naidu </h4>
         </div>
        </div>
       </div>
@@ -589,23 +587,23 @@ Commodity & Bullion Market.</p>
     <h2 class="hidden">hidden</h2>
     <div class="row number-counters">
       <div class="col-md-3 col-sm-6 col-xs-6 counters-item text-center wow fadeInUp" data-wow-delay="300ms">
-        <i class="icon-layers"></i>
-        <strong data-to="1235">0</strong>
-        <p>Project Completed</p>
+        <i class="i-xlarge divcenter nobottommargin i-plain icon-thumbs-up"></i>
+        <strong data-to="5000">5000</strong>
+        <p>SOCIAL MEDIA FOLLOWERS</p>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-6 counters-item text-center wow fadeInUp" data-wow-delay="400ms">
         <i class="icon-trophy"></i>
-        <strong data-to="78">0</strong>
-        <p>Awards Won</p>
+        <strong data-to="100">0</strong>
+        <p>NATIONAL/INTERNATIONAL STATE COVERED</p>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-6 counters-item text-center wow fadeInUp" data-wow-delay="500ms">
         <i class=" icon-icons20"></i>
-        <strong data-to="186">0</strong>
-        <p>Hours of Work / Month</p>
+        <strong data-to="50">0</strong>
+        <p>NATIONAL/INTERNATIONAL RESEARCH SOURCES</p>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-6 counters-item text-center wow fadeInUp" data-wow-delay="600ms">
         <i class="icon-happy"></i>
-        <strong data-to="89">0</strong>
+        <strong data-to="1000">0</strong>
         <p>Satisfied Clients</p>
       </div>
     </div>

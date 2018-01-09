@@ -367,6 +367,40 @@
                 ]
         );
         
+        Route::bind('gallery', function($value, $route) {
+            return Modules\Admin\Models\Gallery::find($value);
+        });
+ 
+        Route::resource('admin/gallery', 'Modules\Admin\Http\Controllers\GalleryController', [
+            'names' => [
+                'edit' => 'gallery.edit',
+                'show' => 'gallery.show',
+                'destroy' => 'gallery.destroy',
+                'update' => 'gallery.update',
+                'store' => 'gallery.store',
+                'index' => 'gallery',
+                'create' => 'gallery.create',
+            ]
+                ]
+        );
+    
+        Route::bind('blog', function($value, $route) {
+            return Modules\Admin\Models\Blogs::find($value);
+        });
+ 
+        Route::resource('admin/blog', 'Modules\Admin\Http\Controllers\BlogController', [
+            'names' => [
+                'edit' => 'blog.edit',
+                'show' => 'blog.show',
+                'destroy' => 'blog.destroy',
+                'update' => 'blog.update',
+                'store' => 'blog.store',
+                'index' => 'blog',
+                'create' => 'blog.create',
+            ]
+                ]
+        );
+
         Route::match(['get','post'],'admin/profile', 'Modules\Admin\Http\Controllers\AdminController@profile'); 
             
   });

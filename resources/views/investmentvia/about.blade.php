@@ -6,10 +6,7 @@
 <h1>Home</h1>
 @stop
 @section('content')
-@include('partials/menu')
-    <!--Slider-->
-
- 
+@include('partials/menu') 
 @include('partials/titlebar')
 
 <section id="about" class="padding">

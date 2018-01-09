@@ -21,7 +21,7 @@
                                     <div class="box-header">
                                         <div class="table-toolbar">
                                         <div class="row">
-                                            <form action="{{route('page')}}" method="get" id="filter_data">
+                                            <form action="{{route('gallery')}}" method="get" id="filter_data">
                                              
                                             <div class="col-md-3">
                                                 <input value="{{ (isset($_REQUEST['search']))?$_REQUEST['search']:''}}" placeholder="Search " type="text" name="search" id="search" class="form-control" >
@@ -32,7 +32,7 @@
                                            
                                         </form>
                                          <div class="col-md-2">
-                                             <a href="{{ route('page') }}">   <input type="submit" value="Reset" class="btn btn-default form-control"> </a>
+                                             <a href="{{ route('gallery') }}">   <input type="submit" value="Reset" class="btn btn-default form-control"> </a>
                                         </div>
                                        
                                         </div>
@@ -40,8 +40,8 @@
                                         
                                         <div class="col-md-2 pull-right">
                                             <div style="width: 150px;" class="input-group"> 
-                                                <a href="{{ route('page.create')}}">
-                                                    <button class="btn  btn-primary"><i class="fa fa-user-plus"></i> Create Page</button> 
+                                                <a href="{{ route('gallery.create')}}">
+                                                    <button class="btn  btn-primary"><i class="fa fa-user-plus"></i> Add New Image</button> 
                                                 </a>
                                             </div>
                                         </div> 
@@ -60,39 +60,35 @@
                                         <table class="table table-hover table-condensed">
                                             <thead><tr>
                                                     <th>Sno</th> 
-                                                    <th>Page Title</th>
-                                                    <th>Content description</th>
+                                                    <th>Image Title</th>
                                                     <th>image </th> 
-                                                    <th>Created Date</th> 
+                                                    <th>Post Date</th> 
                                                     <th>Action</th>
                                                 </tr>
-                                                @if(count($page )==0)
+                                                @if(count($gallery )==0)
                                                     <tr>
                                                       <td colspan="7">
                                                         <div class="alert alert-danger alert-dismissable">
-                                                          <button aria-hidden="true" data-dismiss="alert" class="close" type="button">Ã—</button>
+                                                          <button aria-hidden="true" data-dismiss="alert" class="close" type="button">x</button>
                                                           <i class="icon fa fa-check"></i>  
                                                           {{ 'Record not found. Try again !' }}
                                                         </div>
                                                       </td>
                                                     </tr>
                                                   @endif
-                                                @foreach ($page  as $key => $result)  
+                                                  <?php $i=1;?>
+                                                @foreach ($gallery  as $result)  
                                              <thead>
                                               <tbody>    
                                                 <tr>
-                                                    <td>{{ ++$key }}</td>
+                                                    <td>{{ $i++ }}</td>
                                                     <td>{!! ucfirst($result->title)     !!}
 
                                                     </td>
-                                                   
-                                                    <td>{!! substr($result->page_content,0,50) !!}...<a href="{{ route('page.edit',$result->id)}}">
-                                                            <i class="glyphicon glyphicon-eye-open" title="view"></i> 
-                                                        </a></td>
-                                                     <td> 
-                                                      <!--   {!!  substr(html_entity_decode($result->description, ENT_QUOTES, 'UTF-8'),0,50)  !!}.. -->
-                                                      @if(file_exists(storage_path('files/banner_content/'.$result->images)))
-                                                      <img src="{{url('storage/files/banner_content/'.$result->images)}}" width="100px"> 
+                                                     <td>
+                                                      @if(file_exists(storage_path('gallery/'.$result->image)))
+                                                      
+                                                      <img src="{{url('storage/gallery/'.$result->image)}}" width="100px">
                                                       @else
                                                        NA
                                                       @endif
@@ -102,11 +98,11 @@
                                                     </td>
                                                     
                                                     <td> 
-                                                        <a href="{{ route('page.edit',$result->id)}}">
+                                                        <a href="{{ route('gallery.edit',$result->id)}}">
                                                             <i class="fa fa-fw fa-pencil-square-o" title="edit"></i> 
                                                         </a>
 
-                                                        {!! Form::open(array('class' => 'form-inline pull-left deletion-form', 'method' => 'DELETE',  'id'=>'deleteForm_'.$result->id, 'route' => array('page.destroy', $result->id))) !!}
+                                                        {!! Form::open(array('class' => 'form-inline pull-left deletion-form', 'method' => 'DELETE',  'id'=>'deleteForm_'.$result->id, 'route' => array('gallery.destroy', $result->id))) !!}
                                                         <button class='delbtn btn btn-danger btn-xs' type="submit" name="remove_levels" value="delete" id="{{$result->id}}"><i class="fa fa-fw fa-trash" title="Delete"></i></button>
                                                         
                                                          {!! Form::close() !!}
@@ -116,7 +112,7 @@
                                                 @endforeach 
                                             </tbody></table>
                                     </div><!-- /.box-body --> 
-                                    <div class="center" align="center">  {!! $page->render() !!}</div>
+                                    <div class="center" align="center">  {!! $gallery->render() !!}</div>
                                 </div>
                             </div>
                         </div>

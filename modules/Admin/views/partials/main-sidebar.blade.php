@@ -119,6 +119,31 @@
         </ul>
       </li> 
       
+        <li class="treeview {{ (isset($page_action) && $page_title=='Gallery')?"active":'' }} ">
+        <a href="#">
+          <i class="fa fa-user"></i>
+          <span>Manage Gallery</span>
+          <i class="fa fa-angle-left pull-right"></i>
+        </a> 
+        <ul class="treeview-menu">
+         <li class="{{ (isset($page_action) && $page_action=='Create Gallery')?"active":'' }}" ><a href="{{ route('gallery.create')}}"><i class="fa fa-user-plus"></i>Post Image</a></li>
+          <li class="{{ (isset($page_action) && $page_action=='View Gallery')?"active":'' }}"><a href="{{ url('admin/gallery')}}"><i class="fa  fa-list"></i> View Gallery</a></li>
+        </ul>
+      </li> 
+      
+      
+       <li class="treeview {{ (isset($page_action) && $page_title=='Blog')?"active":'' }} ">
+        <a href="#">
+          <i class="fa fa-user"></i>
+          <span>Manage Blog</span>
+          <i class="fa fa-angle-left pull-right"></i>
+        </a> 
+        <ul class="treeview-menu">
+         <li class="{{ (isset($page_action) && $page_action=='Create Blog')?"active":'' }}" ><a href="{{ route('blog.create')}}"><i class="fa fa-user-plus"></i>Post Blog</a></li>
+          <li class="{{ (isset($page_action) && $page_action=='View Blog')?"active":'' }}"><a href="{{ url('admin/blog')}}"><i class="fa  fa-list"></i> View Blog</a></li>
+        </ul>
+      </li>
+      
       
        <li class="treeview {{ (isset($page_action) && $page_title=='Bank Account')?"active":'' }} ">
         <a href="#">
@@ -155,26 +180,12 @@
          <li class="{{ (isset($page_action) && $page_action=='View Career')?"active":'' }}"><a href="{{ url('admin/career')}}"><i class="fa  fa-list"></i> View Career</a></li>
         </ul>
       </li> 
-      
-      
-      
-        
-      <li class="treeview {{ (isset($page_action) && $page_title=='Transaction')?"active":'' }} ">
-        <a href="#">
-          <i class="fa fa-user"></i>
-          <span>Manage Transactions</span>
-          <i class="fa fa-angle-left pull-right"></i>
-        </a> 
-        <ul class="treeview-menu">
-          <li class="{{ (isset($page_action) && $page_action=='View Transaction')?"active":'' }}"><a href="{{ route('transaction')}}"><i class="fa  fa-list"></i> Transactions</a></li>
-        </ul>
-      </li>  
 
 
       <li class="treeview {{ (isset($page_action) && $page_title=='setting')?"active":'' }} ">
         <a href="#">
           <i class="fa fa-user"></i>
-          <span>Manage Website Setting</span>
+          <span>Website Setting</span>
           <i class="fa fa-angle-left pull-right"></i>
         </a> 
         <ul class="treeview-menu">

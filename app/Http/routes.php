@@ -101,6 +101,18 @@ Route::get('faq',[
                 'uses' => 'HomeController@kycForm'
                 ]
             ); 
+Route::match(['post','get'],'free-trial',[
+                'as' => 'free-trial',
+                'uses' => 'HomeController@freeTrialForm'
+                ]
+            ); 
+ 
+ Route::match(['post','get'],'life-at-research-infotech',[
+                'as' => 'lifeAtResearchInfotech',
+                'uses' => 'HomeController@lifeAtResearchInfotech'
+                ]
+            ); 
+
 
 Route::get('blog',[
           'as' => 'blog',

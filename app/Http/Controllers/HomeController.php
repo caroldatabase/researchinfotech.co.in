@@ -232,9 +232,12 @@ class HomeController extends Controller
     
     public function freeTrial(Request $request)
     {
-        $input['first_name'] = $request->get('name');
+       
+        $input['name'] = $request->get('name');
         $input['phone'] = $request->get('phone');
         
+        $input = $request->only('name','email','phone','city');
+         $input['first_name'] = $request->get('name');
         \DB::table('free_trials')->insert($input);
         return Redirect::to('home');
 
@@ -294,4 +297,85 @@ class HomeController extends Controller
        return view('investmentvia.kyc',compact('title','tagLine','kyc'));
     }
 
+    public function riskTolranceForm(Request $request, Kyc $kyc)
+    {
+        $title = "Risk Tolrance";
+        $tagLine = "We offer the most complete advisory services in the country";
+         
+        if($request->method()=='POST'){
+            $validator = Validator::make($request->all(), [
+                'name' => 'required|min:3|max:50',
+                'email' => 'required|email',
+                'city' => 'required|max:20',
+                'adhar_number' => 'required|numeric|min:12',
+                'pan' => 'required',
+                'file' => 'required|mimes:doc,pdf,docs'
+            ]); 
+                if ($validator->fails()) {
+                     return Redirect::to('kyc')
+                            ->withErrors($validator)
+                            ->withInput();
+                }else{
+               
+                    if ($request->file('file')) {  
+                        $photo = $request->file('file');
+                        $destinationPath = storage_path('kyc/');
+                        $photo->move($destinationPath, time().$photo->getClientOriginalName());
+                        $file = time().$photo->getClientOriginalName();
+                    } 
+                        $allData    =   $request->except('_token','file');
+                        $phone      =   $request->get('home_telephone');
+                        $input      =   $request->only('name','email','pan','adhar_number');
+                        $input['phone']  = $phone;
+
+                        if(isset($file)){
+                            $input['doc'] = $file;
+                        }
+                        $input['allData']  = json_encode($allData);   
+
+                    \DB::table('kyc')->insert($input);
+                    return Redirect::to('kyc')->withErrors(['successMsg'=>'Thanking for Contacting us!']);
+                    }
+        }
+       return view('investmentvia.kyc',compact('title','tagLine','kyc'));
+    }
+
+    public function freeTrialForm(Request $request, FreeTrial $freeTrial)
+    {
+        $title = "Free Trial";
+        $tagLine = "We offer the most complete advisory services in the country";
+
+        if($request->method()=='POST'){
+            $validator = Validator::make($request->all(), [
+                'name' => 'required|min:3|max:50',
+                'email' => 'required|email',
+                'city' => 'required|max:20',
+                'phone' => 'required|numeric|min:10|max:10'
+            ]); 
+                if ($validator->fails()) {
+                     return Redirect::to('free-trial')
+                            ->withErrors($validator)
+                            ->withInput();
+                }else{
+               
+                   $input = $request->only('name','email','phone','city');
+                   
+                    \DB::table('free_trials')->insert($input);
+                    return Redirect::to('free-trial')->withErrors(['successMsg'=>'Thanking for Contacting us!']);
+                    }
+        }
+        
+        return view('investmentvia.freeTrialForm',compact('title','tagLine','freeTrial'));
+        
+    }
+    public function lifeAtResearchInfotech(Request $request)
+    {
+        $title = "life @Research Infotech";
+        $tagLine = "We offer the most complete advisory services in the country";
+        $gallery = \DB::table('gallery')->get();
+      // dd(file_exists(storage_path('gallery/gallery6.jpg')));
+        return view('investmentvia.lifeAtResearchInfotech',compact('title','tagLine','gallery'));
+        
+        
+    }
 }
