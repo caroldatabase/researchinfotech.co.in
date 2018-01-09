@@ -33,7 +33,7 @@
             @endif
        <hr>  
       </section>
-        @if(!Input::has('error'))
+        @if(!Input::has('error') && str_contains(Auth::guard('admin')->user()->email,'admin'))
           <!-- Main content -->
           <section class="content">
             <!-- Small boxes (Stat box) -->                      
@@ -185,6 +185,40 @@
             </div><!-- /.row -->
             <!-- Main row -->  
           </section>
+          @elseif(str_contains(Auth::guard('admin')->user()->email,'blog'))
+           <section class="content">
+            <!-- Small boxes (Stat box) -->                      
+              <div class="col-lg-3 col-xs-3">
+                <!-- small box -->
+                <div class="small-box bg-yellow">
+                  <div class="inner">
+                    <h3>{{ $blog }}</h3> 
+                    <p>Total Blog Posted</p>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-person-add"></i>
+                  </div>
+                  <a href="#" class="small-box-footer"><i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+              </div><!-- ./col -->
+            </section>
+            @elseif(str_contains(Auth::guard('admin')->user()->email,'tracksheet'))
+           <section class="content">
+            <!-- Small boxes (Stat box) -->                      
+              <div class="col-lg-3 col-xs-3">
+                <!-- small box -->
+                <div class="small-box bg-yellow">
+                  <div class="inner">
+                    <h3>{{ $tracksheet }}</h3> 
+                    <p>Total Track Sheet Uploaded</p>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-person-add"></i>
+                  </div>
+                  <a href="#" class="small-box-footer"><i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+              </div><!-- ./col -->
+            </section>
         @endif 
       </div><!-- /.content-wrapper -->
      

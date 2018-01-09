@@ -204,11 +204,21 @@ class HomeController extends Controller
         return view('investmentvia.career',compact('title','tagLine','career'));
     }
 
-    public function blog()
+    public function blog(Blogs $blog,$id=null, $name=null)
     {
-        $title = "Blog";
+        $title = "Reports";
         $tagLine = "We offer the most complete advisory services in the country";
-        return view('investmentvia.blog',compact('title','tagLine'));
+        $blogs = Blogs::all();
+        $url = url('public/assets/js/jquery-2.2.3.js');
+        $jsUrl = '<script src="'.$url.'"></script>';
+        
+        $blogDetails = Blogs::where('id',$id)->first();
+        if($blogDetails){
+            return view('investmentvia.blogDetail',compact('blogDetails','jsUrl','title','tagLine')); 
+        }
+
+        return view('investmentvia.blog',compact('blogs','jsUrl','title','tagLine'));
+    
     } 
     public function riskTolrance()
     {

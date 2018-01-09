@@ -40,7 +40,7 @@
             <li><a href="{{url('contact')}}">Contact</a></li>
               <li><a href="{{url('faq')}}"> FAQ </a></li>
               <li><a href="{{url('career')}}"> Career </a></li>
-              <li><a href="{{url('blog')}}"> Blog </a></li>
+              <li><a href="{{url('blog')}}"> Reports </a></li>
               <li><a href="{{url('kyc')}}"> KYC </a></li>
               <li><a href="{{url('risk-tolrance')}}"> Risk Tolerance </a></li>
               @foreach($pageMenu as $val)

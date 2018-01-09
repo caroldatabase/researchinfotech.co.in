@@ -84,6 +84,13 @@ Route::get('privacypolicy',[
         ]);
 
 
+Route::get('blog/{id}/{name}',[
+          'as' => 'blogDetail',
+          'uses'  => 'HomeController@blog'
+        ]);
+
+
+
 
 Route::get('faq',[
           'as' => 'faq',

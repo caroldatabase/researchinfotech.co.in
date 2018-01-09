@@ -29,6 +29,7 @@ use Modules\Admin\Models\Transaction;
 use App\Admin;
 use Illuminate\Http\Request;
 use Session;
+use Illuminate\Auth\SessionGuard;
  
 /**
  * Class : AdminController
@@ -52,6 +53,7 @@ class AdminController extends Controller {
     **/
     public function index(Request $request) 
     { 
+        
         $page_title     = "Dashboard";
         $page_action    = "Veiw";
         $user           = User::count();
@@ -63,12 +65,13 @@ class AdminController extends Controller {
         $freeTrail       = \Modules\Admin\Models\FreeTrial::count();
         $resume      = \Modules\Admin\Models\Career::count();
         $order          =  Transaction::all()->count();  
-
+        $blog      = \Modules\Admin\Models\Blogs::count();
+        $tracksheet = \Modules\Admin\Models\TrackSheet::count();
         $today_order    =  Transaction::whereDate('created_at', '=', date('Y-m-d'))->get()->count(); 
         
 
         $viewPage       = "Admin";
-        return view('packages::dashboard.index',compact('kyc','contact','freeTrail','resume','today_order','order','service','pricing','user','page_title','page_action','viewPage'));
+        return view('packages::dashboard.index',compact('tracksheet','kyc','blog','contact','freeTrail','resume','today_order','order','service','pricing','user','page_title','page_action','viewPage'));
     }
 
    public function profile(Request $request,Admin $users)
