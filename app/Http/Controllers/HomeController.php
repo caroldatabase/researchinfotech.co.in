@@ -53,8 +53,8 @@ class HomeController extends Controller
          
          }
          
-        
-        
+        $trackSheet = TrackSheet::orderBy('id','desc')->Paginate(12);
+       // dd($trackSheet);
         View::share('website_title',$website_title->website_title);
         View::share('website_email',$website_email->website_email);
         View::share('website_url',$website_url->website_url);
@@ -62,6 +62,7 @@ class HomeController extends Controller
         View::share('company_address',$company_address->company_address);
         View::share('banner',$banner); 
         View::share('pageMenu',$pageMenu);
+        View::share('trackSheet',$trackSheet);
 }
 
     /**

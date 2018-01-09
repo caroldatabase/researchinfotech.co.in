@@ -487,35 +487,42 @@ News and Technical & Fundamental Analysis
 
 <div class="tracksheet">
     <div class="row">
-        <div class="col-sm-5">
-            
+        <div class="col-sm-5" style="padding-right: 0px">
+            <img src="{{ asset('public/assets/images/news1.jpg')}}"  style="width: 630px;min-height: 309px" width="630px"> 
         </div>
-        <div class="col-sm-7 track-content">
+        <div class="col-sm-7 track-content" style="height: 421px">
             <h3>Tracksheet and Reports</h3>
             <p class="track-para">Commodity Trading, Swing Trading, Future Trading and Option Trading in Stock,
 Commodity & Bullion Market.</p>
             <div class="tracksheet-block">
-                <div class="block1 wow fadeInUp" data-wow-delay="500ms">
-                    <p><img src="{{ asset('storage/assets/images/excel.png')}}"> Agri</p>
-                    <p><img src="{{ asset('storage/assets/images/excel.png')}}"> Bullion </p>
-                    <p><img src="{{ asset('storage/assets/images/excel.png')}}"> Stock Cash</p>
-                    <p><img src="{{ asset('storage/assets/images/excel.png')}}"> Option</p>
-                    <p><img src="{{ asset('storage/assets/images/excel.png')}}"> Stock Future</p>
+                
+                @if($trackSheet->count())
+                    @foreach($trackSheet as $key=> $result)
+                    <?php ++$key; $html = ' <p><img src="'.asset('storage/assets/images/excel.png').'" >'.ucfirst($result->title).'</p>';
+
+                     ?>
+                     <div class="block1 wow fadeInUp" data-wow-delay="500ms">
+                       <a href="{{url('storage/files/'.$result->files)}}" target="_blank"> {!!$html!!} </a>
+                     </div>
+                    @endforeach   
+
+                @else
+                 <div class="block1 wow fadeInUp" data-wow-delay="500ms">
+                    <p><img src="{{ asset('storage/assets/images/excel.png')}}"> HNI </p>
+                        <p><img src="{{ asset('storage/assets/images/excel.png')}}"> Stock Cash</p>
+                        <p><img src="{{ asset('storage/assets/images/excel.png')}}"> Option</p>
+                        <p><img src="{{ asset('storage/assets/images/excel.png')}}"> Stock Future</p>
+                                                                                                                            
                 </div>
-                <div class="block1 wow fadeInUp" data-wow-delay="500ms">
-                    <p><img src="{{ asset('storage/assets/images/excel.png')}}"> Agri</p>
-                    <p><img src="{{ asset('storage/assets/images/excel.png')}}"> Bullion </p>
-                    <p><img src="{{ asset('storage/assets/images/excel.png')}}"> Stock Cash</p>
-                    <p><img src="{{ asset('storage/assets/images/excel.png')}}"> Option</p>
-                    <p><img src="{{ asset('storage/assets/images/excel.png')}}"> Stock Future</p>
+                 <div class="block1 wow fadeInUp" data-wow-delay="500ms">
+                    <p><img src="{{ asset('storage/assets/images/excel.png')}}"> HNI </p>
+                        <p><img src="{{ asset('storage/assets/images/excel.png')}}"> Stock Cash</p>
+                        <p><img src="{{ asset('storage/assets/images/excel.png')}}"> Option</p>
+                        <p><img src="{{ asset('storage/assets/images/excel.png')}}"> Stock Future</p>
+                                                                                                                            
                 </div>
-                <div class="block1 wow fadeInUp" data-wow-delay="500ms">
-                    <p><img src="{{ asset('storage/assets/images/excel.png')}}"> Agri</p>
-                    <p><img src="{{ asset('storage/assets/images/excel.png')}}"> Bullion </p>
-                    <p><img src="{{ asset('storage/assets/images/excel.png')}}"> Stock Cash</p>
-                    <p><img src="{{ asset('storage/assets/images/excel.png')}}"> Option</p>
-                    <p><img src="{{ asset('storage/assets/images/excel.png')}}"> Stock Future</p>
-                </div>
+               @endif
+               
             </div>
            <!--  <div class="main-btn">
                 <a href="#">View All</a>
