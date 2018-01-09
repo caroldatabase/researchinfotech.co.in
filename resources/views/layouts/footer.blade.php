@@ -54,11 +54,11 @@
       <div class="col-md-4 col-sm-4 footer_panel bottom25">
         <h3 class="heading bottom25">Quick Links<span class="divider-left"></span></h3>
         <ul class="links">
-          <li><a href="#."><i class="fa fa-right"></i>Home</a></li>
+          <li><a href="{{url('/')}}"><i class="fa fa-right"></i>Home</a></li>
           <li><a href="{!! url('about')!!}"><i class="fa fa-right"></i>About Company</a></li>
           <li><a href="{!! url('services')!!}"><i class="fa fa-right"></i>Services</a></li>
           <li><a href="{!! url('contact')!!}"><i class="fa fa-right"></i>Contact Us</a></li>
-          <li><a href="#."><i class="fa fa-right"></i>Free Trial</a></li>
+          <li><a href="{{url('free-trial')}}"><i class="fa fa-right"></i>Free Trial</a></li>
           <li><a href="{!! url('payment')!!}"><i class="fa fa-right"></i>Payment</a></li>
           <li><a href="{!! url('pricing')!!}"><i class="fa fa-right"></i>Pricing</a></li>
           @foreach($pageMenu as $val)
