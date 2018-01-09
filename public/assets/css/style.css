@@ -1213,7 +1213,7 @@ header#boxed.stick nav.navbar.bootsnav{
 }
 nav.navbar.bootsnav.navbar-fixed.no-background{
 	padding:10px 0;
-	background:none;
+	background:rgba(62, 65, 65, 0.4) none repeat scroll 0 0;
 }
 nav.navbar.bootsnav.navbar-fixed,
 nav.navbar.bootsnav.sticked{
@@ -3110,11 +3110,12 @@ html{
 
 img.logo.logo-display {
     width: 169px !important;
-    margin-top: 15px;
+    margin-top: -15px;
 }
 nav.navbar.bootsnav.no-background.white ul.nav > li > a {
     color: #fff;
 	text-transform: inherit;
+	font-size:16px
 }
 img.logo.logo-scrolled {
     width: 169px !important;
