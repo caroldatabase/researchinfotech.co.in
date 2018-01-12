@@ -424,9 +424,9 @@ class HomeController extends Controller
         $order_id = strtoupper(str_random(10));
         
 	$merchant_data='';
-        $merchant_id = "36234";
-	$working_key='65F1C939F9991596D45D41108CF0E282';//Shared by CCAVENUES
-	$access_code='AVLQ07CL76AD80QLDA';//Shared by CCAVENUES
+    $merchant_id = "36234";
+	$working_key='73F096AFBA1C6B5F16864C9D3D434979';//Shared by CCAVENUES
+	$access_code='AVMV75FA53AY58VMYA';//Shared by CCAVENUES
 	$url = url('public/assets/js/jquery-2.2.3.js');
         $url2 = url('assets/js/json.js');
         
@@ -449,8 +449,8 @@ class HomeController extends Controller
                             ->withErrors($validator)
                             ->withInput();
             }
-            $working_key= env('WORKING_KEY','65F1C939F9991596D45D41108CF0E282') ;//Shared by CCAVENUES
-            $access_code=env('ACCESS_CODE','AVLQ07CL76AD80QLDA');//Shared by CCAVENUES
+            $working_key= env('WORKING_KEY','73F096AFBA1C6B5F16864C9D3D434979') ;//Shared by CCAVENUES
+            $access_code=env('ACCESS_CODE','AVMV75FA53AY58VMYA');//Shared by CCAVENUES
             $merchant_data='';
             $requests = $request->except('_token','total_amount');
             if(session('amount')){
@@ -468,10 +468,9 @@ class HomeController extends Controller
                     $merchant_data.=$key.'='.$value.'&';
                 }
             }
-            $encrypted_data=encrypt($merchant_data,$working_key); // Method for encrypting the data.
-            $production_url='https://secure.ccavenue.com/transaction/transaction.do?command=initiateTransaction&encRequest='.$encrypted_data.'&access_code='.$access_code;
-            
-            return Redirect::to($production_url);
+        $encrypted_data=$this->encrypt($merchant_data,$working_key); // Method for encrypting the data.
+        $production_url='https://secure.ccavenue.com/transaction/transaction.do?command=initiateTransaction&encRequest='.$encrypted_data.'&access_code='.$access_code;
+          return Redirect::to($production_url);
         }
         if ($request->session()->has('amount')) {
             $amount = session('amount');
