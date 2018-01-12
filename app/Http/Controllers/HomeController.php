@@ -436,7 +436,7 @@ class HomeController extends Controller
         $jsUrl1 = '<script src="'.$url.'"></script>';
         $jsUrl2  = '<script src="'.$url2.'"></script>';
         
-	$amount = ($request->get('amount'))?$request->get('amount'):"1000";
+	$amount = ($request->get('amount'))?$request->get('amount'):"1";
         if($serviceName){
             $serviceName = ucfirst(str_replace('-', " ", $serviceName));
         }
