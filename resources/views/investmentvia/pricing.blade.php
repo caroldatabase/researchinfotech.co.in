@@ -34,7 +34,7 @@
                     <h3>{{$result->title}}</h3>
                     <div class="pricing_price"><span class="pricing_currency"></span>Monthly</div>
                     <p class="pricing_sentence">{!! $result->monthly_price !!}  <span class="pay-now">
-                      <a href="{{url('checkout/'.str_slug($result->title).'?amount='.$result->quarterly_price)}}">Pay Now</a></span></p>
+                      <a href="{{url('checkout/'.str_slug($result->title).'?amount='.$result->monthly_price)}}">Pay Now</a></span></p>
 
                     <div class="pricing_price"><span class="pricing_currency"></span>Quarterly</div>
                     <p class="pricing_sentence">{!! $result->quarterly_price !!}  <span class="pay-now">
