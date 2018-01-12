@@ -33,16 +33,20 @@
                     @endif 
                     <h3>{{$result->title}}</h3>
                     <div class="pricing_price"><span class="pricing_currency"></span>Monthly</div>
-                    <p class="pricing_sentence">{!! $result->monthly_price !!}  <span class="pay-now"><a href="#">Pay Now</a></span></p>
+                    <p class="pricing_sentence">{!! $result->monthly_price !!}  <span class="pay-now">
+                      <a href="{{url('checkout/'.str_slug($result->title).'?amount='.$result->quarterly_price)}}">Pay Now</a></span></p>
 
                     <div class="pricing_price"><span class="pricing_currency"></span>Quarterly</div>
-                    <p class="pricing_sentence">{!! $result->quarterly_price !!}  <span class="pay-now"><a href="#">Pay Now</a></span></p>
+                    <p class="pricing_sentence">{!! $result->quarterly_price !!}  <span class="pay-now">
+                      <a href="{{url('checkout/'.str_slug($result->title).'?amount='.$result->quarterly_price)}}">Pay Now</a></span></p>
 
                     <div class="pricing_price"><span class="pricing_currency"></span>Half Yearly</div>
-                    <p class="pricing_sentence">{!! $result->half_yearly_price !!}  <span class="pay-now"><a href="#">Pay Now</a></span></p>
+                    <p class="pricing_sentence">{!! $result->half_yearly_price !!}  <span class="pay-now">
+                      <a href="{{url('checkout/'.str_slug($result->title).'?amount='.$result->half_yearly_price)}}">Pay Now</a></span></p>
 
                     <div class="pricing_price"><span class="pricing_currency"></span>Yearly</div>
-                    <p class="pricing_sentence">{!! $result->yearly_price !!}  <span class="pay-now"><a href="#">Pay Now</a></span></p> 
+                    <p class="pricing_sentence">{!! $result->yearly_price !!}  <span class="pay-now">
+                    <a href="{{url('checkout/'.str_slug($result->title).'?amount='.$result->yearly_price)}}">Pay Now</a></span></p> 
                 </div>
             @endforeach
           

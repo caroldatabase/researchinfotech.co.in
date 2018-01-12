@@ -183,24 +183,24 @@ height:680px;
 
 <!--Header-->
  <!-- Sliding div starts here -->
+           
 			<div id="slider" style="right:-342px;">
         			<div id="sidebar" onclick="open_panel()"><img src="{{asset('public/assets/images/contact.png')}}"></div>
         			<div id="header">
+                        {!! Form::open(['url' => url('contact'), 'method' => 'post']) !!}
+          
         			<h2 style="font-size: 23px;font-weight: 900;color: #e22004;">Contact Form</h2>
         			
-        			<input name="dname" type="text" value="Your Name">
-        			<input name="demail" type="text" value="Your Email">
-        			<h4>Query type</h4>
-        			<select>
-        			<option>General Query</option>
-        			<option>General Query</option>
-        			<option>General Query</option>
-        			<option>Others</option>
-        			</select>
-        			<textarea>Message</textarea>
-        			<button style="background: #f39c12;">Send Message</button>
+        			<input name="name" type="text" value=""  placeholder="Your Name" required="">
+        			<input name="email" type="text" value="" placeholder="Your Email" required="">
+                    <input name="mobile" type="text" value="" placeholder="Your Contact Number" required="">
+        			
+        			<textarea name="comments">Message</textarea>
+        			<button type="submit" style="background: #f39c12;" class="btn">Send Message</button>
+                    {!! Form::close()!!}   
     			</div>
 			</div>
+         
 		<!-- Sliding div ends here -->
 
 <!--Slider-->

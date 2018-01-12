@@ -143,8 +143,21 @@ Route::get('discloser',[
         ]);
 
 
+Route::match(['get','post'],'checkout/{name}',[
+          'as' => 'checkout',
+          'uses'  => 'HomeController@checkout'
+        ]);
  
 
+Route::match(['get','post'],'paymentStatus/{name}',[
+          'as' => 'paymentStatus',
+          'uses'  => 'HomeController@paymentStatus'
+        ]);
+
+Route::match(['get','post'],'status/{name}',[
+          'as' => 'paymentStatus',
+          'uses'  => 'HomeController@paymentStatus'
+        ]);
 
 
 Route::group(['middleware' => ['web']], function(){
@@ -217,6 +230,18 @@ Route::get('myaccount/login',[
 Route::get('myaccount',[
           'as' => 'myaccount',
           'uses'  => 'ProductController@myaccount'
+        ]); 
+
+
+
+Route::get('paypal',[
+          'as' => 'paypal',
+          'uses'  => 'HomeController@paypal'
+        ]); 
+
+Route::post('paypal',[
+          'as' => 'paypal',
+          'uses'  => 'HomeController@paypal'
         ]); 
 
  

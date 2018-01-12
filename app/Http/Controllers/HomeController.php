@@ -105,12 +105,13 @@ class HomeController extends Controller
     }
  
 
-    public function pricing()
+    public function pricing(Request $request)
     {
         $pricing = Product::all(); 
-        $title = "Pricing Tables";
+        $title = "Pricing";
         $tagLine = "We offer the most complete advisory services in the country";
-        
+        $request->session()->forget('amount');
+
         return view('investmentvia.pricing',compact('pricing','title','tagLine'));
     }
 
@@ -137,7 +138,8 @@ class HomeController extends Controller
     }
 
     public function contact(Request $request, Contact $contact)
-    {
+    {   
+        $url = rtrim(url()->previous(),'/');
         $title = "Contact";
         $tagLine = "We offer the most complete advisory services in the country";
         if($request->method()=='POST'){
@@ -155,11 +157,14 @@ class HomeController extends Controller
             }else{
                 $input = $request->only('name','email','mobile','comments');
                 \DB::table('contacts')->insert($input);
-                  return Redirect::to('contact')->withErrors(['successMsg'=>'Thanking for Contacting us!']);
-                return view('investmentvia.contact',compact('title','tagLine','contact'))->with(['msg'=>'Thanking for Contacting us!']); 
+                if($url==url()->to('/')){
+                    return Redirect::to('status/success')  ;
+                }
+                return Redirect::to('contact')->withErrors(['successMsg'=>'Thanking for Contacting us!']);
+                
             }
         }
-            
+           
         return view('investmentvia.contact',compact('title','tagLine','contact'));   
     } 
     public function tNc()
@@ -250,7 +255,8 @@ class HomeController extends Controller
         $input = $request->only('name','email','phone','city');
          $input['first_name'] = $request->get('name');
         \DB::table('free_trials')->insert($input);
-        return Redirect::to('home');
+        
+        return Redirect::to('status/success');
 
     }
     
@@ -389,4 +395,150 @@ class HomeController extends Controller
         
         
     }
+    public function paymentStatus(Request $request, $status=null)
+    {
+        $title = "Status Message";
+        $tagLine = "We offer the most complete advisory services in the country";
+        $msg = "Oops..!Something went Wrong. Please try again.";
+        if(!str_contains(url()->previous(),'ccavenue') && $status=="success")
+        {
+            $msg ="Thank you!.Your request submitted successfully.";
+        }else{
+            if ($status=="success"){
+            $msg = "Thank you!. We have received your payment.";
+            
+            }else if($status=="faild"){
+                $msg = "Failed!. Payment cancel by payment gateway.";
+            }
+        }
+        
+        return view('investmentvia.paymentStatus',compact('title','tagLine','msg'));
+    }
+    // CCAvenue Integration
+    public function checkout(Request $request, $serviceName=null)
+    {
+        $payment = null; 
+        $title = "Checkout<br><br>";
+        $tagLine = "We offer the most complete advisory services in the country";
+        
+        $order_id = strtoupper(str_random(10));
+        
+	$merchant_data='';
+        $merchant_id = "36234";
+	$working_key='65F1C939F9991596D45D41108CF0E282';//Shared by CCAVENUES
+	$access_code='AVLQ07CL76AD80QLDA';//Shared by CCAVENUES
+	$url = url('public/assets/js/jquery-2.2.3.js');
+        $url2 = url('assets/js/json.js');
+        
+        $jsUrl1 = '<script src="'.$url.'"></script>';
+        $jsUrl2  = '<script src="'.$url2.'"></script>';
+        
+	$amount = ($request->get('amount'))?$request->get('amount'):"1000";
+        if($serviceName){
+            $serviceName = ucfirst(str_replace('-', " ", $serviceName));
+        }
+        
+        if($request->method()==='POST')
+        {
+            
+            $validator = Validator::make($request->all(), [
+                'total_amount' => 'required|numeric',
+            ]); 
+            if ($validator->fails()) {
+                 return Redirect::back()
+                            ->withErrors($validator)
+                            ->withInput();
+            }
+            $working_key= env('WORKING_KEY','65F1C939F9991596D45D41108CF0E282') ;//Shared by CCAVENUES
+            $access_code=env('ACCESS_CODE','AVLQ07CL76AD80QLDA');//Shared by CCAVENUES
+            $merchant_data='';
+            $requests = $request->except('_token','total_amount');
+            if(session('amount')){
+                $amount = session('amount');
+            }else{
+                $amount = $request->get('amount');
+            }
+            $amount = number_format((float)$amount, 2, '.', '');
+            foreach ($requests as $key => $value){
+                if($key=="amount")
+                {
+                    $value = number_format((float)$value, 2, '.', '');
+                    $merchant_data.=$key.'='.$value.'&';   
+                }else{
+                    $merchant_data.=$key.'='.$value.'&';
+                }
+            }
+            $encrypted_data=encrypt($merchant_data,$working_key); // Method for encrypting the data.
+            $production_url='https://secure.ccavenue.com/transaction/transaction.do?command=initiateTransaction&encRequest='.$encrypted_data.'&access_code='.$access_code;
+            
+            return Redirect::to($production_url);
+        }
+        if ($request->session()->has('amount')) {
+            $amount = session('amount');
+        }else{
+            $request->session()->put('amount', $amount);
+        }
+        return view('investmentvia.paypal',compact('title','tagLine','jsUrl1','jsUrl2','serviceName','amount','payment','merchant_id','order_id'));
+    }
+    public function encrypt($plainText,$key)
+    {
+        $secretKey = $this->hextobin(md5($key));
+        $initVector = pack("C*", 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f);
+        $openMode = mcrypt_module_open(MCRYPT_RIJNDAEL_128, '','cbc', '');
+        $blockSize = mcrypt_get_block_size(MCRYPT_RIJNDAEL_128, 'cbc');
+        $plainPad = $this->pkcs5_pad($plainText, $blockSize);
+        if (mcrypt_generic_init($openMode, $secretKey, $initVector) != -1) 
+        {
+              $encryptedText = mcrypt_generic($openMode, $plainPad);
+              mcrypt_generic_deinit($openMode);
+
+        } 
+        return bin2hex($encryptedText);
+    }
+
+    public function decrypt($encryptedText,$key)
+    {
+        $secretKey = $this->hextobin(md5($key));
+        $initVector = pack("C*", 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f);
+        $encryptedText=$this->hextobin($encryptedText);
+        $openMode = mcrypt_module_open(MCRYPT_RIJNDAEL_128, '','cbc', '');
+        mcrypt_generic_init($openMode, $secretKey, $initVector);
+        $decryptedText = mdecrypt_generic($openMode, $encryptedText);
+        $decryptedText = rtrim($decryptedText, "\0");
+        mcrypt_generic_deinit($openMode);
+        return $decryptedText;
+
+    }
+	//*********** Padding Function *********************
+
+    public function pkcs5_pad ($plainText, $blockSize)
+    {
+        $pad = $blockSize - (strlen($plainText) % $blockSize);
+        return $plainText . str_repeat(chr($pad), $pad);
+    }
+
+	//********** Hexadecimal to Binary function for php 4.0 version ********
+
+    public function hextobin($hexString) { 
+        $length = strlen($hexString); 
+        $binString="";   
+        $count=0; 
+        while($count<$length) 
+        {       
+            $subString =substr($hexString,$count,2);           
+            $packedString = pack("H*",$subString); 
+            if ($count==0)
+            {
+                        $binString=$packedString;
+            } 
+
+            else 
+            {
+                        $binString.=$packedString;
+            } 
+
+            $count+=2; 
+        } 
+        return $binString; 
+      } 
 }

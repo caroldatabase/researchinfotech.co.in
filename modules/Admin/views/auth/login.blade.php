@@ -22,9 +22,9 @@
   <body class="hold-transition login-page">
     <div class="login-box">
       <div class="login-logo">
-        <a href="#"><b> Research Infotech Admin Panel</b></a>
+        <h2 style="color: #006B63"><b>Admin Panel</b></h2>
       </div><!-- /.login-logo -->
-      <div class="login-box-body"> 
+      <div class="login-box-body" style="width: 400px; border-radius: 10px;padding: 50px;"> 
         <p class="login-box-msg"> 
           @if (count($errors) > 0)
             <div class="alert alert-danger">
