@@ -36,7 +36,7 @@
         {
             var amount = document.getElementById("total_amount").value;
             var Payable = parseInt(amount) + amount * (18 / 100);
-            alert(amount,'+',Payable);
+           // alert(amount,'+',Payable);
             document.getElementById("amount").value = Payable;
 
 
