@@ -400,7 +400,8 @@ class HomeController extends Controller
         $title = "Status Message";
         $tagLine = "We offer the most complete advisory services in the country";
         $msg = "Oops..!Something went Wrong. Please try again.";
-        if(!str_contains(url()->previous(),'ccavenue') && $status=="success")
+    
+        if(!str_contains(url()->previous(),'ccavenue') && $status=="success" && !str_contains(url()->previous(),'paymentStatus/success'))
         {
             $msg ="Thank you!.Your request submitted successfully.";
         }else{
@@ -411,6 +412,8 @@ class HomeController extends Controller
                 $msg = "Failed!. Payment cancel by payment gateway.";
             }
         }
+
+
         
         return view('investmentvia.paymentStatus',compact('title','tagLine','msg'));
     }
