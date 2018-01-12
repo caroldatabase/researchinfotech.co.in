@@ -400,7 +400,11 @@ class HomeController extends Controller
         $title = "Status Message";
         $tagLine = "We offer the most complete advisory services in the country";
         $msg = "Oops..!Something went Wrong. Please try again.";
-    
+
+        \Log::useDailyFiles(storage_path().'/logs/payment.log');
+        $data['response'] = $request->all();
+        \Log::info(json_encode($data));
+       
         if(!str_contains(url()->previous(),'ccavenue') && $status=="success" && !str_contains(url()->previous(),'paymentStatus/success'))
         {
             $msg ="Thank you!.Your request submitted successfully.";
