@@ -404,7 +404,7 @@ class HomeController extends Controller
         \Log::useDailyFiles(storage_path().'/logs/payment.log');
         $data['response'] = $request->all();
         \Log::info(json_encode($data));
-       
+          \Log::info(json_encode(['sourcePayment'=>url()->previous()]));
         if(!str_contains(url()->previous(),'ccavenue') && $status=="success" && !str_contains(url()->previous(),'paymentStatus/success'))
         {
             $msg ="Thank you!.Your request submitted successfully.";
