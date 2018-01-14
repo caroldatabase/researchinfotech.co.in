@@ -19,10 +19,20 @@
       <div class="col-md-12">
          <h2 class="heading heading_space wow fadeInDown"><span>Frequently</span> Payment<span class="divider-left"></span> </h2> 
           
-          <p> <a href="{{ url('checkout/stock?amount=0') }}" style="position: absolute;right: 15px; top: 51px"><img src="{{ asset('storage/assets/images/pay-online.png')}}"></a></p>
 
           <div class="faq_content wow fadeIn" data-wow-delay="400ms">
               <ul class="items">
+                 <li><a href="#.">Online Payment</a>
+                  <ul class="sub-items">
+                    <li>
+                       <a href="{{ url('checkout/stock?amount=0') }}" ><img src="{{ asset('storage/assets/images/pay-online.png')}}"></a>
+                    </li>
+                   <!--   <li>
+                       <a href="{{ url('checkout/stock?amount=0') }}" ><img src="{{ asset('storage/assets/images/payu.png')}}"></a>
+                    </li> -->
+                  </ul>
+                </li>
+
                  @foreach($bankAccount as $result)
                   <li><a href="#.">{{$result->bank_name}}</a>
                   <ul class="sub-items">
