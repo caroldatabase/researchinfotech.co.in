@@ -136,6 +136,11 @@ Route::get('risk-tolrance',[
           'uses'  => 'HomeController@riskTolrance'
         ]);
 
+Route::post('riskTolrance',[
+          'as' => 'riskTolranceForm',
+          'uses'  => 'HomeController@riskTolranceForm'
+        ]);
+
 
 Route::get('discloser',[
           'as' => 'discloser',

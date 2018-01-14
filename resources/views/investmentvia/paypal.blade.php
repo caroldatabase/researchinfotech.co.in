@@ -22,25 +22,39 @@
 
 <script>
     window.onload = function () {
-        var d = new Date().getTime();
+        var d       = new Date().getTime();
         document.getElementById("tid").value = d;
-
-        var amount = document.getElementById("total_amount").value;
-        var Payable = parseInt(amount) + amount * (18 / 100);
+        var tax     = 18;    
+        var amount  = document.getElementById("total_amount").value;
+        var tax     = document.getElementById("gst").value;
+        if(tax==0){
+            tax=0;
+        }else{
+            tax=18;
+        }  
+        var Payable = parseInt(amount) + amount * ( tax/ 100);
 
         document.getElementById("amount").value = Payable;
         
     };
     
     function updatePrice()
-        {
-            var amount = document.getElementById("total_amount").value;
-            var Payable = parseInt(amount) + amount * (18 / 100);
-           // alert(amount,'+',Payable);
-            document.getElementById("amount").value = Payable;
+    {
+        var amount  = document.getElementById("total_amount").value;
+        var tax     = document.getElementById("gst").value;
+        if(tax==0){
+            tax=0;
+        }else{
+            tax=18;
+        }  
+        var amount = document.getElementById("total_amount").value;
+        var Payable = parseInt(amount) + amount * (tax / 100);
+        if(amount.length==0){
+            Payable=0;
+        }document.getElementById("amount").value = Payable;
 
 
-        }
+    }
 </script>
 
 <section id="about" class="padding">
@@ -50,7 +64,9 @@
             <div class="col-md-8 wow fadeInLeft animated" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInLeft;">
                 <h2 class="heading heading_space"><span>Checkout </span><span class="divider-left"></span></h2>
                 <div class="box-body table-responsive no-padding">
-                    <div class="alert alrt-danger">{{ $errors->first('total_amount', ':message') }}</div>
+                    @if( $errors->count() && $errors->first('total_amount', ':message'))
+                        <div class="alert alert-danger">Amount can't be less than 1 INR</div>
+                    @endif   
                     {!! Form::open(['url' => url('checkout/'.str_slug($serviceName)), 'method' => 'post','class'=>'form-inline findus','id'=>'contact-form']) !!}
                     <input type="hidden" name="integration_type">
                         <table width="40%" height="100" border='1' align="center" class="table table-striped table-hover table-bordered">
@@ -78,9 +94,14 @@
                                    
              
                             </tr>
+                            @if($defaultAmount!=0)
                             <tr>
-                                <td>GST(INR)  :</td><td><input type="text" class="form-control"  value="18%" min="18" readonly="" /></td>
+                                <td>GST(INR)  :</td><td><input type="text" class="form-control"  value="18%" id="gst"  readonly="" /></td>
                             </tr>
+                            @else
+                            <input type="hidden" class="form-control"  value="0"  id="gst"   readonly="" />
+                            @endif
+                            
                             <tr>
                                 <td>Payable Amount(INR)  :</td><td><input type="text" class="form-control"  name="amount" value="" id="amount" min="18" readonly="" /></td>
                             </tr>
@@ -121,7 +142,7 @@
                                 <td>Billing Tel :</td><td><input type="text" class="form-control" required=""  name="billing_tel" value="{{old('billing_tel')}}" placeholder="Enter Mobile number"  /></td>
                             </tr>
                             <tr>
-                                <td>Billing Email :</td><td><input type="text" class="form-control"   name="billing_email" value="test@test.com"/></td>
+                                <td>Billing Email :</td><td><input type="text" class="form-control"   name="billing_email" value="info@researchinfotech.co.in"/></td>
                             </tr>
                             <tr>
                                 <td>Promo Code  :</td><td><input type="text" class="form-control"  name="promo_code" value="{{old('promo_code')}}"/></td>

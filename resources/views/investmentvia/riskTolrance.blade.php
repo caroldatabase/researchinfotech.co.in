@@ -20,7 +20,8 @@
        
       <div class="col-md-12 wow fadeInRight animated" data-wow-delay="500ms" style="visibility: visible; animation-delay: 4500ms; animation-name: fadeInRight;">
         <h2 class="heading heading_space"> <span>Risk </span> Tolrance<span class="divider-left"></span></h2>
-        <form class="form-inline findus" id="contact-form" onsubmit="return false">
+        <form class="form-inline findus" id="contact-form" action="{{url('riskTolrance')}}" method="post" >
+          
           <div class="row">
             <div class="col-md-12">
               <div id="result"></div>
@@ -30,7 +31,7 @@
             <div class="col-md-4 col-sm-4">
             <label>Referred by (required)</label>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="referred by" name="referred_by" id="referred_by" required="">
+                <input type="text" class="form-control" placeholder="referred by: google,friend and Other" name="referred_by" id="referred_by"   required="">
               </div>
             </div>
             <div class="col-md-4 col-sm-4">

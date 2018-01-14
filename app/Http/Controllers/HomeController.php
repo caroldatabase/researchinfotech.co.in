@@ -77,10 +77,12 @@ class HomeController extends Controller
         return view('investmentvia.about',compact('title','tagLine'));
     }  
 
-    public function home()
+    public function home(Request $request)
     {
         $title = "Home";
         $tagLine = "We offer the most complete advisory services in the country";
+        $request->session()->forget('amount');
+
         return view('investmentvia.home',compact('title','tagLine'));
     }
 
@@ -96,11 +98,12 @@ class HomeController extends Controller
         return view('investmentvia.service',compact('service','jsUrl','title','tagLine'));
     }
 
-    public function payment()
+    public function payment(Request $request)
     {
         $bankAccount = BankAccount::all();
         $title = "Payment";
         $tagLine = "We offer the most complete advisory services in the country";
+        $request->session()->forget('amount');
         return view('investmentvia.payment', compact('bankAccount','title','tagLine'));
     }
  
@@ -318,7 +321,9 @@ class HomeController extends Controller
     {
         $title = "Risk Tolrance";
         $tagLine = "We offer the most complete advisory services in the country";
-         
+       
+      // dd($request->all());  
+
         if($request->method()=='POST'){
             $validator = Validator::make($request->all(), [
                 'name' => 'required|min:3|max:50',
@@ -397,28 +402,24 @@ class HomeController extends Controller
     }
     public function paymentStatus(Request $request, $status=null)
     {
-        $title = "Status Message";
-        $tagLine = "We offer the most complete advisory services in the country";
-        $msg = "Oops..!Something went Wrong. Please try again.";
-
+        $title      = "Status Message";
+        $tagLine    = "We offer the most complete advisory services in the country";
+        $msg        = "Oops..!Something went Wrong. Please try again.";
         \Log::useDailyFiles(storage_path().'/logs/payment.log');
         $data['response'] = $request->all();
         \Log::info(json_encode($data));
           \Log::info(json_encode(['sourcePayment'=>url()->previous()]));
         if(!str_contains(url()->previous(),'ccavenue') && $status=="success" && !str_contains(url()->previous(),'paymentStatus/success'))
         {
-            $msg ="Thank you!.Your request submitted successfully.";
+            $msg    =   "Thank you!.Your request submitted successfully.";
         }else{
             if ($status=="success"){
-            $msg = "Thank you!. We have received your payment.";
+                $msg    =   "Thank you!. We have received your payment.";
             
             }else if($status=="faild"){
-                $msg = "Failed!. Payment cancel by payment gateway.";
+                $msg    = "Failed!. Payment cancel by payment gateway.";
             }
         }
-
-
-        
         return view('investmentvia.paymentStatus',compact('title','tagLine','msg'));
     }
     // CCAvenue Integration
@@ -430,17 +431,20 @@ class HomeController extends Controller
         
         $order_id = strtoupper(str_random(10));
         
-	$merchant_data='';
-    $merchant_id = "36234";
-	$working_key='73F096AFBA1C6B5F16864C9D3D434979';//Shared by CCAVENUES
-	$access_code='AVMV75FA53AY58VMYA';//Shared by CCAVENUES
-	$url = url('public/assets/js/jquery-2.2.3.js');
-        $url2 = url('assets/js/json.js');
+    	$merchant_data='';
+        $merchant_id = "36234";
+    	$working_key='73F096AFBA1C6B5F16864C9D3D434979';//Shared by CCAVENUES
+    	$access_code='AVMV75FA53AY58VMYA';//Shared by CCAVENUES
+    	$url = url('public/assets/js/jquery-2.2.3.js');
+            $url2 = url('assets/js/json.js');
+            
+            $jsUrl1 = '<script src="'.$url.'"></script>';
+            $jsUrl2  = '<script src="'.$url2.'"></script>';
         
-        $jsUrl1 = '<script src="'.$url.'"></script>';
-        $jsUrl2  = '<script src="'.$url2.'"></script>';
-        
-	$amount = ($request->get('amount'))?$request->get('amount'):"1";
+        $defaultAmount =  $request->get('amount');    
+    	$amount = ($request->get('amount'))?$request->get('amount'):"1";
+
+
         if($serviceName){
             $serviceName = ucfirst(str_replace('-', " ", $serviceName));
         }
@@ -484,7 +488,7 @@ class HomeController extends Controller
         }else{
             $request->session()->put('amount', $amount);
         }
-        return view('investmentvia.paypal',compact('title','tagLine','jsUrl1','jsUrl2','serviceName','amount','payment','merchant_id','order_id'));
+        return view('investmentvia.paypal',compact('defaultAmount','title','tagLine','jsUrl1','jsUrl2','serviceName','amount','payment','merchant_id','order_id'));
     }
     public function encrypt($plainText,$key)
     {
