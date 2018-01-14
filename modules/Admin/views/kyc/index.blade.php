@@ -67,6 +67,7 @@
                 </tr>
             </thead>
             <tbody>
+              @if($kyc->count())
             @foreach($kyc as $key => $result)
                 <tr>
                  <th> {{++$key}} </th>
@@ -92,6 +93,9 @@
                 </tr>
                @endforeach
                 
+                 @else
+               <div class="alert-danger alert"> Record not found! </div>
+              @endif 
             </tbody>
         </table>
        
