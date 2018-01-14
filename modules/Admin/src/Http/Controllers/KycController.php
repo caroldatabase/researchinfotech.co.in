@@ -52,6 +52,40 @@ class KycController extends Controller {
         $this->record_per_page = Config::get('app.record_per_page'); 
     }
 
+
+
+    public function riskTolrance(Request $request)
+    {
+
+        $page_title = 'Risk Tolrance';
+        $page_action  = 'View Risk Tolrance';
+
+        $search = Input::get('search');
+        if ((isset($search) && !empty($search))) {
+             $risktolrance = \DB::table('risktolrance')
+                            ->OrWhere('full_name','LIKE',"%$search%")
+                            ->OrWhere('email','LIKE',"%$search%")
+                            ->OrWhere('phone','LIKE',"%$search%")
+                            ->OrWhere('mobile','LIKE',"%$search%")
+                            ->Paginate(15);
+        }else{
+            $risktolrance = \DB::table('risktolrance')->Paginate(15);
+        }
+
+
+        $export = $request->get('export');
+        if($export=='pdf')
+        {
+           $risktolrance = \DB::table('risktolrance')->first();
+           if(isset($risktolrance)){
+                $risktolrance = json_decode($risktolrance->allData);
+           }
+          
+           $pdf = PDF::loadView('packages::kyc.riskpdf', compact('page_title', 'page_action','risktolrance'));
+           return ($pdf->download('riskTolrance.pdf'));
+        }
+        return view('packages::kyc.riskTolrance', compact('kyc','data', 'page_title', 'page_action','risktolrance'));
+    }
    
     /*
      * Dashboard
@@ -86,8 +120,11 @@ class KycController extends Controller {
         $export = $request->get('export');
         if($export=='pdf')
         {
-            $kyc = Kyc::find($request->get('id'))->toArray(); 
-            
+            $kyc = \DB::table('kyc')->first();
+           if(isset($kyc)){
+                $kyc = json_decode($kyc->allData);
+           }
+                       
            $pdf = PDF::loadView('packages::kyc.pdf', compact('page_title', 'page_action','kyc'));
            return ($pdf->download('kyc.pdf'));
         }

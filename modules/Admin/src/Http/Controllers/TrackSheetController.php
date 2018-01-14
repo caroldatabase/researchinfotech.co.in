@@ -131,9 +131,9 @@ class TrackSheetController extends Controller {
          return view('packages::trackSheet.edit', compact( 'trackSheet','banner' ,'page_title', 'page_action'));
     }
 
-    public function update(TrackSheetRequest $request, TrackSheet $trackSheet) 
+    public function update(Request $request, TrackSheet $trackSheet) 
     {
-        if ($request->file('files')) {  
+         if ($request->file('files')) {  
            
             $photo = $request->file('files');
             $destinationPath = storage_path('files/');
@@ -143,7 +143,6 @@ class TrackSheetController extends Controller {
             
         }  
         $trackSheet->title     =   $request->get('title');
-        
         $trackSheet->save();
         return Redirect::to(route('trackSheet'))
                         ->with('flash_alert_notice', 'TrackSheet was successfully updated!');

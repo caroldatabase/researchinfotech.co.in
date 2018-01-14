@@ -607,7 +607,7 @@ I am an intraday trader in Stock Cash and Stock Futures. Earlier I was skeptical
       </div>
       <div class="col-md-3 col-sm-6 col-xs-6 counters-item text-center wow fadeInUp" data-wow-delay="600ms">
         <i class="icon-happy"></i>
-        <strong data-to="1000">0</strong>
+        <strong data-to="2000">0</strong>
         <p>Satisfied Clients</p>
       </div>
     </div>

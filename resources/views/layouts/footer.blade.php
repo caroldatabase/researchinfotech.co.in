@@ -79,7 +79,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 text-center">
-        <p>Copyright &copy; {{date('Y')}} <a href="#.">Research Infotech</a>. all rights reserved.</p>
+        <p>Copyright &copy; {{date('Y')}} <a href="#.">Research Infotech</a>. all rights reserved. | SEBI REGISTRATION NO: INA000003726</p>
       </div>
     </div>
   </div>

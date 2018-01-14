@@ -19,7 +19,12 @@
     <div class="row padding-bottom">
        
       <div class="col-md-12 wow fadeInRight animated" data-wow-delay="500ms" style="visibility: visible; animation-delay: 4500ms; animation-name: fadeInRight;">
-        <h2 class="heading heading_space"> <span>Risk </span> Tolrance<span class="divider-left"></span></h2>
+        <h2 class="heading heading_space"  style="margin-top: 20px;"> <span>Risk </span> Tolrance<span class="divider-left"></span></h2>
+
+            @if ($errors->any())
+               {{ implode('', $errors->all('<div class="alert alert-danger">:message</div>')) }}
+            @endif
+
         <form class="form-inline findus" id="contact-form" action="{{url('riskTolrance')}}" method="post" >
           
           <div class="row">
@@ -32,12 +37,6 @@
             <label>Referred by (required)</label>
               <div class="form-group">
                 <input type="text" class="form-control" placeholder="referred by: google,friend and Other" name="referred_by" id="referred_by"   required="">
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-4">
-              <div class="form-group">
-               <label>Date (required)</label>
-                <input type="date" class="form-control" placeholder="date" name="date" id="date" required="">
               </div>
             </div>
              
@@ -66,62 +65,46 @@
                 <input type="text" class="form-control" placeholder="state" name="state" id="name" required="">
               </div>
             </div>
-             <div class="col-md-4 col-sm-4">
-            <label>Residential Address (required)
-</label>
-              <div class="form-group">
-               <textarea placeholder="Comment" name="message" id="message" class="form-control"></textarea>
-               
-              </div>
-            </div>
-             <div class="col-md-4 col-sm-4">
+            <div class="col-md-4 col-sm-4">
             <label>Work Telephone (required)</label>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="work telephone" name="work_telephone" id="work_telephone" required="">
+                <input type="text" class="form-control" placeholder="work telephone" name="phone" id="phone" required="">
               </div>
             </div>
+             <div class="col-md-4 col-sm-4">
+              <label>Residential Address (required)</label>
+                <div class="form-group">
+                 <textarea placeholder="Address" rows="4" name="address" id="address" class="form-control"></textarea>
+                </div>
+            </div>
+             
              <div class="col-md-4 col-sm-4">
             <label>Home / Mobile Telephone (required)</label>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Home / Mobile Telephone " name="home_telephone" id="home_telephone" required="">
+                <input type="text" class="form-control"  placeholder="Home / Mobile Telephone " name="mobile" id="mobile" required="">
               </div>
             </div>
-             <div class="col-md-4 col-sm-4">
-            <label>Email Work (required)</label>
-              <div class="form-group">
-               <input type="text" class="form-control" placeholder="Email Work " name="mail_work" id="mail_work" required="">
-              </div>
-            </div>
+             
              <div class="col-md-4 col-sm-4">
             <label>Email</label>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Email" name="email" id="email" required="">
+                <input type="email" class="form-control" placeholder="Email" name="email" id="email" required="">
               </div>
             </div>
              <div class="col-md-4 col-sm-4">
             <label>Date of Birth (required)</label>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Date of Birth (required)" name="dob" id="dob" required="">
+                <input type="date" class="form-control" placeholder="MM-DD-YYYY" name="dob" id="dob" required="">
               </div>
             </div>
-             <div class="col-md-4 col-sm-4">
-            <label>Fax Work (required)</label>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Fax Work (required)" name="fax_work" id="fax_work" required="">
-              </div>
-            </div>
+             
              <div class="col-md-4 col-sm-4">
             <label>Nationality (required)</label>
               <div class="form-group">
                 <input type="text" class="form-control" placeholder="Nationality (required)" name="nationality" id="nationality" required="">
               </div>
             </div>
-             <div class="col-md-4 col-sm-4">
-            <label>Your Name (required)</label>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name (required)" name="your_name" id="name" required="">
-              </div>
-            </div>
+             
              <div class="col-md-12"> 
              <P style="color:green; font-weight: 700">Tolerance for risk is a key consideration in determining your probable level of comfort with
 varying investing choices.</P>
@@ -420,7 +403,7 @@ varying investing choices.</P>
               <br><br>
             <div class="col-md-12">
               <p> <br><br>
-              <input type="checkbox" name="term_conditions"  required="" value="true"> 
+              <input type="checkbox"  checked="" name="term_conditions"  required="" value="true"> 
               I have read and agreed to the terms and conditions of this questionnaire
               </p>
               <button class="btn_common yellow border_radius" id="btn_submit">Submit</button>

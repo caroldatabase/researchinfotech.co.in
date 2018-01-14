@@ -85,7 +85,7 @@
                             <tr>
                                 <td>Service Name</td>
                                 <td>
-                                    <input type="text" class="form-control"  name="service" value="{{$serviceName or ''}}" readonly="" /></td>
+                                    <input type="text" class="form-control"  name="service" value="{{$serviceName or ''}}"  /></td>
                             </tr>
                             <tr>
                                 <td>Amount(INR)  :</td>

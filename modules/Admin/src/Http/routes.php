@@ -318,7 +318,8 @@
         Route::bind('kyc', function($value, $route) {
             return Modules\Admin\Models\Kyc::find($value);
         });
- 
+        Route::get('admin/riskTolrance', 'Modules\Admin\Http\Controllers\KycController@riskTolrance');
+
         Route::resource('admin/kyc', 'Modules\Admin\Http\Controllers\KycController', [
             'names' => [
                 'edit' => 'kyc.edit',
@@ -327,7 +328,7 @@
                 'update' => 'kyc.update',
                 'store' => 'kyc.store',
                 'index' => 'kyc',
-                'create' => 'kyc.create',
+                'create' => 'kyc.create'
             ]
                 ]
         );

@@ -319,47 +319,38 @@ class HomeController extends Controller
 
     public function riskTolranceForm(Request $request, Kyc $kyc)
     {
-        $title = "Risk Tolrance";
-        $tagLine = "We offer the most complete advisory services in the country";
-       
-      // dd($request->all());  
+        $title       = "Risk Tolrance";
+        $tagLine     = "We offer the most complete advisory services in the country";
 
         if($request->method()=='POST'){
             $validator = Validator::make($request->all(), [
-                'name' => 'required|min:3|max:50',
-                'email' => 'required|email',
-                'city' => 'required|max:20',
-                'adhar_number' => 'required|numeric|min:12',
-                'pan' => 'required',
-                'file' => 'required|mimes:doc,pdf,docs'
+                'full_name' => 'required',
+                'email' =>  'required|email'
             ]); 
                 if ($validator->fails()) {
-                     return Redirect::to('kyc')
+                     return Redirect::to('risk-tolrance')
                             ->withErrors($validator)
                             ->withInput();
                 }else{
-               
-                    if ($request->file('file')) {  
-                        $photo = $request->file('file');
-                        $destinationPath = storage_path('kyc/');
-                        $photo->move($destinationPath, time().$photo->getClientOriginalName());
-                        $file = time().$photo->getClientOriginalName();
-                    } 
-                        $allData    =   $request->except('_token','file');
-                        $phone      =   $request->get('home_telephone');
-                        $input      =   $request->only('name','email','pan','adhar_number');
-                        $input['phone']  = $phone;
 
-                        if(isset($file)){
-                            $input['doc'] = $file;
+                    $except = ['id', 'create_at', 'updated_at']; 
+                    $table_cname = \Schema::getColumnListing('risktolrance');
+                    foreach ($table_cname as $key => $value) {
+                    if (in_array($value, $except)) {
+                        continue;
+                    }
+                    if ($request->input($value) != null) {
+                            $input[$value] = $request->get($value);
                         }
+                    }     
+                        $allData    =   $request->except('_token');
                         $input['allData']  = json_encode($allData);   
 
-                    \DB::table('kyc')->insert($input);
-                    return Redirect::to('kyc')->withErrors(['successMsg'=>'Thanking for Contacting us!']);
+                    \DB::table('risktolrance')->insert($input);
+                    return Redirect::to('status/success')->withErrors(['successMsg'=>'Thanking for Contacting us!']);
                     }
         }
-       return view('investmentvia.kyc',compact('title','tagLine','kyc'));
+       return view('investmentvia.risk-tolrance',compact('title','tagLine','kyc'));
     }
 
     public function freeTrialForm(Request $request, FreeTrial $freeTrial)

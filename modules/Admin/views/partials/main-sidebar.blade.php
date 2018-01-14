@@ -74,11 +74,12 @@
        <li class="treeview {{ (isset($page_action) && $page_title=='Kyc')?"active":'' }} ">
         <a href="#">
           <i class="fa fa-user"></i>
-          <span>Manage Kyc</span>
+          <span>Manage Kyc & Risk Tolrance</span>
           <i class="fa fa-angle-left pull-right"></i>
         </a> 
         <ul class="treeview-menu">
            <li class="{{ (isset($page_action) && $page_action=='View Kyc')?"active":'' }}"><a href="{{ url('admin/kyc')}}"><i class="fa  fa-list"></i> View Kyc</a></li>
+           <li class="{{ (isset($page_action) && $page_action=='View Risk Tolrance')?"active":'' }}"><a href="{{ url('admin/riskTolrance')}}"><i class="fa  fa-list"></i> View Risk Tolrance</a></li>
         </ul>
       </li> 
       @endif

@@ -25,26 +25,32 @@
                                 <div class="portlet-title">
                                     <div class="caption">
                                         <i class="icon-settings font-red"></i>
-                                        <span class="caption-subject font-red sbold uppercase">KYC : {{$kyc->name}}</span>
+                                        <span class="caption-subject font-red sbold uppercase">Risk Tolrance </span>
                                     </div>
                                         <hr>
+                                         
+                                     
                                 </div>
+                                  
                                 <div class="portlet-body2">
+                                    
+                                     
                                     <table class="table" id="contact" style="width: 100%" border="1px"  text-align="left">
                                         <thead>
-                                        @if(isset($kyc) && $kyc!=null)
-                                            @foreach($kyc as $key => $result)
+                                        @if(isset($risktolrance) && $risktolrance!=null)
+                                            @foreach($risktolrance as $key => $result)
                                                 @if($key=="term_conditions")
                                                 @else
                                                 <tr>
-                                                    <td> {{ucfirst(str_replace('_',' ',$key))}}</td> 
+                                                    <td> {{ucfirst(str_replace('_',' ',$key))}}</td>  
                                                     <td> @if(is_array($result)) {{ implode(',',$result)}}@else{{$result}} @endif  </td> 
                                                 </tr>
                                                 @endif
                                             @endforeach
-                                        @endif    
-                                        </thead>
+                                        @endif
+                                        </thead>                                        
                                     </table>
+                                    
                                 </div>
                             </div>
                             <!-- END EXAMPLE TABLE PORTLET-->

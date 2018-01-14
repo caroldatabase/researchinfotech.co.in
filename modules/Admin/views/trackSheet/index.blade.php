@@ -93,9 +93,9 @@
                                                     </td>
                                                     
                                                     <td> 
-<!--                                                        <a href="{{ route('trackSheet.edit',$result->id)}}">
+                                                        <a href="{{ route('trackSheet.edit',$result->id)}}">
                                                             <i class="fa fa-fw fa-pencil-square-o" title="edit"></i> 
-                                                        </a>-->
+                                                        </a>
 
                                                         {!! Form::open(array('class' => 'form-inline pull-left deletion-form', 'method' => 'DELETE',  'id'=>'deleteForm_'.$result->id, 'route' => array('trackSheet.destroy', $result->id))) !!}
                                                         <button class='delbtn btn btn-danger btn-xs' type="submit" name="remove_levels" value="delete" id="{{$result->id}}"><i class="fa fa-fw fa-trash" title="Delete"></i></button>
