@@ -397,21 +397,37 @@ class HomeController extends Controller
         $tagLine    = "We offer the most complete advisory services in the country";
         $msg        = "Oops..!Something went Wrong. Please try again.";
         \Log::useDailyFiles(storage_path().'/logs/payment.log');
-        $data['response'] = isset($_POST)?$_POST:[];
+        $data['response'] = isset($_POST['encResp'])?$_POST['encResp']:[];
         \Log::info(json_encode($data));
-          \Log::info(json_encode(['sourcePayment'=>url()->previous()]));
-        if(!str_contains(url()->previous(),'ccavenue') && $status=="success" && !str_contains(url()->previous(),'paymentStatus/success'))
+        $params= [];
+        if($request->method('post'))
         {
-            $msg    =   "Thank you!.Your request submitted successfully.";
-        }else{
-            if ($status=="success"){
-                $msg    =   "Thank you!. We have received your payment.";
-            
-            }else if($status=="faild"){
-                $msg    = "Failed!. Payment cancel by payment gateway.";
+            $encryptedText =json_encode($data);
+            $key = "73F096AFBA1C6B5F16864C9D3D434979";
+            $queryString = $this->decrypt($encryptedText,$key);
+            $query  = explode('&', $queryString);
+            $params = array();
+            foreach($query as $param)
+            {
+                list($name, $value) = explode('=', $param);
+                $params[urldecode($name)] = urldecode($value);
             }
+            if(isset($params) &&  $params['order_status']=="Success")
+            {
+                $msg = "Payment Completed successfully";
+            }else{
+                $msg = "Payment ".isset($params['status_message'])?$params['status_message']:"Payment is pending";
+            }
+             
+        }else{
+             $msg    =   "Thank you!.Your request submitted successfully.";  
         }
-        return view('investmentvia.paymentStatus',compact('title','tagLine','msg'));
+
+        if($status=="faild"){
+            $msg    = "Failed!. Payment cancel by payment gateway.";
+        }
+ 
+        return view('investmentvia.paymentStatus',compact('title','tagLine','msg','params'));
     }
     // CCAvenue Integration
     public function checkout(Request $request, $serviceName=null)
@@ -421,6 +437,9 @@ class HomeController extends Controller
         $tagLine = "We offer the most complete advisory services in the country";
         
         $order_id = strtoupper(str_random(10));
+
+       
+
         
     	$merchant_data='';
         $merchant_id = "36234";
