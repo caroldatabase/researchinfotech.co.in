@@ -66,9 +66,9 @@
               </div>
             </div>
             <div class="col-md-4 col-sm-4">
-            <label>Work Telephone (required)</label>
+            <label>Work Telephone (optional)</label>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="work telephone" name="phone" id="phone" required="">
+                <input type="text" class="form-control" placeholder="work telephone" name="phone" id="phone">
               </div>
             </div>
              <div class="col-md-4 col-sm-4">
