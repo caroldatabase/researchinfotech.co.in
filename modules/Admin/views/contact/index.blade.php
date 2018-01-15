@@ -56,8 +56,7 @@
         <table class="table table-striped table-hover table-bordered" id="contact">
             <thead>
                 <tr>
-                 <th>   Sno </th> 
-                 <th> Title </th>
+                 <th>   Sno </th>
                     <th> Name </th>
                     <th> Email </th> 
                     <th> Phone </th>  
@@ -70,7 +69,6 @@
             @foreach($contacts as $key => $result)
                 <tr>
                  <th> {{++$key}} </th>
-                 <td> {{$result->title }} </td>
                     <td> {{$result->name}} </td>
                      <td> {{$result->email or 'NA'}} </td>
                      <td> {{$result->mobile or $result->mobile }} </td> 
