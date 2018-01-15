@@ -27,6 +27,7 @@
                       <thead> 
                           @foreach($params as $key => $result)
                               @if($key=="bin_country" ||  empty($result) || $result==null || $key=="retry" || $key=="Vault" || $key=="offer_type" || $key=="offer_code")
+                              {{ continue }}
                               @else
                               <tr>
                                   <td> {{ucfirst(str_replace('_',' ',$key))}}</td> 
