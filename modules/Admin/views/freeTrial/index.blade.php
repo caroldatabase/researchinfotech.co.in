@@ -62,7 +62,8 @@
                  <th>   Sno </th>  
                     <th> Name </th>
                     <th> Email </th> 
-                    <th> Phone </th>    
+                    <th> Phone </th>
+                    <th> Service Name </th>    
                     <th>Created date</th> 
                     <th>Action</th> 
                 </tr>
@@ -73,7 +74,8 @@
                  <th> {{++$key}} </th>
                     <td> {{$result->name}} </td>
                      <td> {{!empty($result->email)?$result->email:'NA'}} </td>
-                     <td> {{$result->phone}} </td>  
+                     <td> {{$result->phone}} </td> 
+                     <td> {{$result->service_nam}} </td>  
                          <td>
                             {!! Carbon\Carbon::parse($result->created_at)->format('d-M-Y'); !!}
                         </td>

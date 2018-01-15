@@ -651,6 +651,7 @@ I am an intraday trader in Stock Cash and Stock Futures. Earlier I was skeptical
                 <input type="text" placeholder="Enter Name" name="name" required="" autofocus="true"> 
 
                 <input type="number" placeholder="Enter 10 Digit Phone Number" name="phone" required="" maxlength="10" size="10" min="999999999">
+                <input type="text" placeholder="Enter service name for trial. Example: Commodity" name="service_name" required="" >
 
                 <input type="submit" class="submit trai-btn" value="Start My Free Trial Now!">
 

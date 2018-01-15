@@ -21,7 +21,7 @@ class ContactRequest  extends Request {
                 case 'POST': {
                         return [
                             'firstName' => 'required', 
-                            'email'     => "required|email" , 
+                            'email'     => "email" , 
                             'categoryName' => 'required'
                         ];
                     }
@@ -31,7 +31,7 @@ class ContactRequest  extends Request {
 
                         return [
                             'firstName' => 'required', 
-                             'email' => 'required' , 
+                             'email' => 'email' , 
                             'categoryName' => 'required'
                             
                         ];

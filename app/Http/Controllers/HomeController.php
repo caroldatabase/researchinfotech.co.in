@@ -255,8 +255,7 @@ class HomeController extends Controller
         $input['name'] = $request->get('name');
         $input['phone'] = $request->get('phone');
         
-        $input = $request->only('name','email','phone','city');
-         $input['first_name'] = $request->get('name');
+        $input = $request->only('name','email','phone','city','service_name');
         \DB::table('free_trials')->insert($input);
         
         return Redirect::to('status/success');
@@ -361,7 +360,7 @@ class HomeController extends Controller
         if($request->method()=='POST'){
             $validator = Validator::make($request->all(), [
                 'name' => 'required|min:3|max:50',
-                'email' => 'required|email',
+                'email' => 'email',
                 'city' => 'required|max:20',
                 'phone' => 'required|numeric'
             ]); 
@@ -371,7 +370,7 @@ class HomeController extends Controller
                             ->withInput();
                 }else{
                
-                   $input = $request->only('name','email','phone','city');
+                   $input = $request->only('name','email','phone','city','service_name');
                    
                     \DB::table('free_trials')->insert($input);
                     return Redirect::to('free-trial')->withErrors(['successMsg'=>'Thanking for Contacting us!']);

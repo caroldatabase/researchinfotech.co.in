@@ -248,6 +248,9 @@
                              <span class="label label-danger">{{ $errors->first('email', ':message') }}</span>
                             <input value="{{ old('phone') }}"  type="tel" placeholder="Phone" name="phone" required="">
                              <span class="label label-danger">{{ $errors->first('phone', ':message') }}</span>
+                            <input value="{{ old('service_name') }}"  type="text" placeholder="Enter Services to get trial" name="service_name" required="">
+                             <span class="label label-danger">{{ $errors->first('service_name', ':message') }}</span>
+                           
                             <input value="{{ old('city') }}"  type="text" placeholder="City" name="city" required="">
                              <span class="label label-danger">{{ $errors->first('city', ':message') }}</span>
                             <input type="submit" class="submit" value="Start My Free Trial Now!">
