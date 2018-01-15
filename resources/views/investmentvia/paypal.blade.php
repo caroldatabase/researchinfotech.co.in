@@ -144,9 +144,9 @@
                             <tr>
                                 <td>Billing Email :</td><td><input type="text" class="form-control"   name="billing_email" value="info@researchinfotech.co.in"/></td>
                             </tr>
-                            <tr>
+                            <!-- <tr>
                                 <td>Promo Code  :</td><td><input type="text" class="form-control"  name="promo_code" value="{{old('promo_code')}}"/></td>
-                            </tr>
+                            </tr> -->
                             <tr>
                                 <td></td><td><input type="submit" class="btn btn-primary" value="Make Payment"></td>
                             </tr>
