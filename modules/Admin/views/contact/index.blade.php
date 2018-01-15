@@ -71,9 +71,9 @@
                 <tr>
                  <th> {{++$key}} </th>
                  <td> {{$result->title }} </td>
-                    <td> {{$result->firstName.' '.$result->lastName}} </td>
+                    <td> {{$result->name}} </td>
                      <td> {{$result->email or 'NA'}} </td>
-                     <td> {{$result->phone}} </td> 
+                     <td> {{$result->mobile or $result->mobile }} </td> 
                      <td> {{$result->comments}} </td> 
                          <td>
                             {!! Carbon\Carbon::parse($result->created_at)->format('Y-m-d'); !!}

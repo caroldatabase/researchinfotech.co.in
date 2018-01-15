@@ -68,8 +68,7 @@
             @foreach($freeTrial as $key => $result)
                 <tr>
                  <th> {{++$key}} </th>
-                  
-                    <td> {{$result->first_name}} </td>
+                    <td> {{$result->name}} </td>
                      <td> {{$result->email}} </td>
                      <td> {{$result->phone}} </td>  
                          <td>
