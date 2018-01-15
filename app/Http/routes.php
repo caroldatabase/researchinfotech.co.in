@@ -37,6 +37,25 @@ Route::get('donwloadFreeTrial',function(){
         })->download('csv');
 });
 
+Route::get('donwloadContact',function(){
+
+        $data = \DB::table('contacts')->select('name','email','mobile','comments')->get();
+
+        if($data){
+
+           $jsonData = json_encode($data);
+           $data = json_decode($jsonData,true);
+        }else{
+          $data['data'] = "record not found";
+        }
+
+        return Excel::create('freeTrial', function($excel) use ($data) {
+            $excel->sheet('mySheet', function($sheet) use ($data)
+            {
+                $sheet->fromArray($data);
+            });
+        })->download('csv');
+});
 
 Route::get('/',[
           'as' => 'home',
