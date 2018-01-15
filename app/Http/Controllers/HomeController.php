@@ -430,7 +430,11 @@ class HomeController extends Controller
              }   
              
         }else{
-             $msg    =   "Thank you!.Your request submitted successfully.";  
+            if($status=='failed'){
+                $msg    =   "Payment failed!.Please try again.";  
+            }else{
+                $msg    =   "Thank you!.Your request submitted successfully.";  
+            }
         } 
  
         return view('investmentvia.paymentStatus',compact('title','tagLine','msg','params'));
