@@ -418,6 +418,7 @@ class HomeController extends Controller
                 {
                     $msg = "Payment Completed successfully";
                 }else{
+                    $params['payment_status'] = "Payment Cancelled";
                     $msg = "Payment ".isset($params['status_message'])?$params['status_message']:"Payment is pending";
                 }
             }else{
