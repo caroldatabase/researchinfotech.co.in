@@ -414,6 +414,7 @@ class HomeController extends Controller
                     list($name, $value) = explode('=', $param);
                     $params[urldecode($name)] = urldecode($value);
                 }
+                 \Log::info(json_encode(['payment_status'=>$params]));
                 if(isset($params) &&  $params['order_status']=="Success")
                 {
                     $msg = "Payment Completed successfully";
