@@ -21,7 +21,7 @@
           <div class="faq_content wow fadeIn" data-wow-delay="400ms">
                  <div class="alert alert-success">{{$msg}}</div>
 
-                 @if(iseet($params) && count($params)>0)
+                 @if(isset($params) && count($params)>0)
                  <p>Payment Details</p>
                   <table class="table" id="contact" style="width: 100%" border="1px"  text-align="left">
                       <thead>
