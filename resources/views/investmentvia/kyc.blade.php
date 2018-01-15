@@ -113,12 +113,7 @@
               
               </div>
             </div>
-             <div class="col-md-4 col-sm-4">
-            <label>Work Telephone (required)</label>
-              <div class="form-group">
-                <input type="text" class="form-control" value="{{ old('work_telephone') }}"  placeholder="work telephone" name="work_telephone" id="work_telephone" >
-              </div>
-            </div>
+             
              <div class="col-md-4 col-sm-4">
             <label>Home / Mobile Telephone (required)</label>
               <div class="form-group">
@@ -127,9 +122,9 @@
               </div>
             </div>
              <div class="col-md-4 col-sm-4">
-            <label>Email Work (required)</label>
+            <label>Work Telephone (Optional)</label>
               <div class="form-group">
-               <input type="text" value="{{ old('mail_work') }}"  class="form-control" placeholder="Email Work " name="mail_work" id="mail_work">
+                <input type="text" class="form-control" value="{{ old('work_telephone') }}"  placeholder="work telephone" name="work_telephone" id="work_telephone" >
               </div>
             </div>
              <div class="col-md-4 col-sm-4">
@@ -138,13 +133,7 @@
                 <input type="text" class="form-control" value="{{ old('email') }}"  placeholder="Email" name="email" id="email" required="">
               </div>
             </div>
-             
-             <div class="col-md-4 col-sm-4">
-            <label>Fax Work (required)</label>
-              <div class="form-group">
-                <input type="text" class="form-control" value="{{ old('fax_work') }}"  placeholder="Fax Work (required)" name="fax_work" id="fax_work" required="">
-              </div>
-            </div>
+            
              <div class="col-md-4 col-sm-4">
             <label>Nationality (required)</label>
               <div class="form-group">
@@ -274,7 +263,7 @@
                 </div>
             </div>
               
-               <div class="col-md-4 col-sm-4">
+             <!--   <div class="col-md-4 col-sm-4">
                 <label>Upload signature</label>
                 <div style="position:relative;">
                      <a class='btn btn-primary' href='javascript:;'>
@@ -285,7 +274,7 @@
                     <span class='label label-info' id="upload-file-info"></span>
                      <span class="label label-danger">{{ $errors->first('file', ':message') }}</span>
             </div>
-            </div>
+            </div> -->
               
             <div class="col-md-12 col-sm-4">
                 <div class="col-md-4 col-sm-4"></div>

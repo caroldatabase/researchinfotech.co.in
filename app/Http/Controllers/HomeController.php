@@ -285,7 +285,7 @@ class HomeController extends Controller
                 'city' => 'required',
                 'adhar_number' => 'required|numeric|min:12',
                 'pan' => 'required',
-                'file' => 'required|mimes:doc,pdf,docs'
+             //   'file' => 'required|mimes:doc,pdf,docs'
             ]); 
                 if ($validator->fails()) {
                      return Redirect::to('kyc')
