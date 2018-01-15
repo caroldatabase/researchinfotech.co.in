@@ -72,7 +72,7 @@
                 <tr>
                  <th> {{++$key}} </th>
                     <td> {{$result->name}} </td>
-                     <td> {{$result->email}} </td>
+                     <td> {{!empty($result->email)?$result->email:'NA'}} </td>
                      <td> {{$result->phone}} </td>  
                          <td>
                             {!! Carbon\Carbon::parse($result->created_at)->format('d-M-Y'); !!}
