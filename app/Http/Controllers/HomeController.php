@@ -403,31 +403,30 @@ class HomeController extends Controller
         
         if($request->method()=="POST")
         {  
-            $encryptedText =json_encode($data);
-            $key = "73F096AFBA1C6B5F16864C9D3D434979";
-            $queryString = $this->decrypt($encryptedText,$key);
-            $query  = explode('&', $queryString);
-            $params = array();
-            foreach($query as $param)
-            {
-                list($name, $value) = explode('=', $param);
-                $params[urldecode($name)] = urldecode($value);
-            }
-            if(isset($params) &&  $params['order_status']=="Success")
-            {
-                $msg = "Payment Completed successfully";
+            $encryptedText =  isset($_POST['encResp'])?$_POST['encResp']:[];
+            if(count($encryptedText)>0){
+                $key = "73F096AFBA1C6B5F16864C9D3D434979";
+                $queryString = $this->decrypt($encryptedText,$key);
+                $query  = explode('&', $queryString);
+                $params = array();
+                foreach($query as $param)
+                {
+                    list($name, $value) = explode('=', $param);
+                    $params[urldecode($name)] = urldecode($value);
+                }
+                if(isset($params) &&  $params['order_status']=="Success")
+                {
+                    $msg = "Payment Completed successfully";
+                }else{
+                    $msg = "Payment ".isset($params['status_message'])?$params['status_message']:"Payment is pending";
+                }
             }else{
-                $msg = "Payment ".isset($params['status_message'])?$params['status_message']:"Payment is pending";
-            }
+                 $msg    = "Failed!. Payment cancel by payment gateway.";
+             }   
              
         }else{
              $msg    =   "Thank you!.Your request submitted successfully.";  
-        }
-
-        if($status=="failed"){
-            $msg    = "Failed!. Payment cancel by payment gateway.";
-        }
-        
+        } 
  
         return view('investmentvia.paymentStatus',compact('title','tagLine','msg','params'));
     }
