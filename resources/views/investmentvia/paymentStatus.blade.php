@@ -22,6 +22,7 @@
                  <div class="alert alert-success">{{$msg}}</div>
 
                  @if(isset($params) && count($params)>0)
+                 {{dd($params)}}
                  <p>Payment Details</p>
                   <table class="table" id="contact" style="width: 100%" border="1px"  text-align="left">
                       <thead>
@@ -31,7 +32,7 @@
                               @else
                               <tr>
                                   <td> {{ucfirst(str_replace('_',' ',$key))}}</td> 
-                                  <td> @if(is_array($result)) {{ implode(',',$result)}}@else{{$result}} @endif  </td> 
+                                  <td> {{$result}}  </td> 
                               </tr>
                               @endif
                           @endforeach
