@@ -49,7 +49,7 @@ Route::get('donwloadContact',function(){
           $data['data'] = "record not found";
         }
 
-        return Excel::create('freeTrial', function($excel) use ($data) {
+        return Excel::create('contacts', function($excel) use ($data) {
             $excel->sheet('mySheet', function($sheet) use ($data)
             {
                 $sheet->fromArray($data);
