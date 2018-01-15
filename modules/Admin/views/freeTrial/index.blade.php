@@ -21,7 +21,7 @@
                                     <div class="box-header">
                                         <div class="table-toolbar">
                                         <div class="row">
-                                            <form action="{{route('freeTrial')}}" method="get" id="filter_data">
+                                            <form action="{{url('admin/freeTrial')}}" method="get" id="filter_data">
                                              
                                             <div class="col-md-3">
                                                 <input value="{{ (isset($_REQUEST['search']))?$_REQUEST['search']:''}}" placeholder="Search " type="text" name="search" id="search" class="form-control" >
@@ -32,7 +32,7 @@
                                            
                                         </form>
                                          <div class="col-md-2">
-                                             <a href="{{ route('freeTrial') }}">   <input type="submit" value="Reset" class="btn btn-default form-control"> </a>
+                                             <a href="{{ url('admin/freeTrial') }}">   <input type="submit" value="Reset" class="btn btn-default form-control"> </a>
                                         </div>
                                           <div class="col-md-2">
                                              <a class="btn btn-info" href="{{ url('donwloadFreeTrial') }}"> Download All FreeTrial Data </a>
