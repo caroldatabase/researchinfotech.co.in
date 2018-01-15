@@ -363,7 +363,7 @@ class HomeController extends Controller
                 'name' => 'required|min:3|max:50',
                 'email' => 'required|email',
                 'city' => 'required|max:20',
-                'phone' => 'required|numeric|min:10|max:10'
+                'phone' => 'required|numeric'
             ]); 
                 if ($validator->fails()) {
                      return Redirect::to('free-trial')
