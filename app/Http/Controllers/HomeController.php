@@ -470,7 +470,8 @@ class HomeController extends Controller
                     $merchant_data.=$key.'='.$value.'&';
                 }
             }
-        $encrypted_data=$this->encrypt($merchant_data,$working_key); // Method for encrypting the data.
+        $encrypted_data=encrypt($merchant_data,$working_key); // Method for encrypting the data.
+       // dd($encrypted_data);
         $production_url='https://secure.ccavenue.com/transaction/transaction.do?command=initiateTransaction&encRequest='.$encrypted_data.'&access_code='.$access_code;
           return Redirect::to($production_url);
         }
