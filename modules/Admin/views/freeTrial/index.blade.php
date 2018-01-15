@@ -75,7 +75,7 @@
                     <td> {{$result->name}} </td>
                      <td> {{!empty($result->email)?$result->email:'NA'}} </td>
                      <td> {{$result->phone}} </td> 
-                     <td> {{$result->service_nam}} </td>  
+                     <td> {{!empty($result->service_nam)?$result->service_nam:'NA'}} </td>  
                          <td>
                             {!! Carbon\Carbon::parse($result->created_at)->format('d-M-Y'); !!}
                         </td>
