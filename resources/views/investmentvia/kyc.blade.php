@@ -17,7 +17,8 @@
     <div class="row padding-bottom">
        
       <div class="col-md-12 wow fadeInRight animated" data-wow-delay="500ms" style="visibility: visible; animation-delay: 4500ms; animation-name: fadeInRight;">
-        <h2 class="heading heading_space"> <span>Kyc </span> <span class="divider-left"></span></h2>
+        <br><br>
+        <h2 class="heading heading_space"> <span>{{$title }} </span> <span class="divider-left"></span></h2>
             
          @if($errors->first('successMsg', ' has-error'))
          <div class="alert alert-info">Thank you!.Kyc Form Submitted successfully.</div>
