@@ -424,7 +424,7 @@ class HomeController extends Controller
              $msg    =   "Thank you!.Your request submitted successfully.";  
         }
 
-        if($status=="faild"){
+        if($status=="failed"){
             $msg    = "Failed!. Payment cancel by payment gateway.";
         }
         

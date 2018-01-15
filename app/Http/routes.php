@@ -154,7 +154,7 @@ Route::match(['get','post'],'checkout/{name}',[
         ]);
  
 
-Route::match(['get'],'paymentStatus/{name}',[
+Route::match(['get','post'],'paymentStatus/{name}',[
           'as' => 'paymentStatus',
           'uses'  => 'HomeController@paymentStatus'
         ]);
