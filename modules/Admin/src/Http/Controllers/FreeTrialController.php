@@ -78,9 +78,9 @@ class FreeTrialController extends Controller {
                                       ->OrWhere('phone', 'LIKE', "%$search%");
                         }
                         
-                    })->Paginate($this->record_per_page);
+                    })->Paginate(20);
         } else {
-            $freeTrial = FreeTrial::orderBy('id','desc')->Paginate($this->record_per_page);
+            $freeTrial = FreeTrial::orderBy('id','desc')->Paginate(20);
         }
 
         $export = $request->get('export');
