@@ -26,7 +26,7 @@
                   <table class="table" id="contact" style="width: 100%" border="1px"  text-align="left">
                       <thead> 
                           @foreach($params as $key => $result)
-                              @if($key=="bin_country" ||  empty($result) || $result==null || $key=="retry")
+                              @if($key=="bin_country" ||  empty($result) || $result==null || $key=="retry" || $key=="Vault" || $key=="offer_type" || $key=="offer_code")
                               @else
                               <tr>
                                   <td> {{ucfirst(str_replace('_',' ',$key))}}</td> 
