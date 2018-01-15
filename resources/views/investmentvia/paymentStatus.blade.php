@@ -26,7 +26,7 @@
                   <table class="table" id="contact" style="width: 100%" border="1px"  text-align="left">
                       <thead> 
                           @foreach($params as $key => $result)
-                              @if($key=="bin_country" ||  empty($result) || $result==null || $key=="retry" || $key=="Vault" || $key=="offer_type" || $key=="offer_code")
+                              @if($key=="bin_country" ||  empty($result) || $result==null || $key=="retry" || $key=="vault" || $key=="offer_type" || $key=="offer_code")
                               <?php continue; ?>
                               @else
                               <tr>
