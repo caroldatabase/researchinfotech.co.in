@@ -15,6 +15,29 @@ header('Access-Control-Allow-Methods: GET, POST, DELETE, OPTIONS');
 header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorization, X-Request-With, auth-token');
 header('Access-Control-Allow-Credentials: true');
 
+
+
+Route::get('donwloadFreeTrial',function(){
+
+        $data = \DB::table('free_trials')->select('name','email','phone','city')->get();
+
+        if($data){
+
+           $jsonData = json_encode($data);
+           $data = json_decode($jsonData,true);
+        }else{
+          $data['data'] = "record not found";
+        }
+
+        return Excel::create('freeTrial', function($excel) use ($data) {
+            $excel->sheet('mySheet', function($sheet) use ($data)
+            {
+                $sheet->fromArray($data);
+            });
+        })->download('csv');
+});
+
+
 Route::get('/',[
           'as' => 'home',
           'uses'  => 'HomeController@home'

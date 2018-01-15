@@ -34,6 +34,9 @@
                                          <div class="col-md-2">
                                              <a href="{{ route('freeTrial') }}">   <input type="submit" value="Reset" class="btn btn-default form-control"> </a>
                                         </div>
+                                          <div class="col-md-2">
+                                             <a class="btn btn-info" href="{{ url('donwloadFreeTrial') }}"> Download All FreeTrial Data </a>
+                                        </div>
                                        
                                         </div>
                                     </div>

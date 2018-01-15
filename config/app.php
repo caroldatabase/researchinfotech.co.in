@@ -169,7 +169,8 @@ return [
        Way\Generators\GeneratorsServiceProvider::class,
        Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider::class, 
        Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
-       Nestable\NestableServiceProvider::class
+       Nestable\NestableServiceProvider::class,
+       Maatwebsite\Excel\ExcelServiceProvider::class,
 
 
     ],
@@ -224,7 +225,8 @@ return [
         'Helper'    =>  App\Helpers\Helper::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
         'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
-        'Nestable' => Nestable\Facades\NestableService::class
+        'Nestable' => Nestable\Facades\NestableService::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class
 
     ],
 
