@@ -414,10 +414,13 @@ class HomeController extends Controller
                     list($name, $value) = explode('=', $param);
                     $params[urldecode($name)] = urldecode($value);
                 }
-                 \Log::info(json_encode(['payment_status'=>$params]));
+                 \Log::info(json_encode(['payment_status'=>$params])); 
                 if(isset($params) &&  $params['order_status']=="Success")
                 {
                     $msg = "Payment Completed successfully";
+                }elseif(isset($params) &&  $params['order_status']=="Aborted")
+                {
+                    $msg = "Payment Aborted by customer";
                 }else{
                     $params['payment_status'] = "Payment Cancelled";
                     $msg = "Payment ".isset($params['status_message'])?$params['status_message']:"Payment is pending";

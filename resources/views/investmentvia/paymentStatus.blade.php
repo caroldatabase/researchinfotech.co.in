@@ -24,22 +24,18 @@
                  @if(isset($params) && count($params)>0)
                  <p>Payment Details</p>
                   <table class="table" id="contact" style="width: 100%" border="1px"  text-align="left">
-                      <thead>
-                     
+                      <thead> 
                           @foreach($params as $key => $result)
-                              @if($key=="bin_country" || $result=="" || empty($result) || $result==null || $key=="retry" || $result==0)
+                              @if($key=="bin_country" ||  empty($result) || $result==null || $key=="retry")
                               @else
                               <tr>
                                   <td> {{ucfirst(str_replace('_',' ',$key))}}</td> 
                                   <td> {{$result}}  </td> 
                               </tr>
                               @endif
-                          @endforeach
-                     
+                          @endforeach 
                       </thead>
-                  </table>
-
-
+                  </table>  
                  @endif 
 
         </div>
