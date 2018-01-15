@@ -22,13 +22,12 @@
                  <div class="alert alert-success">{{$msg}}</div>
 
                  @if(isset($params) && count($params)>0)
-                 {{dd($params)}}
                  <p>Payment Details</p>
                   <table class="table" id="contact" style="width: 100%" border="1px"  text-align="left">
                       <thead>
                      
                           @foreach($params as $key => $result)
-                              @if($key=="bin_country" || $result=="" || !empty($result) || $result==null || $key=="retry")
+                              @if($key=="bin_country" || $result=="" || empty($result) || $result==null || $key=="retry" || $result==0)
                               @else
                               <tr>
                                   <td> {{ucfirst(str_replace('_',' ',$key))}}</td> 
