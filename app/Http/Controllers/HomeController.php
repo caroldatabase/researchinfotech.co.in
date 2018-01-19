@@ -217,7 +217,7 @@ class HomeController extends Controller
     {
         $title = "Reports";
         $tagLine = "We offer the most complete advisory services in the country";
-        $blogs = Blogs::all();
+        $blogs = Blogs::orderBy('id','desc')->get();
         $url = url('public/assets/js/jquery-2.2.3.js');
         $jsUrl = '<script src="'.$url.'"></script>';
         
