@@ -52,14 +52,14 @@ class HomeController extends Controller
          $html = "<li>".'<a href="'.$url.'">'.'<i class="fa fa-right">'.'</i>'.ucfirst($val->title).'</a></li>';
          
          }
-         
+        
         $trackSheet = TrackSheet::orderBy('id','desc')->Paginate(12);
        // dd($trackSheet);
-        View::share('website_title',$website_title->website_title);
-        View::share('website_email',$website_email->website_email);
-        View::share('website_url',$website_url->website_url);
-        View::share('contact_number',$contact_number->contact_number);
-        View::share('company_address',$company_address->company_address);
+        View::share('website_title',$website_title->field_value);
+        View::share('website_email',$website_email->field_value);
+        View::share('website_url',$website_url->field_value);
+        View::share('contact_number',$contact_number->field_value); 
+        View::share('company_address',$company_address->field_value); 
         View::share('banner',$banner); 
         View::share('pageMenu',$pageMenu);
         View::share('trackSheet',$trackSheet);

@@ -632,38 +632,30 @@ I am an intraday trader in Stock Cash and Stock Futures. Earlier I was skeptical
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2 class="modal-title" id="exampleModalLabel">2 Days Free Trial</h2>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true" style="
-    position: absolute;
-    top: 10px;
-">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body"> 
-
-        <div class="banner-right col-md-12 col-sm-12 jw-animate-gen animated fadeInRight" data-gen-offset="90%" data-gen="fadeInRight">
-            <form method="post" action="{{url('freeTrial')}}">
-
-                <input type="text" placeholder="Enter Name" name="name" required="" autofocus="true"> 
-
-                <input type="number" placeholder="Enter 10 Digit Phone Number" name="phone" required="" maxlength="10" size="10" min="999999999">
-                <input type="text" placeholder="Enter service name for trial. Example: Commodity" name="service_name" required="" >
-
-                <input type="submit" class="submit trai-btn" value="Start My Free Trial Now!">
-
-            </form> 
-
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="exampleModalLabel">2 Days Free Trial</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="
+                            position: absolute;
+                            top: 10px;
+                        ">&times;</span>
+                    </button>
             </div>
-             
-        </form>
-      </div>
-      
+            <div class="modal-body"> 
+
+                <div class="banner-right col-md-12 col-sm-12 jw-animate-gen animated fadeInRight" data-gen-offset="90%" data-gen="fadeInRight">
+                    <form method="post" action="{{url('freeTrial')}}">
+                        <input type="text" placeholder="Enter Name" name="name" required="" autofocus="true"> 
+                        <input type="number" placeholder="Enter 10 Digit Phone Number" name="phone" required="" maxlength="10" size="10" min="999999999">
+                        <input type="text" placeholder="Enter service name for trial. Example: Commodity" name="service_name" required="" >
+                        <input type="submit" class="submit trai-btn" value="Start My Free Trial Now!">
+                    </form> 
+                </div> 
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 <script>

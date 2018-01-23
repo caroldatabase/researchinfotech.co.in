@@ -68,8 +68,8 @@
       </div>
       <div class="col-md-4 col-sm-4 footer_panel bottom25">
         <h3 class="heading bottom25">Keep in Touch <span class="divider-left"></span></h3>
-        <p class=" address"><i class="fa fa-map-marker" aria-hidden="true"></i>Research Infotech Advisory Service, Indore , India</p>
-        <p class=" address"><i class="fa fa-phone" aria-hidden="true"></i>+91-8982890444</p>
+         <p class=" address" style="float: left;"><i class="fa fa-map-marker" aria-hidden="true"></i>{!! $company_address !!}</p>
+        <p class=" address" ><i class="fa fa-phone" aria-hidden="true"></i>{!! $contact_number !!}</p>
          <img src="{{ asset('storage/assets/images/footer-map.png')}}" class="img-responsive">
       </div>
     </div>
