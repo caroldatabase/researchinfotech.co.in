@@ -39,6 +39,34 @@
         </div>
     </div> 
 
+
+    <div class="form-group{{ $errors->first('website_url', ' has-error') }}">
+        <label class="col-lg-4 col-md-4 control-label">Facebook Url</label>
+        <div class="col-lg-8 col-md-8"> 
+            {!! Form::text('facebook_url',isset($facebook_url->field_value)?$facebook_url->field_value:'http://', ['class' => 'form-control form-cascade-control input-small'])  !!} 
+            <span class="label label-danger">{{ $errors->first('website_url', ':message') }}</span>
+        </div>
+    </div> 
+
+
+    <div class="form-group{{ $errors->first('website_url', ' has-error') }}">
+        <label class="col-lg-4 col-md-4 control-label">Twitter Url</label>
+        <div class="col-lg-8 col-md-8"> 
+            {!! Form::text('twitter_url',isset($twitter_url->field_value)?$twitter_url->field_value:'http://', ['class' => 'form-control form-cascade-control input-small'])  !!} 
+            <span class="label label-danger">{{ $errors->first('website_url', ':message') }}</span>
+        </div>
+    </div> 
+
+
+
+    <div class="form-group{{ $errors->first('website_url', ' has-error') }}">
+        <label class="col-lg-4 col-md-4 control-label">Linkedin Url</label>
+        <div class="col-lg-8 col-md-8"> 
+            {!! Form::text('linkedin_url',isset($linkedin_url->field_value)?$linkedin_url->field_value:'http://', ['class' => 'form-control form-cascade-control input-small'])  !!} 
+            <span class="label label-danger">{{ $errors->first('website_url', ':message') }}</span>
+        </div>
+    </div> 
+
  
 
      <div class="form-group{{ $errors->first('company_address', ' has-error') }}">

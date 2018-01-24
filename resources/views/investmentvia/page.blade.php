@@ -11,7 +11,11 @@
 @include('partials/titlebar')
 <!--Page Header-->
 
-
+<style type="text/css">
+  p{
+    text-align: justify;
+  }
+</style>
 <!--SERVICE SECTION-->
 <section id="faq" class="padding">
   <div class="container">

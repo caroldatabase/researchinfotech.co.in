@@ -44,7 +44,11 @@ class HomeController extends Controller
         $contact_number     = $setting::where('field_key','contact_number')->first();
         $company_address    = $setting::where('field_key','company_address')->first();
         $banner             = $setting::where('field_key','LIKE','%banner_image%')->get();
-        
+
+        $facebook_url        = $setting::where('field_key','facebook_url')->first();
+        $linkedin_url        = $setting::where('field_key','linkedin_url')->first();
+        $twitter_url        = $setting::where('field_key','twitter_url')->first();
+      
         $pageMenu = Pages::all();
         
          foreach($pageMenu as $val){
@@ -60,6 +64,11 @@ class HomeController extends Controller
         View::share('website_url',$website_url->field_value);
         View::share('contact_number',$contact_number->field_value); 
         View::share('company_address',$company_address->field_value); 
+
+        View::share('facebook_url',$facebook_url);
+        View::share('linkedin_url',$linkedin_url);
+        View::share('twitter_url',$twitter_url);
+
         View::share('banner',$banner); 
         View::share('pageMenu',$pageMenu);
         View::share('trackSheet',$trackSheet);

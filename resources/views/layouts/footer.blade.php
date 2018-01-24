@@ -44,11 +44,10 @@
         <img src="{{ asset('storage/assets/images/logo-white.png')}}" alt="Xwin"></a>
         <p>Welcome to Research Infotech, We have been known for serving our customers with atmost care and dedication. Our motto has been always aligned with "Delivering Quality Services" and "Customer Satisfaction".</p>
         <ul class="social_icon top25">
-          <li><a href="#." class="facebook"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="#." class="twitter"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="#." class="dribble"><i class="fa fa-dribbble"></i></a></li>
-          <li><a href="#." class="instagram"><i class="fa fa-instagram"></i></a></li>
-          <li><a href="#." class="vimo"><i class="fa fa-vimeo"></i></a></li>
+          <li><a href="{{$facebook_url->field_value or '#'}}" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="{{$twitter_url->field_value or '#'}}" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="{{$linkedin_url->field_value or '#'}}" target="_blank" class="dribble"><i class="fa fa-dribbble"></i></a></li>
+          
         </ul>
       </div>
       <div class="col-md-4 col-sm-4 footer_panel bottom25">
