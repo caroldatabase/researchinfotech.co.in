@@ -116,11 +116,11 @@
             items:1,
             nav:true
         },
-        600:{
+        300:{
             items:3,
             nav:false
         },
-        1000:{
+        500:{
             items:5,
             nav:true,
             loop:false

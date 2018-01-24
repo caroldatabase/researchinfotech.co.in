@@ -598,22 +598,22 @@ I am an intraday trader in Stock Cash and Stock Futures. Earlier I was skeptical
     <h2 class="hidden">hidden</h2>
     <div class="row number-counters">
       <div class="col-md-3 col-sm-6 col-xs-6 counters-item text-center wow fadeInUp" data-wow-delay="300ms">
-        <i class="i-xlarge divcenter nobottommargin i-plain icon-thumbs-up"></i>
+       <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
         <strong data-to="5000">5000</strong>
         <p>SOCIAL MEDIA FOLLOWERS</p>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-6 counters-item text-center wow fadeInUp" data-wow-delay="400ms">
-        <i class="icon-trophy"></i>
+        <i class="fa fa-trophy"></i>
         <strong data-to="100">0</strong>
         <p>NATIONAL/INTERNATIONAL STATE COVERED</p>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-6 counters-item text-center wow fadeInUp" data-wow-delay="500ms">
-        <i class=" icon-icons20"></i>
+       <i class="fa fa-globe" aria-hidden="true"></i>
         <strong data-to="50">0</strong>
         <p>NATIONAL/INTERNATIONAL RESEARCH SOURCES</p>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-6 counters-item text-center wow fadeInUp" data-wow-delay="600ms">
-        <i class="icon-happy"></i>
+      <i class="fa fa-user-plus" aria-hidden="true"></i>
         <strong data-to="2000">0</strong>
         <p>Satisfied Clients</p>
       </div>
