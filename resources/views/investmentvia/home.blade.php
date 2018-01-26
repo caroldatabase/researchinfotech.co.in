@@ -624,14 +624,14 @@ I am an intraday trader in Stock Cash and Stock Futures. Earlier I was skeptical
 </section>
 
 <!--Paralax -->
-<section id="parallax" class="parallax">
+<section id="contact" class="contact">
   <div class="container">
     <div class="row">
       <div class="col-md-12 text-center wow bounceIn">
       
         @foreach($blog4 as $result)
-            <div class="col-sm-6 col-md-4 equalheight">
-                <div class="course margin_top wow fadeIn" data-wow-delay="400ms">
+            <div class="col-sm-6 col-md-4 " >
+                <div class="course margin_top  fadeIn" data-wow-delay="400ms">
                   <div class="image bottom25">
                     @if(file_exists(storage_path('blog/'.$result->blog_image)))
                     <img src="{{ asset('storage/blog/'.$result->blog_image)}}" alt="Services" class="border_radius">
