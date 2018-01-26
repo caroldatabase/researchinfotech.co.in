@@ -624,6 +624,21 @@ I am an intraday trader in Stock Cash and Stock Futures. Earlier I was skeptical
 </section>
 
 <!--Paralax -->
+<section id="parallax" class="parallax">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center wow bounceIn">
+       <p class="bottom25 whitecolor">Lets Know About Our Expertise</p>
+       <h1 class="bottom25 whitecolor">We Have More Than 1000+ Satisfied Clients</h1>
+       <a href="#." class="border_radius btn_common white_border">Get a Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Paralax -->
+<!-- News-->
+
+<!--Paralax -->
 <section id="contact" class="contact">
   <div class="container">
     <div class="row">
@@ -651,7 +666,6 @@ I am an intraday trader in Stock Cash and Stock Futures. Earlier I was skeptical
   </div>
 </section>
 <!--Paralax -->
-<!-- News-->
  
 
 <!-- Modal -->
