@@ -67,9 +67,13 @@ class SettingsController extends Controller {
         $website_url        = $setting::where('field_key','website_url')->first();
         $contact_number     = $setting::where('field_key','contact_number')->first();
         $company_address    = $setting::where('field_key','company_address')->first();
+        $facebook_url       = $setting::where('field_key','facebook_url')->first();
+        $twitter_url        = $setting::where('field_key','twitter_url')->first();
+        $linkedin_url       = $setting::where('field_key','linkedin_url')->first();
 
         $banner             = $setting::where('field_key','LIKE','%banner_image%')->get();
- 
+        
+
 
         $setting = Settings::first();
 
@@ -81,7 +85,7 @@ class SettingsController extends Controller {
         }
       
 
-        return view('packages::setting.edit', compact('setting','website_title','website_email','website_url','contact_number','company_address','banner', 'page_title', 'page_action','helper'));
+        return view('packages::setting.edit', compact('facebook_url','twitter_url','linkedin_url','setting','website_title','website_email','website_url','contact_number','company_address','banner', 'page_title', 'page_action','helper'));
    
     }
 
