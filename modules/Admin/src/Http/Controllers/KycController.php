@@ -76,7 +76,8 @@ class KycController extends Controller {
         $export = $request->get('export');
         if($export=='pdf')
         {
-           $risktolrance = \DB::table('risktolrance')->first();
+           $risktolrance = \DB::table('risktolrance')->where('id',$request->get('id'))->first();
+
            if(isset($risktolrance)){
                 $risktolrance = json_decode($risktolrance->allData);
            }

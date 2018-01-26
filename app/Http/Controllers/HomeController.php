@@ -354,6 +354,7 @@ class HomeController extends Controller
                         $allData    =   $request->except('_token');
                         $input['allData']  = json_encode($allData);   
 
+
                     \DB::table('risktolrance')->insert($input);
                     return Redirect::to('status/success')->withErrors(['successMsg'=>'Thanking for Contacting us!']);
                     }
