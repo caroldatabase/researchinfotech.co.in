@@ -72,6 +72,11 @@ class HomeController extends Controller
         View::share('banner',$banner); 
         View::share('pageMenu',$pageMenu);
         View::share('trackSheet',$trackSheet);
+
+
+        $blog4 = Blogs::orderBy('id','desc')->limit(3)->get();
+
+          View::share('blog4',$blog4);
 }
 
     /**

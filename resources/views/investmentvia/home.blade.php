@@ -628,9 +628,24 @@ I am an intraday trader in Stock Cash and Stock Futures. Earlier I was skeptical
   <div class="container">
     <div class="row">
       <div class="col-md-12 text-center wow bounceIn">
-       <p class="bottom25 whitecolor">Lets Know About Our Expertise</p>
-       <h1 class="bottom25 whitecolor">We Have More Than 1000+ Satisfied Clients</h1>
-       <a href="#." class="border_radius btn_common white_border">Get a Quote</a>
+      
+        @foreach($blog4 as $result)
+            <div class="col-sm-6 col-md-4 equalheight">
+                <div class="course margin_top wow fadeIn" data-wow-delay="400ms">
+                  <div class="image bottom25">
+                    @if(file_exists(storage_path('blog/'.$result->blog_image)))
+                    <img src="{{ asset('storage/blog/'.$result->blog_image)}}" alt="Services" class="border_radius">
+                    @endif
+                  </div>
+                  <h3 class="bottom10" id="title_{!! $result->id !!}">{!! $result->blog_title !!}</h3>
+                  <div class="bottom20" id="desc_{!! $result->id !!}">{!! substr($result->blog_description,0,100) !!}...</div>
+                  <input type="hidden" id="feature_{!! $result->id !!}" value="{!! $result->feature !!}">
+                  <a class="btn_common yellow border_radius" href="{{url('blog/'.$result->id.'/'.str_slug($result->blog_title))}}" id="{!! $result->id !!}" >Read More</a>
+                </div>
+            </div>
+        @endforeach
+     
+
       </div>
     </div>
   </div>
