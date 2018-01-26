@@ -132,7 +132,7 @@
         
   $(function () {
       $('body').show();
-  }); // end ready
+  }); 
   </script>
  
 <script>

@@ -20,6 +20,12 @@
 	<link rel="icon" href="{{ asset('public/assets/images/favicon.png')}}">
         <!-- Start of Async Drift Code --> 
 <!-- End of Async Drift Code -->
+  <style>
+            body {
+            display: none;
+        }
+        </style>     
+       
 </head>
 <body class="pushmenu-push">
 <a href="#" class="scrollToTop"><i class="fa fa-angle-up"></i></a>
