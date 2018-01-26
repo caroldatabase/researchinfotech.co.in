@@ -357,7 +357,7 @@ class KycController extends Controller {
     public function riskTolranceDel($id=null) { 
         \DB::table('risktolrance')->where('id', '=', $id)->delete();
 
-        return Redirect::to('admin/risktolrance')
+        return Redirect::to('admin/riskTolrance')
                         ->with('flash_alert_notice', 'Risk Tolrance  successfully deleted.');
     }
 
