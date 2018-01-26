@@ -34,7 +34,7 @@
           <i class="icon icon-phone4 border_radius"></i>
           <h4>Call Us</h4>
           <p>+91-{{$contact_number or '8982890444'}}</p>
-          <p>{{$company_address or 'Indore' }}</p>
+          <p>{!!$company_address or 'Indore' !!}</p>
         </div>
       </div>    
       <div class="col-md-8 wow fadeInRight animated" data-wow-delay="450ms" style="visibility: visible; animation-delay: 450ms; animation-name: fadeInRight;">
