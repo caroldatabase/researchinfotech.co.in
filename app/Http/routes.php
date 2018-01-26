@@ -109,11 +109,10 @@ Route::get('package',[
                 ]
             ); 
 
-
-Route::get('terns-and-conditions',[
+Route::get('terms-and-conditions',[
           'as' => 'tNc',
           'uses'  => 'HomeController@tNc'
-        ])->name('tNc');
+        ]);
 
 Route::get('privacy-policy',[
           'as' => 'privacy_and_policy',

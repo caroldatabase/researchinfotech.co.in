@@ -72,7 +72,7 @@
           </li>
           <li><a href="{{url('pricing')}}">Pricing</a></li> 
           <li><a href="{{url('contact')}}">Contact</a></li>
-           <li><a href="{{url('tNc')}}"> T&C </a></li>
+           <li><a href="{{route('tNc')}}"> T&C </a></li>
      
             <li><a href="{{url('faq')}}"> FAQ </a></li>
             <li><a href="{{url('career')}}"> Career </a></li>
