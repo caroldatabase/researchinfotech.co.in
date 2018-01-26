@@ -339,7 +339,7 @@ class KycController extends Controller {
             $contact->$key = $value;
         }
         $contact->save();
-        return Redirect::to(route('contact'))
+        return Redirect::to('admin/kyc')
                         ->with('flash_alert_notice', 'Contact  successfully updated.');
     }
     /*
@@ -349,9 +349,19 @@ class KycController extends Controller {
      */
     public function destroy(Contact $contact) { 
         Kyc::where('id',$contact->id)->delete(); 
-        return Redirect::to(route('contact'))
-                        ->with('flash_alert_notice', 'contact  successfully deleted.');
+
+        return Redirect::to('admin/kyc')->with('flash_alert_notice', 'Kyc  successfully deleted.');
     }
+
+
+    public function riskTolranceDel($id=null) { 
+        \DB::table('risktolrance')->where('id', '=', $id)->delete();
+
+        return Redirect::to('admin/risktolrance')
+                        ->with('flash_alert_notice', 'Risk Tolrance  successfully deleted.');
+    }
+
+
 
     public function show($id) {
         

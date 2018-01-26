@@ -79,14 +79,12 @@
                             {!! Carbon\Carbon::parse($result->created_at)->format('d-M-Y'); !!}
                         </td>
                         
-<!--                        <td> 
+                        <td> 
+                            <a href="{{url('admin/risktolrance/delete/'.$result->id)}}">
+                              <button class='delbtn btn btn-danger btn-xs' type="submit" name="remove_levels" value="delete" id="{{$result->id}}"><i class="fa fa-fw fa-trash" title="Delete"></i></button>
+                            </a>
                             
-                            {!! Form::open(array('class' => 'form-inline pull-left deletion-form', 'method' => 'DELETE',  'id'=>'deleteForm_'.$result->id, 'route' => array('kyc.destroy', $result->id))) !!}
-                            <button class='delbtn btn btn-danger btn-xs' type="submit" name="remove_levels" value="delete" id="{{$result->id}}"><i class="fa fa-fw fa-trash" title="Delete"></i></button>
-                            
-                             {!! Form::close() !!}
-
-                        </td>-->
+                        </td>
                    
                 </tr>
                @endforeach
