@@ -320,7 +320,7 @@
         });
         Route::get('admin/riskTolrance', 'Modules\Admin\Http\Controllers\KycController@riskTolrance');
 
-        Route::get('risktolrance/delete/{id}', 'Modules\Admin\Http\Controllers\KycController@riskTolranceDel');
+        Route::get('admin/risktolrance/delete/{id}', 'Modules\Admin\Http\Controllers\KycController@riskTolranceDel');
 
 
         
