@@ -28,14 +28,7 @@
 <section id="course_all" class="padding-bottom">
   <div class="container">
     <div class="row">
-        @if($blogs->count()<=0)
-            <div class="col-sm-6 col-md-4 equalheight">
-                <div class="course margin_top wow fadeIn" data-wow-delay="400ms">
-                    Service Page is in Maintainance
-                </div>
-            </div>
-        @endif
-        
+      
         @foreach($blogs as $result)
         <div class="col-sm-6 col-md-4 equalheight">
             <div class="course margin_top wow fadeIn" data-wow-delay="400ms">
