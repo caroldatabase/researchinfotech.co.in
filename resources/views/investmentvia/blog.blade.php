@@ -38,7 +38,7 @@
         @endif
         
         @foreach($blogs as $result)
-        <div class="col-sm-6 col-md-4 equalheight">
+        <div class="col-md-4 equalheight">
             <div class="course margin_top wow fadeIn" data-wow-delay="400ms">
               <div class="image bottom25">
                 <img src="{{ asset('storage/blog/'.$result->blog_image)}}" alt="Services" class="border_radius">
