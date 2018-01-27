@@ -640,11 +640,11 @@ I am an intraday trader in Stock Cash and Stock Futures. Earlier I was skeptical
 <!-- News-->
 
 <!--Paralax -->
-<section id="contact" class="contact">
+<section id="contact" class="contact" style="margin-top: 20px;">
   <div class="container">
     <div class="row">
       <div class="col-md-12 text-center wow bounceIn">
-      
+      <br></br>
         @foreach($blog4 as $result)
             <div class="col-md-4 equalheight">
             <div class="course margin_top wow fadeIn" data-wow-delay="400ms" style="padding: 15px;">
