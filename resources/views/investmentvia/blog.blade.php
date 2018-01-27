@@ -25,29 +25,37 @@
   </div>
 </section>
 
+
 <section id="course_all" class="padding-bottom">
   <div class="container">
     <div class="row">
-      
+        @if($blogs->count()<=0)
+            <div class="col-sm-6 col-md-4 equalheight">
+                <div class="course margin_top wow fadeIn" data-wow-delay="400ms">
+                    Blog Page is in Maintainance
+                </div>
+            </div>
+        @endif
+        
         @foreach($blogs as $result)
         <div class="col-sm-6 col-md-4 equalheight">
             <div class="course margin_top wow fadeIn" data-wow-delay="400ms">
               <div class="image bottom25">
-                @if(file_exists(storage_path('blog/'.$result->blog_image)))
                 <img src="{{ asset('storage/blog/'.$result->blog_image)}}" alt="Services" class="border_radius">
-                @endif
               </div>
-              <h3 class="bottom10" id="title_{!! $result->id !!}">{!! $result->blog_title !!}</h3>
+               <h3 class="bottom10" id="title_{!! $result->id !!}">{!! $result->blog_title !!}</h3>
               <div class="bottom20" id="desc_{!! $result->id !!}">{!! substr($result->blog_description,0,100) !!}...</div>
               <input type="hidden" id="feature_{!! $result->id !!}" value="{!! $result->feature !!}">
               <a class="btn_common yellow border_radius" href="{{url('blog/'.$result->id.'/'.str_slug($result->blog_title))}}" id="{!! $result->id !!}" >Read More</a>
             </div>
         </div>
+        
         @endforeach
      
     </div>
   </div>
 </section>
+
 
 
 
