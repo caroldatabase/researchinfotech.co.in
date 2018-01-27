@@ -159,6 +159,7 @@ padding:60px 0px;
 height:680px;
 }
 
+.counter2{padding: 70px 0px; background-image: url('http://researchinfotech.co.in/public/assets/images/parallax2.jpg') !important;}
 </style>
 
 <!-- <div class="loader">
@@ -595,7 +596,7 @@ I am an intraday trader in Stock Cash and Stock Futures. Earlier I was skeptical
 </section>
 <!--Customers Review-->
 
-<section id="counter" class="parallax padding">
+<div id="counter" class=" padding">
   <div class="container">
     <h2 class="hidden">hidden</h2>
     <div class="row number-counters">
@@ -621,10 +622,10 @@ I am an intraday trader in Stock Cash and Stock Futures. Earlier I was skeptical
       </div>
     </div>
   </div>
-</section>
+</div>
 
 <!--Paralax -->
-<section id="parallax" class="parallax">
+<div id="counter" class="counter2">
   <div class="container">
     <div class="row">
       <div class="col-md-12 text-center wow bounceIn">
@@ -634,7 +635,7 @@ I am an intraday trader in Stock Cash and Stock Futures. Earlier I was skeptical
       </div>
     </div>
   </div>
-</section>
+</div>
 <!--Paralax -->
 <!-- News-->
 
