@@ -43,13 +43,13 @@
               <div class="image bottom25">
                 <img src="{{ asset('storage/blog/'.$result->blog_image)}}" alt="Services" class="border_radius">
               </div>
-               <h3 class="bottom10" id="title_{!! $result->id !!}">{!! $result->blog_title !!}</h3>
-              <div class="bottom20" id="desc_{!! $result->id !!}">{!! substr($result->blog_description,0,100) !!}...</div>
+               <h4 class="bottom10" id="title_{!! $result->id !!}">{!! $result->blog_title !!}</h4>
+              <div class="bottom20" id="desc_{!! $result->id !!}">{!! substr($result->blog_description,0,100) !!}</div>
               <input type="hidden" id="feature_{!! $result->id !!}" value="{!! $result->feature !!}">
               <a class="btn_common yellow border_radius" href="{{url('blog/'.$result->id.'/'.str_slug($result->blog_title))}}" id="{!! $result->id !!}" >Read More</a>
             </div>
         </div>
-        
+
         @endforeach
      
     </div>
