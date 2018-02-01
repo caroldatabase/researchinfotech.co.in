@@ -121,7 +121,7 @@ class KycController extends Controller {
         $export = $request->get('export');
         if($export=='pdf')
         {
-            $kyc = \DB::table('kyc')->first();
+            $kyc = \DB::table('kyc')->where('id',$request->get('id'))->first();
            if(isset($kyc)){
                 $kyc = json_decode($kyc->allData);
            }
