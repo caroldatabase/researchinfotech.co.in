@@ -24,7 +24,28 @@
             body {
             display: none;
         }
-        </style>     
+        </style>   
+ 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113294393-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-113294393-1');
+	</script>
+	<!--slider-main-start-->
+	<!-- responsive menu -->
+	<script type="text/javascript">
+		jQuery(document).ready(function($){
+			$('.menu').click(function(){
+				$('body').toggleClass('show-menu');
+			});
+			$('.close-button').click(function(){
+				$('body').removeClass('show-menu');
+			});
+			
+		});
+	</script>  
        
 </head>
 <body class="pushmenu-push">
