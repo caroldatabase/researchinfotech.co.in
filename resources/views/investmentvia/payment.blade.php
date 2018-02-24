@@ -24,12 +24,17 @@
               <ul class="items">
                  <li><a href="#.">Online Payment</a>
                   <ul class="sub-items">
-                    <li>
-                       <a href="{{ url('checkout/stock?amount=0') }}" ><img src="{{ asset('storage/assets/images/pay-online.png')}}"></a>
+                    <li style="display: inline;">
+                       <a href="{{ url('checkout/stock?amount=0') }}" class="btn btn-success" >
+                          Ccavenue payment
+                       </a>
                     </li>
-                   <!--   <li>
-                       <a href="{{ url('checkout/stock?amount=0') }}" ><img src="{{ asset('storage/assets/images/payu.png')}}"></a>
-                    </li> -->
+                       <li style="display: inline;">
+                       <a href="https://easebuzz.in/pay/researchinfotech" target="_blank" class="btn btn-primary">
+                         
+                         Easebuzz payment
+                       </a>
+                    </li> 
                   </ul>
                 </li>
 
