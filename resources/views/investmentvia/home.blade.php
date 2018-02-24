@@ -263,7 +263,7 @@ News and Technical & Fundamental Analysis
                      <a href="{{$linkedin_url->field_value or '#'}}"  target="_blank"><i class="fa fa-linkedin"></i></a></span></p>
             </div>
             <div class="live-btn">
-                <p> <a href="{{ url('checkout/stock?amount=0') }}"><img src="{{ asset('storage/assets/images/pay-online.png')}}"></a>
+                <p> <a href="Http:/easebuzz.in/pay/researchinfotech" target="_blank"><img src="{{ asset('storage/assets/images/pay-online.png')}}"></a>
                 </p>
             </div>
         </div>
