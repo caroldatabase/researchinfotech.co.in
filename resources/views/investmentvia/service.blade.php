@@ -44,7 +44,7 @@
         
         @foreach($service as $result)
         <div class="col-sm-6 col-md-4 equalheight">
-            <div class="course margin_top wow fadeIn" data-wow-delay="400ms" style="padding: 15px; min-height: 550px">
+            <div class="course margin_top wow fadeIn" data-wow-delay="400ms" style="padding: 15px; min-height: 610px">
                <div class="image bottom25">
                 <img src="{{ asset('storage/services/'.$result->category_image)}}" alt="Services" class="border_radius" style="width: 100%; height: 240px">
               </div>
