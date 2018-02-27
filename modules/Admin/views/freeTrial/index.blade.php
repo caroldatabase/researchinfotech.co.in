@@ -63,6 +63,7 @@
                     <th> Name </th>
                     <th> Email </th> 
                     <th> Phone </th>
+                    <th> City </th>
                     <th> Service Name </th>    
                     <th>Created date</th> 
                     <th>Action</th> 
@@ -75,7 +76,8 @@
                     <td> {{$result->name}} </td>
                      <td> {{!empty($result->email)?$result->email:'NA'}} </td>
                      <td> {{$result->phone}} </td> 
-                     <td> {{!empty($result->service_nam)?$result->service_nam:'NA'}} </td>  
+                     <td> {{$result->city}} </td> 
+                     <td> {{!empty($result->service_name)?$result->service_name:'NA'}} </td>  
                          <td>
                             {!! Carbon\Carbon::parse($result->created_at)->format('d-M-Y'); !!}
                         </td>
