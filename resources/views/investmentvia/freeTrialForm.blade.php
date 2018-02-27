@@ -205,7 +205,7 @@
             <div class="container">
                 <div class="row">
                     <div class="banner-left col-md-7 col-sm-6 jw-animate-gen animated fadeInLeft" data-gen-offset="90%" data-gen="fadeInLeft">
-                        <h1>Join us free trail and stay connected!</h1>
+                        <h1>Join us free trial and stay connected!</h1>
                         <h3>PROFITABLE TRADING TIPS, TEST US TO MAKE MORE PROFIT</h3>
                         <ul class="fa-ul">
                             <li>
