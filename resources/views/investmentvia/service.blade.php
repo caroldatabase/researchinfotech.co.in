@@ -49,7 +49,7 @@
                 <img src="{{ asset('storage/services/'.$result->category_image)}}" alt="Services" class="border_radius" style="width: 100%; height: 200px">
               </div>
               <h3 class="bottom10" id="title_{!! $result->id !!}">{!! $result->title !!}</h3>
-              <div class="" id="desc_{!! $result->id !!}" style="font-size: 12px; font-weight: 100">{!! substr($result->description,0,300) !!}
+              <div class="" id="desc_{!! $result->id !!}" style="font-size: 12px; font-weight: 100">{!! $result->description !!}
                 <br>
                  <input type="hidden" id="feature_{!! $result->id !!}" value="{!! $result->feature !!}">
               <a class="btn_common yellow border_radius" href="#" id="{!! $result->id !!}"  onClick="openModel(this.id)"  data-toggle="modal" data-target="#modelpopUp" style="margin-top:10px ">view details</a>
