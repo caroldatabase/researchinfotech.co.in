@@ -279,14 +279,6 @@ News and Technical & Fundamental Analysis
     border-radius: 8px;    width: 40px;     cursor: pointer;"></a>
 
 </div>
-
-
-]<div class="slideout">
-    <a href="#"><img src="{{ asset('storage/assets/images/watsapp.png')}}" alt=""></a>
-  <div class="slideout_inner">
-    +91-8982890444
-  </div>
-</div>
         
         
 </section>  
@@ -446,14 +438,14 @@ News and Technical & Fundamental Analysis
                 <div class="what-content wow fadeInUp" data-wow-delay="500ms">
                     <p><img src="{{ asset('storage/assets/images/right-circle.jpg')}}"></p>
                     <h3>WHO WE ARE ?</h3>
-                    <p class="what-desc">We are a team that supports the accumulation of your wealth through different sources. A team that has market’s best advisors helps you to wade through a difficult phase. We research Infotech  are always present to guide you to the right investment plans. Trust is what we offer you to be with us</p>
+                    <p class="what-desc">We are a team that supports the accumulation of your wealth through different sources. Trust is what we offer you to be with us</p>
                 </div>
             </div>
             <div class="col-sm-4 border-right">
                 <div class="what-content wow fadeInUp" data-wow-delay="500ms""">
                     <p><img src="{{ asset('storage/assets/images/right-circle.jpg')}}"></p>
                     <h3>WHAT WE CARE ?</h3>
-                    <p class="what-desc">Customer needs and satisfaction are the main concerns of Research Infotech . Our tips and services are the indeed portrayal of our work. Enhanced services along with the trials are being provided to take care of the security issues of our clients.</p>
+                    <p class="what-desc">Customer needs and satisfaction are the main concerns of Research Infotech . Our tips and services are the indeed portrayal of our work. </p>
                 </div>
             </div>
             <div class="col-sm-4">
@@ -484,7 +476,7 @@ News and Technical & Fundamental Analysis
                 <div class="what-content wow fadeInUp" data-wow-delay="500ms""">
                     <p><img src="{{ asset('storage/assets/images/right-circle.jpg')}}"></p>
                     <h3>Customer/ON-CALL Support</h3>
-                    <p class="what-desc">In this service we provide limited calls in GOLD/SILVER with a high level of accuracy. You can also avail Free Tips for two days to test our accuracy and if satisfied you can join BULLION HNI services</p>
+                    <p class="what-desc">In this service we provide limited calls in GOLD/SILVER with a high level of accuracy. You can also avail Free Tips for two days to test our accuracy.</p>
                 </div>
             </div>
         </div>
@@ -556,23 +548,23 @@ Commodity & Bullion Market.</p>
       <h2 class="heading heading_space"> <span>Client</span> Testimonials <span class="divider-center"></span> </h2>
       <div id="review_slider" class="owl-carousel text-center">
         <div class="item">
-          <img src="{{ asset('storage/assets/images/customer1.png')}}" class="client_pic border_radius" alt="costomer">
+          
           <p class="review_text">I am quite impressed with their services. I like their strategies & resistance, support levels. With this I am able to earn more profit with less fund.</p>
           <h4>D.K bansal</h4> 
         </div>
         <div class="item">
-          <img src="{{ asset('storage/assets/images/customer1.png')}}" class="client_pic border_radius" alt="costomer">
+          
           <p class="review_text">I totally and blindly follow Research infotech  team for my trade in Stock Market because I know they will not let down me and always be there for me for support and efforts with their brilliant team. I wish them all the success for the future</p>
           <h4>Bala subramanya swamy</h4>
          
         </div>
         <div class="item">
-          <img src="{{ asset('storage/assets/images/customer1.png')}}" class="client_pic border_radius" alt="costomer">
+          
           <p class="review_text">Myself virendra pratap singh, client of research infotech  from past 2 months. I’m a new trader with very less knowledge about share market but want to trade and earn more from this market. Assent team gives me what I want from their excellent core Research and Sales team support. I’m so happy with their contribution to my success and now i give there to all my friends those who want to trade in this market. </p>
           <h4>Virendra pratap singh</h4> 
         </div>
         <div class="item">
-          <img src="{{ asset('storage/assets/images/customer1.png')}}" class="client_pic border_radius" alt="costomer">
+          
           <p class="review_text">You guys are doing great job, I had a profitable trade during last 9 months without fail. Your option strategy service is excellent; I wanted to try out your BTST Calls. Special thanks to ankit  for assisting me as always! <br>
 I am an intraday trader in Stock Cash and Stock Futures. Earlier I was skeptical about stock tips service. But one day I heard about this stock market advisory providing intraday stock tips. I just visited website and filled out stock tips free trial form for intraday trading tips. And what I got was maximum returns ever.
 </p>
@@ -580,12 +572,12 @@ I am an intraday trader in Stock Cash and Stock Futures. Earlier I was skeptical
           
         </div>
         <div class="item">
-          <img src="{{ asset('storage/assets/images/customer1.png')}}" class="client_pic border_radius" alt="costomer">
+          
           <p class="review_text">Thank you very much for considering my request for permitting to make part payment 60% , (Rs8000).This kind of gesture towards retired people like me gives an oppertunity to generate income and gives a feeling of alive or else others would treat us as deadwood.I would make payment as soon activates my F & O segments.</p>
           <h4>Nand kishore pawar</h4> 
         </div>
         <div class="item">
-          <img src="{{ asset('storage/assets/images/customer1.png')}}" class="client_pic border_radius" alt="costomer">
+          
           <p class="review_text">I am very happy with their calls & proper follow ups. My experience with Research Infotech is just amazing. I hope they will be able to always maintain their accuracy & services. </p>
           <h4>Sriniwas naidu </h4>
         </div>
@@ -638,33 +630,7 @@ I am an intraday trader in Stock Cash and Stock Futures. Earlier I was skeptical
 </div>
 <!--Paralax -->
 <!-- News-->
-
-<!--Paralax -->
-<section id="contact" class="contact" style="margin-top: 20px;">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 text-center wow bounceIn">
-      <br></br>
-        @foreach($blog4 as $result)
-            <div class="col-md-4 equalheight">
-            <div class="course margin_top wow fadeIn" data-wow-delay="400ms" style="padding: 15px;">
-              <div class="image bottom25">
-                <img src="{{ asset('storage/blog/'.$result->blog_image)}}" alt="Services" class="border_radius">
-              </div>
-               <h4 class="bottom10" id="title_{!! $result->id !!}">{!! $result->blog_title !!}</h4>
-              <!-- <div class="bottom20" id="desc_{!! $result->id !!}">{!! substr($result->blog_description,0,100) !!}</div>
-               --><input type="hidden" id="feature_{!! $result->id !!}" value="{!! $result->feature !!}">
-              <a class="btn_common yellow border_radius" href="{{url('blog/'.$result->id.'/'.str_slug($result->blog_title))}}" id="{!! $result->id !!}" style="margin-top: 10px; margin-left: 0px;" >Read More</a>
-            </div>
-        </div>
-        @endforeach
-     
-
-      </div>
-    </div>
-  </div>
-</section>
-<!--Paralax -->
+ 
  
 
 <!-- Modal -->
@@ -745,5 +711,10 @@ setTimeout(slideIn, 1);
 }
 }
 		</script>
+        <style type="text/css">
+            .item{
+                padding-top: 20px;
+            }
+        </style>
     <!--Paralax --> 
  @stop

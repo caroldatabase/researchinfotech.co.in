@@ -16,7 +16,7 @@
   <div class="container aboutus">
     <div class="row">
       <div class="col-md-12 wow fadeInLeft" data-wow-delay="300ms">
-       <h2 class="heading heading_space text-center-service"><span>Our </span>Reports </h2>
+       <h2 class="heading heading_space text-center-service"><span>Our </span>Blogs </h2>
        <p class="bottom25">We are recommending Intraday / BTST/ STBT /Positional tips in various Product(Packages). Our Stock Cash , Derivatives (FnO) MCX/NCDEX Product are designed ideally to suit investors needs. Investors are advised to trade in multiple lots as per their trading capacity , investment amount as well as exposure suggested by your desired broker</p>
        
       </div>

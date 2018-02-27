@@ -238,7 +238,7 @@
                     </div>
                     <div class="banner-right col-md-4 col-sm-6 col-lg-push-1 jw-animate-gen animated fadeInRight" data-gen-offset="90%" data-gen="fadeInRight">
 
-                        <h2>2 Days Free Trial On Whatsapp</h2> 
+                        <h2>2 Days Free Trial</h2> 
 
                         {!! Form::model($freeTrial, ['route' => ['free-trial'],'class'=>'form-inline findus','id'=>'contact-form']) !!}
          

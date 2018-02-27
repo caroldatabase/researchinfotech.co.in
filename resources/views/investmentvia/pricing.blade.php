@@ -26,27 +26,43 @@
         <div class="pricing three padding-bottom">
             @foreach($pricing as $result)
                 <div class="pricing_item wow fadeInUp" data-wow-delay="400ms">
-                    @if(file_exists(asset('storage/pricing/'.$result->photo)))
-                    <img src="{{ asset('storage/pricing/'.$result->photo) }}" class="pricing-pic">
-                    @else
-                    <img src="{{ asset('storage/assets/images/intra-cash.jpg') }}" class="pricing-pic">
-                    @endif 
-                    <h3>{{$result->title}}</h3>
-                    <div class="pricing_price"><span class="pricing_currency"></span>Monthly</div>
-                    <p class="pricing_sentence">{!! $result->monthly_price !!}  <span class="pay-now">
+                    
+                    <h3>{{$result->title}}</h3> 
+
+                    <table class="table table-striped table-hover table-bordered">
+                      <tr>
+                        <th>Monthly</th>
+                        <td><i class="fa fa-rupee"></i> {!! $result->monthly_price !!} </td>
+                        <td><span class="pay-now">
                       <a href="{{url('checkout/'.str_slug($result->title).'?amount='.$result->monthly_price)}}">Pay Now</a></span></p>
+                    </td>
+                      </tr>
 
-                    <div class="pricing_price"><span class="pricing_currency"></span>Quarterly</div>
-                    <p class="pricing_sentence">{!! $result->quarterly_price !!}  <span class="pay-now">
+                      <tr>
+                        <th>Quarterly</th>
+                        <td><i class="fa fa-rupee"></i> {!! $result->quarterly_price !!} </td>
+                        <td><span class="pay-now">
                       <a href="{{url('checkout/'.str_slug($result->title).'?amount='.$result->quarterly_price)}}">Pay Now</a></span></p>
+                    </td>
+                      </tr>
 
-                    <div class="pricing_price"><span class="pricing_currency"></span>Half Yearly</div>
-                    <p class="pricing_sentence">{!! $result->half_yearly_price !!}  <span class="pay-now">
+                       <tr>
+                        <th>Half Yearly</th>
+                        <td><i class="fa fa-rupee"></i> {!! $result->half_yearly_price !!} </td>
+                        <td><span class="pay-now">
                       <a href="{{url('checkout/'.str_slug($result->title).'?amount='.$result->half_yearly_price)}}">Pay Now</a></span></p>
+                    </td>
+                      </tr>
 
-                    <div class="pricing_price"><span class="pricing_currency"></span>Yearly</div>
-                    <p class="pricing_sentence">{!! $result->yearly_price !!}  <span class="pay-now">
-                    <a href="{{url('checkout/'.str_slug($result->title).'?amount='.$result->yearly_price)}}">Pay Now</a></span></p> 
+                       <tr>
+                        <th>Yearly</th>
+                        <td><i class="fa fa-rupee"></i> {!! $result->yearly_price !!} </td>
+                        <td><span class="pay-now">
+                      <a href="{{url('checkout/'.str_slug($result->title).'?amount='.$result->yearly_price)}}">Pay Now</a></span></p>
+                    </td>
+                      </tr>
+                    </table>
+    
                 </div>
             @endforeach
           
