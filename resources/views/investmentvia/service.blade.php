@@ -55,19 +55,7 @@
             </div>
         </div>
 
-         <div class="col-md-4 equalheight">
-            <div class="course margin_top wow fadeIn" data-wow-delay="400ms" style="padding: 15px; min-height: 375px">
-              <div class="image bottom25">
-                <img src="{{ asset('storage/services/'.$result->category_image)}}" alt="Services" class="border_radius" style="width: 100%; height: 200px">
-              </div>
-                <h4 class="" id="title_{!! $result->id !!}" style="text-transform: capitalize;">{!! substr($result->blog_title,0,100) !!}</h4>
-
-
-              <!-- <div class="bottom20" id="desc_{!! $result->id !!}">{!! substr($result->blog_description,0,100) !!}</div>
-               --><input type="hidden" id="feature_{!! $result->id !!}" value="{!! $result->feature !!}">
-              <a class="btn_common yellow border_radius" href="{{url('blog/'.$result->id.'/'.str_slug($result->blog_title))}}" id="{!! $result->id !!}" style="margin-top: 10px; margin-left: 0px;" >Read More</a>
-            </div>
-        </div>
+        
 
 
         @endforeach
