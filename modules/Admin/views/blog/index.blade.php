@@ -98,7 +98,7 @@
                                                       @endif
                                                      </td>
                                                      <td>
-                                                        {!! Carbon\Carbon::parse($result->created_at)->format('d-M-Y'); !!}
+                                                       {!! Carbon\Carbon::parse($result->updated_at)->format('d-M-Y'); !!}
                                                     </td>
                                                     
                                                     <td> 

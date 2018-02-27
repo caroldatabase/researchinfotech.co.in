@@ -76,7 +76,7 @@
                      <td> {{$result->mobile or $result->mobile }} </td> 
                      <td> {{$result->comments}} </td> 
                          <td>
-                            {!! Carbon\Carbon::parse($result->created_at)->format('Y-m-d'); !!}
+                         {!! Carbon\Carbon::parse($result->updated_at)->format('d-M-Y'); !!}
                         </td>
                         
                         <td> 
