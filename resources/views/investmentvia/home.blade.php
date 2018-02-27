@@ -476,7 +476,7 @@ News and Technical & Fundamental Analysis
                 <div class="what-content wow fadeInUp" data-wow-delay="500ms""">
                     <p><img src="{{ asset('storage/assets/images/right-circle.jpg')}}"></p>
                     <h3>Customer/ON-CALL Support</h3>
-                    <p class="what-desc">In this service we provide limited calls in GOLD/SILVER with a high level of accuracy. You can also avail Free Tips for two days to test our accuracy.</p>
+                    <p class="what-desc">In this service we provide limited calls in GOLD/SILVER with a high level of accuracy.You can also avail Free Tips to test our accuracy.</p>
                 </div>
             </div>
         </div>
