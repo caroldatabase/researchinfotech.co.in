@@ -28,14 +28,9 @@
         <div class="address second">
           <i class="icon icon-envelope border_radius"></i>
           <h4>Email Us</h4>
-          <p><a href="mailto:{{$website_email}}">{{$website_email or 'info@researchinfotech.co.in'}}</a></p>
+          <p><a href="mailto:{{$website_email}}">info@researchinfotech.co.in</a></p>
         </div>
-        <div class="address">
-          <i class="icon icon-phone4 border_radius"></i>
-          <h4>Call Us</h4>
-          <p>+91-{{$contact_number or '8982890444'}}</p>
-          <p>{!!$company_address or 'Indore' !!}</p>
-        </div>
+         
       </div>    
       <div class="col-md-8 wow fadeInRight animated" data-wow-delay="450ms" style="visibility: visible; animation-delay: 450ms; animation-name: fadeInRight;">
         <h2 class="heading heading_space"> <span>Career</span> Form<span class="divider-left"></span></h2>
