@@ -87,29 +87,40 @@ class HomeController extends Controller
     public function about()
     { 
         $title = "About Us";
-        $tagLine = "We offer the most complete advisory services in the country";
-        return view('investmentvia.about',compact('title','tagLine'));
+        $tagLine = "Intraday Stock Trading Tips by Research Infotech";
+
+        $meta1 = '<meta name="description" content=" Research Infotech Provides Intraday Tips,Share Market Trading Tips,Intraday Stock Tips,Day Trading Tips, Mcx Commodity Trading Tips,Stock & Nifty future tips on Intraday Basis. "/>';
+        $meta2 = '<meta name="keywords" content=" Intraday tips,intraday stock tips,free intraday tips on mobile, stock trading tips,stock tips,stock market tips for intraday, commodity tips, stock tips India,stock future tips,nifty future tips,option tips, indian intraday trading tips Stock Intraday Tips for Today,Free Intraday Tips on Mobile"/>';
+
+
+        return view('investmentvia.about',compact('title','tagLine','meta1','meta2'));
     }  
 
     public function home(Request $request)
     {
         $title = "Home";
-        $tagLine = "We offer the most complete advisory services in the country";
+        $tagLine = "Research Infotech- Best Stock Market Tips Provider ";
         $request->session()->forget('amount');
 
-        return view('investmentvia.home',compact('title','tagLine'));
+        $meta1 = '<meta name="description" content=" Research Infotech is one of the leading Stock Advisory Company which Provides Stock Tips,Mcx Tips,Commodity Trading Tips,Indian Share Market Tips,Equity Tips,Intraday Tips,Nifty Future Tips, Free Intraday Stock Tips on Mobile. "/>';
+        $meta2 ='<meta name="keywords" content="Stock Market Tips, Intraday Tips Provider, Best SEBI Registered Advisory"/>';
+
+        return view('investmentvia.home',compact('title','tagLine','meta1','meta2'));
     }
 
     
     public function services()
     {
         $title = "Services";
-        $tagLine = "We offer the most complete advisory services in the country";
+        $tagLine = "Indian Stock Market, Commodity Market Tips Provider Company";
         $service = Category::all();
         $url = url('public/assets/js/jquery-2.2.3.js');
         $jsUrl = '<script src="'.$url.'"></script>';
+
+        $meta1 = '<meta name="description" content=" Research Infotech Provide the Stock & Commodity Market Tips, Indian Stock Market Tips,Mcx Tips,Equity Trading Tips,Future & Option Tips,Bullion Tips & Premium Services at best among the market. "/>';
+        $meta2 = '<meta name="keywords" content="share tips, stock cash tips, Indian share market tips, share market tips, Intraday Trading Tips, Share Market Recommendations, Today Stock Cash Tips, commodities trading tips, Nifty charts, Premium Services & Tips"/>';
           
-        return view('investmentvia.service',compact('service','jsUrl','title','tagLine'));
+        return view('investmentvia.service',compact('service','jsUrl','title','tagLine','meta1','meta2'));
     }
 
     public function payment(Request $request)
@@ -158,7 +169,7 @@ class HomeController extends Controller
     {   
         $url = rtrim(url()->previous(),'/');
         $title = "Contact";
-        $tagLine = "We offer the most complete advisory services in the country";
+        $tagLine = "Free Intraday Equity and Commodity Tips by Research Infotech";
         if($request->method()=='POST'){
             $validator = Validator::make($request->all(), [
                 'name' => 'required|min:3',
@@ -370,7 +381,7 @@ class HomeController extends Controller
     public function freeTrialForm(Request $request, FreeTrial $freeTrial)
     {
         $title = "Free Trial";
-        $tagLine = "We offer the most complete advisory services in the country";
+        $tagLine = "Free Intraday Equity and Commodity Tips by Research Infotech";
 
         if($request->method()=='POST'){
             $validator = Validator::make($request->all(), [
@@ -391,8 +402,10 @@ class HomeController extends Controller
                     return Redirect::to('free-trial')->withErrors(['successMsg'=>'Thanking for Contacting us!']);
                     }
         }
-        
-        return view('investmentvia.freeTrialForm',compact('title','tagLine','freeTrial'));
+        $meta1 = '<meta name="description" content=" We are providing Free Trials on Equity and Commodity Market best accuracy level. We are also providing Free Stock Tips,Mcx Tips,Commodity Market Tips,Intraday Trading Tips, Share Market Tips,Nifty Future & Option Tips, Free Equity Tips on Mobile. "/>';
+        $meta2  = '<meta name="keywords" content="free Stock Cash Tips,commodity tips,mcx tips,ncdex tips,share market tips,intraday tips,Stock Cash Tips,stock market tips,indian share market tips,nse tips,bse tips,intraday trading,free intraday tips,intraday calls,financial advisory,indian stock market,indore"/>';
+
+        return view('investmentvia.freeTrialForm',compact('title','tagLine','freeTrial','meta1','meta2'));
         
     }
     public function lifeAtResearchInfotech(Request $request)

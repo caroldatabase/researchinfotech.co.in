@@ -4,7 +4,9 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	<title>Research Infotech</title>
+	<title> Research Infotech | {{ $tagLine or ''}} </title>
+	{!! $meta1 or ''!!}
+	{!!$meta2 or ''!!}
 	<link rel="stylesheet" type="text/css" href="{{ asset('public/assets/css/bootstrap.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('public/assets/css/Xwin-icons.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('public/assets/css/animate.min.css')}}">
