@@ -15,6 +15,10 @@ header('Access-Control-Allow-Methods: GET, POST, DELETE, OPTIONS');
 header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorization, X-Request-With, auth-token');
 header('Access-Control-Allow-Credentials: true');
 
+if (env('APP_ENV') === 'local') {
+    URL::forceSchema('https');
+}
+
 
 
 Route::get('donwloadFreeTrial',function(){
@@ -55,6 +59,10 @@ Route::get('donwloadContact',function(){
                 $sheet->fromArray($data);
             });
         })->download('csv');
+});
+
+Route::get('/',function(){
+	return  \Redirect::to('home');
 });
 
 Route::get('/',[
