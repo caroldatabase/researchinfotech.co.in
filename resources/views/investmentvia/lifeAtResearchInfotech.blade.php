@@ -175,10 +175,10 @@ footer a,footer a:hover{
   		 <?php $i=1; ?> 
 		<div class="col-md-6 col-sm-12 co-xs-12 gal-item">
 	      <div class="box ">
-	        <a href="#" data-toggle="modal" data-target="#1">
+	        <a href="#" data-toggle="modal" data-target="#{{$value->id}}">
 	          <img src="{{url('storage/gallery/'.$value->image)}}">
 	        </a>
-	        <div class="modal fade" id="1" tabindex="-1" role="dialog">
+	        <div class="modal fade" id="{{$value->id}}" tabindex="-1" role="dialog">
 	          <div class="modal-dialog" role="document">
 	            <div class="modal-content">
 	                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
