@@ -418,6 +418,43 @@ class HomeController extends Controller
         
         
     }
+
+    public function paymentResponse(Request $request, $status=null)
+    {
+        $title      = "Status Message";
+        $tagLine    = "We offer the most complete advisory services in the country";
+        \Log::useDailyFiles(storage_path().'/logs/payment.log');
+        $data['response'] = isset($_POST['encResp'])?$_POST['encResp']:[];
+        \Log::info(json_encode($data));
+        $params= [];
+        $response=[];    
+        if($request->method()=="POST")
+        {  
+            
+            $secret_key = "6ff23b218d1f7b55264820d1a5a33681";   // Pass Your Registered Secret Key from EBS secure Portal
+            if(isset($_REQUEST)){
+                 $response = $_REQUEST;
+                 $sh = $response['SecureHash']; 
+                 $params = $secret_key;
+                 ksort($response);
+                        foreach ($response as $key => $value){
+                            if (strlen($value) > 0 and $key!='SecureHash') {
+                                    $params .= '|'.$value;
+                                }
+                            }
+                $msg    = "Payment successfully done.";
+       
+            }
+               
+             
+        }else{
+            $msg    =   "Payment failed!.Please try again.";  
+            
+        } 
+ 
+        return view('investmentvia.paymentStatus',compact('title','tagLine','msg','response'));
+    }
+
     public function paymentStatus(Request $request, $status=null)
     {
         $title      = "Status Message";
@@ -467,6 +504,99 @@ class HomeController extends Controller
         return view('investmentvia.paymentStatus',compact('title','tagLine','msg','params'));
     }
     // CCAvenue Integration
+
+    public function paymentConfirm(Request $request){
+        $payment = null; 
+        $title = "Checkout<br><br>";
+        $tagLine = "We offer the most complete advisory services in the country";
+
+        ini_set('display_errors',1);
+            error_reporting(E_ALL);
+
+            $hashData = "6ff23b218d1f7b55264820d1a5a33681"; //Pass your Registered Secret Key
+
+            unset($_POST['submitted']);
+            unset($_POST['_token']);
+            
+            ksort($_POST);
+            foreach ($_POST as $key => $value){
+                if (strlen($value) > 0) {
+                    $hashData .= '|'.$value;
+                }
+            }
+            
+            if (strlen($hashData) > 0) {
+                $secure_hash = strtoupper(hash("sha512",$hashData));//for SHA512
+                 
+            } 
+         $btn =    '<form action="https://secure.ebs.in/pg/ma/payment/request" name="payment" method="POST">
+                    <input type="hidden" value="'.$_POST['account_id'].'" name="account_id"/>
+                    <input type="hidden" value="'.$_POST['address'].'" name="address"/> 
+                    <input type="hidden" value="'.$_POST['amount'].'" name="amount"/> 
+                    <input type="hidden" value="'.$_POST['bank_code'].'" name="bank_code"/> 
+                    <input type="hidden" value="'.$_POST['card_brand'].'" name="card_brand"/> 
+                    <input type="hidden" value="'.$_POST['channel'].'" name="channel"/> 
+                    <input type="hidden" value="'.$_POST['city'].'" name="city"/> 
+                    <input type="hidden" value="'.$_POST['country'].'" name="country"/> 
+                    <input type="hidden" value="'.$_POST['currency'].'" name="currency"/> 
+                    <input type="hidden" value="'.$_POST['description'].'" name="description"/> 
+                    <input type="hidden" value="'.$_POST['display_currency'].'" name="display_currency"/> 
+                    <input type="hidden" value="'.$_POST['display_currency_rates'].'" name="display_currency_rates"/> 
+                    <input type="hidden" value="'.$_POST['email'].'" name="email"/> 
+                    <input type="hidden" value="'.$_POST['emi'].'" name="emi"/>
+                    <input type="hidden" value="'.$_POST['mode'].'" name="mode"/> 
+                    <input type="hidden" value="'.$_POST['name'].'" name="name"/> 
+                    <input type="hidden" value="'.$_POST['page_id'].'" name="page_id"/> 
+                    <input type="hidden" value="'.$_POST['payment_mode'].'" name="payment_mode"/> 
+                    <input type="hidden" value="'.$_POST['payment_option'].'" name="payment_option"/> 
+                    <input type="hidden" value="'.$_POST['phone'].'" name="phone"/> 
+                    <input type="hidden" value="'.$_POST['postal_code'].'" name="postal_code"/> 
+                    <input type="hidden" value="'.$_POST['reference_no'].'" name="reference_no"/> 
+                    <input type="hidden" value="'.$_POST['return_url'].'" name="return_url"/> 
+                    <input type="hidden" value="'.$_POST['ship_address'].'" name="ship_address"/> 
+                    <input type="hidden" value="'.$_POST['ship_city'].'" name="ship_city"/> 
+                    <input type="hidden" value="'.$_POST['ship_country'].'" name="ship_country"/> 
+                    <input type="hidden" value="'.$_POST['ship_name'].'" name="ship_name"/> 
+                    <input type="hidden" value="'.$_POST['ship_phone'].'" name="ship_phone"/> 
+                    <input type="hidden" value="'.$_POST['ship_postal_code'].'" name="ship_postal_code"/> 
+                    <input type="hidden" value="'.$_POST['ship_state'].'" name="ship_state"/> 
+                    <input type="hidden" value="'.$_POST['state'].'" name="state"/> 
+                    <input type="hidden" value="'.$secure_hash.'" name="secure_hash"/>
+                    <button onclick="document.payment.submit();" class="btn btn-primary"> Click Here to continue  </button>
+
+                    </form>Net Payment : '.$_POST['amount'];
+
+        return view('investmentvia.confirmPayment',compact('title','tagLine','btn')); 
+
+    }
+
+    public function checkOutEbs(Request $request, $serviceName=null){
+        
+        $payment = null; 
+        $title = "Checkout<br><br>";
+        $tagLine = "We offer the most complete advisory services in the country";
+        
+        $order_id = strtoupper(str_random(10));
+
+        $merchant_data='';
+        $merchant_id = "36234";
+        $working_key='73F096AFBA1C6B5F16864C9D3D434979';//Shared by CCAVENUES
+        $access_code='AVMV75FA53AY58VMYA';//Shared by CCAVENUES
+        $url = url('public/assets/js/jquery-2.2.3.js');
+        $url2 = url('assets/js/json.js');
+        
+        $jsUrl1 = '<script src="'.$url.'"></script>';
+        $jsUrl2  = '<script src="'.$url2.'"></script>';
+
+        $accountId = '27682';
+        
+        $defaultAmount =  $request->get('amount');    
+        $amount = ($request->get('amount'))?$request->get('amount'):"1";
+
+
+        return view('investmentvia.ebs',compact('defaultAmount','title','tagLine','jsUrl1','jsUrl2','serviceName','amount','payment','merchant_id','order_id','accountId'));
+    }
+
     public function checkout(Request $request, $serviceName=null)
     {
         $payment = null; 

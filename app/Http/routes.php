@@ -16,7 +16,7 @@ header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorizatio
 header('Access-Control-Allow-Credentials: true');
 
 if (env('APP_ENV') === 'local') {
-    URL::forceSchema('https');
+   // URL::forceSchema('https');
 }
 
 
@@ -201,12 +201,34 @@ Route::match(['get','post'],'checkout/{name}',[
           'as' => 'checkout',
           'uses'  => 'HomeController@checkout'
         ]);
+
+Route::match(['get','post'],'checkOutEBS/{name}',[
+          'as' => 'checkOutEbs',
+          'uses'  => 'HomeController@checkOutEbs'
+        ]);
+
+
+      Route::match(['get','post'],'paymentConfirm/{name}',[
+          'as' => 'paymentConfirm',
+          'uses'  => 'HomeController@paymentConfirm'
+        ]);
+
+
  
 
 Route::match(['get','post'],'paymentStatus/{name}',[
           'as' => 'paymentStatus',
           'uses'  => 'HomeController@paymentStatus'
         ]);
+
+
+Route::match(['get','post'],'payment/response',[
+          'as' => 'paymentResponse',
+          'uses'  => 'HomeController@paymentResponse'
+        ]);
+
+
+
 
 
 Route::post('paymentStatus/success',[
