@@ -16,7 +16,7 @@ header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorizatio
 header('Access-Control-Allow-Credentials: true');
 
 if (env('APP_ENV') === 'local') {
-   // URL::forceSchema('https');
+    URL::forceSchema('https');
 }
 
 
