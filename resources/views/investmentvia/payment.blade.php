@@ -18,19 +18,24 @@
     <div class="row">
       <div class="col-md-12">
          <h2 class="heading heading_space wow fadeInDown"><span>Frequently</span> Payment<span class="divider-left"></span> </h2> 
-          
-
+           
           <div class="faq_content wow fadeIn" data-wow-delay="400ms">
               <ul class="items">
                  <li><a href="#.">Online Payment</a>
                   <ul class="sub-items">
                     <li style="display: inline;">
-                       <a href="{{ url('checkout/stock?amount=0') }}" class="btn btn-success" >
+                       <a href="{{ url('checkOutEBS/stock?amount=1000') }}" class="btn btn-info"  target="_blank" >
+                          EBS payment
+                       </a>
+                    </li>
+
+                    <li style="display: inline;">
+                       <a href="{{ url('checkout/stock?amount=0') }}" class="btn btn-success"   target="_blank">
                           Ccavenue payment
                        </a>
                     </li>
                        <li style="display: inline;">
-                       <a href="https://easebuzz.in/pay/researchinfotech" target="_blank" class="btn btn-primary">
+                       <a href="https://easebuzz.in/pay/researchinfotech" target="_blank" class="btn btn-primary"  target="_blank">
                          
                          Easebuzz payment
                        </a>
