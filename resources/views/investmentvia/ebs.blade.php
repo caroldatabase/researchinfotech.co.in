@@ -89,8 +89,16 @@
                 <input name="ship_postal_code" type="hidden" value="600000" />   
                 <input name="ship_country" type="hidden" value="IND" />
                 <input name="ship_phone" type="hidden" value="" />
+                <input name="payment_mode" type="hidden" value="0" />
+                <input name="card_brand" type="hidden" value="" />
+                <input name="display_currency" type="hidden" value="INR" />
 
-    <h3>Payment</h3>
+                
+                
+
+
+    <h3>EBS Payment</h3>
+    <br>
     <table width="100%" cellpadding="2" cellspacing="2" border="0" class="table table-striped table-hover table-bordered">
         <tr >
             <th colspan="2">Transaction Details</th>
@@ -108,7 +116,7 @@
                 <option value="USD">USD</option>
                 </select></td>
         </tr>
-        <tr >
+        <tr style="display: none;" >
             <td class="fieldName">Additional Currency</td>
             <td align="left"><select name="display_currency" class="form-control" >
                 <option value="INR" selected>INR</option>
@@ -123,10 +131,11 @@
         </tr>
         
         
-        <tr>
+        <tr style="display: none;">
             <td class="fieldName">Payment Mode</td>
             <td align="left">
                 <select name="payment_mode" class="form-control" >
+                <option value="0">All</option>
                 <option value="3" selected="">Net Banking</option>
                 <option value="1">Credit Card</option>
                 <option value="2">Debit Card</option>
@@ -138,7 +147,7 @@
             </select>
             </td>
         </tr>
-        <tr>
+        <tr style="display: none;">
             <td class="fieldName">Card Brand</td>
 
             <td align="left">
