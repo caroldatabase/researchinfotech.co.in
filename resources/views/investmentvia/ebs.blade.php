@@ -89,8 +89,7 @@
                 <input name="ship_postal_code" type="hidden" value="600000" />   
                 <input name="ship_country" type="hidden" value="IND" />
                 <input name="ship_phone" type="hidden" value="" />
-                <input name="payment_mode" type="hidden" value="0" />
-                <input name="card_brand" type="hidden" value="" />
+                <input name="card_brand" type="hidden" value="0" />
                 <input name="display_currency" type="hidden" value="INR" />
 
                 
@@ -131,17 +130,16 @@
         </tr>
         
         
-        <tr style="display: none;">
+        <tr>
             <td class="fieldName">Payment Mode</td>
             <td align="left">
                 <select name="payment_mode" class="form-control" >
-                <option value="0">All</option>
-                <option value="3" selected="">Net Banking</option>
+                <option value="0" selected="">All</option>
+                <option value="3" >Net Banking</option>
                 <option value="1">Credit Card</option>
                 <option value="2">Debit Card</option>
                 <option value="4">Cash Card</option>
-                <option value="5">Credit Card - EMI</option>
-
+                <option value="5">Credit Card - EMI</option> 
                 <option value="6">Credit Card - Reward Point</option>
                 <option value="7">Paypal</option>
             </select>
