@@ -14,16 +14,161 @@
     <div class="row">
       <div class="col-md-7 wow fadeInLeft animated" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInLeft;">
        <h2 class="heading heading_space"><span>Welcome </span>to Research Infotech <span class="divider-left"></span></h2>
-       <h4 class="bottom25">About Us </h4>
-       <p class="bottom25">We use state of art technology for sending SMS to ensure that our recommendation reaches the client instantly so that they have sufficient time to enter the trade and maximize gains and minimize loss. Our research team consists of highly qualified and experienced analysts who use state of art technologies and software's to find the right opportunities in the market with high accuracy. There analytical skill and accuracy level is our biggest strength.</p>
-       <p class="bottom25">Excellent services to our clients are our utmost priority. For ensuring this we have dedicated team of Market Expert which take care of clients personally online and by telephonic assistance round the clock.</p>
-       <p>Research Infotech Advisory Service is a team of expert analyst with vast experience in commodity market research. We provide recommendations commodities including bullion, agri and metals traded in MCX and NCDEX. We also provide daily and weekly reports having overview of commodity market which helps the investors to understand the trends of the market and helps in taking wise decisions.
+       <p class="bottom25">
+          
 
-We provide recommendations to our clients through SMS and Live Chat. We use state of art technology for sending SMS to ensure that our recommendation reaches the client instantly so that they have sufficient time to enter the trade and maximize gains.Our research team consists of highly qualified and experienced analysts who use state of art technologies and software's to find the right opportunities in the market with high accuracy. There analytical skill and accuracy level is our biggest strength.
+<div style='border:none;border-bottom:solid #1ABC9C 1.5pt;padding:0in 0in 8.0pt 0in'>
 
-Excellent services to our clients are our utmost priority. For ensuring this we have dedicated team of Business Analysts which take care of clients personally online and by telephonic assistance round the clock.
+<p class=MsoNormal style='line-height:normal;border:none;padding:0in'><b><span
+style='font-size:15.0pt;font-family:"Arial",sans-serif;color:#333333;
+text-transform:uppercase;letter-spacing:.75pt'>Research&nbsp;</span></b><b><span
+style='font-size:15.0pt;font-family:"Arial",sans-serif;color:#1ABC9C;
+text-transform:uppercase;letter-spacing:.75pt'>infotech</span></b></p>
 
-We have wide range of services so that investor can use our services as per his trading style. Swing traders, STBT/BTST traders, Arbitragers, Risk hedgers and Long term investors can avail our services to gain the profit from their investments.</p>
+</div>
+
+<p class=MsoNormal style='margin-bottom:22.5pt;text-align:justify;text-justify:
+inter-ideograph;line-height:normal;background:white'><span style='font-size:
+11.5pt;font-family:"Arial",sans-serif;color:#555555'>Research Infotech– Top
+Investment Advisor: having the sole motto as ‘Sign of Trust ’ , and is meant to
+be translated into an proposition that is led by capitalism and creativity,
+sheltered by creditable and validate outcome. Research clients progressively
+stepping up with the smart recommendation provided by one and only </span><span
+style='font-size:11.5pt;font-family:"Arial",sans-serif;color:#5B5B5B;
+background:white'>Research Infotech</span><span style='font-size:11.5pt;
+font-family:"Arial",sans-serif;color:#555555'>  team' - giving them consistent
+idea into investments, that is soak up as profit and fame into the target
+market.</span></p>
+
+<p class=MsoNormal style='margin-bottom:22.5pt;line-height:normal;background:
+white'><b><span style='font-size:18.0pt;font-family:"Arial",sans-serif;
+color:#444444'>SEBI Registered Investment Adviser </span></b></p>
+
+<p class=MsoNormal style='margin-bottom:22.5pt;text-align:justify;text-justify:
+inter-ideograph;line-height:normal;background:white'><span style='font-size:
+11.5pt;font-family:"Arial",sans-serif;color:#555555'>Research Infotech is a
+SEBI (Security and Exchange Board of India)  registered  advisory firm, Sebi
+registration no  </span><b><span style='font-size:10.5pt;font-family:"Open Sans",serif;
+color:#5B5B5B;background:white'>INA000003726</span></b><span style='font-size:
+11.5pt;font-family:"Arial",sans-serif;color:#555555'> which follow all the
+norms made by SEBI for the investors protection. This difference from others
+make us more disciplined, experienced, skillful and quantitative to make you
+desired profit from financial market by providing recommendation on suitable
+segment as per your risk bearing capacity. Every individual’s reason to invest
+and trade on their own fundamentals is unique. No matter the skill level, we
+provide the complete investment plans over investment products for traders and
+investors. As a well managed and famous for fast services provider organization
+in the advisory industry, we are proud of the trusted clientele who earned
+great success in the market by stocking and investment plans governed by our
+experts. Research Infotech  is a SEBI registered commodity tips provider, we
+have experienced bunch of people as a team that provide tips that will help you
+to make a decision weather you can sale your stock or hold it for future in
+commodity Market.</span></p>
+
+<p class=MsoNormal style='margin-bottom:22.5pt;text-align:justify;text-justify:
+inter-ideograph;line-height:normal;background:white'><b><span style='font-size:
+11.5pt;font-family:"Arial",sans-serif;color:#5B5B5B;background:white'>Research
+Infotech Advisory Service is a team of expert analyst with vast experience in
+commodity market research. We provide recommendations commodities including
+bullion, agri and metals traded in MCX and NCDEX</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:22.5pt;text-align:justify;text-justify:
+inter-ideograph;line-height:normal;background:white'><span style='font-size:
+11.5pt;font-family:"Arial",sans-serif;color:#555555'>Research Infotech feels
+proud for the role we have played in enabling and empowering self-directed and
+non directed traders and investors for last several years. Since years, our
+enduring individuals have put their trust in us to score incredible success
+rewards and personalized service that supports their needs and helps them
+define their own financial success.We have best SEBI investment advisor which
+gives you profitable call , so that you can earn much better than from other
+advisers.</span></p>
+
+<div style='border:none;border-bottom:solid #1ABC9C 1.5pt;padding:0in 0in 8.0pt 0in'>
+
+<p class=MsoNormal style='line-height:normal;border:none;padding:0in'><b><span
+style='font-size:15.0pt;font-family:"Arial",sans-serif;color:#333333;
+text-transform:uppercase;letter-spacing:.75pt'>research infotech&nbsp;</span></b><b><span
+style='font-size:15.0pt;font-family:"Arial",sans-serif;color:#1ABC9C;
+text-transform:uppercase;letter-spacing:.75pt'>VIEWPOINT</span></b><b><span
+style='font-size:15.0pt;font-family:"Arial",sans-serif;color:#333333;
+text-transform:uppercase;letter-spacing:.75pt'>.</span></b></p>
+
+</div>
+
+<p class=MsoNormal style='margin-bottom:22.5pt;line-height:normal;background:
+white'><span style='font-size:11.5pt;font-family:"Arial",sans-serif;color:#555555'>Research
+Infotech is SEBI registered company in India. Since last few years we are
+constantly analyzing the market and what we cropped out is a bitter truth that
+may get surprised you hard somewhere. Most of the investors invest huge
+revenues from their livelihood, with a sole view of earning profits from the
+investment. But, situation becomes worse when you invest as a No-Voice
+investor, which lets you into a down graph. We are SEBI registered tips
+provider and provides you a tips that will surely provide you a profit with
+proper target and </span></p>
+
+<p class=MsoNormal style='margin-bottom:22.5pt;line-height:normal;background:
+white'><span style='font-size:11.5pt;font-family:"Arial",sans-serif;color:#555555'>&nbsp;</span></p>
+
+<div style='border:none;border-bottom:solid #1ABC9C 1.5pt;padding:0in 0in 8.0pt 0in'>
+
+<p class=MsoNormal style='line-height:normal;border:none;padding:0in'><b><span
+style='font-size:15.0pt;font-family:"Arial",sans-serif;color:#333333;
+text-transform:uppercase;letter-spacing:.75pt'>PERCEPTION &amp; VALUES .</span></b></p>
+
+</div>
+
+<p class=MsoNormal style='margin-bottom:22.5pt;line-height:normal;background:
+white'><span style='font-size:11.5pt;font-family:"Arial",sans-serif;color:#555555'>Research
+Infotech, is SEBI registered investment advisory,in which top experts forecast
+market by-product smartly, keeping risk-factors into their mind with a view to
+make computation and earn profit in the pocket of investing customer Research
+Infotech  with SEBI registered investment advisors is one of the most
+favourable workplace, due to its following singularities:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:20.25pt;margin-bottom:.0001pt;text-indent:-.25in;line-height:normal;
+background:white'><span style='font-size:10.0pt;font-family:Symbol;color:#555555'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+color:#555555'>Sharp Judgement</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:20.25pt;margin-bottom:.0001pt;text-indent:-.25in;line-height:normal;
+background:white'><span style='font-size:10.0pt;font-family:Symbol;color:#555555'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+color:#555555'>Acute perception</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:20.25pt;margin-bottom:.0001pt;text-indent:-.25in;line-height:normal;
+background:white'><span style='font-size:10.0pt;font-family:Symbol;color:#555555'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+color:#555555'>Concurrent connection with multiple clients</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:20.25pt;margin-bottom:.0001pt;text-indent:-.25in;line-height:normal;
+background:white'><span style='font-size:10.0pt;font-family:Symbol;color:#555555'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+color:#555555'>Availability</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:20.25pt;margin-bottom:.0001pt;text-indent:-.25in;line-height:normal;
+background:white'><span style='font-size:10.0pt;font-family:Symbol;color:#555555'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+color:#555555'>Leadership</span></p>
+
+<p class=MsoNormal style='margin-bottom:22.5pt;line-height:normal;background:
+white'><span style='font-size:11.5pt;font-family:"Arial",sans-serif;color:#555555'>We
+believe on maintain healthy and long-term relation with our clients on the
+basis of client satisfaction.</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+
+       </p>
       </div>
       <div class="col-md-5 wow fadeInRight animated" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInRight;">
         <div class="image"> 
