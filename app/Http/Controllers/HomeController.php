@@ -264,7 +264,7 @@ class HomeController extends Controller
     public function riskProfiling()
     {
         $title = "Risk Profiling";
-        $tagLine = "Risk Tolrance Investor Advisor";
+        $tagLine = "Research Infotech Investor Advisor";
         return view('investmentvia.riskProfiling',compact('title','tagLine'));
     }
 
