@@ -82,10 +82,10 @@
                 <div class="form-group">
                   <ul>
                     
-                    <li> <input type="radio" name="age" value="0-25"> Less than 25</ins> <span>40</span></li>
-                     <li> <input type="radio" name="age" value="25-45"> 25-45</ins> <span>30</span></li>
-                      <li> <input type="radio" name="age" value="45-55"> 45-55</ins> <span>20</span></li>
-                       <li> <input type="radio" name="age" value="55-100"> Above 55</ins> <span>10</span></li>
+                    <li> <input type="radio" name="age" value="0-25"  data_value="40" id="age"> Less than 25</ins> <span>40</span></li>
+                     <li> <input type="radio" name="age" value="25-45" data_value="30" id="age"> 25-45</ins> <span>30</span></li>
+                      <li> <input type="radio" name="age" value="45-55" data_value="20" id="age"> 45-55</ins> <span>20</span></li>
+                       <li> <input type="radio" name="age" value="55-100" data_value="10" id="age"> Above 55</ins> <span>10</span></li>
                   </ul>
               </div>
               </div>
@@ -93,10 +93,11 @@
                 <label class="control-label">(2) <b> Goal and Expectations </b> <br></label>
                   <div class="form-group">
                     <ul> 
-                      <li> <input type="radio" name="Expectations" value="Capital Appreciation"> Capital Appreciation <span>0</span></li>
-                       <li> <input type="radio" name="Expectations" value="Regular Income"> Regular Inc <span>20</span></li>
-                        <li><input type="radio" name="Expectations" value="Capital Appreciation and Regular Income"> Capital Appreciation and Regular Income <span>10</span> </li> <br>
-                         <li> <input type="radio" name="Expectations" value="If any other specific goal please specify"> If any other specific goal please specify required
+                      <li> <input type="radio" name="Expectations" value="Capital Appreciation"  data_value="0" id="Expectations"> Capital Appreciation <span>0</span></li>
+                       <li> <input type="radio" name="Expectations" value="Regular Income"   data_value="20" id="Expectations"> Regular Inc <span>20</span></li>
+                        <li><input type="radio" name="Expectations" value="Capital Appreciation and Regular Income" data_value="10" id="Expectations"> 
+                          Capital Appreciation and Regular Income <span>10</span> </li> <br>
+                         <li> <input type="radio" name="Expectations" value="If any other specific goal please specify" data_value="" id="Expectations"> If any other specific goal please specify required
                          <input type="text" name="other_specification" class="form-control" > 
 
                          </li>
@@ -108,10 +109,10 @@
                     <div class="form-group">
                         <ul> 
                           <li> 
-                          <input type="radio" name="Proposed_investment" value="0-3"> 0-1 Lacs</ins>  <span>10</span> </li>
-                           <li> <input type="radio" name="Proposed_investment" value="1-3"> 1-3 Lacs</ins>  <span>20</span> </li>
-                            <li> <input type="radio" name="Proposed_investment" value="3-5"> 3-5 Lacs</ins>  <span>30</span> </li>
-                             <li> <input type="radio" name="Proposed_investment" value="5>0">Above 5 Lacs</ins>  <span>40</span> </li>
+                          <input type="radio" name="Proposed_investment" value="0-3"  data_value="10" id="Proposed_investment"> 0-1 Lacs</ins>  <span>10</span> </li>
+                           <li> <input type="radio" name="Proposed_investment" value="1-3"  data_value="20" id="Proposed_investment"> 1-3 Lacs</ins>  <span>20</span> </li>
+                            <li> <input type="radio" name="Proposed_investment" value="3-5" data_value="30" id="Proposed_investment"> 3-5 Lacs</ins>  <span>30</span> </li>
+                             <li> <input type="radio" name="Proposed_investment" value="5>0"  data_value="40" id="Proposed_investment">Above 5 Lacs</ins>  <span>40</span> </li>
                         </ul>
                     </div>
               </div> 
@@ -121,10 +122,10 @@
                     <div class="form-group">
                         <ul> 
                           <li> 
-                          <input type="radio" name="market_value" value="0-3"> 0-1 Lacs</ins>  <span>10</span> </li>
-                           <li> <input type="radio" name="market_value" value="1-3"> 1-3 Lacs</ins>  <span>20</span> </li>
-                            <li> <input type="radio" name="market_value" value="3-5"> 3-5 Lacs</ins>  <span>30</span> </li>
-                             <li> <input type="radio" name="market_value" value="5>0">Above 5 Lacs</ins>  <span>40</span> </li>
+                          <input type="radio" name="market_value" value="0-3"  data_value="10" id="market_value"> 0-1 Lacs</ins>  <span>10</span> </li>
+                           <li> <input type="radio" name="market_value" value="1-3" data_value="20" id="market_value"> 1-3 Lacs</ins>  <span>20</span> </li>
+                            <li> <input type="radio" name="market_value" value="3-5" data_value="30" id="market_value"> 3-5 Lacs</ins>  <span>30</span> </li>
+                             <li> <input type="radio" name="market_value" value="5>0" data_value="40" id="market_value">Above 5 Lacs</ins>  <span>40</span> </li>
                         </ul>
                     </div>
                 </div>
@@ -136,58 +137,24 @@
                   <label>(a)Which of these statements would best describe your attitudes about the next three years performance of this investment?</label>
                     <ul> 
                       <li> 
-                      <input type="radio" name="Short_term_Risk_Attitudes" value="I don't mind if I lose money"> I don't mind if I lose money
+                      <input type="radio" name="Short_term_Risk_Attitudes" value="I don't mind if I lose money" data_value="40" id="Short_term_Risk_Attitudes"> I don't mind if I lose money
                       <span>40</span></li>
-                       <li> <input type="radio" name="Short_term_Risk_Attitudes" value="I can tolerate a loss"> I can tolerate a loss
+                       <li> <input type="radio" name="Short_term_Risk_Attitudes" value="I can tolerate a loss" data_value="30" id="Short_term_Risk_Attitudes"> I can tolerate a loss
                         <span>30</span></li>
-                        <li> <input type="radio" name="Short_term_Risk_Attitudes" value="I'd have a hard time tolerating any loss"> I'd have a hard time tolerating any loss<span>10</span></li>
-                         <li> <input type="radio" name="Short_term_Risk_Attitudes" value="I need to see at least a little return"> I need to see at least a little return <span>20</span></li>
+                        <li> <input type="radio" name="Short_term_Risk_Attitudes" value="I'd have a hard time tolerating any loss" data_value="10" id="Short_term_Risk_Attitudes"> I'd have a hard time tolerating any loss<span>10</span></li>
+                         <li> <input type="radio" name="Short_term_Risk_Attitudes" value="I need to see at least a little return" data_value="20" id="Short_term_Risk_Attitudes"> I need to see at least a little return <span>20</span></li>
                     </ul>
                   </div>
               </div>
-
-
-<!-- 
-
-              <div class="col-md-4 col-sm-4">
-                  <label><b>(4) Preferred Investment time horizon</b><br></label>
-                  <div class="form-group">
-                    <ul> 
-                      <li> 
-                      <input type="radio" name="Proposed_investment" value="0-3" > 0-1 Lacs</ins> 
-                      <span >10</span></li>
-                       <li> <input type="radio" name="Proposed_investment" value="1-3" > 1-3 Lacs</ins><span>20</span></li>
-                        <li> <input type="radio" name="Proposed_investment" value="3-5" > 3-5 Lacs</ins><span>30</span></li>
-                         <li> <input type="radio" name="Proposed_investment" value="5>0" > 5>0 Lacs</ins><span>40</span></li>
-                    </ul>
-                  </div>
-              </div> -->
-              
-              <!-- <div class="col-md-4 col-sm-4">
-                  <label>(b) Which of these statements would best describe your attitudes aboutthe next three months performance of this investment?</label>
-                  <div class="form-group">
-                  
-                    <ul> 
-                      <li> 
-                      <input type="radio" name="Attitudes" value="Who cares? One calendar quarter means nothing."> Who cares? One calendar quarter means nothing.</li>
-                       <li> <input type="radio" name="Attitudes" value="I wouldn't worry about losses in that time frame"> I wouldn't worry about losses in that time frame</li>
-                        <li> <input type="radio" name="Attitudes" value="If I suffered a loss of greater than 10%, I'd get concerned"> If I suffered a loss of greater than 10%, I'd get concerned</li>
-                         <li> <input type="radio" name="Attitudes" value="I can only tolerate small short-term losses"> I can only tolerate small short-term losses</li>
-                         <li> <input type="radio" name="Attitudes" value="I'd have a hard time accepting any losses"> I'd have a hard time accepting any losses</li>
-
-                    </ul>
-                  </div>
-              </div> -->
 
                <div class="col-md-4 col-sm-4">
                   <label>(6) Annual Income details:-</b><br></label>
                   <div class="form-group">
                     <ul> 
-                      <li> 
-                      <input type="radio" name="Income" value="Below 3 lac">    Below 3 lacs    <span>10</span> </li>
-                       <li> <input type="radio" name="Income" value="3-7 lac">  3-7 lacs        <span>20</span> </ins></li>
-                        <li> <input type="radio" name="Income" value="7-15 lac">     7-15 Lacs       <span>30</span> </ins></li>
-                         <li> <input type="radio" name="Income" value="Above 15 lac">    Above 15 Lacs   <span>40</span> </ins></li>
+                      <li> <input type="radio" name="Income" value="Below 3 lac"  data_value="10" id="Income">    Below 3 lacs    <span>10</span> </li>
+                      <li> <input type="radio" name="Income" value="3-7 lac"      data_value="20" id="Income">    3-7 lacs        <span>20</span> </ins></li>
+                      <li> <input type="radio" name="Income" value="7-15 lac"     data_value="30" id="Income">    7-15 Lacs       <span>30</span> </ins></li>
+                      <li> <input type="radio" name="Income" value="Above 15 lac" data_value="40" id="Income">    Above 15 Lacs   <span>40</span> </ins></li>
                     </ul>
                   </div>
               </div>
@@ -198,7 +165,7 @@
                     <ul> 
                     <label>A. Primary Source</label>
                       <li> 
-                        <input type="radio" name="sources" value="Salary"> Salary
+                        <input type="radio" name="sources" value="Salary" > Salary
                       </li>
                       <li>
                         <input type="radio" name="sources" value="Business"> Business
@@ -247,9 +214,9 @@
                   <div class="form-group">
                     <ul> 
                       <li> 
-                       <input type="radio" name="dependents" value="None" data-value="20" id=""> None <span>20</span></li>
-                       <li> <input type="radio" name="dependents" value="1-3" data-value="10"> Between 1-3<span>10</span></li>
-                        <li> <input type="radio" name="dependents" value="3-5" data-value="0">   3+</li> <span>0</span></li>
+                       <input type="radio" name="dependents" value="None" data_value="20" id="dependents" data_value="20" id="dependents"> None <span>20</span></li>
+                       <li> <input type="radio" name="dependents" value="1-3" data_value="10" data_value="10" id="dependents"> Between 1-3<span>10</span></li>
+                        <li> <input type="radio" name="dependents" value="3-5" data_value="0" data_value="0" id="dependents">   3+</li> <span>0</span></li>
                     </ul>
                   </div>
               </div>
@@ -259,10 +226,10 @@
                   <div class="form-group">
                     <ul> 
                       <li> 
-                      <input type="radio" name="emergency" value="< 1 month income">< 1 month income<span>10</span></li>
-                       <li> <input type="radio" name="emergency" value="1-3 months income"> 1-3 months income<span>20</span></li>
-                        <li> <input type="radio" name="emergency" value="3-6 months income"> 3-6 months income</ins><span>30</span></li>
-                         <li> <input type="radio" name="emergency" value="> 6 months income"> 6 months income<span>40</span></li>
+                      <input type="radio" name="emergency" value="< 1 month income" data_value="10" id="emergency">< 1 month income<span>10</span></li>
+                       <li> <input type="radio" name="emergency" value="1-3 months income" data_value="20" id="emergency"> 1-3 months income<span>20</span></li>
+                        <li> <input type="radio" name="emergency" value="3-6 months income" data_value="30" id="emergency"> 3-6 months income</ins><span>30</span></li>
+                         <li> <input type="radio" name="emergency" value="> 6 months income" data_value="40" id="emergency"> 6 months income<span>40</span></li>
                     </ul>
                   </div>
               </div>
@@ -272,10 +239,10 @@
                   <div class="form-group">
                     <ul> 
                       <li> 
-                      <input type="radio" name="Value" value="Below 10 lac"> Below 10 lac<span>10</span></li>
-                       <li> <input type="radio" name="Value" value="10-30 lac"> 10-30 lac</ins><span>20</span></li>
-                         <li> <input type="radio" name="Value" value="30-50 lac"> 30-50 lac </ins><span>30</span></li> 
-                         <li> <input type="radio" name="Value" value=">50 > lac"> Above  50  lac </ins><span>40</span></li>
+                      <input type="radio" name="ValApprox_value_of_assets" value="Below 10 lac" data_value="10" id="Approx_value_of_assets"> Below 10 lac<span>10</span></li>
+                       <li> <input type="radio" name="Approx_value_of_assets" value="10-30 lac" data_value="20" id="Approx_value_of_assets"> 10-30 lac</ins><span>20</span></li>
+                         <li> <input type="radio" name="Approx_value_of_assets" value="30-50 lac" data_value="30" id="Approx_value_of_assets"> 30-50 lac </ins><span>30</span></li> 
+                         <li> <input type="radio" name="Approx_value_of_assets" value=">50 > lac" data_value="40" id="Approx_value_of_assets"> Above  50  lac </ins><span>40</span></li>
                     </ul>
                   </div>
               </div>
@@ -286,10 +253,10 @@
                   <div class="form-group">
                     <ul> 
                       <li> 
-                      <input type="radio" name="percentage" value="None"> None <span>10</span> </li>
-                      <li><input type="radio" name="percentage" value="< 20 %"> Less than 20% <span>30</span></li>
-                       <li> <input type="radio" name="percentage" value="20-50%"> 20-50% <span>20</span></li> 
-                        <li> <input type="radio" name="percentage" value="> 50%"> > 50% <span>10</span></li>  
+                      <input type="radio" name="percentage" value="None"  data_value="10" id="percentage"> None <span>10</span> </li>
+                      <li><input type="radio" name="percentage" value="< 20 %" data_value="30" id="percentage"> Less than 20% <span>30</span></li>
+                       <li> <input type="radio" name="percentage" value="20-50%" data_value="20" id="percentage"> 20-50% <span>20</span></li> 
+                        <li> <input type="radio" name="percentage" value="> 50%" data_value="10" id="percentage"> > 50% <span>10</span></li>  
                     </ul>
                   </div>
               </div>
@@ -302,9 +269,9 @@
                   <div class="form-group">
                     <ul> 
                         <li> 
-                      <input type="radio" name="Investment" value="0-3" data-value="10"> < 1 Years</ins> <span>10</span></li>
-                       <li> <input type="radio" name="Investment" value="1-3" data-value="20"> 1-3 Years</ins> <span>20</span></li>
-                        <li> <input type="radio" name="Investment" value="3-5" data-value="30"> 3 > Years</ins> <span>30</span></li>  
+                      <input type="radio" name="Investment" value="0-3" data_value="10"> < 1 Years</ins> <span>10</span></li>
+                       <li> <input type="radio" name="Investment" value="1-3" data_value="20"> 1-3 Years</ins> <span>20</span></li>
+                        <li> <input type="radio" name="Investment" value="3-5" data_value="30"> 3 > Years</ins> <span>30</span></li>  
                     </ul>
                   </div>
               </div>
@@ -313,11 +280,11 @@
                   <label>(14)  Experience in market products </b><br></label>
                   <div class="form-group">
                     <ul> 
-                      <li> <input type="radio" name="Experience" value="Commodity"> Commodity <span>20</span></li>
-                       <li> <input type="radio" name="Experience" value="Stock"> Stock <span>10</span></li>
-                        <li> <input type="radio" name="Experience" value="Derivatives Stocks"> Derivatives Stocks <span>20</span></li>
-                         <li> <input type="radio" name="Experience" value="None of the above"> None of the above <span>0</span></li>
-                           <li> <input type="radio" name="Experience" value="All"> None of the above <span>30</span></li>
+                      <li> <input type="radio" name="Experience" value="Commodity" data_value="20" id="Experience"> Commodity <span>20</span></li>
+                       <li> <input type="radio" name="Experience" value="Stock" data_value="10" id="Experience"> Stock <span>10</span></li>
+                        <li> <input type="radio" name="Experience" value="Derivatives Stocks" data_value="20" id="Experience"> Derivatives Stocks <span>20</span></li>
+                         <li> <input type="radio" name="Experience" value="None of the above" data_value="0" id="Experience"> None of the above <span>0</span></li>
+                           <li> <input type="radio" name="Experience" value="All" data_value="30" id="Experience"> None of the above <span>30</span></li>
                     </ul>
                   </div>
               </div>
@@ -327,12 +294,12 @@
                   <div class="form-group">
                     <ul> 
                       <li> 
-                      <input type="radio" name="equity" value="Extensive"> Extensive</li>
-                       <li> <input type="radio" name="equity" value="Moderate"> Moderate</li>
+                      <input type="radio" name="equity" value="Extensive" data_value=""> Extensive</li>
+                       <li> <input type="radio" name="equity" value="Moderate" data_value=""> Moderate</li>
                         <li>
-                          <input type="radio" name="equity" value="Very less"> Very less
+                          <input type="radio" name="equity" value="Very less" data_value=""> Very less
                         </li>
-                         <li> <input type="radio" name="equity" value="No experience"> No experience</li>
+                         <li> <input type="radio" name="equity" value="No experience" data_value=""> No experience</li>
                     </ul>
                   </div>
               </div>
@@ -358,10 +325,10 @@
                   <div class="form-group">
                     <ul> 
                       <li> 
-                      <input type="radio" name="capacity_willingness" value="High"> High <span>20</span></li>
-                       <li> <input type="radio" name="capacity_willingness" value="Medium">   Medium   <span>10</span>    </li>
+                      <input type="radio" name="capacity_willingness" value="High" data_value="20" id="capacity_willingness"> High <span>20</span></li>
+                       <li> <input type="radio" name="capacity_willingness" value="Medium"  data_value="10" id="capacity_willingness">   Medium   <span>10</span>    </li>
                         <li>
-                          <input type="radio" name="capacity_willingness" value="Low"> Low<span>0</span>
+                          <input type="radio" name="capacity_willingness" value="Low" data_value="0" id="capacity_willingness"> Low<span>0</span>
                         </li> 
                     </ul>
                   </div>
@@ -373,14 +340,15 @@
                   <div class="form-group">
                     <ul> 
                       <li> 
-                      <input type="radio" name="ractice_on_saving_money" value="I don't believe in saving"> I don't believe in saving <span>0</span></li>
-                       <li> <input type="radio" name="ractice_on_saving_money" value=" I'd like to save, but my expenses and other financial commitments do not permit me to">  I'd like to save, but my expenses and other financial commitments do not permit me to.     <span>10</span>    </li>
+                      <input type="radio" name="practice_on_saving_money" value="I don't believe in saving" data_value="0" id="practice_on_saving_money"> I don't believe in saving <span>0</span></li>
+                       <li> <input type="radio" name="practice_on_saving_money" value=" I'd like to save, but my expenses and other financial commitments do not permit me to" data_value="10" id="practice_on_saving_money">  I'd like to save, but my expenses and other financial commitments do not permit me to.    
+                        <span>10</span>    </li>
                         <li>
-                          <input type="radio" name="ractice_on_saving_money" value="I try to save whenever and wherever possible">   I try to save whenever and wherever possible.                                                        <span>20</span>
+                          <input type="radio" name="practice_on_saving_money" value="I try to save whenever and wherever possible" data_value="20" id="practice_on_saving_money">   I try to save whenever and wherever possible.                                                        <span>20</span>
                         </li> 
 
                          <li>
-                          <input type="radio" name="ractice_on_saving_money" value="I save 15 percent or more of my take-home salary without exception less">
+                          <input type="radio" name="practice_on_saving_money" value="I save 15 percent or more of my take-home salary without exception less" data_value="30" id="practice_on_saving_money">
                           I save 15 percent or more of my take-home salary without exception.
                            <span>30</span>
                         </li> 
@@ -394,15 +362,15 @@
                   <div class="form-group">
                     <ul> 
                       <li> 
-                      <input type="radio" name="awareness_about_finance" value="I read most of the business and investment magazines and watch business updates on television daily.">
+                      <input type="radio" name="awareness_about_finance" value="I read most of the business and investment magazines and watch business updates on television daily." data_value="30" id="awareness_about_finance">
                         I read most of the business and investment magazines and watch business updates on television daily. <span>30</span></li> <br>
-                       <li> <input type="radio" name="awareness_about_finance" value="I read a financial newspaper daily and regularly read at least one specialized business magazine">I read a financial newspaper daily and regularly read at least one specialized business magazine <span>20</span>    </li> <br>
+                       <li> <input type="radio" name="awareness_about_finance" value="I read a financial newspaper daily and regularly read at least one specialized business magazine" data_value="20" id="awareness_about_finance">I read a financial newspaper daily and regularly read at least one specialized business magazine <span>20</span>    </li> <br>
                         <li>
-                          <input type="radio" name="awareness_about_finance" value="I often look up the market prices of my shares in the newspaper.">I often look up the market prices of my shares in the  <span>10</span>newspaper.                                                       
+                          <input type="radio" name="awareness_about_finance" value="I often look up the market prices of my shares in the newspaper." data_value="10" id="awareness_about_finance">I often look up the market prices of my shares in the  <span>10</span>newspaper.                                                       
                         </li>  <br>
 
                          <li>
-                          <input type="radio" name="awareness_about_finance" value="I never read the finance section of the newspaper">
+                          <input type="radio" name="awareness_about_finance" value="I never read the finance section of the newspaper" data_value="0" id="awareness_about_finance">
                           I never read the finance section of the newspaper.
                            <span>0</span>
                         </li> 
@@ -432,7 +400,7 @@
      }
    </style>
    <div class="score">
-        <p >Total Score –  <input type="text"    name="total_score"  required="" value="500">  </p>
+        <p >Total Score –  <input type="text"    name="total_score" id="total_score" required="" value="500">  </p>
         <span>Classification of Services</span>
         <table border="1" width="100%" cellpadding="15px" cellspacing="15px">
             <tr>
@@ -442,13 +410,13 @@
             </tr>
 
             <tr>
-                <td>Medium</td>
+                <td> <span class="Medium">Medium</span></td>
                 <td>0-330</td>
                 <td>Intraday Cash and Stock Cash HNI</td>
             </tr>
 
             <tr>
-                <td>High</td>
+                <td  > <span class="High">High </span></td>
                 <td>Above 330</td>
                 <td>
                     Stock Future </br>
@@ -484,4 +452,46 @@
     
   </style>
 </section>
+
+<script src="http://localhost/investmentvia/public/assets/js/jquery-2.2.3.js"></script>
+
+<script type="text/javascript">
+    var arr=[];
+    var ids = [];
+  jQuery(function($){
+      
+      $('input[type="radio"]').change(function () {
+
+        var total =  0;
+        var data = $(this).attr('data_value');
+        var id = $(this).attr('id'); 
+        
+        var a = ids.indexOf(id);
+        
+        if(a==-1){
+          console.log(id); 
+          arr[id] = data;
+        } else{
+          console.log(id);  
+          arr[id] = data;
+        }
+        ids.push(id);  
+           console.log(arr); 
+
+           for(n1 in arr){
+             total = total+Number(arr[n1]);
+           } 
+           $('#total_score').val(total);
+           $('span.Medium').html('Medium').css({"background-color": "#fff", "font-size": "100%"});
+            $('span.High').html('High').css({"background-color": "#fff", "font-size": "100%"});
+           if(total<=330){
+              $('span.Medium').html('Medium').css({"background-color": "yellow", "font-size": "100%","font-weight":"bold","padding":"5px"});
+           }else{
+               $('span.High').html('High').css({"background-color": "green", "font-size": "100%","font-weight":"bold","padding":"5px"});
+           }
+      }); 
+
+  });
+
+</script>
 @stop
