@@ -59,7 +59,10 @@
           <li><a href="{!! url('contact')!!}"><i class="fa fa-right"></i>Contact Us</a></li>
           <li><a href="{{url('free-trial')}}"><i class="fa fa-right"></i>Free Trial</a></li>
           <li><a href="{!! url('payment')!!}"><i class="fa fa-right"></i>Payment</a></li>
-          <li><a href="{!! url('pricing')!!}"><i class="fa fa-right"></i>Pricing</a></li>
+          <li><a href="{!! url('pricing')!!}"><i class="fa fa-right"></i>Pricing</a></li> 
+          <li><a href="{!! url('risk-profiling')!!}"><i class="fa fa-right"></i>Risk profiling</a></li> 
+
+
           @foreach($pageMenu as $val)
           <li><a href="{!! url('page/'.str_slug($val->title))!!}"><i class="fa fa-right"></i>{!! ucfirst($val->title)!!}</a></li>
          @endforeach

@@ -190,6 +190,16 @@ Route::post('riskTolrance',[
           'uses'  => 'HomeController@riskTolranceForm'
         ]);
 
+Route::get('risk-profiling',[
+          'as' => 'risk_profiling',
+          'uses'  => 'HomeController@riskProfiling'
+        ]);
+
+Route::post('riskProfiling',[
+          'as' => 'riskProfilingForm',
+          'uses'  => 'HomeController@riskProfilingForm'
+        ]);
+
 
 Route::get('discloser',[
           'as' => 'discloser',

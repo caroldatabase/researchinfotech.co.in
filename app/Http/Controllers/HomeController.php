@@ -260,6 +260,15 @@ class HomeController extends Controller
         $tagLine = "We offer the most complete advisory services in the country";
         return view('investmentvia.riskTolrance',compact('title','tagLine'));
     }
+    
+    public function riskProfiling()
+    {
+        $title = "Risk Profiling";
+        $tagLine = "Risk Tolrance Investor Advisor";
+        return view('investmentvia.riskProfiling',compact('title','tagLine'));
+    }
+
+    
     public function kyc(Request $request, Kyc $kyc)
     {
         $title = "Kyc";
@@ -339,6 +348,44 @@ class HomeController extends Controller
                     }
         }
        return view('investmentvia.kyc',compact('title','tagLine','kyc'));
+    }
+
+    public function riskProfilingForm(Request $request, Kyc $kyc)
+    {
+        $title       = "Risk Profiling";
+        $tagLine     = "We offer the most complete advisory services in the country";
+
+        if($request->method()=='POST'){
+            $validator = Validator::make($request->all(), [
+                'full_name' => 'required',
+                'services' =>  'required',
+                'risk_capacity' => 'required',
+
+            ]); 
+                if ($validator->fails()) {
+                     return Redirect::to('risk-profiling')
+                            ->withErrors($validator)
+                            ->withInput();
+                }else{
+
+                    $except = ['id', 'create_at', 'updated_at']; 
+                    $table_cname = \Schema::getColumnListing('risk_profiling');
+                    foreach ($table_cname as $key => $value) {
+                    if (in_array($value, $except)) {
+                        continue;
+                    }
+                    if ($request->input($value) != null) {
+                            $input[$value] = $request->get($value);
+                        }
+                    }     
+                        $allData    =   $request->except('_token');
+                        $input['all_data']  = json_encode($allData);  
+
+                    \DB::table('risk_profiling')->insert($input);
+                    return Redirect::to('status/success')->withErrors(['successMsg'=>'Thanking you!']);
+                    }
+        }
+       return view('investmentvia.risk-profiling',compact('title','tagLine','kyc'));
     }
 
     public function riskTolranceForm(Request $request, Kyc $kyc)

@@ -23,11 +23,11 @@
               <ul class="items">
                  <li><a href="#.">Online Payment</a>
                   <ul class="sub-items">
-                    <li style="display: inline;">
+                   <!--  <li style="display: inline;">
                        <a href="{{ url('checkOutEBS/stock?amount=1000') }}" class="btn btn-info"  target="_blank" >
                           EBS payment
                        </a>
-                    </li>
+                    </li> -->
 
                     <li style="display: inline;">
                        <a href="{{ url('checkout/stock?amount=0') }}" class="btn btn-success"   target="_blank">

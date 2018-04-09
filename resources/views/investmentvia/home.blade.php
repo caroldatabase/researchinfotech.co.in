@@ -265,7 +265,7 @@ News and Technical & Fundamental Analysis
             <div class="live-btn">
                 <p> <!-- <a href="http://easebuzz.in/pay/researchinfotech" target="_blank"><img src="{{ asset('storage/assets/images/pay-online.png')}}"></a> -->
 
-                    <a href="https://www.researchinfotech.co.in/checkOutEBS/payment-online?amount=1000" target="_blank"><img src="{{ asset('storage/assets/images/pay-online.png')}}"></a>
+                    <!-- <a href="https://www.researchinfotech.co.in/checkOutEBS/payment-online?amount=1000" target="_blank"><img src="{{ asset('storage/assets/images/pay-online.png')}}"></a> -->
 
 
                     
