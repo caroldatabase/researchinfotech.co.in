@@ -410,7 +410,7 @@
             </tr>
 
             <tr>
-                <td> <span class="Medium">Medium</span></td>
+                <td> <span class="Medium">Medium</span> <input type="hidden"    name="risk" id="risk"  value=""> <input type="hidden"    name="score" id="score"  value="0"></td>
                 <td>0-330</td>
                 <td>Intraday Cash and Stock Cash HNI</td>
             </tr>
@@ -482,12 +482,15 @@
              total = total+Number(arr[n1]);
            } 
            $('#total_score').val(total);
+           $('#score').val(total);
            $('span.Medium').html('Medium').css({"background-color": "#fff", "font-size": "100%"});
             $('span.High').html('High').css({"background-color": "#fff", "font-size": "100%"});
            if(total<=330){
+              $('#risk').val('Medium');
               $('span.Medium').html('Medium').css({"background-color": "yellow", "font-size": "100%","font-weight":"bold","padding":"5px"});
            }else{
-               $('span.High').html('High').css({"background-color": "green", "font-size": "100%","font-weight":"bold","padding":"5px"});
+                $('#risk').val('High');
+                $('span.High').html('High').css({"background-color": "red", "font-size": "100%","font-weight":"bold","padding":"5px"});
            }
       }); 
 
