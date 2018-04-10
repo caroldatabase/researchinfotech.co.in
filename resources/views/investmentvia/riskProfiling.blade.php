@@ -31,7 +31,7 @@
             @if ($errors->any())
                {{ implode('', $errors->all('<div class="alert alert-danger">:message</div>')) }}
             @endif
-
+             <P style="color:green; font-weight: 700"> Research Infotech Investment Advisory </P>
         <form class="form-inline findus" id="contact-form" action="{{url('riskProfiling')}}" method="post" >
           
           <div class="row">
@@ -54,7 +54,7 @@
               </div>
             </div>
              <div class="col-md-4 col-sm-4">
-            <label>Risk Capacity(%)</label>
+            <label>Risk Capacity</label>
               <div class="form-group">
                 <input type="text" class="form-control" placeholder="Risk Capacity" name="risk_capacity" id="risk_capacity" required="">
               </div>
@@ -76,7 +76,7 @@
             </div>  -->
              
              <div class="col-md-12"> 
-             <P style="color:green; font-weight: 700"> Research Infotech Investor Advisory </P>
+            
             <div class="col-md-4 col-sm-4">
               <label>(1) <b>What is your current age?</b><br></label>
                 <div class="form-group">
@@ -487,9 +487,11 @@
             $('span.High').html('High').css({"background-color": "#fff", "font-size": "100%"});
            if(total<=330){
               $('#risk').val('Medium');
+              $('risk_capacity').val('Medium');
               $('span.Medium').html('Medium').css({"background-color": "yellow", "font-size": "100%","font-weight":"bold","padding":"5px"});
            }else{
                 $('#risk').val('High');
+                $('risk_capacity').val('High');
                 $('span.High').html('High').css({"background-color": "red", "font-size": "100%","font-weight":"bold","padding":"5px"});
            }
       }); 

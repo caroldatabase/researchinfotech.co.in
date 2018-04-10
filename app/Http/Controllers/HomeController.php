@@ -264,7 +264,7 @@ class HomeController extends Controller
     public function riskProfiling()
     {
         $title = "Risk Profiling";
-        $tagLine = "Research Infotech Investor Advisor";
+        $tagLine = "Research Infotech Investment Advisory";
         return view('investmentvia.riskProfiling',compact('title','tagLine'));
     }
 
@@ -352,7 +352,7 @@ class HomeController extends Controller
 
     public function riskProfilingForm(Request $request, Kyc $kyc)
     {
-        $title       = "Risk Profiling";
+        $title       = "Research Infotech Investment Advisory";
         $tagLine     = "We offer the most complete advisory services in the country";
 
         if($request->method()=='POST'){
