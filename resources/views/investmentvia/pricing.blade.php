@@ -34,32 +34,33 @@
                         <th>Monthly</th>
                         <td><i class="fa fa-rupee"></i>{!! $result->monthly_price !!} </td>
                         <td><span class="pay-now">
-                      <a href="{{url('checkOutEBS/'.str_slug($result->title).'?amount='.$result->monthly_price)}}">Pay Now</a></span></p>
+                      <a href="#">Pay Now</a></span></p>
                     </td>
                       </tr>
-
+                      <!-- {{url('checkOutEBS/'.str_slug($result->title).'?amount='.$result->monthly_price)}} -->
                       <tr>
                         <th>Quarterly</th>
                         <td><i class="fa fa-rupee"></i>{!! $result->quarterly_price !!} </td>
                         <td><span class="pay-now">
-                      <a href="{{url('checkOutEBS/'.str_slug($result->title).'?amount='.$result->quarterly_price)}}">Pay Now</a></span></p>
+                      <a href="#">Pay Now</a></span></p>
                     </td>
                       </tr>
-
+                      <!-- {{url('checkOutEBS/'.str_slug($result->title).'?amount='.$result->quarterly_price)}} -->
                        <tr>
                         <th>Half Yearly</th>
                         <td><i class="fa fa-rupee"></i>{!! $result->half_yearly_price !!} </td>
                         <td><span class="pay-now">
-                      <a href="{{url('checkOutEBS/'.str_slug($result->title).'?amount='.$result->half_yearly_price)}}">Pay Now</a></span></p>
+                      <a href="#">Pay Now</a></span></p>
                     </td>
                       </tr>
-
+                        <!-- {{url('checkOutEBS/'.str_slug($result->title).'?amount='.$result->half_yearly_price)}} -->
                        <tr>
                         <th>Yearly</th>
                         <td><i class="fa fa-rupee"></i>{!! $result->yearly_price !!} </td>
                         <td><span class="pay-now">
-                      <a href="{{url('checkOutEBS/'.str_slug($result->title).'?amount='.$result->yearly_price)}}">Pay Now</a></span></p>
+                      <a href="#">Pay Now</a></span></p>
                     </td>
+                    <!-- {{url('checkOutEBS/'.str_slug($result->title).'?amount='.$result->yearly_price)}} -->
                       </tr>
                     </table>
     
