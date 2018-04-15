@@ -487,11 +487,11 @@
             $('span.High').html('High').css({"background-color": "#fff", "font-size": "100%"});
            if(total<=330){
               $('#risk').val('Medium');
-              $('risk_capacity').val('Medium');
+              $('#risk_capacity').val('Medium');
               $('span.Medium').html('Medium').css({"background-color": "yellow", "font-size": "100%","font-weight":"bold","padding":"5px"});
            }else{
                 $('#risk').val('High');
-                $('risk_capacity').val('High');
+                $('#risk_capacity').val('High');
                 $('span.High').html('High').css({"background-color": "red", "font-size": "100%","font-weight":"bold","padding":"5px"});
            }
       }); 

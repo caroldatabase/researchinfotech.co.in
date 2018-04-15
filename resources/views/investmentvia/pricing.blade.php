@@ -58,7 +58,7 @@
                         <th>Yearly</th>
                         <td><i class="fa fa-rupee"></i>{!! $result->yearly_price !!} </td>
                         <td><span class="pay-now">
-                      <a href="#">Pay Now</a></span></p>
+                      <a href="#" onclick="alert('payment gateway under maintainance')">Pay Now</a></span></p>
                     </td>
                     <!-- {{url('checkOutEBS/'.str_slug($result->title).'?amount='.$result->yearly_price)}} -->
                       </tr>
