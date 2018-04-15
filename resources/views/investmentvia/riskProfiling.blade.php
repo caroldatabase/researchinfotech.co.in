@@ -452,8 +452,11 @@
     
   </style>
 </section>
-
+<!-- 
 <script src="http://localhost/investmentvia/public/assets/js/jquery-2.2.3.js"></script>
+ -->
+
+<script type="text/javascript" src="{{ url('public/assets/js/jquery-2.2.3.js')}}"></script>
 
 <script type="text/javascript">
     var arr=[];
