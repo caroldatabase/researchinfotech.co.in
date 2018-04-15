@@ -29,7 +29,7 @@
         <h2 class="heading heading_space"  style="margin-top: 20px;"> <span> {{$title}} </span>  <span class="divider-left"></span></h2>
 
             @if ($errors->any())
-               {{ implode('', $errors->all('<div class="alert alert-danger">:message</div>')) }}
+               {!! implode('', $errors->all('<div class="alert alert-danger">:message</div>')) !!}
             @endif
              <P style="color:green; font-weight: 700"> Research Infotech Investment Advisory </P>
         <form class="form-inline findus" id="contact-form" action="{{url('riskProfiling')}}" method="post" >
@@ -56,7 +56,7 @@
              <div class="col-md-4 col-sm-4">
             <label>Risk Capacity</label>
               <div class="form-group">
-                <input type="text" disabled="" class="form-control" placeholder="Risk Capacity" name="risk_capacity" id="risk_capacity" required="">
+                <input type="text" disabled="" class="form-control" placeholder="Risk Capacity"  name="risk_capacity" id="risk_capacity">
               </div>
             </div>
            

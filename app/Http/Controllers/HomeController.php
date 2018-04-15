@@ -358,9 +358,7 @@ class HomeController extends Controller
         if($request->method()=='POST'){
             $validator = Validator::make($request->all(), [
                 'full_name' => 'required',
-                'services' =>  'required',
-                'risk_capacity' => 'required',
-
+                'services' =>  'required'
             ]); 
                 if ($validator->fails()) {
                      return Redirect::to('risk-profiling')
