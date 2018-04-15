@@ -28,8 +28,6 @@
                                         <span class="caption-subject font-red sbold uppercase">Risk Profiling </span>
                                     </div>
                                         <hr>
-                                         
-                                     
                                 </div>
                                   
                                 <div class="portlet-body2">
@@ -39,7 +37,7 @@
                                         <thead>
                                         @if(isset($riskProfile) && $riskProfile!=null)
                                             @foreach($riskProfile as $key => $result)
-                                                @if($key=="term_conditions")
+                                                @if($key=="term_conditions" || $key=="Score")
                                                 @else
                                                 <tr>
                                                     <td> {{ucfirst(str_replace('_',' ',$key))}}</td>  

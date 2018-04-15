@@ -56,7 +56,7 @@
              <div class="col-md-4 col-sm-4">
             <label>Risk Capacity</label>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Risk Capacity" name="risk_capacity" id="risk_capacity" required="">
+                <input type="text" disabled="" class="form-control" placeholder="Risk Capacity" name="risk_capacity" id="risk_capacity" required="">
               </div>
             </div>
            
