@@ -29,11 +29,11 @@
                        </a>
                     </li> -->
 
-                    <li style="display: inline;">
+                  <!--   <li style="display: inline;">
                        <a href="{{ url('checkout/stock?amount=0') }}" class="btn btn-success"   target="_blank">
                           Ccavenue payment
                        </a>
-                    </li>
+                    </li> -->
                        <li style="display: inline;">
                        <a href="https://easebuzz.in/pay/researchinfotech" target="_blank" class="btn btn-primary"  target="_blank">
                          

@@ -42,7 +42,6 @@
               <li><a href="{{url('career')}}"> Career </a></li>
               <li><a href="{{url('blog')}}"> Blog </a></li>
               <li><a href="{{url('kyc')}}"> KYC </a></li>
-              <li><a href="{{url('risk-tolrance')}}"> Risk Tolerance </a></li>
               <li><a href="{{url('risk-profiling')}}"> Risk Profiling </a></li>
               @foreach($pageMenu as $val)
                 <li><a href="{!! url('page/'.str_slug($val->title))!!}"><i class="fa fa-right"></i>{!! ucfirst($val->title)!!}</a></li>
@@ -79,7 +78,6 @@
             <li><a href="{{url('career')}}"> Career </a></li>
             <li><a href="{{url('blog')}}"> Blog </a></li>
             <li><a href="{{url('kyc')}}"> KYC </a></li>
-            <li><a href="{{url('risk-tolrance')}}"> Risk Tolerance </a></li>
             <li><a href="{{url('risk-profiling')}}"> Risk Profiling </a></li>
 
 
