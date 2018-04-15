@@ -318,9 +318,9 @@
         Route::bind('kyc', function($value, $route) {
             return Modules\Admin\Models\Kyc::find($value);
         });
-        Route::get('admin/riskTolrance', 'Modules\Admin\Http\Controllers\KycController@riskTolrance');
+        Route::get('admin/riskProfile', 'Modules\Admin\Http\Controllers\KycController@riskProfile');
 
-        Route::get('admin/risktolrance/delete/{id}', 'Modules\Admin\Http\Controllers\KycController@riskTolranceDel');
+        Route::get('admin/riskProfile/delete/{id}', 'Modules\Admin\Http\Controllers\KycController@riskProfileDel');
 
 
         

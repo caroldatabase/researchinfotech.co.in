@@ -19,7 +19,7 @@
                                     <div class="box-header">
                                         <div class="table-toolbar">
                                         <div class="row">
-                                            <form action="{{url('admin/riskTolrance')}}" method="get" id="filter_data">
+                                            <form action="{{url('admin/riskProfile')}}" method="get" id="filter_data">
                                              
                                             <div class="col-md-3">
                                                 <input value="{{ (isset($_REQUEST['search']))?$_REQUEST['search']:''}}" placeholder="Search " type="text" name="search" id="search" class="form-control" >
@@ -30,7 +30,7 @@
                                            
                                         </form>
                                          <div class="col-md-2">
-                                             <a href="{{ url('admin/riskTolrance') }}">   <input type="submit" value="Reset" class="btn btn-default form-control"> </a>
+                                             <a href="{{ url('admin/riskProfile') }}">   <input type="submit" value="Reset" class="btn btn-default form-control"> </a>
                                         </div>
                                        
                                         </div>
@@ -55,32 +55,32 @@
             <thead>
                 <tr>
                  <th>   Sno </th>  
-                    <th> Name </th>
-                    <th> Email </th> 
-                    <th> Phone </th>   
-                    <th> Mobile </th> 
+                    <th> Full Name </th>
+                    <th> Services </th> 
+                    <th> Risk Capacity </th>   
+                    <th> Total Score </th> 
                     <th>   </th>
                     <th>Created date</th>
                 </tr>
             </thead>
             <tbody>
-              @if(count($risktolrance))
+              @if(count($riskProfile))
 
-            @foreach($risktolrance as $key => $result)
+            @foreach($riskProfile as $key => $result)
                 <tr>
                  <th> {{++$key}} </th>
                   
                     <td> {{$result->full_name}} </td>
-                     <td> {{$result->email}} </td>
-                     <td> {{$result->phone}} </td>  
-                      <td> {{$result->mobile}} </td>
-                      <th>  <a href="{{url('admin/riskTolrance?export=pdf&id='.$result->id)}}">Download RiskTolrance</a>  </th>
+                     <td> {{$result->services}} </td>
+                     <td> {{$result->risk_capacity}} </td>  
+                      <td> {{$result->total_score}} </td>
+                      <th>  <a href="{{url('admin/riskProfile?export=pdf&id='.$result->id)}}">Download RiskProfile</a>  </th>
                          <td>
                             {!! Carbon\Carbon::parse($result->created_at)->format('d-M-Y'); !!}
                         </td>
                         
                         <td> 
-                            <a href="{{url('admin/risktolrance/delete/'.$result->id)}}">
+                            <a href="{{url('admin/riskProfile/delete/'.$result->id)}}">
                               <button class='delbtn btn btn-danger btn-xs' type="submit" name="remove_levels" value="delete" id="{{$result->id}}"><i class="fa fa-fw fa-trash" title="Delete"></i></button>
                             </a>
                             
@@ -95,7 +95,7 @@
         </table>
        
 
-         <div class="center" align="center">  {!! $risktolrance->appends(['search' => isset($_GET['search'])?$_GET['search']:''])->render() !!}</div>
+         <div class="center" align="center">  {!! $riskProfile->appends(['search' => isset($_GET['search'])?$_GET['search']:''])->render() !!}</div>
     </div>
                                    
                                 </div>

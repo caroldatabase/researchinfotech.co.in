@@ -25,7 +25,7 @@
                                 <div class="portlet-title">
                                     <div class="caption">
                                         <i class="icon-settings font-red"></i>
-                                        <span class="caption-subject font-red sbold uppercase">Risk Tolrance </span>
+                                        <span class="caption-subject font-red sbold uppercase">Risk Profiling </span>
                                     </div>
                                         <hr>
                                          
@@ -37,8 +37,8 @@
                                      
                                     <table class="table" id="contact" style="width: 100%" border="1px"  text-align="left">
                                         <thead>
-                                        @if(isset($risktolrance) && $risktolrance!=null)
-                                            @foreach($risktolrance as $key => $result)
+                                        @if(isset($riskProfile) && $riskProfile!=null)
+                                            @foreach($riskProfile as $key => $result)
                                                 @if($key=="term_conditions")
                                                 @else
                                                 <tr>

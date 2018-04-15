@@ -54,38 +54,36 @@ class KycController extends Controller {
 
 
 
-    public function riskTolrance(Request $request)
+    public function riskProfile(Request $request)
     {
 
-        $page_title = 'Risk Tolrance';
-        $page_action  = 'View Risk Tolrance';
+        $page_title = 'Risk Profile';
+        $page_action  = 'View Risk Profile';
 
         $search = Input::get('search');
         if ((isset($search) && !empty($search))) {
-             $risktolrance = \DB::table('risktolrance')
+             $riskProfile = \DB::table('risk_profiling')
                             ->OrWhere('full_name','LIKE',"%$search%")
-                            ->OrWhere('email','LIKE',"%$search%")
-                            ->OrWhere('phone','LIKE',"%$search%")
-                            ->OrWhere('mobile','LIKE',"%$search%")
+                            ->OrWhere('risk_capacity','LIKE',"%$search%") 
                             ->Paginate(15);
         }else{
-            $risktolrance = \DB::table('risktolrance')->Paginate(15);
+            $riskProfile = \DB::table('risk_profiling')->Paginate(15);
         }
 
 
         $export = $request->get('export');
         if($export=='pdf')
         {
-           $risktolrance = \DB::table('risktolrance')->where('id',$request->get('id'))->first();
+           $riskProfile = \DB::table('risk_profiling')->where('id',$request->get('id'))->first(); 
 
-           if(isset($risktolrance)){
-                $risktolrance = json_decode($risktolrance->allData);
+           if(isset($riskProfile)){
+                $riskProfile = json_decode($riskProfile->all_data);
            }
-          
-           $pdf = PDF::loadView('packages::kyc.riskpdf', compact('page_title', 'page_action','risktolrance'));
-           return ($pdf->download('riskTolrance.pdf'));
+         //   dd( $riskProfile);
+           $pdf = PDF::loadView('packages::kyc.riskpdf', compact('page_title', 'page_action','riskProfile'));
+           return ($pdf->download('riskprofile.pdf'));
         }
-        return view('packages::kyc.riskTolrance', compact('kyc','data', 'page_title', 'page_action','risktolrance'));
+        return view('packages::kyc.riskTolrance', compact('kyc','data', 'page_title', 'page_action','riskProfile'));
     }
    
     /*
