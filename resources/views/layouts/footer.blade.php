@@ -108,6 +108,7 @@
 <script src="{{ asset('public/assets/js/revolution.extension.video.min.js')}}"></script>
 <script src="{{ asset('public/assets/js/wow.min.js')}}"></script>
 <script src="{{ asset('public/assets/js/functions.js')}}"></script>
+<script src="https://js.instamojo.com/v1/button.js"></script>
 <script>
   $('.owl-carousel-2').owlCarousel({
     loop:true,
