@@ -42,7 +42,7 @@
                                                 @if($key=="full_name") 
                                                 @elseif($key=="term_conditions" || $key=="Score" || $key=="score" || $key=='total_score' || $key=='risk')
                                                 <?php  continue; ?>
-                                                @elseif($key=='Other_Expectations' && $result=="")
+                                                @elseif($key=='Other_Expectations' && $result=="" || $key=='other_specification' && $result=="")
                                                    <?php continue; ?>
                                                 @else
                                                 <tr>
