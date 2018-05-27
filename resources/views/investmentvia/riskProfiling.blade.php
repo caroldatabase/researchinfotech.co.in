@@ -78,7 +78,7 @@
                         <li><input type="radio" name="Expectations" value="Capital Appreciation and Regular Income" data_value="10" id="Expectations"> 
                         Capital Appreciation and Regular Income <span>10</span> </li> <br>
                         <li> <input type="radio" name="Expectations" value="If any other specific goal please specify" data_value="" id="Expectations"> If any other specific goal please specify required
-                        <input type="text" name="other_specification" class="form-control" > 
+                        <input type="text" name="Expectations" class="form-control"  id> 
                         </li>
                     </ul>
                 </div>
