@@ -38,6 +38,7 @@
                                         <thead>
                                         @if(isset($riskProfile) && $riskProfile!=null)
                                             @foreach($riskProfile as $key => $result)
+
                                                 @if($key=="full_name") 
                                                 @elseif($key=="term_conditions" || $key=="Score" || $key=="score" || $key=='total_score' || $key=='risk')
                                                 <?php  continue; ?>
@@ -62,7 +63,7 @@
                     </div>
 
                     <div class="score">
-                    <p >Total Score – {{ $data->total_score }}</p> 
+                    <p >Total Score :  @if($data->total_score=='NaN' && $data->risk=='Medium') Below 330 @elseif($data->total_score=='NaN' && $data->risk=='High')   Above 330 @elseif($data->total_score!='NaN')    {{ $data->total_score  }} @endif</p> 
                     <span>Classification of Services</span>
                         <table border="1" width="100%" cellpadding="15px" cellspacing="15px">
                             <tr>
@@ -86,7 +87,11 @@
                                 </td>
                             </tr>
                         </table> 
-                         <p>Result : @if($data->total_score<=330) <span style="color: green; font-weight: bold;"> Medium</span> @else <span style="color: red;font-weight: bold;">High</span>  @endif Risk </p>
+                         <p>
+                         Result : @if($data->total_score<=330 && $data->total_score!='NaN') <span style="color: green; font-weight: bold;"> Medium</span>     @elseif($data->total_score>330 && $data->total_score!='NaN') <span style="color: red;font-weight: bold;">High</span> 
+                         @elseif($data->total_score=='NaN' && $data->risk=='Medium')  <span style="color: green; font-weight: bold;"> Medium</span>  @elseif($data->total_score=='NaN' && $data->risk=='High')    <span style="color: red;font-weight: bold;">High</span> 
+                         @endif Risk 
+                         </p>
                     </div>
                     <!-- END PAGE BASE CONTENT -->
                 </div>
