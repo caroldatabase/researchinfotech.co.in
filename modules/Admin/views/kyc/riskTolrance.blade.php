@@ -72,8 +72,8 @@
                   
                     <td> {{$result->full_name}} </td>
                      <td> {{$result->services}} </td>
-                     <td> @if($result->total_score=='NaN' && $result->risk=='Medium') Below 330 @elseif($result->total_score=='NaN' && $result->risk=='High')   Above 330 @elseif($result->total_score!='NaN')    {{ $result->total_score  }} @endif </td>  
-                      <td> {{$result->total_score}} </td>
+                     <td> @if($result->total_score=='NaN' && $result->risk=='Medium') Medium @elseif($result->total_score=='NaN' && $result->risk=='High') High @elseif($result->total_score!='NaN')    {{ $result->risk  }} @endif </td>  
+                       <td> @if($result->total_score=='NaN' && $result->risk=='Medium') Below 330 @elseif($result->total_score=='NaN' && $result->risk=='High')   Above 330 @elseif($result->total_score!='NaN')    {{ $result->total_score  }} @endif </td> 
                       <th>  <a href="{{url('admin/riskProfile?export=pdf&id='.$result->id)}}">Download RiskProfile</a>  </th>
                          <td>
                             {!! Carbon\Carbon::parse($result->created_at)->format('d-M-Y'); !!}
