@@ -72,7 +72,7 @@
                   
                     <td> {{$result->full_name}} </td>
                      <td> {{$result->services}} </td>
-                     <td> {{$result->risk_capacity}} </td>  
+                     <td> @if($data->total_score=='NaN' && $data->risk=='Medium') Below 330 @elseif($data->total_score=='NaN' && $data->risk=='High')   Above 330 @elseif($data->total_score!='NaN')    {{ $data->total_score  }} @endif </td>  
                       <td> {{$result->total_score}} </td>
                       <th>  <a href="{{url('admin/riskProfile?export=pdf&id='.$result->id)}}">Download RiskProfile</a>  </th>
                          <td>
