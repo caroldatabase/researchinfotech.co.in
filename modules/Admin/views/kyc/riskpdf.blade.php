@@ -42,6 +42,8 @@
                                                 @if($key=="full_name") 
                                                 @elseif($key=="term_conditions" || $key=="Score" || $key=="score" || $key=='total_score' || $key=='risk')
                                                 <?php  continue; ?>
+                                                @elseif($key=='Other_Expectations' && $result=="")
+                                                   <?php continue; ?>
                                                 @else
                                                 <tr>
                                                     <td> {{ucfirst(str_replace('_',' ',$key))}}</td>  
