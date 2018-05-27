@@ -65,9 +65,10 @@ class KycController extends Controller {
              $riskProfile = \DB::table('risk_profiling')
                             ->OrWhere('full_name','LIKE',"%$search%")
                             ->OrWhere('risk_capacity','LIKE',"%$search%") 
+                            ->orderBy('id','desc')
                             ->Paginate(15);
         }else{
-            $riskProfile = \DB::table('risk_profiling')->Paginate(15);
+            $riskProfile = \DB::table('risk_profiling')->orderBy('id','desc')->Paginate(15);
         }
 
 
