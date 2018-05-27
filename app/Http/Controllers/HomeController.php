@@ -376,12 +376,12 @@ class HomeController extends Controller
                             $input[$value] = $request->get($value);
                         }
                     }     
-                        $allData    =   $request->except('_token');
-                        $input['all_data']  = json_encode($allData);  
+                    $allData            =   $request->except('_token','score_point','score');
+                    $input['all_data']  =   json_encode($allData);  
 
                     \DB::table('risk_profiling')->insert($input);
                     return Redirect::to('status/success')->withErrors(['successMsg'=>'Thanking you!']);
-                    }
+                }
         }
        return view('investmentvia.risk-profiling',compact('title','tagLine','kyc'));
     }

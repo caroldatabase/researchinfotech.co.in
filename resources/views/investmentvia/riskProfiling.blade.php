@@ -1,134 +1,122 @@
-
-
 @extends('layouts.master')
-@section('title', 'HOME')
-
-@section('header')
-<h1>Home</h1>
+    @section('title', 'HOME')
+    @section('header')
 @stop
 @section('content') 
-@include('partials/menu')
+    @include('partials/menu')
 
-<!--Page Header-->
-@include('partials/titlebar')
-<!--Page Header-->
-
-<style type="text/css">
-  li span{
-     float: right; 
-     margin-right: 50px;"
-  }
-</style>
+    <!--Page Header-->
+    @include('partials/titlebar')
+    <!--Page Header-->
+    <style type="text/css">
+      li span{
+         float: right; 
+         margin-right: 50px;"
+      }
+    </style>
 
 <!--SERVICE SECTION-->
 <section id="contact" class="padding">
-  <div class="container">
-    <div class="row padding-bottom">
-       
-      <div class="col-md-12 wow fadeInRight animated" data-wow-delay="500ms" style="visibility: visible; animation-delay: 4500ms; animation-name: fadeInRight;">
-        <h2 class="heading heading_space"  style="margin-top: 20px;"> <span> {{$title}} </span>  <span class="divider-left"></span></h2>
+    <div class="container">
+        <div class="row padding-bottom">
+            <div class="col-md-12 wow fadeInRight animated" data-wow-delay="500ms" style="visibility: visible; animation-delay: 4500ms; animation-name: fadeInRight;">
+            <h2 class="heading heading_space"  style="margin-top: 20px;"> <span> {{$title}} </span>  <span class="divider-left"></span></h2>
 
             @if ($errors->any())
                {!! implode('', $errors->all('<div class="alert alert-danger">:message</div>')) !!}
             @endif
-             <P style="color:green; font-weight: 700"> Research Infotech Investment Advisory </P>
-        <form class="form-inline findus" id="contact-form" action="{{url('riskProfiling')}}" method="post" >
-          
-          <div class="row">
-            <div class="col-md-12">
-              <div id="result"></div>
-            </div>
-          </div>
-          <div class="row"> 
-             <div class="col-md-4 col-sm-4">
-            <label>Full Name (required)</label>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Full Name (required)" name="full_name" id="full_name" required="required">
-              </div>
-            </div>
-              
-             <div class="col-md-4 col-sm-4">
-            <label>Services</label>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Services" name="services" id="services" required="">
-              </div>
-            </div>
-             <div class="col-md-4 col-sm-4">
-            <label>Risk Capacity</label>
-              <div class="form-group">
-                <input type="text" disabled="" class="form-control" placeholder="Risk Capacity"  name="risk_capacity" id="risk_capacity">
-              </div>
-            </div>
-           
-             
-          <!--    <div class="col-md-4 col-sm-4">
-            <label>Home / Mobile Telephone (required)</label>
-              <div class="form-group">
-                <input type="text" class="form-control"  placeholder="Home / Mobile Telephone " name="mobile" id="mobile" required="">
-              </div>
-            </div> -->
-             
-           <!--   <div class="col-md-4 col-sm-4">
-            <label>Email</label>
-              <div class="form-group">
-                <input type="email" class="form-control" placeholder="Email" name="email" id="email" >
-              </div>
-            </div>  -->
-             
-             <div class="col-md-12"> 
-            
-            <div class="col-md-4 col-sm-4">
-              <label>(1) <b>What is your current age?</b><br></label>
-                <div class="form-group">
-                  <ul>
-                    
-                    <li> <input type="radio" name="age" value="0-25"  data_value="40" id="age"> Less than 25</ins> <span>40</span></li>
-                     <li> <input type="radio" name="age" value="25-45" data_value="30" id="age"> 25-45</ins> <span>30</span></li>
-                      <li> <input type="radio" name="age" value="45-55" data_value="20" id="age"> 45-55</ins> <span>20</span></li>
-                       <li> <input type="radio" name="age" value="55-100" data_value="10" id="age"> Above 55</ins> <span>10</span></li>
-                  </ul>
-              </div>
-              </div>
-               <div class="col-md-4 col-sm-4">
-                <label class="control-label">(2) <b> Goal and Expectations </b> <br></label>
-                  <div class="form-group">
-                    <ul> 
-                      <li> <input type="radio" name="Expectations" value="Capital Appreciation"  data_value="0" id="Expectations"> Capital Appreciation <span>0</span></li>
-                       <li> <input type="radio" name="Expectations" value="Regular Income"   data_value="20" id="Expectations"> Regular Inc <span>20</span></li>
-                        <li><input type="radio" name="Expectations" value="Capital Appreciation and Regular Income" data_value="10" id="Expectations"> 
-                          Capital Appreciation and Regular Income <span>10</span> </li> <br>
-                         <li> <input type="radio" name="Expectations" value="If any other specific goal please specify" data_value="" id="Expectations"> If any other specific goal please specify required
-                         <input type="text" name="other_specification" class="form-control" > 
 
-                         </li>
-                    </ul>
-                  </div>
-              </div>
-               <div class="col-md-4 col-sm-4">
-                  <label>(3) <b>Proposed Investment Amount? </b><br></label>
-                    <div class="form-group">
-                        <ul> 
-                          <li> 
-                          <input type="radio" name="Proposed_investment" value="0-3"  data_value="10" id="Proposed_investment"> 0-1 Lacs</ins>  <span>10</span> </li>
-                           <li> <input type="radio" name="Proposed_investment" value="1-3"  data_value="20" id="Proposed_investment"> 1-3 Lacs</ins>  <span>20</span> </li>
-                            <li> <input type="radio" name="Proposed_investment" value="3-5" data_value="30" id="Proposed_investment"> 3-5 Lacs</ins>  <span>30</span> </li>
-                             <li> <input type="radio" name="Proposed_investment" value="5>0"  data_value="40" id="Proposed_investment">Above 5 Lacs</ins>  <span>40</span> </li>
-                        </ul>
-                    </div>
-              </div> 
+            <p style="color:green; font-weight: 700"> Research Infotech Investment Advisory </p>
 
-                <div class="col-md-4 col-sm-4">
-                  <label>(4) <b>Market Value of portfolio held </b><br></label>
-                    <div class="form-group">
-                        <ul> 
-                          <li> 
-                          <input type="radio" name="market_value" value="0-3"  data_value="10" id="market_value"> 0-1 Lacs</ins>  <span>10</span> </li>
-                           <li> <input type="radio" name="market_value" value="1-3" data_value="20" id="market_value"> 1-3 Lacs</ins>  <span>20</span> </li>
-                            <li> <input type="radio" name="market_value" value="3-5" data_value="30" id="market_value"> 3-5 Lacs</ins>  <span>30</span> </li>
-                             <li> <input type="radio" name="market_value" value="5>0" data_value="40" id="market_value">Above 5 Lacs</ins>  <span>40</span> </li>
-                        </ul>
+            <form class="form-inline findus" id="contact-form" action="{{url('riskProfiling')}}" method="post" >
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="result"></div>
                     </div>
                 </div>
+                <div class="row"> 
+                    <div class="col-md-4 col-sm-4">
+                        <label>Full Name (required)</label>
+                        <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Full Name (required)" name="full_name" id="full_name" required="required">
+                    </div>
+                </div>
+                  
+                <div class="col-md-4 col-sm-4">
+                    <label>Services</label>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Services" name="services" id="services" required="">
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4">
+                    <label>Risk Capacity</label>
+                    <div class="form-group">
+                        <input type="text" disabled="" class="form-control" placeholder="Risk Capacity"  name="risk_capacity" id="risk_capacity">
+                    </div>
+                </div> 
+             
+            <div class="col-md-12"> 
+            
+            <div class="col-md-4 col-sm-4">
+                <label>(1) <b>What is your current age?</b><br></label>
+                <div class="form-group">
+                    <ul> 
+                        <li> <input type="radio" name="age" value="0-25"  data_value="40" id="age"> Less than 25</ins> <span>40</span></li>
+                        <li> <input type="radio" name="age" value="25-45" data_value="30" id="age"> 25-45</ins> <span>30</span></li>
+                        <li> <input type="radio" name="age" value="45-55" data_value="20" id="age"> 45-55</ins> <span>20</span></li>
+                        <li> <input type="radio" name="age" value="55-100" data_value="10" id="age"> Above 55</ins> <span>10</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <label class="control-label">(2) <b> Goal and Expectations </b> <br></label>
+                <div class="form-group">
+                    <ul> 
+                        <li> <input type="radio" name="Expectations" value="Capital Appreciation"  data_value="0" id="Expectations"> Capital Appreciation <span>0</span></li>
+                        <li> <input type="radio" name="Expectations" value="Regular Income"   data_value="20" id="Expectations"> Regular Inc <span>20</span></li>
+                        <li><input type="radio" name="Expectations" value="Capital Appreciation and Regular Income" data_value="10" id="Expectations"> 
+                        Capital Appreciation and Regular Income <span>10</span> </li> <br>
+                        <li> <input type="radio" name="Expectations" value="If any other specific goal please specify" data_value="" id="Expectations"> If any other specific goal please specify required
+                        <input type="text" name="other_specification" class="form-control" > 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <label>(3) <b>Proposed Investment Amount? </b><br></label>
+                <div class="form-group">
+                    <ul> 
+                        <li> 
+                          <input type="radio" name="Proposed_investment" value="0-3"  data_value="10" id="Proposed_investment"> 0-1 Lacs</ins><span>10
+                          </span> 
+                        </li>
+                        <li> <input type="radio" name="Proposed_investment" value="1-3"  data_value="20" id="Proposed_investment"> 1-3 Lacs</ins><span>20
+                        </span> </li>
+                        <li> <input type="radio" name="Proposed_investment" value="3-5" data_value="30" id="Proposed_investment"> 3-5 Lacs</ins><span>30
+                        </span> </li>
+                        <li> <input type="radio" name="Proposed_investment" value="5>0"  data_value="40" id="Proposed_investment">Above 5 Lacs</ins><span>40
+                        </span>   
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4">
+              <label>(4) <b>Market Value of portfolio held </b><br></label>
+                <div class="form-group">
+                    <ul> 
+                        <li> 
+                            <input type="radio" name="market_value" value="0-3"  data_value="10" id="market_value"> 0-1 Lacs</ins>  <span>10</span> </li>
+                        <li> 
+                            <input type="radio" name="market_value" value="1-3" data_value="20" id="market_value"> 1-3 Lacs</ins>  <span>20</span> </li>
+                        <li> 
+                            <input type="radio" name="market_value" value="3-5" data_value="30" id="market_value"> 3-5 Lacs</ins>  <span>30</span> </li>
+                        <li> 
+                            <input type="radio" name="market_value" value="5>0" data_value="40" id="market_value">Above 5 Lacs</ins>  <span>40</span> </li>
+                    </ul>
+                </div>
+            </div>
 
 
                  <div class="col-md-4 col-sm-4">
@@ -165,20 +153,20 @@
                     <ul> 
                     <label>A. Primary Source</label>
                       <li> 
-                        <input type="radio" name="sources" value="Salary" > Salary
+                        <input type="radio" name="sources" value="Salary"  data_value="0" id="sources"> Salary
                       </li>
                       <li>
-                        <input type="radio" name="sources" value="Business"> Business
+                        <input type="radio" name="sources" value="Business" data_value="0" id="sources"> Business
                       </li>
                       <label>B. Secondary Source</label>
                       <li>
-                        <input type="radio" name="sources" value="Royalties"> Royalties
+                        <input type="radio" name="sources" value="Royalties" data_value="0" id="sources"> Royalties
                       </li>
                       <li>
-                        <input type="radio" name="sources" value="Rental"> Rental
+                        <input type="radio" name="sources" value="Rental" data_value="0" id="sources"> Rental
                       </li>
                       <li>
-                        <input type="radio" name="sources" value="Dividend"> Dividend
+                        <input type="radio" name="sources" value="Dividend" data_value="0" id="sources"> Dividend
                       </li>
                     </ul>
                   </div>
@@ -189,22 +177,22 @@
                   <div class="form-group">
                     <ul> 
                       <li> 
-                      <input type="checkbox" name="Occupation[]" value="Private sector service">
+                      <input type="checkbox" name="Occupation[]" value="Private sector service" data_value="0">
                       Private sector service"
                        </li>
-                       <li><input type="checkbox" name="Occupation[]" value="Government sector">
+                       <li><input type="checkbox" name="Occupation[]" value="Government sector" data_value="0">
                         Government sector
                        </li>
-                       <li><input type="checkbox" name="Occupation[]" value="Professional">Professional</li>
-                       <li><input type="checkbox" name="Occupation[]" value="Retired">Retired</li>
-                       <li><input type="checkbox" name="Occupation[]" value="Student">Student</li>
+                       <li><input type="checkbox" name="Occupation[]" value="Professional" data_value="0">Professional</li>
+                       <li><input type="checkbox" name="Occupation[]" value="Retired" data_value="0">Retired</li>
+                       <li><input type="checkbox" name="Occupation[]" value="Student" data_value="0">Student</li>
                        <li><input type="checkbox" name="Occupation[]" value="Public sector">Public sector
                        </li>
                        <li>
-                         <input type="checkbox" name="Occupation[]" value="Business">Business
+                         <input type="checkbox" name="Occupation[]" value="Business" data_value="0">Business
                        </li>
-                       <li><input type="checkbox" name="Occupation[]" value="Agricultural">Agricultural</li>
-                       <li><input type="checkbox" name="Occupation[]" value="Housewife">Housewife</li>
+                       <li><input type="checkbox" name="Occupation[]" value="Agricultural" data_value="0">Agricultural</li>
+                       <li><input type="checkbox" name="Occupation[]" value="Housewife" data_value="0">Housewife</li>
                     </ul>
                   </div>
               </div>
@@ -269,9 +257,9 @@
                   <div class="form-group">
                     <ul> 
                         <li> 
-                      <input type="radio" name="Investment" value="0-3" data_value="10"> < 1 Years</ins> <span>10</span></li>
-                       <li> <input type="radio" name="Investment" value="1-3" data_value="20"> 1-3 Years</ins> <span>20</span></li>
-                        <li> <input type="radio" name="Investment" value="3-5" data_value="30"> 3 > Years</ins> <span>30</span></li>  
+                      <input type="radio" name="Investment" value="0-3" data_value="10" id="Investment"> < 1 Years</ins> <span>10</span></li>
+                       <li> <input type="radio" name="Investment" value="1-3" data_value="20" id="Investment"> 1-3 Years</ins> <span>20</span></li>
+                        <li> <input type="radio" name="Investment" value="3-5" data_value="30" id="Investment"> 3 > Years</ins> <span>30</span></li>  
                     </ul>
                   </div>
               </div>
@@ -284,221 +272,226 @@
                        <li> <input type="radio" name="Experience" value="Stock" data_value="10" id="Experience"> Stock <span>10</span></li>
                         <li> <input type="radio" name="Experience" value="Derivatives Stocks" data_value="20" id="Experience"> Derivatives Stocks <span>20</span></li>
                          <li> <input type="radio" name="Experience" value="None of the above" data_value="0" id="Experience"> None of the above <span>0</span></li>
-                           <li> <input type="radio" name="Experience" value="All" data_value="30" id="Experience"> None of the above <span>30</span></li>
+                           <li> <input type="radio" name="Experience" value="All" data_value="30" id="Experience"> All <span>30</span></li>
                     </ul>
                   </div>
               </div>
 
-              <div class="col-md-4 col-sm-4">
-                  <label>(15) <b>What is your experience with equity investments? </b><br></label>
-                  <div class="form-group">
-                    <ul> 
-                      <li> 
-                      <input type="radio" name="equity" value="Extensive" data_value=""> Extensive</li>
-                       <li> <input type="radio" name="equity" value="Moderate" data_value=""> Moderate</li>
-                        <li>
-                          <input type="radio" name="equity" value="Very less" data_value=""> Very less
-                        </li>
-                         <li> <input type="radio" name="equity" value="No experience" data_value=""> No experience</li>
-                    </ul>
-                  </div>
-              </div>
+                    <div class="col-md-4 col-sm-4">
+                        <label>(15) <b>What is your experience with equity investments? </b><br></label>
+                        <div class="form-group">
+                            <ul> 
+                                <li> 
+                                    <input type="radio" name="equity" value="Extensive" data_value="0" id="equity"> Extensive</li>
+                                <li> 
+                                    <input type="radio" name="equity" value="Moderate" data_value="0" id="equity"> Moderate
+                                </li>
+                                <li>
+                                    <input type="radio" name="equity" value="Very less" data_value="0" id="equity"> Very less
+                                </li>
+                                <li> <input type="radio" name="equity" value="No experience" data_value="0" id="equity"> No experience</li>
+                            </ul>
+                        </div>
+                    </div>
 
-              <div class="col-md-4 col-sm-4">
-                  <label>(16) <b>What is your experience with Commodity investments? </b><br></label>
-                  <div class="form-group">
-                    <ul> 
-                      <li> 
-                      <input type="radio" name="Commodity" value="Extensive"> Extensive</li>
-                       <li> <input type="radio" name="Commodity" value="Moderate"> Moderate</li>
-                        <li>
-                          <input type="radio" name="Commodity" value="Very less"> Very less
-                        </li>
-                         <li> <input type="radio" name="Commodity" value="No experience"> No experience</li>
-                    </ul>
-                  </div>
-              </div>
-
-
-               <div class="col-md-4 col-sm-4">
-                  <label>(17)  <b>What is your capacity and willingness to take risk? </b><br></label>
-                  <div class="form-group">
-                    <ul> 
-                      <li> 
-                      <input type="radio" name="capacity_willingness" value="High" data_value="20" id="capacity_willingness"> High <span>20</span></li>
-                       <li> <input type="radio" name="capacity_willingness" value="Medium"  data_value="10" id="capacity_willingness">   Medium   <span>10</span>    </li>
-                        <li>
-                          <input type="radio" name="capacity_willingness" value="Low" data_value="0" id="capacity_willingness"> Low<span>0</span>
-                        </li> 
-                    </ul>
-                  </div>
-              </div>
+                    <div class="col-md-4 col-sm-4">
+                        <label>(16) <b>What is your experience with Commodity investments? </b><br></label>
+                        <div class="form-group">
+                            <ul> 
+                                <li> 
+                                    <input type="radio" name="Commodity" value="Extensive" data_value="0" id="Commodity"> Extensive
+                                </li>
+                                <li> 
+                                    <input type="radio" name="Commodity" value="Moderate" data_value="0" id="Commodity"> Moderate
+                                </li>
+                                <li>
+                                    <input type="radio" name="Commodity" value="Very less" data_value="0" id="Commodity"> Very less
+                                </li>
+                                <li> 
+                                    <input type="radio" name="Commodity" value="No experience" data_value="0" id="Commodity"> No experience
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 
 
-                <div class="col-md-4 col-sm-4">
-                  <label>(18) <b>What is your practice on saving money? </b><br></label>
-                  <div class="form-group">
-                    <ul> 
-                      <li> 
-                      <input type="radio" name="practice_on_saving_money" value="I don't believe in saving" data_value="0" id="practice_on_saving_money"> I don't believe in saving <span>0</span></li>
-                       <li> <input type="radio" name="practice_on_saving_money" value=" I'd like to save, but my expenses and other financial commitments do not permit me to" data_value="10" id="practice_on_saving_money">  I'd like to save, but my expenses and other financial commitments do not permit me to.    
-                        <span>10</span>    </li>
-                        <li>
-                          <input type="radio" name="practice_on_saving_money" value="I try to save whenever and wherever possible" data_value="20" id="practice_on_saving_money">   I try to save whenever and wherever possible.                                                        <span>20</span>
-                        </li> 
+                    <div class="col-md-4 col-sm-4">
+                        <label>(17)  <b>What is your capacity and willingness to take risk? </b><br></label>
+                        <div class="form-group">
+                            <ul> 
+                                <li> 
+                                    <input type="radio" name="capacity_willingness" value="High" data_value="20" id="capacity_willingness"> High <span>20</span>
+                                </li>
+                                <li> 
+                                    <input type="radio" name="capacity_willingness" value="Medium"  data_value="10" id="capacity_willingness">   Medium   
+                                    <span>10</span>    
+                                </li>
+                                <li>
+                                    <input type="radio" name="capacity_willingness" value="Low" data_value="0" id="capacity_willingness"> Low<span>0</span>
+                                </li> 
+                            </ul>
+                        </div>
+                    </div> 
 
-                         <li>
-                          <input type="radio" name="practice_on_saving_money" value="I save 15 percent or more of my take-home salary without exception less" data_value="30" id="practice_on_saving_money">
-                          I save 15 percent or more of my take-home salary without exception.
-                           <span>30</span>
-                        </li> 
-                    </ul>
-                  </div>
-              </div>
+                    <div class="col-md-4 col-sm-4">
+                        <label>(18) <b>What is your practice on saving money? </b><br></label>
+                        <div class="form-group">
+                            <ul> 
+                                <li> 
+                                    <input type="radio" name="practice_on_saving_money" value="I don't believe in saving" data_value="0" id="practice_on_saving_money"> 
+                                    I don't believe in saving <span>0</span></li>
+                                <li> 
+                                    <input type="radio" name="practice_on_saving_money" value=" I'd like to save, but my expenses and other financial commitments do not permit me to" data_value="10" id="practice_on_saving_money">  
+                                    I'd like to save, but my expenses and other financial commitments do not permit me to.    
+                                    <span>10</span>    </li>
+                                <li>
+                                    <input type="radio" name="practice_on_saving_money" value="I try to save whenever and wherever possible" data_value="20" id="practice_on_saving_money">   
+                                    I try to save whenever and wherever possible.                                                       
+                                    <span>20</span>
+                                </li> 
+                                <li>
+                                    <input type="radio" name="practice_on_saving_money" value="I save 15 percent or more of my take-home salary without exception less" data_value="30" id="practice_on_saving_money">
+                                    I save 15 percent or more of my take-home salary without exception.
+                                    <span>30</span>
+                                </li> 
+                            </ul>
+                        </div>
+                    </div>
 
 
-              <div class="col-md-4 col-sm-4">
-                  <label>(19) <b>Which would best describe your awareness about finance? </b><br></label>
-                  <div class="form-group">
-                    <ul> 
-                      <li> 
-                      <input type="radio" name="awareness_about_finance" value="I read most of the business and investment magazines and watch business updates on television daily." data_value="30" id="awareness_about_finance">
-                        I read most of the business and investment magazines and watch business updates on television daily. <span>30</span></li> <br>
-                       <li> <input type="radio" name="awareness_about_finance" value="I read a financial newspaper daily and regularly read at least one specialized business magazine" data_value="20" id="awareness_about_finance">I read a financial newspaper daily and regularly read at least one specialized business magazine <span>20</span>    </li> <br>
-                        <li>
-                          <input type="radio" name="awareness_about_finance" value="I often look up the market prices of my shares in the newspaper." data_value="10" id="awareness_about_finance">I often look up the market prices of my shares in the  <span>10</span>newspaper.                                                       
-                        </li>  <br>
+                    <div class="col-md-4 col-sm-4">
+                        <label>(19) <b>Which would best describe your awareness about finance? </b><br></label>
+                        <div class="form-group">
+                            <ul> 
+                                <li> 
+                                    <input type="radio" name="awareness_about_finance" value="I read most of the business and investment magazines and watch business updates on television daily." data_value="30" id="awareness_about_finance">
+                                    I read most of the business and investment magazines and watch business updates on television daily. <span>30</span></li> <br>
+                                <li> 
+                                    <input type="radio" name="awareness_about_finance" value="I read a financial newspaper daily and regularly read at least one specialized business magazine" data_value="20" id="awareness_about_finance">I read a financial newspaper daily and regularly read at least one specialized business magazine <span>20</span>    </li> <br>
+                                <li>
+                                    <input type="radio" name="awareness_about_finance" value="I often look up the market prices of my shares in the newspaper." data_value="10" id="awareness_about_finance">I often look up the market prices of my shares in the  <span>10</span>newspaper.                                                       
+                                </li>  <br>
 
-                         <li>
-                          <input type="radio" name="awareness_about_finance" value="I never read the finance section of the newspaper" data_value="0" id="awareness_about_finance">
-                          I never read the finance section of the newspaper.
-                           <span>0</span>
-                        </li> 
-                    </ul>
-                  </div>
-              </div>
-
-
-
-              <br><br>
-            <div class="col-md-12">
-              <p>
-              <input type="checkbox"  checked="" name="term_conditions"  required="" value="true"> 
-              I have read and agreed to the terms and conditions of this questionnaire
-              </p>
-              <button class="btn_common yellow border_radius" id="btn_submit">Submit</button>
+                                <li>
+                                    <input type="radio" name="awareness_about_finance" value="I never read the finance section of the newspaper" data_value="0" id="awareness_about_finance">
+                                    I never read the finance section of the newspaper.
+                                    <span>0</span>
+                                </li> 
+                            </ul>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="col-md-12">
+                        <p>
+                            <input type="checkbox"  checked="" name="term_conditions"  required="" value="true"> 
+                            I have read and agreed to the terms and conditions of this questionnaire
+                        </p>
+                        <button class="btn_common yellow border_radius" id="btn_submit">Submit</button>
+                    </div>
+                </div>
+                <br>  
+                <div class="score">
+                    <p >Total Score –  <input type="text"    name="total_score" id="total_score" required="" value="500">  </p>
+                    <span>Classification of Services</span>
+                        <table border="1" width="100%" cellpadding="15px" cellspacing="15px">
+                            <tr>
+                                <td>Risk</td>
+                                <td>Score</td>
+                                <td>Services</td>
+                            </tr>
+                            <tr>
+                                <td> <span class="Medium">Medium</span> <input type="hidden"    name="risk" id="risk"  value=""> 
+                                <input type="hidden"    name="score" id="score"  value="0"></td>
+                                <td>0-330</td>
+                                <td>Intraday Cash and Stock Cash HNI</td>
+                            </tr>
+                            <tr>
+                                <td  > <span class="High">High </span></td>
+                                <td>Above 330</td>
+                                <td>
+                                    Stock Future </br>
+                                    Stock Future HNI <br>
+                                    PSP<br>
+                                </td>
+                            </tr>
+                        </table> 
+                    </div>
+                    <input type="hidden" name="score_point"  id="score_point" value="">
+                </form>
             </div>
-          </div>
-
-           <br> 
-   <style type="text/css">
-     table tr td  {
-      padding: 5px !important;
-     }
-     .score{
-      border: 3px solid #ccc;padding: 30px;float: left;width: 100%;margin-top: 15px;
-     }
-   </style>
-   <div class="score">
-        <p >Total Score –  <input type="text"    name="total_score" id="total_score" required="" value="500">  </p>
-        <span>Classification of Services</span>
-        <table border="1" width="100%" cellpadding="15px" cellspacing="15px">
-            <tr>
-                <td>Risk</td>
-                <td>Score</td>
-                <td>Services</td>
-            </tr>
-
-            <tr>
-                <td> <span class="Medium">Medium</span> <input type="hidden"    name="risk" id="risk"  value=""> <input type="hidden"    name="score" id="score"  value="0"></td>
-                <td>0-330</td>
-                <td>Intraday Cash and Stock Cash HNI</td>
-            </tr>
-
-            <tr>
-                <td  > <span class="High">High </span></td>
-                <td>Above 330</td>
-                <td>
-                    Stock Future </br>
-                    Stock Future HNI <br>
-                    PSP<br>
-                </td>
-            </tr>
-        </table> 
-      </div>
-
-        </form>
-       
-      </div>
+        </div>
     </div>
 
-
-    
-  </div>
-
   
-  <style type="text/css">
-    label b { 
-    line-height: 26PX;  
-    margin-bottom: 10px;
-   }
-   .padding{
-    padding-top: 0px !important;
-        padding-bottom: 40px;
-   }
-   .padding-bottom {
-    padding-bottom: 30px;
-}
-    
-  </style>
+    <style type="text/css">
+        table tr td  {
+            padding: 5px !important;
+        }
+        .score{
+            border: 3px solid #ccc;padding: 30px;float: left;width: 100%;margin-top: 15px;
+        }
+        label b { 
+            line-height: 26PX;  
+            margin-bottom: 10px;
+        }
+        .padding{
+            padding-top: 0px !important;
+            padding-bottom: 40px;
+        }
+        .padding-bottom {
+            padding-bottom: 30px;
+        }
+    </style>
+
 </section>
-<!-- 
-<script src="http://localhost/investmentvia/public/assets/js/jquery-2.2.3.js"></script>
- -->
+
 
 <script type="text/javascript" src="{{ url('public/assets/js/jquery-2.2.3.js')}}"></script>
-
 <script type="text/javascript">
-    var arr=[];
-    var ids = [];
-  jQuery(function($){
-      
-      $('input[type="radio"]').change(function () {
+    var arr =   [];
+    var ids =   [];
+    var j  =   {};
+    jQuery(function($){
+        var keyVal=[];
+        $('input[type="radio"]').change(function () {
+            var total   =  0;
+            var data    = $(this).attr('data_value');
+            var id      = $(this).attr('id'); 
+             
+            var a       = ids.indexOf(id);
 
-        var total =  0;
-        var data = $(this).attr('data_value');
-        var id = $(this).attr('id'); 
-        
-        var a = ids.indexOf(id);
-        
-        if(a==-1){
-          console.log(id); 
-          arr[id] = data;
-        } else{
-          console.log(id);  
-          arr[id] = data;
-        }
-        ids.push(id);  
-           console.log(arr); 
+            j[id]= data;
 
-           for(n1 in arr){
+            if(a==-1){
+              
+              arr[id]   = data;
+            } else{
+               
+              arr[id]   = data;
+            }
+            ids.push(id);
+           
+            var jData = JSON.stringify(j);
+
+            $('#score_point').val(jData); 
+
+            for(n1 in arr){
              total = total+Number(arr[n1]);
-           } 
-           $('#total_score').val(total);
-           $('#score').val(total);
-           $('span.Medium').html('Medium').css({"background-color": "#fff", "font-size": "100%"});
+            } 
+            $('#total_score').val(total);
+            $('#score').val(total);
+            $('span.Medium').html('Medium').css({"background-color": "#fff", "font-size": "100%"});
             $('span.High').html('High').css({"background-color": "#fff", "font-size": "100%"});
-           if(total<=330){
-              $('#risk').val('Medium');
-              $('#risk_capacity').val('Medium');
-              $('span.Medium').html('Medium').css({"background-color": "yellow", "font-size": "100%","font-weight":"bold","padding":"5px"});
-           }else{
+            if(total<=330){
+                $('#risk').val('Medium');
+                $('#risk_capacity').val('Medium');
+                $('span.Medium').html('Medium').css({"background-color": "yellow", "font-size": "100%","font-weight":"bold","padding":"5px"});
+            }else{
                 $('#risk').val('High');
                 $('#risk_capacity').val('High');
                 $('span.High').html('High').css({"background-color": "red", "font-size": "100%","font-weight":"bold","padding":"5px"});
-           }
-      }); 
-
+            }
+        });
   });
 
 </script>
