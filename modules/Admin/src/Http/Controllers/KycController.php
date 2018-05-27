@@ -75,12 +75,16 @@ class KycController extends Controller {
         if($export=='pdf')
         {
            $riskProfile = \DB::table('risk_profiling')->where('id',$request->get('id'))->first(); 
-
+           $data = $riskProfile;
            if(isset($riskProfile)){
+                $score_point = json_decode($riskProfile->score_point);
                 $riskProfile = json_decode($riskProfile->all_data);
            }
+
+
+
          //   dd( $riskProfile);
-           $pdf = PDF::loadView('packages::kyc.riskpdf', compact('page_title', 'page_action','riskProfile'));
+           $pdf = PDF::loadView('packages::kyc.riskpdf', compact('page_title', 'data','page_action','riskProfile','score_point'));
            return ($pdf->download('riskprofile.pdf'));
         }
         return view('packages::kyc.riskTolrance', compact('kyc','data', 'page_title', 'page_action','riskProfile'));
@@ -144,6 +148,12 @@ class KycController extends Controller {
         $categories  = Category::all();
   
         return view('packages::contact.create', compact('categories', 'html','category','sub_category_name', 'page_title', 'page_action'));
+    }
+
+
+    public function riskProfileDel(Request $request,$id){
+        \DB::table('risk_profiling')->where('id',$id)->delete(); 
+        return Redirect::to('admin/riskProfile')->with('flash_alert_notice', 'Risk profile  successfully deleted.');
     }
 
     public function createGroup(Request $request)

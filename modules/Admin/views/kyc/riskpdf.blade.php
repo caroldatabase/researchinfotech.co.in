@@ -25,23 +25,29 @@
                                 <div class="portlet-title">
                                     <div class="caption">
                                         <i class="icon-settings font-red"></i>
-                                        <span class="caption-subject font-red sbold uppercase">Risk Profiling </span>
-                                    </div>
                                         <hr>
+                                        <span class="caption-subject font-red sbold uppercase">Risk Profiling </span>
+                                        <p>Name: <b>{{ $data->full_name }} </b></p>
+                                    </div>
+                                        
                                 </div>
                                   
-                                <div class="portlet-body2">
-                                    
-                                     
+                                <div class="portlet-body2"> 
+
                                     <table class="table" id="contact" style="width: 100%" border="1px"  text-align="left">
                                         <thead>
                                         @if(isset($riskProfile) && $riskProfile!=null)
                                             @foreach($riskProfile as $key => $result)
-                                                @if($key=="term_conditions" || $key=="Score")
+                                                @if($key=="full_name") 
+                                                @elseif($key=="term_conditions" || $key=="Score" || $key=="score" || $key=='total_score' || $key=='risk')
+                                                <?php  continue; ?>
                                                 @else
                                                 <tr>
                                                     <td> {{ucfirst(str_replace('_',' ',$key))}}</td>  
-                                                    <td> @if(is_array($result)) {{ implode(',',$result)}}@else{{$result}} @endif  </td> 
+                                                    <td> @if(is_array($result)) {{ implode(',',$result)}}@else{{ ucfirst($result)}} @endif  </td> 
+                                                    <td> @if(isset($score_point->$key)) {{ $score_point->$key }} @elseif($key=='total_score' || $key=='risk' || $key=='score')  @endif  
+
+                                                     </td> 
                                                 </tr>
                                                 @endif
                                             @endforeach
@@ -53,6 +59,34 @@
                             </div>
                             <!-- END EXAMPLE TABLE PORTLET-->
                         </div>
+                    </div>
+
+                    <div class="score">
+                    <p >Total Score – {{ $data->total_score }}</p> 
+                    <span>Classification of Services</span>
+                        <table border="1" width="100%" cellpadding="15px" cellspacing="15px">
+                            <tr>
+                                <td>Risk</td>
+                                <td>Score</td>
+                                <td>Services</td>
+                            </tr>
+                            <tr>
+                                <td> <span class="Medium">Medium</span> <input type="hidden"    name="risk" id="risk"  value=""> 
+                                <input type="hidden"    name="score" id="score"  value="0"></td>
+                                <td>0-330</td>
+                                <td>Intraday Cash and Stock Cash HNI</td>
+                            </tr>
+                            <tr>
+                                <td  > <span class="High">High </span></td>
+                                <td>Above 330</td>
+                                <td>
+                                    Stock Future ,
+                                    Stock Future HNI,
+                                    PSP<br>
+                                </td>
+                            </tr>
+                        </table> 
+                         <p>Result : @if($data->total_score<=330) <span style="color: green; font-weight: bold;"> Medium</span> @else <span style="color: red;font-weight: bold;">High</span>  @endif Risk </p>
                     </div>
                     <!-- END PAGE BASE CONTENT -->
                 </div>
