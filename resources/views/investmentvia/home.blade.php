@@ -263,7 +263,7 @@ News and Technical & Fundamental Analysis
                      <a href="{{$linkedin_url->field_value or '#'}}"  target="_blank"><i class="fa fa-linkedin"></i></a></span></p>
             </div>
             <div class="live-btn">
-                <p>  <a href="https://www.researchinfotech.co.in/payment" ><img src="{{ asset('storage/assets/images/pay-online.png')}}"></a>  https://www.researchinfotech.co.in/payment
+                <p>  <a href="https://www.researchinfotech.co.in/payment" ><img src="{{ asset('storage/assets/images/pay-online.png')}}"></a>  https:// 
 
                     <!-- 
                         https://www.instamojo.com/@researchinfotech1788
