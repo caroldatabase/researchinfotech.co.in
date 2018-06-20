@@ -34,7 +34,7 @@
                         <th>Monthly</th>
                         <td><i class="fa fa-rupee"></i>{!! $result->monthly_price !!} </td>
                         <td><span class="pay-now">
-                      <a href="https://www.instamojo.com/@researchinfotech1788/?ref=onb_tasks&amount={{$result->monthly_price}}" target="_blank">Pay Now</a></span></p>
+                      <a href="@if($result->payment_url) {{ $result->payment_url }} @else https://www.instamojo.com/@researchinfotech1788/?ref=onb_tasks&amount={{$result->monthly_price}} @endif" target="_blank">Pay Now</a></span></p>
                     </td>
                       </tr>
                       <!-- {{url('checkOutEBS/'.str_slug($result->title).'?amount='.$result->monthly_price)}} -->
@@ -42,7 +42,7 @@
                         <th>Quarterly</th>
                         <td><i class="fa fa-rupee"></i>{!! $result->quarterly_price !!} </td>
                         <td><span class="pay-now">
-                      <a href="https://www.instamojo.com/@researchinfotech1788/?ref=onb_tasks&amount={{$result->quarterly_price}}" target="_blank">Pay Now</a></span></p>
+                      <a href="@if($result->payment_url) {{ $result->payment_url }} @else https://www.instamojo.com/@researchinfotech1788/?ref=onb_tasks&amount={{$result->quarterly_price}} @endif" target="_blank">Pay Now</a></span></p>
                     </td>
                       </tr>
                       <!-- {{url('checkOutEBS/'.str_slug($result->title).'?amount='.$result->quarterly_price)}} -->
@@ -50,7 +50,7 @@
                         <th>Half Yearly</th>
                         <td><i class="fa fa-rupee"></i>{!! $result->half_yearly_price !!} </td>
                         <td><span class="pay-now">
-                      <a href="https://www.instamojo.com/@researchinfotech1788/?ref=onb_tasks&amount={{$result->half_yearly_price}}" target="_blank">Pay Now</a></span></p>
+                      <a href="@if($result->payment_url) {{ $result->payment_url }} @else https://www.instamojo.com/@researchinfotech1788/?ref=onb_tasks&amount={{$result->half_yearly_price}} @endif" target="_blank">Pay Now</a></span></p>
                     </td>
                       </tr>
                         <!-- {{url('checkOutEBS/'.str_slug($result->title).'?amount='.$result->half_yearly_price)}} -->
@@ -58,7 +58,8 @@
                         <th>Yearly</th>
                         <td><i class="fa fa-rupee"></i>{!! $result->yearly_price !!} </td>
                         <td><span class="pay-now">
-                      <a href="https://www.instamojo.com/@researchinfotech1788/?ref=onb_tasks&amount={{ $result->yearly_price}}"  target="_blank">Pay Now</a></span></p>
+                      <a href="@if($result->payment_url) {{ $result->payment_url }} @else
+                        https://www.instamojo.com/@researchinfotech1788/?ref=onb_tasks&amount={{ $result->yearly_price}} @endif"  target="_blank">Pay Now</a></span></p>
                     </td>
                     <!-- {{url('checkOutEBS/'.str_slug($result->title).'?amount='.$result->yearly_price)}} -->
                       </tr>
@@ -76,3 +77,11 @@
 <!--Pricings-->
 
  @stop
+ <?php
+ /*
+ 
+  https://www.instamojo.com/@researchinfotech1788/?ref=onb_tasks&amount={{$result->quarterly_price}}
+  https://www.instamojo.com/@researchinfotech1788/?ref=onb_tasks&amount={{$result->half_yearly_price}}
+  https://www.instamojo.com/@researchinfotech1788/?ref=onb_tasks&amount={{ $result->yearly_price}}
+ */
+  ?>

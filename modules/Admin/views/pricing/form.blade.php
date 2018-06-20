@@ -95,7 +95,13 @@
             <span class="label label-danger">{{ $errors->first('features', ':message') }}</span>
         </div>
     </div> 
-
+    <div class="form-group{{ $errors->first('payment_url', ' has-error') }}">
+        <label class="col-lg-4 col-md-4 control-label"> Payment url </label>
+        <div class="col-lg-8 col-md-8"> 
+            {!! Form::text('payment_url',null, ['class' => 'form-control form-cascade-control input-small'])  !!} 
+            <span class="label label-danger">{{ $errors->first('payment_url', ':message') }}</span>
+        </div>
+    </div> 
      
     
     <div class="form-group">

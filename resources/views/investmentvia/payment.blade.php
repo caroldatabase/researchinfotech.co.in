@@ -33,7 +33,7 @@
                         
                          <a href="https://www.instamojo.com/@researchinfotech1788" target="_blank"><img src="{{ asset('storage/assets/images/pay-online.png')}}"></a>  
 
-                    </li>
+                    </li> 
 
                   <!--   <li style="display: inline;">
                        <a href="{{ url('checkout/stock?amount=0') }}" class="btn btn-success"   target="_blank">

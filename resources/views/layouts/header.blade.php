@@ -18,6 +18,14 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('public/assets/css/style.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('public/assets/css/font-awesome.min.css')}}">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"> 
+
+	<link rel="stylesheet" href="{{ asset('public/colorbox.css')}}" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="{{ asset('public/jquery.colorbox.js')}}"></script>
+
+   
+
+
 	<!-- <link rel="stylesheet" type="text/css" href="{{ asset('public/assets/css/loader.css')}}">  -->
 	<link rel="icon" href="{{ asset('public/assets/images/favicon.png')}}">
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115461791-1"></script>
@@ -28,6 +36,7 @@
 	  gtag('config', 'UA-115461791-1');
 	</script>
 
+    <link rel="stylesheet" href="{{ asset('public/colorbox.css')}}" />
         <!-- Start of Async Drift Code --> 
 <!-- End of Async Drift Code -->
   <style>
@@ -45,18 +54,27 @@
 	</script>
 	<!--slider-main-start-->
 	<!-- responsive menu -->
-	<script type="text/javascript">
-		jQuery(document).ready(function($){
-			$('.menu').click(function(){
-				$('body').toggleClass('show-menu');
-			});
-			$('.close-button').click(function(){
-				$('body').removeClass('show-menu');
-			});
-			
-		});
-	</script>  
+	 <style type="text/css"> 
+		.cboxPhoto{
+		  	margin-top: 0px;
+			cursor: pointer;
+			width: 97% !important;
+			height: 100%;
+			float: none;
+			padding: 5px;
+			overflow-y: hidden;
+		}
+    
+  </style>
        
 </head>
 <body class="pushmenu-push">
 <a href="#" class="scrollToTop"><i class="fa fa-angle-up"></i></a>
+
+ <div style="padding: 0px"> 
+      
+	<a class="group3" href="{{(url('public/popup/popup-1.jpeg'))}}"   title="Suitability Assessment">  
+	</a> 
+	<a class="group3" href="{{(url('public/popup/popup-2.jpeg'))}}" title="Suitability Assessment">  </a>
+
+</div>

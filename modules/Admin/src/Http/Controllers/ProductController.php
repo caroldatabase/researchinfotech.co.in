@@ -108,6 +108,7 @@ class ProductController extends Controller {
             $photo_name = time().$photo->getClientOriginalName();
            $product->photo = $photo_name; 
         }  
+        $product->payment_url = $request->get('payment_url');
         $product->save(); 
         return Redirect::to(route('product'))
                             ->with('flash_alert_notice', 'New Pricing was successfully added !');
@@ -136,8 +137,8 @@ class ProductController extends Controller {
             $photo_name = time().$photo->getClientOriginalName(); 
            $product->photo = $photo_name;
         } 
-        
-        $product->save(); 
+        $product->payment_url = $request->get('payment_url');
+        $product->save();
         
         return Redirect::to(route('product'))
                         ->with('flash_alert_notice', 'Pricing was  successfully updated !');
