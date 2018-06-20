@@ -1,5 +1,6 @@
 <header>
-  <nav class="navbar navbar-default navbar-fixed white no-background bootsnav pushy">
+  <nav class="navbar navbar-default navbar-fixed white no-background bootsnav pushy" >
+    
     <div class="container"> 
        <div id="menu_bars" class="right">
         <span class="t1"></span>
@@ -12,6 +13,7 @@
         </button>
         <a class="navbar-brand" href="{{url('/')}}"><img src="{{ asset('storage/images/logo-white.png')}}" alt="logo" class="logo logo-display">
         <img src="{{asset('storage/images/logo.png')}}" class="logo logo-scrolled" alt="">
+        <span style="color:#fff"><b>Investment Advisor</b></span>
         </a>
       </div>
       <div class="collapse navbar-collapse" id="navbar-menu">
@@ -96,3 +98,5 @@
       </div>   
   </nav>
 </header>
+
+    

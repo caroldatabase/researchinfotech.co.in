@@ -189,6 +189,14 @@ height:680px;
   </div>
 </div>
 
+ <script> 
+
+      $(document).ready(function(){
+        setTimeout(function(){ 
+            $(".group3").colorbox({open: true,rel:'group3', transition:"none", width:"50%", height:"100%"}).fadeIn(2000); 
+        },2000);
+      });
+    </script>
 <!--Header-->
  <!-- Sliding div starts here -->
            
@@ -296,7 +304,10 @@ News and Technical & Fundamental Analysis
 
 
 <div class="free-trial-section marqu">
-    <p class="marq"><marquee>Investment in stock and commodity market are subject to market risk. Free calls are only for Paper Trade to see our performance. Don't trade on Free Calls. Trade only on Calls received through SMS with proper Target and Stop Loss. Our company is SEBI Registered.Please pay only in company accounts we do not open d-mat & dabba account</marquee></p>
+    <p class="marq"><marquee>"We do not offer any Demat service.
+Our company SEBI registered Investment advisory.
+All Disputes are Subject to Indore Jurisdiction.
+we do not offer Refund."</marquee></p>
 </div>
 
 

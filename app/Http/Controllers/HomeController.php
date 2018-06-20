@@ -265,6 +265,17 @@ class HomeController extends Controller
     {
         $title = "Risk Profiling";
         $tagLine = "Research Infotech Investment Advisory";
+
+        //PDF file is stored under project/public/download/info.pdf
+        $file= public_path(). "/Research-Infotech.xlsx";
+
+        $headers = array(
+                  'Content-Type: application/pdf',
+                );
+
+        return \Response::download($file, 'Research-Infotech-risktolrance.xlsx');
+
+
         return view('investmentvia.riskProfiling',compact('title','tagLine'));
     }
 

@@ -1,3 +1,4 @@
+ 
 <!-- News-->
 <!-- News-->
 <section id="news" class="padding">
@@ -89,8 +90,7 @@
 <!--FOOTER ends-->
 
 
-
-<script src="{{ asset('public/assets/js/jquery-2.2.3.js')}}"></script>
+ 
 <script src="{{ asset('public/assets/js/bootstrap.min.js')}}"></script>
 <script src="{{ asset('public/assets/js/bootsnav.js')}}"></script>
 <script src="{{ asset('public/assets/js/jquery.appear.js')}}"></script>
@@ -161,6 +161,20 @@
 drift.SNIPPET_VERSION = '0.3.1';
 drift.load('9iwz8utnsf2m');
 </script>
+
+ 
+
+    <script type="text/javascript">
+    jQuery(document).ready(function($){
+      $('.menu').click(function(){
+        $('body').toggleClass('show-menu');
+      });
+      $('.close-button').click(function(){
+        $('body').removeClass('show-menu');
+      });
+      
+    });
+  </script>  
 
 </body>
 </html>
