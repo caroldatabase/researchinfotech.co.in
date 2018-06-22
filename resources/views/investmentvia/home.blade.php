@@ -271,9 +271,9 @@ News and Technical & Fundamental Analysis
                      <a href="{{$linkedin_url->field_value or '#'}}"  target="_blank"><i class="fa fa-linkedin"></i></a></span></p>
             </div>
             <div class="live-btn">
-                <p>  <a href="https://www.researchinfotech.co.in/payment" target="_blank"><img src="{{ asset('storage/assets/images/pay-online.png')}}"></a>  
+                <p>  <a href="ttps://easebuzz.in/pay/researchinfotech" target="_blank"><img src="{{ asset('storage/assets/images/pay-online.png')}}"></a>  
 
-                      
+                
                     <!-- a href="https://www.researchinfotech.co.in/checkOutEBS/payment-online?amount=1000" target="_blank"><img src="{{ asset('storage/assets/images/pay-online.png')}}"></a>  
 
                       <a href="https://www.instamojo.com/@researchinfotech1788/" rel="im-checkout" data-behaviour="remote" data-style="light" data-text="Checkout With Instamojo"></a>  --> 
