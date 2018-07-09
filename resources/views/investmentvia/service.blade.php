@@ -65,7 +65,11 @@
     </div>
   </div>
 </section>
-
+<style type="text/css">
+  ol, ul{
+   list-style: decimal;
+  }
+</style>
 
 
 <!-- Modal -->
@@ -96,7 +100,7 @@
         var feature =   $('#feature_'+id).val();
         
         if(feature.length>0){
-            feature = "Feature: "+feature;
+            feature = "Feature: <hr>"+feature;
         }
         
         $('#exampleModalLongTitle').html(title);
