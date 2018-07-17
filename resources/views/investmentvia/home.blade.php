@@ -320,8 +320,8 @@ News and Technical & Fundamental Analysis
                                                 
                         </div>
                         <div class="col-md-8 pull-right content-box col-sm-6">
-                        <h3 class="block-title">MCX GOLD OPTION TIPS</h3>
-                        <p>Big opportunity for retail trades who wish to trades in GOLD commodity                       
+                        <h3 class="block-title">EXPRESS CASH</h3>
+                        <p>Big opportunity for retail trades who wish to trades in EXPRESS CASH                       
                         </p>                            
                         </div>
                         </div>
@@ -334,7 +334,7 @@ News and Technical & Fundamental Analysis
                                                         
                                 </div>
                             <div class="col-md-8 pull-right content-box col-sm-6">
-                                <h3 class="block-title">Nifty Option Tips</h3>
+                                <h3 class="block-title">EXPRESS OPTION</h3>
                                 <p>For starters with very less capital -- Anyone who wants to start a new service.                        
                                 </p>                            
                             </div>
@@ -348,7 +348,7 @@ News and Technical & Fundamental Analysis
                                                         
                                 </div>
                                 <div class="col-md-8 pull-right content-box col-sm-6">
-                                <h3 class="block-title">Stock Cash BTST Tips</h3>
+                                <h3 class="block-title">NCDEX PACK</h3>
                                 <p>Get benefit from gap up/gap down market every day, while entering in trade                       
                                 </p>                            
                                 </div>
@@ -362,8 +362,9 @@ News and Technical & Fundamental Analysis
                                                 
                         </div>
                         <div class="col-md-8 pull-right content-box col-sm-6">
-                        <h3 class="block-title">Inventory Calls</h3>
-                        <p>Inventory Calls-based on Inventory Report. Get the benefit of each services.
+                        <h3 class="block-title">Jobbers Equity Combo Call</h3>
+                        <p>Jobbers Equity Combo Call
+ Calls-based on Inventory Report. Get the benefit of each services.
                         </p>                            
                         </div>
                         </div>
@@ -376,7 +377,7 @@ News and Technical & Fundamental Analysis
                                                 
                         </div>
                         <div class="col-md-8 pull-right content-box col-sm-6">
-                        <h3 class="block-title">Stock Option Platinum Tips </h3>
+                        <h3 class="block-title">JOBBERS COMBO COMMODITY </h3>
                         <p>In this pack we provide calls in Stock Option segment for traders
                         </p>                            
                         </div>
@@ -390,8 +391,8 @@ News and Technical & Fundamental Analysis
                                                 
                         </div>
                         <div class="col-md-8 pull-right content-box col-sm-6">
-                        <h3 class="block-title">Stock Future Platinum Tips</h3>
-                        <p>In this pack we provide calls in Stock Future segment for traders
+                        <h3 class="block-title">EXPRESS FUTURE</h3>
+                        <p>In this pack we provide calls in EXPRESS FUTURE segment for traders
                         </p>                            
                         </div>
                         </div>
