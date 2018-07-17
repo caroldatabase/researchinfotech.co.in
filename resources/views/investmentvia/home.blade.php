@@ -303,10 +303,7 @@ News and Technical & Fundamental Analysis
 
 
 <div class="free-trial-section marqu">
-    <p class="marq"><marquee>"We do not offer any Demat service.
-Our company SEBI registered Investment advisory.
-All Disputes are Subject to Indore Jurisdiction.
-we do not offer Refund."</marquee></p>
+    <p class="marq"><marquee>"We are SEBI Resisted Investment Advisor and Investments in stock and commodity market are subject to market risk and we are providing the Services of Equity & Commodity Market to our Client. We are not offering any D-mat services and we are not a Broker. All Disputes are Subject to Indore Jurisdiction. No refund policy."</marquee></p>
 </div>
 
 
