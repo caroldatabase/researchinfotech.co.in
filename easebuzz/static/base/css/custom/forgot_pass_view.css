@@ -1,0 +1,9 @@
+@font-face{font-family:Lato;src:url(../../../merchant/font/Lato/Lato-Regular.woff)}.default-form-div{margin:5rem 0;background-color:#FFF;border-radius:10px;color:#000}
+.default-form-div .form-div-container{padding:2em 4em}.default-form-div .form-div-container .form-title-container div{padding-bottom:5px}
+.default-form-div .form-div-container .form-title-container .form-title{font-family:montserrat;font-weight:400;font-style:normal;font-size:24px;color:#0a1632}
+.default-form-div .form-div-container .form-container{margin:1em 0 2em 0}.default-form-div .form-div-container .form-container .ui.form .field>label{font-family:Lato;font-weight:400;font-style:normal;opacity:.8;font-size:12px}
+.default-form-div .form-div-container .form-container .ui.form .field{clear:both;margin:0 0 .5em}
+.default-form-div .form-div-container .form-container input{padding:.8em .9em;background-color:#f9fafb}
+#application-base .main_content_container{padding:0}#application-base .form-div-container{padding:2em 10%}
+@media screen and (max-width:767px){#application-base .default-form-div{margin-top:40%}
+}

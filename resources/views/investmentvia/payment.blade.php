@@ -40,12 +40,10 @@
                           Ccavenue payment
                        </a>
                     </li> -->
-                       <li style="display: inline;">
                        <a href="https://easebuzz.in/pay/researchinfotech" target="_blank" class="btn btn-primary"  target="_blank">
                          
                          Easebuzz payment
                        </a>
-                    </li> 
                   </ul>
                 </li>
 

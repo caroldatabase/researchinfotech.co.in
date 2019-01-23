@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+
+<html>
+
+<!-- Mirrored from easebuzz.in/store/E-Readers by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 17 Nov 2018 11:11:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+    <link rel="icon" type="image/png" href="../static/base/favicon/eb-favicon.png">
+
+
+    <title>E-Readers | Easebuzz Free Webstore</title>
+
+
+    <meta name="title" content="Ereaders"/>
+    <meta name="description" content="">
+    <meta name="keywords" content="None">
+    <meta name="robots" content="index, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+    <!-- <link rel="stylesheet/less" type="text/css" href="/static/base/less/store_view.less" /> -->
+
+    <link type="text/css" rel="stylesheet" href="../static/base/css/custom/store_view.css"/>
+    <script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','../../connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '859002937495697');
+fbq('track', "PageView");
+fbq('track', 'Purchase', {value: '0.00', currency:'INR'});
+
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=859002937495697&amp;ev=PageView&amp;noscript=1"
+    /></noscript>
+    <link rel="stylesheet" href="../static/merchant/css/materialize.min.css">
+<link rel="stylesheet" href="../../maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../static/merchant/css/custom/base_colors.css">
+<script src="../static/merchant/js/jquery-2.2.0.min.js"></script>
+<script src="../static/merchant/js/materialize.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/merchant/css/bundle.css" />
+
+<script src="../static/merchant/js/bundle.js"></script>
+<style type="text/css">
+
+    .store_profile_img{
+            height:12rem;
+            width:12rem;
+            box-shadow: 0px 0px 10px 2px #888;
+        }
+
+    .main-banner{
+        margin-bottom: 10rem;
+    }
+
+    .profile_bar{
+        z-index: 1;
+    }
+    .link.icon{
+        width:5px !important;
+    }
+
+    .load-more{
+        margin-top: 0px !important;
+    }
+
+     @media only screen and (max-width: 992px){
+        .main-banner{
+            height:35rem;
+            margin-bottom: 5rem;
+        }
+
+        .profile_container{
+            background-color: rgba(0, 0, 0, .5);
+        }
+
+        .profile_strip{
+            display: none;
+        }
+
+        .profile_bar{
+            position: absolute !important;
+            left: 0;
+            right: 0;
+            top:50;
+            padding:10px 0px !important;
+        }
+
+        .profile_bar .profile_controller{
+            text-align: center; !important;
+            padding-top: 0px;
+        }
+
+
+        .profile_bar .profile_controller .column{
+            padding:5px !important;
+        }
+
+        .profile_bar .profile_controller .highlight-button
+        {
+            margin-top: 0px !important;
+        }
+        .profile_bar .profile_controller .icon input{
+            margin-left: -22px !important;
+        }
+        .profile_bar img{
+            border-radius: 50%;
+        }
+
+    }
+
+
+    @media only screen and (min-width: 991px){
+        .main-banner{
+            height:20rem;
+        }
+
+        .profile_strip{
+            position: absolute;
+            width: 100%;
+            height: 6rem;
+            bottom: 0;
+            background: rgba(0,0,0,0.4);
+        }
+
+        .profile_bar{
+            position: absolute !important;
+            bottom: -7rem;
+            left: 0;
+            right: 0;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .store_profile_img{
+            float:right;
+            margin-right: 1rem;
+        }
+
+        .profile_bar .profile_controller{
+            text-align: left !important;
+            padding-top: 4rem;
+            padding-left: 1rem;
+        }
+
+        .ui.input{
+            width:100% !important;
+        }
+
+        .ui.input input[type=text]{
+            padding-right: 5px !important;
+        }
+
+        .profile_bar .profile_controller .highlight-button
+        {
+            margin-top: 1rem !important;
+        }
+
+
+    }
+
+</style>
+
+</head>
+
+<body ng-app="ebzApp" id="application-base">
+
+
+<div ng-controller="StoreBannerController as sbc" class="ui equal width center aligned padded grid">
+    <div class="row main-banner menu-visibility-marker"
+         style="background-size: cover !important; background-position: 0; background-image:url('../../s3.ap-southeast-1.amazonaws.com/easebuzz/easebuzz.in/merchant/files/6885/user-images/fGZZ1Zp.jpg');">
+
+         <!-- <div class="row" style="width:100%;position:absolute;bottom:0;margin:0px;left:0;height:7rem;background: rgba(0, 0, 0, 0.5) none repeat scroll 0% 0%;">
+            </div> -->
+        <div class="sixteen wide column profile_container">
+            <div class="profile_strip" >
+            </div>
+            <div class="ui grid left aligned profile_bar">
+
+                <div class="row">
+                    <div class="five wide computer sixteen wide tablet column center aligned"">
+                        
+                                    <img class=" store_profile_img"
+                                         onError="this.src='../static/merchant/images/default_user.png';"
+                                         src="../../s3.ap-southeast-1.amazonaws.com/easebuzz/easebuzz.in/merchant/files/6885/profile/i3wuTn96.jpg">
+                                    
+                    </div>
+                    <div class="ten wide computer sixteen wide tablet column">
+                        <div class="ui padded grid profile_controller">
+                            <div class="row" style="font-size: 2rem;color: #FFF;line-height: 2rem">
+
+                                <div class="six wide computer sixteen wide tablet column ">
+                                E-Readers
+                                </div>
+                                <div class="five wide computer sixteen wide tablet column">
+                                <div class="ui icon input">
+                                    <input type="text" name="search" ng-model="setSearch" style="height:100%;background: rgba(255, 255, 255, 0.8) none repeat scroll 0% 0%;"
+                                           ng-model-options="{ getterSetter: true }" placeholder="Search Products">
+                                    <i class="remove link icon" ng-click="resetSearch()" ng-show="search.title"></i>
+                                </div>
+                                </div>
+
+                                <div class="sixteen wide computer sixteen wide tablet column"  >
+
+                                    <a target="_blank" style="font-size: 1.1rem;margin-top: 1rem; " href="../pay/ereadersindia.html"
+                                           class="ui button highlight-button" data-tooltip="Pay what you want directly to the merchant" data-position="bottom center">Pay E Readers India</a>
+
+                                    &nbsp;
+                                </div>
+
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<div ng-controller="StoreController as sc" class="ui container" style="position:relative">
+    <div ng-class="{'ui dimmer':true, 'active':!view_loaded}">
+        <div class="ui text loader">Loading</div>
+    </div>
+    <div class="ui four stackable cards card-items ">
+        <div class="ui card" ng-animate="'animate'"
+             dir-paginate="item in filtered_data = (store_items | filter: search ) | itemsPerPage: itemsPerPage">
+            <a target="_blank" ng-href="/link/{[{ item.slug }]}">
+                <div class="item-image" set-image dataImage="{[{ getItemImage(item) }]}">
+                </div>
+            </a>
+            <div class="content">
+                <a target="_blank" ng-href="/link/{[{ item.slug }]}" class="header">{[{ item.title }]}</a>
+                <div class="description">
+                    {[{ item.sub_categories[0].description }]}
+                </div>
+
+            </div>
+            <div class="ui bottom attached">
+                <div class="price-div">
+                    <!--<strike ng-if="getItemPrice(item) != getItemMinPrice(item)" style="font-size: 0.8em;"> {[{-->
+                    <!--getItemMinPrice(item) }]}</strike>-->
+                    <i class="icon rupee"></i><span>{[{ getItemPrice(item) }]}</span>
+                </div>
+                <a target="_blank" ng-href="/link/{[{ item.slug }]}"
+                   class="ui button highlight-button cinema buy-button">
+                    <span style="align-self:flex-end">BUY NOW</span>
+                </a>
+
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="ui centered grid">
+        <div class="six wide center aligned column">
+            <button ng-show="itemsPerPage < filtered_data.length" class="ui button highlight-button load-more"
+                    ng-click="load_more()">SHOW MORE
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67009256-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.js"></script>-->
+
+<!-- <script src="/static/merchant/js/trip.min.js"></script> -->
+
+
+<script src="../static/merchant/js/messenger.js"></script>
+
+
+
+
+<!-- google analytics -->
+    <!--<script>-->
+      <!--(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){-->
+      <!--(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),-->
+      <!--m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)-->
+      <!--})(window,document,'script','//www.google-analytics.com/analytics.js','ga');-->
+
+      <!--ga('create', 'UA-67009256-1', 'auto');-->
+      <!--ga('send', 'pageview');-->
+
+    <!--</script>-->
+
+
+<script src="../static/merchant/js/angular.js"></script>
+<script src="../static/merchant/js/angular-animate-1.3.0.js"></script>
+<script src="../static/merchant/js/dirPagination.js"></script>
+<script>
+        var ebzApp = angular.module("ebzApp", ['ngAnimate','angularUtils.directives.dirPagination']);
+        ebzApp.config(['$httpProvider', function ($httpProvider) {
+            $httpProvider.defaults.xsrfCookieName = 'csrftoken';
+            $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
+        }]);
+        ebzApp.config(function ($interpolateProvider) {
+                    $interpolateProvider.startSymbol('{[{');
+                    $interpolateProvider.endSymbol('}]}');
+                });
+        ebzApp.run(function($http) {
+        $http.defaults.headers.common['X-CSRFToken']='jUlIh93Qz6Ga4Fzwf4DEkLa8mXuXgt7l';
+        });
+        ebzApp.factory('storeItemsService', ['$http', function storeItemsService($http) {
+            var service = {
+                items:[],
+                setCallback:setCallbackFunction,
+                callback:false
+            };
+            function setCallbackFunction(callback)
+            {
+            service.callback=callback
+
+            }
+
+            // implementation
+            function getStoreItems() {
+                $http({
+                    method  : 'POST',
+                        url     : '/store/fetchAll/E-Readers',
+                        data    : '',
+                        headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data (not request payload)
+                    }).success(function(response) {
+                        if(response.status)
+                        {
+                            service.items = response.data;
+                        }
+                        if(service.callback)
+                        {
+                            service.callback(service.items)
+                        }
+                    }).error(function() {
+
+                    });
+
+            }
+            getStoreItems()
+
+            return service;
+
+        }]);
+        ebzApp.directive('setImage', function(){
+            return{
+                restrict: 'A',
+                link: function(scope, element, attrs){
+                    var height = element.width()/(100.0/75.0) + 'px';
+                    element.css('height',height);
+                    var background_image = attrs['dataimage']
+                    element.css('background-image', 'url(' + background_image +')');
+                    //element.height($window.innerHeight/3);
+                }
+            }
+        })
+        ebzApp.factory('storeSearchService', [function storeSearchService() {
+            var service = {
+                search:{},
+                setCallback:setCallbackFunction,
+                callback:false,
+                setStoreSearch:setStoreSearch
+            };
+            function setCallbackFunction(callback)
+            {
+                service.callback=callback
+            }
+
+            // implementation
+            function setStoreSearch(search) {
+                service.search = search
+                if(service.callback)
+                {
+                    service.callback(service.search)
+                }
+            }
+
+            return service;
+
+        }]);
+        ebzApp.controller('StoreBannerController', ['$scope','storeSearchService', function($scope, storeSearchService){
+            var searchField = ''
+            $scope.search = {'title':undefined}
+            $scope.setSearch = function(search_field){
+                $scope.search.title = arguments.length ? (searchField = search_field) : searchField;
+                storeSearchService.setStoreSearch($scope.search)
+                return arguments.length ? (searchField = search_field) : searchField;
+            }
+            $scope.resetSearch=function(){
+                $scope.search.title=undefined
+                $scope.setSearch(undefined)
+            }
+        }])
+        ebzApp.controller('StoreController', ['$scope', 'storeItemsService','storeSearchService', function($scope, storeItemsService, storeSearchService){
+            $scope.view_loaded = false
+            //get store items
+            storeItemsService.setCallback((store_items) => {$scope.store_items = store_items;$scope.view_loaded=true })
+            storeSearchService.setCallback(function(search){
+                $scope.search = search
+            })
+
+            var PAGE_SIZE = 12;
+            $scope.itemsPerPage = PAGE_SIZE;
+
+            $scope.load_more = function(){
+                $scope.itemsPerPage += PAGE_SIZE
+            }
+
+
+            $scope.getItemImage = function(item){
+                var isAmazonImage = false;
+                var imgLink = item.link_gallery[0].image_link
+                if(item.link_gallery[0].amazon_link)
+                {
+
+                imgLink = item.link_gallery[0].amazon_link
+                if(item.link_gallery[0].thumbnail_exists)
+                {
+                    imgLink = imgLink + '_thumb'
+                }
+                isAmazonImage = true;
+                }
+
+                for(var i in item.link_gallery)
+                {
+                var image = item.link_gallery[i]
+                if(image.card_image == 1)
+                {
+                    if(item.link_gallery[i].amazon_link)
+                    {
+                        isAmazonImage = true;
+                        imgLink = item.link_gallery[i].amazon_link
+                        if(item.link_gallery[i].thumbnail_exists)
+                        {
+                            imgLink = imgLink + '_thumb'
+                        }
+                    }
+                    else
+                    {
+                        isAmazonImage = false;
+                        imgLink = image.image_link
+                    }
+
+                }
+                }
+                var imgUrl = '/media/' + imgLink;
+                if(isAmazonImage)
+                {
+                imgUrl = imgLink;
+                }
+                return imgUrl
+                // var adv_link = this.props.base_url + 'link/' + item.slug;
+                // var errorImgUrl = this.props.base_url + 'static/base/images/store/photo_default.png';
+            }
+            $scope.getItemPrice = function(item){
+                var min_price = 0
+                var max_discount = 0
+                var price = ''
+                if(item.sub_categories[0].price == '0')
+                {
+                price = 'Free';
+                }
+                else
+                {
+
+                var temp_price
+                var min_price = parseInt(item.sub_categories[0].price)
+                for(var i=0; i<item.sub_categories.length; i++)
+                {
+                    if(!item.sub_categories[i].is_active)
+                    {
+                        continue;
+                    }
+                    min_price = item.sub_categories[i].price
+                }
+                for(var i=0; i<item.sub_categories.length; i++)
+                {
+                    if(!item.sub_categories[i].is_active)
+                    {
+                        continue;
+                    }
+                    temp_price = parseInt(item.sub_categories[i].price)
+
+                    if(item.sub_categories[i].isoffer == 1){
+                        temp_price = parseInt(item.sub_categories[i].current_price);
+
+                        if(item.sub_categories[i].discount > max_discount)
+                        {
+                            max_discount = item.sub_categories[i].discount
+                        }
+                        }
+                    if(temp_price < min_price){
+                        min_price = temp_price
+                    }
+                }
+                if(min_price == 0)
+                {
+                    price = 'Free';
+                }
+                else
+                {
+                    price = min_price
+                }
+
+                }
+                return price;
+            }
+
+            $scope.getItemMinPrice = function(item){
+                var min_price = 0
+                var max_discount = 0
+                var price = ''
+                if(item.sub_categories[0].price == '0')
+                {
+                price = 'Free';
+                }
+                else
+                {
+
+                var temp_price
+                var min_price = parseInt(item.sub_categories[0].price)
+                for(var i=0; i<item.sub_categories.length; i++)
+                {
+                    if(!item.sub_categories[i].is_active)
+                    {
+                        continue;
+                    }
+                    min_price = item.sub_categories[i].price
+                }
+                if(min_price == 0)
+                {
+                    price = 'Free';
+                }
+                else
+                {
+                    price = 'Rs. ' + min_price
+                }
+
+                }
+                return min_price;
+            }
+
+
+        }])
+
+
+
+</script>
+</body>
+
+<!-- Mirrored from easebuzz.in/store/E-Readers by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 17 Nov 2018 11:11:16 GMT -->
+</html>

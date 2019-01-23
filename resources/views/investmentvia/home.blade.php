@@ -421,7 +421,7 @@ News and Technical & Fundamental Analysis
 					<span class="feature-abs1"><i class="fa fa-location-arrow" aria-hidden="true"></i></span>
 				</div>
 				<div class="feature-box">
-					<h4>Intense 27/7 support</h4>
+					<h4>Intense 24/7 support</h4>
 					<p>
 						Trading advice on Mobile Devices/IMs Purely based on Economic News and Technical & Fundamental Analysis
 					</p>
