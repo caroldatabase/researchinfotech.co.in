@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	<title> Research Infotech | {{ $tagLine or ''}} </title>
+	<title> Hybrid Research | {{ $tagLine or ''}} </title>
 	{!! $meta1 or ''!!}
 	{!!$meta2 or ''!!}
 	<link rel="stylesheet" type="text/css" href="{{ asset('public/assets/css/bootstrap.min.css')}}">
@@ -28,30 +28,13 @@
 
 	<!-- <link rel="stylesheet" type="text/css" href="{{ asset('public/assets/css/loader.css')}}">  -->
 	<link rel="icon" href="{{ asset('public/assets/images/favicon.png')}}">
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115461791-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	  gtag('config', 'UA-115461791-1');
-	</script>
-
     <link rel="stylesheet" href="{{ asset('public/colorbox.css')}}" />
-        <!-- Start of Async Drift Code --> 
-<!-- End of Async Drift Code -->
-  <style>
+        <!-- Start of Async Drift Code -->  
+  	<style>
             body {
             display: none;
         }
-        </style>   
- 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113294393-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-113294393-1');
-	</script>
+    </style>   
 	<!--slider-main-start-->
 	<!-- responsive menu -->
 	 <style type="text/css"> 
@@ -71,10 +54,4 @@
 <body class="pushmenu-push">
 <a href="#" class="scrollToTop"><i class="fa fa-angle-up"></i></a>
 
- <div style="padding: 0px"> 
-      
-	<a class="group3" href="{{(url('public/popup/popup-1.jpeg'))}}"   title="Suitability Assessment">  
-	</a> 
-	<a class="group3" href="{{(url('public/popup/popup-2.jpeg'))}}" title="Suitability Assessment">  </a>
 
-</div>

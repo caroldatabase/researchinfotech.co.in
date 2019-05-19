@@ -82,7 +82,7 @@ Route::get('about',[
 
 
 Route::get('services',[
-          'as' => 'home',
+          'as' => 'services',
           'uses'  => 'HomeController@services'
         ]);
 

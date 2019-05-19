@@ -15,7 +15,7 @@
   </form>
 </div>
 <!--Page Header-->
-@include('partials/titlebar')
+@include('partials/titlebarBg')
 <!--Page Header-->
 
 <section id="about" class="padding">

@@ -11,9 +11,8 @@
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
           <i class="fa fa-bars"></i>
         </button>
-        <a class="navbar-brand" href="{{url('/')}}"><img src="{{ asset('storage/images/logo-white.png')}}" alt="logo" class="logo logo-display">
-        <img src="{{asset('storage/images/logo.png')}}" class="logo logo-scrolled" alt="">
-        <span style="color:#fff"><b>Investment Advisor</b></span>
+        <a class="navbar-brand" href="{{url('/')}}" style="margin-top: 13px;">
+       <span style="color: #ce1a1a;font-size: -webkit-xxx-large;font-family: fantasy;">Hybrid</span> <span style="color: #2a2e3c;font-family: fantasy;position: absolute;top: 45px;left: 80px;font-size: x-large;">Research </span> </br> 
         </a>
       </div>
       <div class="collapse navbar-collapse" id="navbar-menu">

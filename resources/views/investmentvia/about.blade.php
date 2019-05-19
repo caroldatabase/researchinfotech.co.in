@@ -7,7 +7,7 @@
 @stop
 @section('content')
 @include('partials/menu') 
-@include('partials/titlebar')
+@include('partials/titlebarAboutus')
 
 <section id="about" class="padding">
   <div class="container aboutus">

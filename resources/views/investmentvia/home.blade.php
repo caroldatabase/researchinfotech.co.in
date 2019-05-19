@@ -308,203 +308,56 @@ News and Technical & Fundamental Analysis
 
 
 <!--ABout US-->
-<section id="our-services" class="service-section">
-  <div class="container-fluid">
-            <div class="service-bg">        
-                <img width="450" height="100%" src="{{ asset('storage/assets/images/services-bg.png')}}" class="attachment-thumb-450-450 imgrotate" alt="services-bg">               <h3>Services</h3>
-            </div>
-                                    <div class="col-md-6 col-sm-12 col-xs-12 mcx-side">
-                        <div class="service-box-inner animated slideInLeft">
-                        <div class="col-md-4 pull-right  col-sm-5">
-                                                <i class="fa fa-rupee"></i>
-                                                
-                        </div>
-                        <div class="col-md-8 pull-right content-box col-sm-6">
-                        <h3 class="block-title">EXPRESS CASH</h3>
-                        <p>Big opportunity for retail trades who wish to trades in EXPRESS CASH                       
-                        </p>                            
-                        </div>
-                        </div>
-                        </div>  
-
-                        <div class="col-md-6 col-sm-12 col-xs-12 nifty-side">
-                            <div class="service-box-inner animated slideInRight">
-                                <div class="col-md-4   col-sm-5">
-                                    <i class="fa fa-line-chart" aria-hidden="true"></i>
-                                                        
-                                </div>
-                            <div class="col-md-8 pull-right content-box col-sm-6">
-                                <h3 class="block-title">EXPRESS OPTION</h3>
-                                <p>For starters with very less capital -- Anyone who wants to start a new service.                        
-                                </p>                            
-                            </div>
-                            </div>
-                        </div>  
-
-                        <div class="col-md-6 col-sm-12 col-xs-12 stock-side">
-                            <div class="service-box-inner animated slideInLeft">
-                                <div class="col-md-4 pull-right  col-sm-5">
-                                    <i class="fa fa-tachometer" aria-hidden="true"></i>
-                                                        
-                                </div>
-                                <div class="col-md-8 pull-right content-box col-sm-6">
-                                <h3 class="block-title">NCDEX PACK</h3>
-                                <p>Get benefit from gap up/gap down market every day, while entering in trade                       
-                                </p>                            
-                                </div>
-                            </div>
-                        </div>  
-
-                                    <div class="col-md-6 col-sm-12 col-xs-12 inve-side">
-                        <div class="service-box-inner animated slideInRight">
-                        <div class="col-md-4   col-sm-5">
-                                                <i class="fa fa-bar-chart" aria-hidden="true"></i>
-                                                
-                        </div>
-                        <div class="col-md-8 pull-right content-box col-sm-6">
-                        <h3 class="block-title">Jobbers Equity Combo Call</h3>
-                        <p>Jobbers Equity Combo Call
- Calls-based on Inventory Report. Get the benefit of each services.
-                        </p>                            
-                        </div>
-                        </div>
-                        </div>  
-
-                                    <div class="col-md-6 col-sm-12 col-xs-12 stock-option-side">
-                        <div class="service-box-inner animated slideInLeft">
-                        <div class="col-md-4 pull-right  col-sm-5">
-                                                <i class="fa fa-bolt" aria-hidden="true"></i>
-                                                
-                        </div>
-                        <div class="col-md-8 pull-right content-box col-sm-6">
-                        <h3 class="block-title">JOBBERS COMBO COMMODITY </h3>
-                        <p>In this pack we provide calls in Stock Option segment for traders
-                        </p>                            
-                        </div>
-                        </div>
-                        </div>  
-
-                                    <div class="col-md-6 col-sm-12 col-xs-12 future-side">
-                        <div class="service-box-inner animated slideInRight">
-                        <div class="col-md-4   col-sm-5">
-                                                <i class="fa fa-briefcase" aria-hidden="true"></i>
-                                                
-                        </div>
-                        <div class="col-md-8 pull-right content-box col-sm-6">
-                        <h3 class="block-title">EXPRESS FUTURE</h3>
-                        <p>In this pack we provide calls in EXPRESS FUTURE segment for traders
-                        </p>                            
-                        </div>
-                        </div>
-                        </div>  
+   <!--ABout US-->
+    <section id="about" class="padding">
+      <div class="container">
+        <div class="row">
+        <div class="col-sm-12 text-center">
+          <h2 class="heading"><span>Our</span> Services <span class="divider-center"></span></h2>
         </div>
-</section>
+        <div class="icon_wrapclearfix">
+          <div class="col-sm-4 icon_box text-center margin_tophalf wow fadeInUp" data-wow-delay="300ms">
+             <img src="{{ asset('storage/assets/images/icon1.png')}}">
+             <h4 class="text-capitalize bottom20 margin10">BULLION HNI</h4>
+             <p class="no_bottom">Keep away from people who try to belittle your ambitions. Small people always do that but the really great.</p>
+          </div>
+          <div class="col-sm-4 icon_box text-center margin_tophalf wow fadeInUp" data-wow-delay="400ms">
+              <img src="{{ asset('storage/assets/images/icon2.png')}}">
+             <h4 class="text-capitalize bottom20 margin10">DERIVATIVES HNI</h4>
+             <p class="no_bottom">Keep away from people who try to belittle your ambitions. Small people always do that but the really great.</p>
+          </div>
+          <div class="col-sm-4 icon_box text-center margin_tophalf wow fadeInUp" data-wow-delay="500ms">
+              <img src="{{ asset('storage/assets/images/icon3.png')}}">
+             <h4 class="text-capitalize bottom20 margin10">NCDEX</h4>
+             <p class="no_bottom">Keep away from people who try to belittle your ambitions. Small people always do that but the really great.</p>
+          </div>
+          <div class="col-sm-4 icon_box text-center margin_tophalf wow fadeInUp" data-wow-delay="500ms">
+             <img src="{{ asset('storage/assets/images/icon4.png')}}">
+             <h4 class="text-capitalize bottom20 margin10">MCX BASIC</h4>
+             <p class="no_bottom">Keep away from people who try to belittle your ambitions. Small people always do that but the really great.</p>
+          </div>
+          <div class="col-sm-4 icon_box text-center margin_tophalf wow fadeInUp" data-wow-delay="400ms">
+              <img src="{{ asset('storage/assets/images/icon5.png')}}">
+             <h4 class="text-capitalize bottom20 margin10">EQUITY BASIC</h4>
+             <p class="no_bottom">Keep away from people who try to belittle your ambitions. Small people always do that but the really great.</p>
+          </div>
+          <div class="col-sm-4 icon_box text-center margin_tophalf wow fadeInUp" data-wow-delay="500ms">
+              <img src="{{ asset('storage/assets/images/icon6.png')}}">
+             <h4 class="text-capitalize bottom20 margin10">BTST/STBT NCDEX</h4>
+             <p class="no_bottom">Keep away from people who try to belittle your ambitions. Small people always do that but the really great.</p>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
 <!--ABout US-->
 
-<div class="home-feature wow fadeInUp" data-wow-delay="500ms">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-6">
-				<h2>Let Know Our Feature - Research Infotech</h2>
-				<div class="feature-box">
-					<h4>Daily and weekly research report</h4>
-					<p>
-						Trading advice on Mobile Devices/IMs Purely based on Economic News and Technical & Fundamental Analysis
-					</p>
-					<span class="feature-abs0"><i class="fa fa-credit-card-alt" aria-hidden="true"></i></span>
-				</div>
-				<div class="feature-box">
-					<h4>Live chat Facilities</h4>
-					<p>
-						Trading advice on Mobile Devices/IMs Purely based on Economic News and Technical & Fundamental Analysis
-					</p>
-					<span class="feature-abs1"><i class="fa fa-location-arrow" aria-hidden="true"></i></span>
-				</div>
-				<div class="feature-box">
-					<h4>Intense 24/7 support</h4>
-					<p>
-						Trading advice on Mobile Devices/IMs Purely based on Economic News and Technical & Fundamental Analysis
-					</p>
-					<span class="feature-abs2"><i class="fa fa-phone" aria-hidden="true"></i></span>
-				</div>
-				<div class="feature-box">
-					<h4>Personalized Service</h4>
-					<p>
-						Trading advice on Mobile Devices/IMs Purely based on Economic News and Technical & Fundamental Analysis
-					</p>
-					<span class="feature-abs3"><i class="fa fa-cogs" aria-hidden="true"></i></span>
-				</div>
-			</div>
-			<div class="col-sm-6 mobile-view-clone">
-				<img src="{{ asset('public/assets/images/mobile-bg.png')}}">
-				
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="what-we-do">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 text-center what-heading">
-                <h2 class="heading">What We Do. <span class="divider-center"></span></h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4 border-right">
-                <div class="what-content wow fadeInUp" data-wow-delay="500ms">
-                    <p><img src="{{ asset('storage/assets/images/right-circle.jpg')}}"></p>
-                    <h3>WHO WE ARE ?</h3>
-                    <p class="what-desc">We are a team that supports the accumulation of your wealth through different sources. Trust is what we offer you to be with us</p>
-                </div>
-            </div>
-            <div class="col-sm-4 border-right">
-                <div class="what-content wow fadeInUp" data-wow-delay="500ms""">
-                    <p><img src="{{ asset('storage/assets/images/right-circle.jpg')}}"></p>
-                    <h3>WHAT WE CARE ?</h3>
-                    <p class="what-desc">Customer needs and satisfaction are the main concerns of Research Infotech . Our tips and services are the indeed portrayal of our work. </p>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="what-content wow fadeInUp" data-wow-delay="500ms""">
-                    <p><img src="{{ asset('storage/assets/images/right-circle.jpg')}}"></p>
-                    <h3>Learn How To Trade</h3>
-                    <p class="what-desc">You don’t have to work on BSE/NSE to make money like BSE. Learn more how to trade with Research Infotech</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-sm-4 border-right">
-                <div class="what-content wow fadeInUp" data-wow-delay="500ms""">
-                    <p><img src="{{ asset('storage/assets/images/right-circle.jpg')}}"></p>
-                    <h3>Quick Technical Support</h3>
-                    <p class="what-desc">You will get the quick solutions for your every problem pertaining to the Services. Call us or just click Priority Support.</p>
-                </div>
-            </div>
-            <div class="col-sm-4 border-right">
-                <div class="what-content wow fadeInUp" data-wow-delay="500ms""">
-                    <p><img src="{{ asset('storage/assets/images/right-circle.jpg')}}"></p>
-                    <h3>Quality Order Execution</h3>
-                    <p class="what-desc">You might be surprised at the variety of possible ways in which an order can be filled and the associated time delays.</p>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="what-content wow fadeInUp" data-wow-delay="500ms""">
-                    <p><img src="{{ asset('storage/assets/images/right-circle.jpg')}}"></p>
-                    <h3>Customer/ON-CALL Support</h3>
-                    <p class="what-desc">In this service we provide limited calls in GOLD/SILVER with a high level of accuracy.You can also avail Free Tips to test our accuracy.</p>
-                </div>
-            </div>
-        </div>
-        
-    </div>
-</div>
+ 
 
 <div class="tracksheet">
     <div class="row">
         <div class="col-sm-5" style="padding-right: 0px">
-            <img src="{{ asset('public/assets/images/news1.jpg')}}"  style="width: 630px;min-height: 309px" width="630px"> 
+            <img src="{{ asset('public/assets/images/googe-data-banner-600x400.jpg')}}"  style="width: 630px;min-height: 309px" width="630px" height="421px"> 
         </div>
         <div class="col-sm-7 track-content" style="height: 421px">
             <h3>Tracksheet and Reports</h3>

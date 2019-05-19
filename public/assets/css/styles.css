@@ -1212,7 +1212,7 @@ nav.bootsnav .megamenu-content{
 nav.navbar.bootsnav.navbar-fixed.no-background .search_btn:hover,
 nav.navbar.bootsnav.navbar-fixed.no-background .search_btn:focus{
 	color:#fff;
-	border-color:#3e9fbe;
+	background:#0069ff;
 }
 nav.navbar.bootsnav.navbar-fixed.no-background .search_btn{
 	border-color:#fff;
