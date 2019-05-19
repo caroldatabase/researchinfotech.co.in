@@ -7,7 +7,7 @@
 @section('content')
 @include('partials/menu')
 <!--Page Header-->
-@include('partials/titlebar')
+@include('partials/titlebarBg')
 <!--Page Header-->
 
 

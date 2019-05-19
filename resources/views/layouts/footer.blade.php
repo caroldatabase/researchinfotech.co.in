@@ -40,10 +40,11 @@
     <div class="row">
       <div class="col-md-4 col-sm-4 footer_panel bottom25">
         <h3 class="heading bottom25">About Us<span class="divider-left"></span></h3>
-        <a href="index.html" class="footer_logo bottom25">
-
-        <img src="{{ asset('storage/assets/images/logo-white.png')}}" alt="Xwin"></a>
-        <p>Welcome to Research Infotech, We have been known for serving our customers with atmost care and dedication. Our motto has been always aligned with "Delivering Quality Services" and "Customer Satisfaction".</p>
+         <a class="navbar-brand" href="{{url('/')}}" style="margin-top: 13px;">
+       <span style="color: #ce1a1a;font-size: -webkit-xxx-large;font-family: fantasy;">Hybrid</span> <span style="color: #fff;font-family: fantasy;position: absolute;top: 119px;left: 80px;font-size: x-large;">Research </span> </br> 
+        </a>
+        <br><br><br><br>
+        <p>Welcome to Hybrid Research, We have been known for serving our customers with atmost care and dedication. Our motto has been always aligned with "Delivering Quality Services" and "Customer Satisfaction".</p>
         <ul class="social_icon top25">
           <li><a href="{{$facebook_url->field_value or '#'}}" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a></li>
           <li><a href="{{$twitter_url->field_value or '#'}}" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a></li>
@@ -82,7 +83,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 text-center">
-        <p>Copyright &copy; {{date('Y')}} <a href="#.">Research Infotech</a>. all rights reserved. | SEBI REGISTRATION NO: INA000003726</p>
+        <p>Copyright &copy; {{date('Y')}} <a href="#.">Hybrid Research</a>. all rights reserved. | SEBI REGISTRATION NO: XXXXXXXX</p>
       </div>
     </div>
   </div>
@@ -138,31 +139,6 @@
       $('body').show();
   }); 
   </script>
- 
-<script>
-!function() {
-  var t;
-  if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0, 
-  t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
-  t.factory = function(e) {
-    return function() {
-      var n;
-      return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
-    };
-  }, t.methods.forEach(function(e) {
-    t[e] = t.factory(e);
-  }), t.load = function(t) {
-    var e, n, o, i;
-    e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"), 
-    o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js", 
-    n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
-  });
-}();
-drift.SNIPPET_VERSION = '0.3.1';
-drift.load('9iwz8utnsf2m');
-</script>
-
- 
 
     <script type="text/javascript">
     jQuery(document).ready(function($){

@@ -9,7 +9,7 @@
  
 
 
-@include('partials/titlebar')
+@include('partials/titlebarBg')
 
 
 <!--SERVICE SECTION-->
@@ -40,7 +40,7 @@
                           Ccavenue payment
                        </a>
                     </li> -->
-                       <a href="https://easebuzz.in/pay/researchinfotech" target="_blank" class="btn btn-primary"  target="_blank">
+                       <a href="https://easebuzz.in/pay/hybridresearch" target="_blank" class="btn btn-primary"  target="_blank">
                          
                          Easebuzz payment
                        </a>

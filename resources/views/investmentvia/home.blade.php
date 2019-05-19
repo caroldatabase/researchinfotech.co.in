@@ -152,14 +152,14 @@ float:right;
 }
 .home-feature
 {
-background:url('http://researchinfotech.co.in/public/assets/images/clone.png');
+background:url('public/assets/images/clone.png');
 background-size:cover;
 background-repeat:no-repeat;
 padding:60px 0px;
 height:680px;
 }
 
-.counter2{padding: 70px 0px; background-image: url('http://researchinfotech.co.in/public/assets/images/parallax2.jpg') !important;}
+.counter2{padding: 70px 0px; background-image: url('public/assets/images/parallax2.jpg') !important;}
 </style>
 
 <!-- <div class="loader">
@@ -170,10 +170,9 @@ height:680px;
  -->
 
  <!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
+<!-- <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
-
-    <!-- Modal content-->
+ 
     <div class="modal-content" style="    padding: 9px 15px;">
      <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" style="border: 1px solid #16b9ed;font-size: 30px; padding: 5px; opacity:1; color:#16b9ed;">&times;</button>
@@ -187,7 +186,7 @@ height:680px;
     </div>
 
   </div>
-</div>
+</div> -->
 
  <script> 
 
@@ -257,7 +256,7 @@ News and Technical & Fundamental Analysis
     height: 40px;
     font-size: larger;
     font-weight: bold;
-    background: #07bfd5;
+    background: #ee5835;
     border: 0px;
 " type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                     Free Trial
@@ -271,7 +270,7 @@ News and Technical & Fundamental Analysis
                      <a href="{{$linkedin_url->field_value or '#'}}"  target="_blank"><i class="fa fa-linkedin"></i></a></span></p>
             </div>
             <div class="live-btn">
-                <p>  <a href="https://easebuzz.in/pay/researchinfotech" target="_blank"><img src="{{ asset('storage/assets/images/pay-online.png')}}"></a>  
+                <p>  <a href="https://easebuzz.in/pay/hybridresearch" target="_blank"><img src="{{ asset('storage/assets/images/pay-online.png')}}"></a>  
 
                 
                     <!-- a href="https://www.researchinfotech.co.in/checkOutEBS/payment-online?amount=1000" target="_blank"><img src="{{ asset('storage/assets/images/pay-online.png')}}"></a>  
@@ -285,7 +284,7 @@ News and Technical & Fundamental Analysis
         </div>
         <!-- Large modal -->
 
-<div class="">
+<!-- <div class="">
     <a data-toggle="modal" data-target="#myModal"><img id="" src="{{ asset('storage/assets/images/paytm.png')}}"style="    width: 50px;
     position: fixed;
     top: 400px;
@@ -294,7 +293,7 @@ News and Technical & Fundamental Analysis
     border: 1px solid #042e6f;
     border-radius: 8px;    width: 40px;     cursor: pointer;"></a>
 
-</div>
+</div> -->
         
         
 </section>  

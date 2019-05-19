@@ -34,7 +34,7 @@
         </li>
         <li><a href="{{url('pricing')}}">Pricing</a></li>
         <li><a href="{{url('free-trial')}}">Free Trial</a></li>
-        <li><a href="{{url('life-at-research-infotech')}}">Life@rch</a></li>
+        <li><a href="{{url('life-at-research-infotech')}}">Life@HR</a></li>
         <li class="dropdown"><a href="javascript:" class="dropdown-toggle" data-toggle="dropdown">More</a>
             <ul class="dropdown-menu animated fadeOut" style="display: none; opacity: 1;">
                 
@@ -55,7 +55,12 @@
     </div>
     <div class="sidebar_menu">
         <nav class="pushmenu pushmenu-right">
-          <a class="push-logo" href="{{url('/')}}"><img src="{{asset('storage/assets/images/logo.png')}}" alt="logo"></a>
+         
+
+          <a class="navbar-brand" href="{{url('/')}}" style="margin-top: 0px;">
+       <span style="color: #ce1a1a;font-size: -webkit-xxx-large;font-family: fantasy;">Hybrid</span> <span style="color: #2a2e3c;font-family: fantasy;position: absolute;top: 57px;left: 105px;font-size: x-large;">Research </span> </br> 
+        </a>
+
           <ul class="push_nav centered">
             <li>
             <a href="{{url('/')}}">Home</a>

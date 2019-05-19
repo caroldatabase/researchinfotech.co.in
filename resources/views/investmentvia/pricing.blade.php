@@ -15,7 +15,7 @@
   </form>
 </div>
 
-@include('partials/titlebar')
+@include('partials/titlebarBg')
 <!--Pricings-->
 <section class="padding" id="pricing">
   <div class="container">

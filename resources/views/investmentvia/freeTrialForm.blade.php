@@ -9,7 +9,7 @@
 
 
 <!--Page Header-->
-@include('partials/titlebar')
+@include('partials/titlebarBg')
 <!--Page Header-->
 <style>
     .banner{background: url(storage/assets/images/bouncer-banner.original.jpg) no-repeat top center;

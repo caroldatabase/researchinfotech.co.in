@@ -13,7 +13,7 @@
   <div class="container aboutus">
     <div class="row">
       <div class="col-md-7 wow fadeInLeft animated" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInLeft;">
-       <h2 class="heading heading_space"><span>Welcome </span>to Research Infotech <span class="divider-left"></span></h2>
+       <h2 class="heading heading_space"><span>Welcome </span>to Hybrid Research <span class="divider-left"></span></h2>
        <p class="bottom25">
           
 
@@ -21,21 +21,21 @@
 
 <p class=MsoNormal style='line-height:normal;border:none;padding:0in'><b><span
 style='font-size:15.0pt;font-family:"Arial",sans-serif;color:#333333;
-text-transform:uppercase;letter-spacing:.75pt'>Research&nbsp;</span></b><b><span
+text-transform:uppercase;letter-spacing:.75pt'>Hybrid&nbsp;</span></b><b><span
 style='font-size:15.0pt;font-family:"Arial",sans-serif;color:#1ABC9C;
-text-transform:uppercase;letter-spacing:.75pt'>infotech</span></b></p>
+text-transform:uppercase;letter-spacing:.75pt'>Research</span></b></p>
 
 </div>
 
 <p class=MsoNormal style='margin-bottom:22.5pt;text-align:justify;text-justify:
 inter-ideograph;line-height:normal;background:white'><span style='font-size:
-11.5pt;font-family:"Arial",sans-serif;color:#555555'>Research Infotech– Top
+11.5pt;font-family:"Arial",sans-serif;color:#555555'>Hybrid Research– Top
 Investment Advisor: having the sole motto as ‘Sign of Trust ’ , and is meant to
 be translated into an proposition that is led by capitalism and creativity,
 sheltered by creditable and validate outcome. Research clients progressively
 stepping up with the smart recommendation provided by one and only </span><span
 style='font-size:11.5pt;font-family:"Arial",sans-serif;color:#5B5B5B;
-background:white'>Research Infotech</span><span style='font-size:11.5pt;
+background:white'>Hybrid Research</span><span style='font-size:11.5pt;
 font-family:"Arial",sans-serif;color:#555555'>  team' - giving them consistent
 idea into investments, that is soak up as profit and fame into the target
 market.</span></p>
@@ -46,7 +46,7 @@ color:#444444'>SEBI Registered Investment Adviser </span></b></p>
 
 <p class=MsoNormal style='margin-bottom:22.5pt;text-align:justify;text-justify:
 inter-ideograph;line-height:normal;background:white'><span style='font-size:
-11.5pt;font-family:"Arial",sans-serif;color:#555555'>Research Infotech is a
+11.5pt;font-family:"Arial",sans-serif;color:#555555'>Hybrid Research is a
 SEBI (Security and Exchange Board of India)  registered  advisory firm, Sebi
 registration no  </span><b><span style='font-size:10.5pt;font-family:"Open Sans",serif;
 color:#5B5B5B;background:white'>INA000003726</span></b><span style='font-size:
@@ -60,21 +60,21 @@ provide the complete investment plans over investment products for traders and
 investors. As a well managed and famous for fast services provider organization
 in the advisory industry, we are proud of the trusted clientele who earned
 great success in the market by stocking and investment plans governed by our
-experts. Research Infotech  is a SEBI registered commodity tips provider, we
+experts. Hybrid Research  is a SEBI registered commodity tips provider, we
 have experienced bunch of people as a team that provide tips that will help you
 to make a decision weather you can sale your stock or hold it for future in
 commodity Market.</span></p>
 
 <p class=MsoNormal style='margin-bottom:22.5pt;text-align:justify;text-justify:
 inter-ideograph;line-height:normal;background:white'><b><span style='font-size:
-11.5pt;font-family:"Arial",sans-serif;color:#5B5B5B;background:white'>Research
-Infotech Advisory Service is a team of expert analyst with vast experience in
+11.5pt;font-family:"Arial",sans-serif;color:#5B5B5B;background:white'>Hybrid Research
+ Advisory Service is a team of expert analyst with vast experience in
 commodity market research. We provide recommendations commodities including
 bullion, agri and metals traded in MCX and NCDEX</span></b></p>
 
 <p class=MsoNormal style='margin-bottom:22.5pt;text-align:justify;text-justify:
 inter-ideograph;line-height:normal;background:white'><span style='font-size:
-11.5pt;font-family:"Arial",sans-serif;color:#555555'>Research Infotech feels
+11.5pt;font-family:"Arial",sans-serif;color:#555555'>Hybrid Research feels
 proud for the role we have played in enabling and empowering self-directed and
 non directed traders and investors for last several years. Since years, our
 enduring individuals have put their trust in us to score incredible success
@@ -87,7 +87,7 @@ advisers.</span></p>
 
 <p class=MsoNormal style='line-height:normal;border:none;padding:0in'><b><span
 style='font-size:15.0pt;font-family:"Arial",sans-serif;color:#333333;
-text-transform:uppercase;letter-spacing:.75pt'>research infotech&nbsp;</span></b><b><span
+text-transform:uppercase;letter-spacing:.75pt'>Hybrid Research&nbsp;</span></b><b><span
 style='font-size:15.0pt;font-family:"Arial",sans-serif;color:#1ABC9C;
 text-transform:uppercase;letter-spacing:.75pt'>VIEWPOINT</span></b><b><span
 style='font-size:15.0pt;font-family:"Arial",sans-serif;color:#333333;
@@ -96,8 +96,7 @@ text-transform:uppercase;letter-spacing:.75pt'>.</span></b></p>
 </div>
 
 <p class=MsoNormal style='margin-bottom:22.5pt;line-height:normal;background:
-white'><span style='font-size:11.5pt;font-family:"Arial",sans-serif;color:#555555'>Research
-Infotech is SEBI registered company in India. Since last few years we are
+white'><span style='font-size:11.5pt;font-family:"Arial",sans-serif;color:#555555'>Hybrid Research is SEBI registered company in India. Since last few years we are
 constantly analyzing the market and what we cropped out is a bitter truth that
 may get surprised you hard somewhere. Most of the investors invest huge
 revenues from their livelihood, with a sole view of earning profits from the
@@ -118,11 +117,11 @@ text-transform:uppercase;letter-spacing:.75pt'>PERCEPTION &amp; VALUES .</span><
 </div>
 
 <p class=MsoNormal style='margin-bottom:22.5pt;line-height:normal;background:
-white'><span style='font-size:11.5pt;font-family:"Arial",sans-serif;color:#555555'>Research
-Infotech, is SEBI registered investment advisory,in which top experts forecast
+white'><span style='font-size:11.5pt;font-family:"Arial",sans-serif;color:#555555'>Hybrid Research
+ , is SEBI registered investment advisory,in which top experts forecast
 market by-product smartly, keeping risk-factors into their mind with a view to
-make computation and earn profit in the pocket of investing customer Research
-Infotech  with SEBI registered investment advisors is one of the most
+make computation and earn profit in the pocket of investing customer Hybrid Research
+   with SEBI registered investment advisors is one of the most
 favourable workplace, due to its following singularities:</span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
@@ -172,11 +171,15 @@ basis of client satisfaction.</span></p>
       </div>
       <div class="col-md-5 wow fadeInRight animated" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInRight;">
         <div class="image"> 
-         <img src="{{ asset('storage/assets/images/news3.jpg')}}" alt="Xwin">
+         <img src="{{ asset('public/assets/images/news3.jpg')}}" alt="Xwin">
         </div>
         <br>
         <div class="image"> 
-         <img src="{{ asset('storage/assets/images/news2.jpg')}}" alt="Xwin">
+         <img src="{{ asset('public/assets/images/news2.jpg')}}" alt="Xwin">
+        </div>
+        <br>
+        <div class="image"> 
+         <img src="{{ asset('public/assets/images/news4.jpg')}}" alt="Xwin">
         </div>
       </div>
     </div>

@@ -449,7 +449,7 @@ p{
 	color:#3e9fbe;
 }
 .whitecolor{
-	color:#fff;
+	color:#ee5835;
 }
 .bg_blue{
 	background-color:#0798bc;
@@ -2043,7 +2043,7 @@ body.pushmenu-push-toleft  nav.navbar.bootsnav.sticked, body.pushmenu-push-tolef
 	background-position:center center;
 }
 #parallax, #experts, #experts p, #counter, #counter p{
-	color:#fff;
+	color:#000;
 }
 #parallax h1 {
   font-weight: 200;
@@ -2836,7 +2836,7 @@ form.findus textarea{
 
 /* --------------- FOOTER ---------------*/
 footer {
-    background: #2a2e3c;
+    background: #0a237b;
 }
 .footer_panel .divider-left{
 	background:#fff;
@@ -3137,14 +3137,14 @@ img.logo.logo-scrolled {
     float: right;
     padding-left: 56%;
 	font-size:18px;
-	color:#4a4d59;
+	color:#191a1d;
 	line-height:24px;
 	margin-bottom:30px;
 }
 .over-content h3
 {
 	margin-bottom: 15px;
-    color: #dd2342;
+    color: #ee5835;
     font-size: 30px;
 }
 .main-btn a
@@ -3432,7 +3432,7 @@ margin-right:5px;
 }
 .follow-us-banner p, .follow-us-banner a
 {
-color:#fff;
+color:#ee5835;
 }
 .follow-us-banner a
 {

@@ -9,12 +9,12 @@
 @section('content')
 @include('partials/menu')
 <!--Page Header-->
-@include('partials/titlebar')
+@include('partials/titlebarBg')
 <!--Page Header-->
 
 
 <!--SERVICE SECTION-->
-<section id="contact" class="padding">
+<section id="contact" class="" style="padding-top: 0px;">
   <div class="container">
     <div class="row padding-bottom">
       <div class="col-md-4 contact_address heading_space wow fadeInLeft animated" data-wow-delay="400ms" style="visibility: visible; animation-delay: 400ms; animation-name: fadeInLeft;">
