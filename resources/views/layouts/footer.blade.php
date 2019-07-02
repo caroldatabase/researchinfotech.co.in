@@ -11,22 +11,22 @@
     <div class="row">
   <ul class="list-inline">
       <li>
-          <a href="https://www.nseindia.com" target="_blank">  <img src="{{ asset('storage/assets/images/nse.jpg')}}"> </a>
+          <a href="https://www.nseindia.com" target="_blank">  <img src="{{ asset('storage/assets/images/nse.jpg')}}" alt="nse"> </a>
       </li>
        <li>
-          <a href="https://www.marketwatch.com" target="_blank">  <img src="{{ asset('storage/assets/images/marketwatch.jpg')}}"></a>
+          <a href="https://www.marketwatch.com" target="_blank">  <img src="{{ asset('storage/assets/images/marketwatch.jpg')}}" alt="marketwatch"></a>
       </li>
       <li>
-          <a href="https://www.investing.com" target="_blank">  <img src="{{ asset('storage/assets/images/investing.jpg')}}"></a>
+          <a href="https://www.investing.com" target="_blank">  <img src="{{ asset('storage/assets/images/investing.jpg')}}" alt="investing"></a>
       </li>
       <li>
-          <a href="https://www.www.moneycontrol.com" target="_blank"> <img src="{{ asset('storage/assets/images/moneycontrol.jpg')}}"></a>
+          <a href="https://www.www.moneycontrol.com" target="_blank"> <img src="{{ asset('storage/assets/images/moneycontrol.jpg')}}" alt="moneycontrol"></a>
       </li>
       <li>
-          <a href="https://www.mcxcontrol.com" target="_blank">  <img src="{{ asset('storage/assets/images/mcx.jpg')}}"></a>
+          <a href="https://www.mcxcontrol.com" target="_blank">  <img src="{{ asset('storage/assets/images/mcx.jpg')}}" alt="mcx"></a>
       </li>
       <li>
-          <a href="https://www.cnbc.com" target="_blank"> <img src="{{ asset('storage/assets/images/cnbc.jpg')}}"> </a>
+          <a href="https://www.cnbc.com" target="_blank"> <img src="{{ asset('storage/assets/images/cnbc.jpg')}}" alt="cnbc"> </a>
       </li>
       </ul>
     </div>
@@ -40,7 +40,7 @@
     <div class="row">
       <div class="col-md-4 col-sm-4 footer_panel bottom25">
         <h3 class="heading bottom25">About Us<span class="divider-left"></span></h3>
-        <a href="index.html" class="footer_logo bottom25">
+        <a href="/about" class="footer_logo bottom25">
 
         <img src="{{ asset('storage/assets/images/logo-white.png')}}" alt="Xwin"></a>
         <p>Welcome to Research Infotech, We have been known for serving our customers with atmost care and dedication. Our motto has been always aligned with "Delivering Quality Services" and "Customer Satisfaction".</p>
@@ -73,7 +73,7 @@
         <h3 class="heading bottom25">Keep in Touch <span class="divider-left"></span></h3>
          <p class=" address" style="float: left;"><i class="fa fa-map-marker" aria-hidden="true"></i>{!! $company_address !!}</p>
         <p class=" address" ><i class="fa fa-phone" aria-hidden="true"></i>{!! $contact_number !!}</p>
-         <img src="{{ asset('storage/assets/images/footer-map.png')}}" class="img-responsive">
+         <img alt="map" src="{{ asset('storage/assets/images/footer-map.png')}}" class="img-responsive">
       </div>
     </div>
   </div>

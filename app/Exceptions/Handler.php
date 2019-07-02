@@ -57,7 +57,8 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {        //dd( $e);
-       $path_info_url = $request->getpathInfo();
+
+	$path_info_url = $request->getpathInfo();
        $api_url='';
        $web_url ='';
         if (strpos($path_info_url, 'api/v1') !== false) {
@@ -88,21 +89,8 @@ class Handler extends ExceptionHandler
         $error_from_route =0;
         if($e instanceof NotFoundHttpException)
         {   
-            $error_from_route =1;
-            if($api_url)
-            {
-                echo json_encode(
-                    [ "status"=>1,
-                      "code"=>200,
-                      "message"=>"Request URL not available" ,
-                      "data" => "" 
-                    ]
-                );
-            }else{
-               
-              $url =  URL::previous().'?error=InvalidURL'; 
-              return Redirect::to($url);
-            } 
+	            return response()->view('errors.' . '404', [], 404);
+
             exit();
         }
         if($e instanceof QueryException)

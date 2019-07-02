@@ -89,20 +89,24 @@ class HomeController extends Controller
         $title = "About Us";
         $tagLine = "Intraday Stock Trading Tips by Research Infotech";
 
-        $meta1 = '<meta name="description" content=" Research Infotech Provides Intraday Tips,Share Market Trading Tips,Intraday Stock Tips,Day Trading Tips, Mcx Commodity Trading Tips,Stock & Nifty future tips on Intraday Basis. "/>';
+        $meta1 = '<meta name="description" content="Intraday Tips,Market Trading Tips,Intraday Stock Tips,Day Trading Tips, Mcx Commodity Trading Tips,Stock & Nifty future tips on Intraday Basis. "/>';
         $meta2 = '<meta name="keywords" content=" Intraday tips,intraday stock tips,free intraday tips on mobile, stock trading tips,stock tips,stock market tips for intraday, commodity tips, stock tips India,stock future tips,nifty future tips,option tips, indian intraday trading tips Stock Intraday Tips for Today,Free Intraday Tips on Mobile"/>';
 
 
         return view('investmentvia.about',compact('title','tagLine','meta1','meta2'));
     }  
-
+     public function pnf(Request $request){
+	$title = "Page not found";
+	$tagLine = "Research Infotech- Best Stock Market Tips Provider";	
+	return view('investmentvia.404',compact('title','tagLine'));
+     }
     public function home(Request $request)
     {
         $title = "Home";
         $tagLine = "Research Infotech- Best Stock Market Tips Provider ";
         $request->session()->forget('amount');
 
-        $meta1 = '<meta name="description" content=" Research Infotech is one of the leading Stock Advisory Company which Provides Stock Tips,Mcx Tips,Commodity Trading Tips,Indian Share Market Tips,Equity Tips,Intraday Tips,Nifty Future Tips, Free Intraday Stock Tips on Mobile. "/>';
+        $meta1 = '<meta name="description" content="Stock Tips, Mcx Tips, Commodity Trading Tips, Indian Share Market Tips, Equity Tips, Intraday Tips, Nifty Future Tips, Free Intraday Stock Tips on Mobile."/>';
         $meta2 ='<meta name="keywords" content="Stock Market Tips, Intraday Tips Provider, Best SEBI Registered Advisory"/>';
 
         return view('investmentvia.home',compact('title','tagLine','meta1','meta2'));

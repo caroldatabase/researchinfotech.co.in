@@ -20,6 +20,10 @@ if (env('APP_ENV') === 'prod') {
 }
 
 
+Route::get('404',[
+          'as' => '404',
+          'uses'  => 'HomeController@pnf'
+        ]);
 
 Route::get('donwloadFreeTrial',function(){
 
@@ -392,7 +396,9 @@ Route::post('Ajaxlogin',function(App\User $user , Illuminate\Http\Request $reque
 
  });
 
-
+   Route::any('{any}', function(){
+	return \Redirect::to('404');
+	});
 
 
       

@@ -12,7 +12,7 @@
           <i class="fa fa-bars"></i>
         </button>
         <a class="navbar-brand" href="{{url('/')}}"><img src="{{ asset('storage/images/logo-white.png')}}" alt="logo" class="logo logo-display">
-        <img src="{{asset('storage/images/logo.png')}}" class="logo logo-scrolled" alt="">
+        <img src="{{asset('storage/images/logo.png')}}" class="logo logo-scrolled" alt="logo">
         <span style="color:#fff"><b>Investment Advisor</b></span>
         </a>
       </div>

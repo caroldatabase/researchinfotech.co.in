@@ -1,7 +1,7 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
 <head>
-	<meta charset="utf-8">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<title> Research Infotech | {{ $tagLine or ''}} </title>
@@ -23,10 +23,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="{{ asset('public/jquery.colorbox.js')}}"></script>
 
-   
-
-
-	<!-- <link rel="stylesheet" type="text/css" href="{{ asset('public/assets/css/loader.css')}}">  -->
+  
 	<link rel="icon" href="{{ asset('public/assets/images/favicon.png')}}">
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115461791-1"></script>
 	<script>

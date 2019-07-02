@@ -46,7 +46,7 @@
         <div class="col-sm-6 col-md-4 equalheight">
             <div class="course margin_top wow fadeIn" data-wow-delay="400ms" style="padding: 12px; min-height: 510px">
                <div class="image bottom25">
-                <img src="{{ asset('storage/services/'.$result->category_image)}}" alt="Services" class="border_radius" style="width: 100%; height: 200px">
+                <img src="{{ asset('storage/services/'.$result->category_image)}}" alt="{!! $result->title !!}" class="border_radius" style="width: 100%; height: 200px">
               </div>
               <h3 class="bottom10" id="title_{!! $result->id !!}">{!! $result->title !!}</h3>
               <div class="para-justify" id="desc_{!! $result->id !!}" style="font-size: 11px; font-weight: 100">{!! $result->description !!}

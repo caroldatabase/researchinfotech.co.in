@@ -152,22 +152,16 @@ float:right;
 }
 .home-feature
 {
-background:url('http://researchinfotech.co.in/public/assets/images/clone.png');
+background:url('https://researchinfotech.co.in/public/assets/images/clone.png');
 background-size:cover;
 background-repeat:no-repeat;
 padding:60px 0px;
 height:680px;
 }
 
-.counter2{padding: 70px 0px; background-image: url('http://researchinfotech.co.in/public/assets/images/parallax2.jpg') !important;}
+.counter2{padding: 70px 0px; background-image: url('https://researchinfotech.co.in/public/assets/images/parallax2.jpg') !important;}
 </style>
 
-<!-- <div class="loader">
-<div class="spinner centered">
-<img src="http://prestigeresearch.in/storage/images/loading.gif" width="100%">
-</div>
-</div>
- -->
 
  <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
@@ -179,7 +173,7 @@ height:680px;
         <button type="button" class="close" data-dismiss="modal" style="border: 1px solid #16b9ed;font-size: 30px; padding: 5px; opacity:1; color:#16b9ed;">&times;</button>
      </div>
       <div class="modal-body"style="padding:0px;">
-        <img src="{{ asset('public/assets/images/paytm-QR-code.png')}}" class="img-responsive">
+        <img alt="paytm-qr-codew"  src="{{ asset('public/assets/images/paytm-QR-code.png')}}" class="img-responsive">
       </div>
       <div class="modal-footer">
         
@@ -201,7 +195,7 @@ height:680px;
  <!-- Sliding div starts here -->
            
 			<div id="slider" style="right:-342px;">
-        			<div id="sidebar" onclick="open_panel()"><img src="{{asset('public/assets/images/contact.png')}}"></div>
+        			<div id="sidebar" onclick="open_panel()"><img alt="contact form"  src="{{asset('public/assets/images/contact.png')}}"></div>
         			<div id="header">
                         {!! Form::open(['url' => url('contact'), 'method' => 'post']) !!}
           
@@ -229,14 +223,14 @@ height:680px;
         @foreach($banner as $key => $value)  
             <li data-transition="fade">
             <!-- MAIN IMAGE -->
-                <img src="{!! asset('storage/files/banner/'.$value->field_value) !!}" alt="" data-bgposition="center center" data-bgfit="cover" data-bgparallax="10" class="rev-slidebg">
+                <img alt="Researchinfotech.co.in"  src="{!! asset('storage/files/banner/'.$value->field_value) !!}"  data-bgposition="center center" data-bgfit="cover" data-bgparallax="10" class="rev-slidebg">
             <!-- LAYER NR. 1 -->
             </li>
         @endforeach
     @else
         <li data-transition="fade">
             <!-- MAIN IMAGE -->
-            <img src="{{ asset('storage/assets/images/news3.jpg')}}" alt="" data-bgposition="center center" data-bgfit="cover" data-bgparallax="10" class="rev-slidebg">
+            <img src="{{ asset('storage/assets/images/news3.jpg')}}" alt="Researchinfotech" data-bgposition="center center" data-bgfit="cover" data-bgparallax="10" class="rev-slidebg">
             <!-- LAYER NR. 1 -->
         </li>
     @endif
@@ -271,10 +265,10 @@ News and Technical & Fundamental Analysis
                      <a href="{{$linkedin_url->field_value or '#'}}"  target="_blank"><i class="fa fa-linkedin"></i></a></span></p>
             </div>
             <div class="live-btn">
-                <p>  <a href="https://easebuzz.in/pay/researchinfotech" target="_blank"><img src="{{ asset('storage/assets/images/pay-online.png')}}"></a>  
+                <p>  <a href="https://easebuzz.in/pay/researchinfotech" target="_blank"><img alt="payonline" src="{{ asset('storage/assets/images/pay-online.png')}}"></a>  
 
                 
-                    <!-- a href="https://www.researchinfotech.co.in/checkOutEBS/payment-online?amount=1000" target="_blank"><img src="{{ asset('storage/assets/images/pay-online.png')}}"></a>  
+                    <!-- a href="https://www.researchinfotech.co.in/checkOutEBS/payment-online?amount=1000" target="_blank"><img alt="ebs-payment" src="{{ asset('storage/assets/images/pay-online.png')}}"></a>  
 
                       <a href="https://www.instamojo.com/@researchinfotech1788/" rel="im-checkout" data-behaviour="remote" data-style="light" data-text="Checkout With Instamojo"></a>  --> 
 
@@ -286,7 +280,7 @@ News and Technical & Fundamental Analysis
         <!-- Large modal -->
 
 <div class="">
-    <a data-toggle="modal" data-target="#myModal"><img id="" src="{{ asset('storage/assets/images/paytm.png')}}"style="    width: 50px;
+    <a data-toggle="modal" data-target="#myModal"><img alt="paytm" src="{{ asset('storage/assets/images/paytm.png')}}"style="    width: 50px;
     position: fixed;
     top: 400px;
     left: 2px;
@@ -436,7 +430,7 @@ News and Technical & Fundamental Analysis
 				</div>
 			</div>
 			<div class="col-sm-6 mobile-view-clone">
-				<img src="{{ asset('public/assets/images/mobile-bg.png')}}">
+				<img alt="Research Infotech"  src="{{ asset('public/assets/images/mobile-bg.png')}}">
 				
 			</div>
 		</div>
@@ -453,21 +447,21 @@ News and Technical & Fundamental Analysis
         <div class="row">
             <div class="col-sm-4 border-right">
                 <div class="what-content wow fadeInUp" data-wow-delay="500ms">
-                    <p><img src="{{ asset('storage/assets/images/right-circle.jpg')}}"></p>
+                    <p><img  alt="Who we are?" src="{{ asset('storage/assets/images/right-circle.jpg')}}"></p>
                     <h3>WHO WE ARE ?</h3>
                     <p class="what-desc">We are a team that supports the accumulation of your wealth through different sources. Trust is what we offer you to be with us</p>
                 </div>
             </div>
             <div class="col-sm-4 border-right">
                 <div class="what-content wow fadeInUp" data-wow-delay="500ms""">
-                    <p><img src="{{ asset('storage/assets/images/right-circle.jpg')}}"></p>
+                    <p><img alt="What we care?" src="{{ asset('storage/assets/images/right-circle.jpg')}}"></p>
                     <h3>WHAT WE CARE ?</h3>
                     <p class="what-desc">Customer needs and satisfaction are the main concerns of Research Infotech . Our tips and services are the indeed portrayal of our work. </p>
                 </div>
             </div>
             <div class="col-sm-4">
                 <div class="what-content wow fadeInUp" data-wow-delay="500ms""">
-                    <p><img src="{{ asset('storage/assets/images/right-circle.jpg')}}"></p>
+                    <p><img alt="Learn how to trade?" src="{{ asset('storage/assets/images/right-circle.jpg')}}"></p>
                     <h3>Learn How To Trade</h3>
                     <p class="what-desc">You don’t have to work on BSE/NSE to make money like BSE. Learn more how to trade with Research Infotech</p>
                 </div>
@@ -477,21 +471,21 @@ News and Technical & Fundamental Analysis
         <div class="row">
             <div class="col-sm-4 border-right">
                 <div class="what-content wow fadeInUp" data-wow-delay="500ms""">
-                    <p><img src="{{ asset('storage/assets/images/right-circle.jpg')}}"></p>
+                    <p><img alt="Quick technical support"  src="{{ asset('storage/assets/images/right-circle.jpg')}}"></p>
                     <h3>Quick Technical Support</h3>
                     <p class="what-desc">You will get the quick solutions for your every problem pertaining to the Services. Call us or just click Priority Support.</p>
                 </div>
             </div>
             <div class="col-sm-4 border-right">
                 <div class="what-content wow fadeInUp" data-wow-delay="500ms""">
-                    <p><img src="{{ asset('storage/assets/images/right-circle.jpg')}}"></p>
+                    <p><img src="{{ asset('storage/assets/images/right-circle.jpg')}}" alt="Quality order execution"></p>
                     <h3>Quality Order Execution</h3>
                     <p class="what-desc">You might be surprised at the variety of possible ways in which an order can be filled and the associated time delays.</p>
                 </div>
             </div>
             <div class="col-sm-4">
                 <div class="what-content wow fadeInUp" data-wow-delay="500ms""">
-                    <p><img src="{{ asset('storage/assets/images/right-circle.jpg')}}"></p>
+                    <p><img src="{{ asset('storage/assets/images/right-circle.jpg')}}" alt="Customer on-call support"></p>
                     <h3>Customer/ON-CALL Support</h3>
                     <p class="what-desc">In this service we provide limited calls in GOLD/SILVER with a high level of accuracy.You can also avail Free Tips to test our accuracy.</p>
                 </div>
@@ -504,7 +498,7 @@ News and Technical & Fundamental Analysis
 <div class="tracksheet">
     <div class="row">
         <div class="col-sm-5" style="padding-right: 0px">
-            <img src="{{ asset('public/assets/images/news1.jpg')}}"  style="width: 630px;min-height: 309px" width="630px"> 
+            <img alt="Tracksheet Report" src="{{ asset('public/assets/images/news1.jpg')}}"  style="width: 630px;min-height: 309px" width="630px"> 
         </div>
         <div class="col-sm-7 track-content" style="height: 421px">
             <h3>Tracksheet and Reports</h3>
@@ -514,7 +508,7 @@ Commodity & Bullion Market.</p>
                 
                 @if($trackSheet->count())
                     @foreach($trackSheet as $key=> $result)
-                    <?php ++$key; $html = ' <p><img src="'.asset('storage/assets/images/excel.png').'" >'.ucfirst($result->title).'</p>';
+                    <?php ++$key; $html = ' <p><img src="'.asset('storage/assets/images/excel.png').'"  alt="'.$result->title.'">'.ucfirst($result->title).'</p>';
 
                      ?>
                      <div class="block1 wow fadeInUp" data-wow-delay="500ms">
@@ -524,17 +518,17 @@ Commodity & Bullion Market.</p>
 
                 @else
                  <div class="block1 wow fadeInUp" data-wow-delay="500ms">
-                    <p><img src="{{ asset('storage/assets/images/excel.png')}}"> HNI </p>
-                        <p><img src="{{ asset('storage/assets/images/excel.png')}}"> Stock Cash</p>
-                        <p><img src="{{ asset('storage/assets/images/excel.png')}}"> Option</p>
-                        <p><img src="{{ asset('storage/assets/images/excel.png')}}"> Stock Future</p>
+                    <p><img src="{{ asset('storage/assets/images/excel.png')}}" alt="HNI"> HNI </p>
+                        <p><img src="{{ asset('storage/assets/images/excel.png')}}" alt="Stock Cash"> Stock Cash</p>
+                        <p><img src="{{ asset('storage/assets/images/excel.png')}}" alt="Option"> Option</p>
+                        <p><img src="{{ asset('storage/assets/images/excel.png')}}" alt="Stock Future"> Stock Future</p>
                                                                                                                             
                 </div>
                  <div class="block1 wow fadeInUp" data-wow-delay="500ms">
-                    <p><img src="{{ asset('storage/assets/images/excel.png')}}"> HNI </p>
-                        <p><img src="{{ asset('storage/assets/images/excel.png')}}"> Stock Cash</p>
-                        <p><img src="{{ asset('storage/assets/images/excel.png')}}"> Option</p>
-                        <p><img src="{{ asset('storage/assets/images/excel.png')}}"> Stock Future</p>
+		<p><img src="{{ asset('storage/assets/images/excel.png')}}" alt="HNI"> HNI </p>
+                        <p><img src="{{ asset('storage/assets/images/excel.png')}}" alt="Stock Cash"> Stock Cash</p>
+                        <p><img src="{{ asset('storage/assets/images/excel.png')}}" alt="Option"> Option</p>
+                        <p><img src="{{ asset('storage/assets/images/excel.png')}}" alt="Stock Future"> Stock Future</p>
                                                                                                                             
                 </div>
                @endif
