@@ -498,9 +498,9 @@ News and Technical & Fundamental Analysis
 <div class="tracksheet">
     <div class="row">
         <div class="col-sm-5" style="padding-right: 0px">
-            <img alt="Tracksheet Report" src="{{ asset('public/assets/images/news1.jpg')}}"  style="width: 630px;min-height: 309px" width="630px"> 
+            <img alt="Tracksheet Report" src="{{ asset('public/assets/images/news1.jpg')}}"  style="width: 100%;float:left; min-height:421px" > 
         </div>
-        <div class="col-sm-7 track-content" style="height: 421px">
+        <div class="col-sm-7 track-content" style="min-height: 421px">
             <h3>Tracksheet and Reports</h3>
             <p class="track-para">Commodity Trading, Swing Trading, Future Trading and Option Trading in Stock,
 Commodity & Bullion Market.</p>
@@ -508,10 +508,10 @@ Commodity & Bullion Market.</p>
                 
                 @if($trackSheet->count())
                     @foreach($trackSheet as $key=> $result)
-                    <?php ++$key; $html = ' <p><img src="'.asset('storage/assets/images/excel.png').'"  alt="'.$result->title.'">'.ucfirst($result->title).'</p>';
+                    <?php ++$key; $html = ' <p class="col-md-3"><img src="'.asset('storage/assets/images/excel.png').'"  alt="'.$result->title.'">'.ucfirst($result->title).'</p>';
 
                      ?>
-                     <div class="block1 wow fadeInUp" data-wow-delay="500ms">
+                     <div class="wow fadeInUp" data-wow-delay="500ms">
                        <a href="{{url('storage/files/'.$result->files)}}" target="_blank"> {!!$html!!} </a>
                      </div>
                     @endforeach   
