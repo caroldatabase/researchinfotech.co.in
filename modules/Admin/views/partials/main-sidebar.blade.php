@@ -36,29 +36,8 @@
         </ul>
       </li>
  
-      <li class="treeview {{ (isset($page_action) && $page_title=='Service')?"active":'' }} ">
-        <a href="#">
-          <i class="fa fa-user"></i>
-          <span>Manage Service</span>
-          <i class="fa fa-angle-left pull-right"></i>
-        </a>
-        <ul class="treeview-menu">
-          <li class="{{ (isset($page_action) && $page_action=='Create Service')?"active":'' }}" ><a href="{{ route('category.create')}}"><i class="fa fa-user-plus"></i> Create Service</a></li>
-           <li class="{{ (isset($page_action) && $page_action=='View Service')?"active":'' }}"><a href="{{ route('category')}}"><i class="fa  fa-list"></i> View Service</a></li>
-        </ul>
-      </li>
-
-      <li class="treeview {{ (isset($page_action) && $page_title=='Pricing')?"active":'' }} ">
-        <a href="#">
-          <i class="fa fa-user"></i>
-          <span>Manage Pricing</span>
-          <i class="fa fa-angle-left pull-right"></i>
-        </a> 
-        <ul class="treeview-menu">
-          <li class="{{ (isset($page_action) && $page_action=='Create Pricing')?"active":'' }}" ><a href="{{ route('pricing.create')}}"><i class="fa fa-user-plus"></i> Create Pricing</a></li>
-          <li class="{{ (isset($page_action) && $page_action=='View Pricing')?"active":'' }}"><a href="{{ url('admin/pricing')}}"><i class="fa  fa-list"></i> View Pricing</a></li>
-        </ul>
-      </li>  
+      
+     
       
        <li class="treeview {{ (isset($page_action) && $page_title=='FreeTrial')?"active":'' }} ">
         <a href="#">
@@ -155,30 +134,7 @@
         </ul>
       </li> 
       
-       <li class="treeview {{ (isset($page_action) && $page_title=='Bank Account')?"active":'' }} ">
-        <a href="#">
-          <i class="fa fa-user"></i>
-          <span>Manage Bank Account</span>
-          <i class="fa fa-angle-left pull-right"></i>
-        </a> 
-        <ul class="treeview-menu">
-         <li class="{{ (isset($page_action) && $page_action=='Create Bank Account')?"active":'' }}" ><a href="{{ route('bankAccount.create')}}"><i class="fa fa-user-plus"></i> Add Bank Account</a></li>
-          <li class="{{ (isset($page_action) && $page_action=='View Bank Account')?"active":'' }}"><a href="{{ url('admin/bankAccount')}}"><i class="fa  fa-list"></i> View Bank Account</a></li>
-        </ul>
-      </li> 
-      
         
-       <li class="treeview {{ (isset($page_action) && $page_title=='Page')?"active":'' }} ">
-        <a href="#">
-          <i class="fa fa-user"></i>
-          <span>Manage Page</span>
-          <i class="fa fa-angle-left pull-right"></i>
-        </a> 
-        <ul class="treeview-menu">
-         <li class="{{ (isset($page_action) && $page_action=='Create Page')?"active":'' }}" ><a href="{{ route('page.create')}}"><i class="fa fa-user-plus"></i> Create Static Page</a></li>
-          <li class="{{ (isset($page_action) && $page_action=='View Page')?"active":'' }}"><a href="{{ route('page')}}"><i class="fa  fa-list"></i> View page</a></li>
-        </ul>
-      </li> 
       
        <li class="treeview {{ (isset($page_action) && $page_title=='Career')?"active":'' }} ">
         <a href="#">
@@ -191,18 +147,7 @@
         </ul>
       </li> 
 
-
-      <li class="treeview {{ (isset($page_action) && $page_title=='setting')?"active":'' }} ">
-        <a href="#">
-          <i class="fa fa-user"></i>
-          <span>Website Setting</span>
-          <i class="fa fa-angle-left pull-right"></i>
-        </a> 
-        <ul class="treeview-menu">
-          <li class="{{ (isset($page_action) && $page_action=='View setting')?"active":'' }}"><a href="{{ route('setting')}}"><i class="fa  fa-list"></i> Website Setting</a></li>
-        </ul>
-      </li>  
-
+ 
       @endif
     </ul>
   </section>

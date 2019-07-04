@@ -42,26 +42,7 @@
                 ]
         );
         
-        //=============bankaccount
-        
-        Route::bind('bankAccount', function($value, $route) {
-            return Modules\Admin\Models\BankAccount::find($value);
-        });
-
-        Route::resource('admin/bankAccount', 'Modules\Admin\Http\Controllers\BankAccountController', [
-            'names' => [
-                'edit' => 'bankAccount.edit',
-                'show' => 'bankAccount.show',
-                'destroy' => 'bankAccount.destroy',
-                'update' => 'bankAccount.update',
-                'store' => 'bankAccount.store',
-                'index' => 'bankAccount',
-                'create' => 'bankAccount.create',
-            ]
-                ]
-        );
-        
-        
+         
         /*---------End---------*/   
   
         /*------------User Category and controller---------*/
@@ -157,22 +138,7 @@
         ); 
 
 
-          Route::bind('page', function($value, $route) {
-            return Modules\Admin\Models\Pages::find($value);    
-        });
- 
-        Route::resource('admin/page', 'Modules\Admin\Http\Controllers\PageController', [
-            'names' => [
-                'edit'      => 'page.edit',
-                'show'      => 'page.show',
-                'destroy'   => 'page.destroy',
-                'update'    => 'page.update',
-                'store'     => 'page.store',
-                'index'     => 'page',
-                'create'    => 'page.create',
-            ]
-                ]
-        ); 
+         
         
         
         Route::bind('contact', function($value, $route) {
@@ -210,22 +176,6 @@
         );  
         
         
-        Route::bind('service', function($value, $route) {
-            return Modules\Admin\Models\Category::find($value);
-        });
- 
-        Route::resource('admin/service', 'Modules\Admin\Http\Controllers\CategoryController', [
-            'names' => [
-                'edit' => 'service.edit',
-                'show' => 'service.show',
-                'destroy' => 'service.destroy',
-                'update' => 'service.update',
-                'store' => 'service.store',
-                'index' => 'service',
-                'create' => 'service.create',
-            ]
-                ]
-        ); 
 
         
         Route::bind('freeTrial', function($value, $route) {
@@ -262,24 +212,7 @@
                 ]
         );
         
-        
-        Route::bind('pricing', function($value, $route) {
-            return Modules\Admin\Models\Product::find($value);
-        });
- 
-        Route::resource('admin/pricing', 'Modules\Admin\Http\Controllers\ProductController', [
-            'names' => [
-                'edit' => 'pricing.edit',
-                'show' => 'pricing.show',
-                'destroy' => 'pricing.destroy',
-                'update' => 'pricing.update',
-                'store' => 'pricing.store',
-                'index' => 'pricing',
-                'create' => 'pricing.create',
-            ]
-                ]
-        );
-        
+         
         Route::bind('payment', function($value, $route) {
             return Modules\Admin\Models\Pricing::find($value);
         });
