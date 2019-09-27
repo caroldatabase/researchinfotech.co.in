@@ -120,7 +120,7 @@
                 ]
         ); 
 
-        Route::bind('setting', function($value, $route) {
+ Route::bind('setting', function($value, $route) {
             return Modules\Admin\Models\Settings::find($value);
         });
  
@@ -135,7 +135,7 @@
                 'create'    => 'setting.create',
             ]
                 ]
-        ); 
+        );  
 
 
          
@@ -342,6 +342,8 @@
 
         Route::match(['get','post'],'admin/profile', 'Modules\Admin\Http\Controllers\AdminController@profile'); 
             
+	Route::any('admin/{any}', 'Modules\Admin\Http\Controllers\AdminController@errorPage');
+   
   });
 
 

@@ -20,6 +20,22 @@ if (env('APP_ENV') === 'prod') {
 }
 
 
+Route::get('testmail',function(){
+
+
+ return  \Mail::send('emails.testmail', [],  function($message)
+          {
+            $name = "Admin";
+            $message->from('kroy.aws@gmail.com');
+            $message->to('kroy@mailinator.com')->subject('kandy');
+
+          });
+
+
+
+});
+
+
 Route::get('404',[
           'as' => '404',
           'uses'  => 'HomeController@pnf'
